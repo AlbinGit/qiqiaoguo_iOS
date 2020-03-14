@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="BLUBrandCategoryMO" representedClassName="BLUBrandCategoryMO" syncable="YES">
+        <attribute name="categoryID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="hot" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="logoHeight" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="logoOriginURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoThumbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoWidth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="parentID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="brands" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BLUBrandMO" syncable="YES"/>
+    </entity>
+    <entity name="BLUBrandMO" representedClassName="BLUBrandMO" syncable="YES">
+        <attribute name="brandID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="fake" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="hot" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="initials" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="logoHeight" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="logoOriginURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoThumbURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoWidth" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="BLUCircleMO" representedClassName="BLUCircleMO" syncable="YES">
+        <attribute name="circleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="circleID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="didFollowCircle" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="followedUserCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="isFollowRequesting" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="logoThumb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="masterUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="shouldVisible" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="slogan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unreadPostCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="BLUContentParagraphMO" representedClassName="BLUContentParagraphMO" syncable="YES">
+        <attribute name="contentID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pageURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="redirectType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="videoURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="BLUDialogueMO" representedClassName="BLUDialogueMO" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dialogueID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserGender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserNickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromUserThumbnailAvatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="masterUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="unreadCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="BLUDynamicMO" representedClassName="BLUDynamicMO" syncable="YES">
+        <attribute name="anonymous" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="commentID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dynamicID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserGender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserNickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromUserThumbnailAvatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="masterUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="postID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="targetUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="toUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="toUserNickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="BLUGoodMO" representedClassName="BLUGoodMO" syncable="YES">
+        <attribute name="brandID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="collectionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="didCollect" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="didView" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="exchangeID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="goodID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="inCart" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="inventory" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="masterUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numberOfCollection" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfEvaluationPosts" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfPosts" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfVideos" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="popularSearch" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="purchaseType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="purchaseURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="requiredCoin" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="requiredLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="shoppingCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="targetViewMask" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="logo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BLUImageMO" syncable="YES"/>
+        <relationship name="paragraphs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BLUContentParagraphMO" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BLUImageMO" syncable="YES"/>
+    </entity>
+    <entity name="BLUGoodSearchResultMO" representedClassName="BLUGoodSearchResultMO" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BLUImageMO" representedClassName="BLUImageMO" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="imageID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="originURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="BLUMessageCategoryMO" representedClassName="BLUMessageCategoryMO" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="masterUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="targetUserGender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="targetUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="targetUserNickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetUserThumbnailAvatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="unreadCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="BLUMessageMO" representedClassName="BLUMessageMO" syncable="YES">
+        <attribute name="audioURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="audioUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentType" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="createDate" attributeType="Date" syncable="YES"/>
+        <attribute name="fromUserGender" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fromUserID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="fromUserNickname" attributeType="String" syncable="YES"/>
+        <attribute name="fromUserThumbnailAvatarURL" attributeType="String" syncable="YES"/>
+        <attribute name="idTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageHeight" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageWidth" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="messageID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="orderIndex" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="redirectID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="redirectType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="remoteState" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="showSendTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="styleType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toUserID" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="videoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoUUID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BLUServerNotificationMO" representedClassName="BLUServerNotificationMO" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="didRead" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="masterUserID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="notificationID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="objID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="photoHeight" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="photoOriginURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoThumbnailURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoWidth" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="webURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="QGGoodsMO" representedClassName="QGGoodsMO" syncable="YES">
+        <attribute name="deliveryType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="goodID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="goodsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="goodsImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inventory" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="isBuyNow" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isSeckilling" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seckillingNO" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="storeID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="storeName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BLUBrandCategoryMO" positionX="25" positionY="126" width="128" height="180"/>
+        <element name="BLUBrandMO" positionX="-137" positionY="126" width="128" height="180"/>
+        <element name="BLUCircleMO" positionX="-702" positionY="132" width="128" height="255"/>
+        <element name="BLUContentParagraphMO" positionX="-414" positionY="633" width="128" height="195"/>
+        <element name="BLUDialogueMO" positionX="160" positionY="45" width="128" height="195"/>
+        <element name="BLUDynamicMO" positionX="-702" positionY="441" width="128" height="270"/>
+        <element name="BLUGoodMO" positionX="189" positionY="291" width="128" height="465"/>
+        <element name="BLUGoodSearchResultMO" positionX="-29" positionY="18" width="128" height="60"/>
+        <element name="BLUImageMO" positionX="-515" positionY="441" width="128" height="180"/>
+        <element name="BLUMessageCategoryMO" positionX="-515" positionY="63" width="128" height="180"/>
+        <element name="BLUMessageMO" positionX="-279" positionY="72" width="128" height="405"/>
+        <element name="BLUServerNotificationMO" positionX="340" positionY="183" width="128" height="240"/>
+        <element name="QGGoodsMO" positionX="340" positionY="36" width="128" height="270"/>
+    </elements>
+</model>

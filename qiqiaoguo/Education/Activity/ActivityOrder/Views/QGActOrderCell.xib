@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QGActOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-xO-bh5">
+                        <rect key="frame" x="287" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="Dbc-dr-5wG"/>
+                            <constraint firstAttribute="height" constant="22" id="lqy-e2-fN0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" image="increase-use"/>
+                        <connections>
+                            <action selector="plusButtonClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Rlf-ZQ-kJY"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5K-pf-tfW">
+                        <rect key="frame" x="233" y="11" width="52" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="IuK-xV-oHW"/>
+                            <constraint firstAttribute="height" constant="21" id="W8z-Gg-PMV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBa-mj-GZQ">
+                        <rect key="frame" x="10" y="0.0" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="WMN-Dh-Ac6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="儿童/人">
+                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥165" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScF-Zb-Om0">
+                        <rect key="frame" x="57" y="1" width="136" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="136" id="6WO-v7-yNg"/>
+                            <constraint firstAttribute="height" constant="44" id="wFT-As-lR6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSp-CA-PBC">
+                        <rect key="frame" x="209" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="6eh-5A-QW1"/>
+                            <constraint firstAttribute="height" constant="22" id="IXz-Oc-JbN"/>
+                        </constraints>
+                        <state key="normal" image="Reduction-use"/>
+                        <connections>
+                            <action selector="minusButtonClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bm3-XJ-7FL"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ScF-Zb-Om0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="2PA-NX-vcL"/>
+                    <constraint firstAttribute="trailing" secondItem="bGB-xO-bh5" secondAttribute="trailing" constant="11" id="Dxt-om-ZiV"/>
+                    <constraint firstItem="yBa-mj-GZQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Fvy-XM-Dvs"/>
+                    <constraint firstItem="W5K-pf-tfW" firstAttribute="leading" secondItem="wSp-CA-PBC" secondAttribute="trailing" constant="2" id="InH-hK-aQx"/>
+                    <constraint firstItem="bGB-xO-bh5" firstAttribute="leading" secondItem="W5K-pf-tfW" secondAttribute="trailing" constant="2" id="Oda-Rg-ADB"/>
+                    <constraint firstItem="yBa-mj-GZQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Qyq-ZK-g2R"/>
+                    <constraint firstItem="W5K-pf-tfW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="cxc-sn-p3T"/>
+                    <constraint firstItem="bGB-xO-bh5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="p8x-YU-epF"/>
+                    <constraint firstAttribute="bottom" secondItem="W5K-pf-tfW" secondAttribute="bottom" constant="11" id="wYl-Bx-w3o"/>
+                    <constraint firstItem="ScF-Zb-Om0" firstAttribute="leading" secondItem="yBa-mj-GZQ" secondAttribute="trailing" constant="3" id="wjC-ON-bCa"/>
+                    <constraint firstItem="wSp-CA-PBC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="xHt-zb-ROs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="countLabel" destination="W5K-pf-tfW" id="5v0-9K-1H0"/>
+                <outlet property="minusButton" destination="wSp-CA-PBC" id="1Ss-zO-lEt"/>
+                <outlet property="name" destination="yBa-mj-GZQ" id="ZUN-2v-sRq"/>
+                <outlet property="plusButton" destination="bGB-xO-bh5" id="3TP-WG-0VC"/>
+                <outlet property="price" destination="ScF-Zb-Om0" id="5je-Ji-4Hx"/>
+            </connections>
+            <point key="canvasLocation" x="679" y="292"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Reduction-use" width="20" height="20"/>
+        <image name="increase-use" width="20" height="20"/>
+    </resources>
+</document>

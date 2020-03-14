@@ -1,0 +1,927 @@
+/* Circle */
+"circle.title" = "Circle";
+
+/* No comment provided by engineer. */
+"Could not parse the service response" = "Could not parse the service response";
+
+/* Join */
+"home.joinCircleButton.join" = "Join";
+
+/* Feature */
+"home.segmented-control.feature" = "Feature";
+
+/* Follow */
+"home.segmented-control.follow" = "Follow";
+
+/* Home */
+"home.title" = "Recommend";
+
+/* No comment provided by engineer. */
+"Invalid JSON array element: %@" = "Invalid JSON array element: %@";
+
+/* Me */
+"me.title" = "Me";
+
+/* Message */
+"message.title" = "Message";
+
+/* No comment provided by engineer. */
+"Response wasn't an array or dictionary (%@): %@" = "Response wasn't an array or dictionary (%1$@): %2$@";
+
+/* Advice */
+"setting.indicator-setting-cell.advice" = "Advice";
+
+/* Abount us */
+"setting.indicator-setting-cell.info" = "About us";
+
+/* Push message */
+"setting.indicator-setting-cell.push-notification" = "Push notification";
+
+/* Q&A */
+"setting.indicator-setting-cell.q&a" = "Q&A";
+
+/* User reviews */
+"setting.indicator-setting-cell.user-reviews" = "User reviews";
+
+/* Log out */
+"setting.log-out-setting-cell.log-out" = "Log out";
+
+/* Privacy password */
+"setting.switch-setting-cell.privacy-password" = "Private password";
+
+/*App recommaned */
+"setting.indicator-setting-cell.app-recommanded" = "App recommaned";
+
+/* Setting */
+"setting.title" = "Setting";
+
+/* From */
+"follow.circle-button.from" = "From";
+
+/* My circles */
+"circle.brief-circle-header.my-circles" = "My circles";
+
+/* Recommend */
+"circle.brief-circle-header.recommend" = "Recommend";
+
+/* More circles */
+"circle.more-circle-cell.more-label.more circles" = "More circles";
+
+/* Enable passcode */
+"passcode-lock.enable-view-model.title" = "Enable passcode";
+
+/* Enter passcode */
+"passcode-lock.enable-view-model.enter-passcode" = "Enter passcode";
+
+/* Re-enter passcode */
+"passcode-lock.enable-view-model.re-enter-passcode" = "Re-enter passcode";
+
+/* Enter passcode */
+"passcode-lock.enable-view-model.enter-passcode" = "Enter passcode";
+
+/* Passcode did not match. Try again. */
+"passcode-lock.enable-view-model.try-again" = "Passcode did not match. Try again.";
+
+/* Enter passcode */
+"passcode-lock.disable-view-model.enter-passcode" = "Enter passcode";
+
+/* Disable passcode */
+"passcode-lock.disable-view-model.title" = "Disable passcode";
+
+/* Enter passcode */
+"passcode-lock.unlock-view-model.enter-passcode" = "Enter passcode";
+
+/* Unlock */
+"passcode-lock.unlock-view-model.unlock" = "Unlock";
+
+/* App recommended */
+"app-recommend.title" = "App recommended";
+
+/* All */
+"circle.segmented-control.all" = "All";
+
+/* New */
+"circle.segmented-control.new" = "New";
+
+/* Feature */
+"circle.segmented-control.feature" = "Feature";
+
+/* Download */
+"app-recommend.cell.download" = "Download  ";
+
+/* Post recommended opt cell */
+"post-recommended-optCell.add" = "Join";
+
+/* Post detail title */
+"post-detail.title" = "Post details";
+
+/* Post detail tableview header comment */
+"post-detail.table-view.header.comment" = "Comment";
+
+/* Post detail alert controller title more */
+"post-detail.alert-controller.title.more" = "More";
+
+/* Post detail alert controller collect action collect */
+"post-detail.alert-controller.collect-action.collect" = "Collect";
+
+/* Post detail alert controller cancel collect action cancel collect */
+"post-detail.alert-controller.cancel-collect-action.cancel-collect" = "Unsubscribe";
+
+/* Post detail alert controller report action report */
+"post-detail.alert-controller.report-action.report" = "Report";
+
+/* Post detail reported */
+"post-detail.reported" = "Your report has been submitted, we will carefully review, thank you for your support!";
+
+/* Post detail alert controller cancel action cancel */
+"post-detail.alert-controller.cancel-action.cancel" = "Cancel";
+
+/* Post detail look at lz */
+"post-detail.look-at-lz" = "Look at lz";
+
+/* Post detail opt cell lz */
+"post-detail-opt-cell.lz" = "LZ";
+
+/* Post detail opt cell like */
+"post-detail-opt-cell.like" = "Like";
+
+/* Post detail opt cell comment */
+"post-detail-opt-cell.comment" = "Comment";
+
+/* Post detail opt cell share */
+"post-detail-opt-cell.share" = "Share";
+
+/* Post detail opt cell more */
+"post-detail-opt-cell.more" = "More";
+
+/* Post detail opt cell like counts */
+"post-detail-opt-cell.like-count-%@" = "%@ likes";
+
+"post-detail.share-alert-controller.share-to-wechat-session-action" = "Share to wechat session";
+"post-detail.share-alert-controller.share-to-wechat-timeline-action" = "Share to wechat timeline";
+"post-detail.share-alert-controller.share-to-qq-action" = "Share to QQ";
+"post-detail.share-alert-controller.share-to-qzone-action" = "Share to QZone";
+"post-detail.share-alert-controller.share-to-sina-action" = "Share to sina";
+
+/* Post comment toolbar send button title send */
+"post-comment-toolbar.send-button.title.send" = "Send";
+
+"post-comment-toolbar.text-field.placeholder" = "Reply";
+
+/* Other user header post */
+"other-user.header.post" = "Post";
+
+/* Other user hander info */
+"other-user.header.info" = "Info";
+
+"other-user.right-bar-button-item.title" = "More";
+
+"other-user.alert-action.report" = "Report";
+
+"other-user.alert-controller.report" = "Your report has been submitted, we will carefully review, thank you for your support!";
+
+/* Me title */
+"me.title" = "Me";
+
+/* user nav cell content label my posts *" */
+"user-nav-cell.content-label.my-posts" = "My posts";
+
+/* user nav cell content label participated */
+"user-nav-cell.content-label.participated" = "Participated";
+
+/* user nav cell content label my collections */
+"user-nav-cell.content-label.my-collections" = "My collections";
+
+/* user nav cell content label setting */
+"user-nav-cell.content-label.setting" = "Setting";
+
+"personal.user-post.title.my-posts" = "My posts";
+
+"personal.user-post.title.Participated" = "Participated";
+
+"personal.user-post.title.my-collections" = "My collections";
+
+"user.marriage.in-love" = "In love";
+
+"user.marriage.single" = "Single";
+
+"user.marriage.married" = "Married";
+
+"user.marriage.secrecy" = "Secrecy";
+
+"user.marriage.divorced" = "Divorced";
+
+"user.gender.male" = "Male";
+
+"user.gender.female" = "Female";
+
+"user.birtyday.age-%@" = "%@";
+
+"user.default-gender" = "Unknown";
+
+"user.default-birthday" = "Unknown";
+
+"user.default-marriage" = "Unknown";
+
+"user.default-signature" = "Unknown";
+
+"user-setting.alert-controller.title.gender" = "Gender";
+
+"user-setting.cancel-action.cancel" = "Cancel";
+
+"user-setting.user-cell.avatar" = "Avatar";
+
+"user-setting.user-cell.mobile" = "Mobile";
+
+"user-setting.user-cell.birthday" = "Birthday";
+
+"user-setting.user-cell.marriage" = "Marriage";
+
+"user-setting.user-cell.signature" = "Signature";
+
+"user-setting.user-cell.nickname" = "Nickname";
+
+"user-setting.signature-edit.title.signature" = "Signature";
+
+"user-setting.nicname-edit.title.nickname" = "Nickname";
+
+"user-setting.title" = "User setting";
+
+"setting.indicator-setting-cell.clear-cache" = "Clear cache";
+
+"setting.alert-controller.title.log-out" = "Log out?";
+
+"setting.alert-controller.title.confirm" = "Confirm";
+
+"setting.alert-controller.title.cancel" = "Cancel";
+
+"login.title" = "Log in";
+
+"login.mobile-text-field.mobile" = "Mobile";
+
+"login.password-text-field.password" = "Password";
+
+"login.reset-password-button.reset-password" = "Reset password";
+
+"login.login-button.login" = "Log in";
+
+"login.register-button.register" = "Register";
+
+"reset-password.title" = "Reset password";
+
+"reset-password.mobile-text-field.mobile" = "Mobile";
+
+"reset-password.security-code-text-field.security-code" = "Security code";
+
+"reset-password.security-password-text-field.security-password" = "Security password";
+
+"reset-password.reset-password-button.reset-password" = "Reset password";
+
+"reset-password.prompt-button.contact-us" = "Contact us";
+
+"security-view-model.sending" = "Sending";
+
+"security-view-model.resend" = "Resend";
+
+"security-view-model.get-security-code" = "Get security code";
+
+"reg-step1.title" = "Register";
+
+"reg-step1.mobile-text-field.mobile" = "Mobile";
+
+"reg-step1.security-code-text-field.security-code" = "Security code";
+
+"reg-step1.next-step-button.next" = "Next";
+
+"reg-step1.agree-component.agree" = "Tap next and agree our ";
+
+"reg-step1.agree-component.eula" = "User agreement";
+
+"reg-step2.title" = "Register";
+
+"reg-step2.nickname-text-field.title" = "Nickname";
+
+"reg-step2.nickname-text-field.placeholder" = "1-12 characters";
+
+"reg-step2.password-text-field.title" = "Password";
+
+"reg-step2.password-text-field.placeholder" = "6-12 characters";
+
+"reg-step2.male-button.title" = " Male";
+
+"reg-step2.female-button.title" = " Female";
+
+"reg-step2.gender-prompt-label.title" = "Once you choose a gender, then you can't change any more";
+
+"reg-step2.agree-component.agree" = "Sign up and agree our ";
+
+"reg-step2.agree-component.user-agreement" = "User agreement";
+
+"reg-step2.finish-button.title" = "Complete registration";
+
+"date-addition.<1min" = "1m";
+
+"date-addition.1min-ago" = "1m";
+
+"date-addition.%d-m" = "%dm";
+
+"date-addition.1-hour-ago" = "1h";
+
+"date-addition.%d-h" = "%dh";
+
+"date-addition.yesterday" = "Yesterday";
+
+"date-addition.%d-day" = "%dd";
+
+"date-addition.%d-month" = "%dmon";
+
+"date-addition.%d-year" = "%dy";
+
+"circle-brief.add-button.title" = "Join";
+"circle-brief.add-button.title.quit" = "Quit";
+
+"date-addition.capricorn" = "Capricorn";
+"date-addition.aquarius" = "Aquarius";
+"date-addition.pisces" = "Pisces";
+"date-addition.aries" = "Aries";
+"date-addition.taurus" = "Taurus";
+"date-addition.gemini" = "Gemini";
+"date-addition.cancer" = "Cancer";
+"date-addition.leo" = "Leo";
+"date-addition.virgo" = "Virgo";
+"date-addition.libra" = "Libra";
+"date-addition.scorpio" = "Scorpio";
+"date-addition.sagittarius" = "Sagittarius";
+"date-addition.capricorn" = "Capricorn";
+
+"other-user.age" = "Age";
+"other-user.marriage" = "Marriage";
+"other-user.signature" = "Signature";
+
+"user.not-logged-in" = "Not logged in";
+"user.empty-signature-prompt" = "Empty sigature prompt";
+
+"select-and-pick-image-view-model.avatar" = "Avatar";
+"select-and-pick-image-view-model.take-photo" = "Take photo";
+"select-and-pick-image-view-model.get-from-photo-library" = "Get from photo library";
+"select-and-pick-image-view-model.cancel" = "Cancel";
+
+"post-comment-opt-cell.lzButton.title" = "LZ";
+
+"comment.first-floor" = "# 1";
+"comment.%@-floor" = "# %@";
+
+"or-separatorline.or" = "Or";
+
+"send-post.right-bar-button.title" = "Send";
+"send-post.title-text-field.placeholder" = "Required (at least four words)";
+"send-post.content-text-view.placeholder" = "Share interests, feelings, experiences and secrets with your friends(At least 6 characters)";
+
+"image-picker.title" = "Photo albums";
+
+"image-picker.preview-button.title" = "Preview";
+"image-picker.finish-button.title" = "Finish";
+
+"setting.clear-cache-alert-controller.title" = "Clear cache?";
+"setting.clear-cache-alert-controller.confirm-button.title" = "Confirm";
+"setting.clear-cache-alert-controller.cancen-button.title" = "Cancel";
+"setting.cacheSizeString" = "Caculating...";
+
+"EULA.title" = "EULA";
+
+"post-detail.share-alert-controller.title" = "Share completed";
+"post-detail.share-alert-controller.ok-action.title" = "OK";
+"post-detail.share-alert-controller.no-share-action" = "Share Success!";
+
+"circle-more.title" = "More circles";
+
+"post-common-opt-cell.image-prompt-label.title.%@" = "Total: %@";
+
+"alert-action.title.cancel" = "Cancel";
+"alert-action.title.ok" = "OK";
+
+"about.title" = "About";
+
+"about.rate-app" = "Rate app";
+
+"about.update" = "Update";
+
+"about.eula" = "EULA";
+
+"about.version-prompt" = "It is the latest version.";
+
+"guide.1st-top-label.text" = "用最潮的玩具";
+"guide.2nd-top-label.text" = "话题百无禁忌";
+"guide.3rd-top-label.text" ="和达人一起";
+"guide.4th-top-label.text"= "我在布鲁";
+"guide.1st-bottom-label.text" = "一键解锁最in的你";
+"guide.2nd-buttom-label.text" = "只怕一不小心弄湿你";
+"guide.3rd-buttom-label.text" = "开发有情有趣的自己";
+"guide.4th-buttom-label.text" = "等你";
+"guide.ender-button.title" = "进入我吧";
+
+"base-vc.alert-action.title.read" = "Read";
+
+"post-detail.toolbar.placeholder.reply" = "Reply";
+"post-detail.toolbar.placeholder.replyToComment %@" = "Reply %@";
+
+"send-post.toolbar.button.title" = " Anonymous";
+
+"user.anonymous.nickname" = "Anonymous";
+
+"comment-reply-text-view.reply" = "Reply";
+
+"comment-reply-text-view.menu-item.title.report" = "Report";
+
+"post-comment-cell.more-replies-button.title %@" = "More replies(%@)>>";
+
+"post-comment-vc.toolbar.placeholder.reply-to-comment %@" = "Reply %@";
+"post-comment.toolbar.placeholder.replyToReply %@" = "Reply %@";
+
+"post-comment.title" = "Comment detail";
+
+"post-detail.table-view-action.report" = "Report";
+"post-detail.table-view-action.delete" = "delete";
+
+"ap-setting.title" = "Push notification";
+"ap-setting-view-model.system-item.title" = "System message";
+"ap-setting-view-model.comment-item.title" = "Comment message";
+"ap-setting-view-model.like-item.title" = "Like message";
+"ap-setting-view-model.follow.title" = "Follow message";
+"ap-setting-view-model.private-message.title" = "Priavte message";
+
+"post-detail-vc.tableview-footer-view.prompt-label.text" = "There is no comment.";
+"post-detail-vc.tableview-footer-view.comment-button.title" = "Comment";
+
+"user-post-vc.watermark-view.prompt.no-post" = "There is no post.";
+"user-post-vc.watermark-view.prompt.no-collection" = "There is no post.";
+"user-post.vc.watermark-view.prompt.no-participated" = "There is no post.";
+
+"refresh-footer.no-more-date.title" = "No more data";
+
+"about-vc.right-label.title.cn" = "伯骐科技  版权所有\n";
+"about-vc.right-label.title.en" = "Copyright © 2015-2018 blue69.cn All Rights Reserved.";
+
+"dynamic-vc.title" = "Dynamic";
+
+"dialogue-vc.title" = "Private messages";
+
+"message-cell.detail-button.title" = "Details >>";
+
+"user-info-view.following-button.title" = "Following";
+"user-info-view.foller-button.title" = "Follower";
+"user-info-view.setting-button.title" = "Edit";
+"user-info-view.message-title-button.title" = "Message";
+"user-info-view.follow-title-button.title.unfollow" = "Unfollow";
+"user-info-view.follow-title-button.title.follow" = "Follow";
+
+"personal-vc.users-vc.title.following" = "Followings";
+"personal-vc.users-vc.title.follower" = "Followers";
+
+"other-user-vc.users-vc.title.following" = "Followings";
+"other-user-vc.users-vc.title.follower" = "Followers";
+
+"message-category-cell.title-label.title.dynamic" = "Dynamic";
+"message-category-cell.title-label.title.private-message" = "Private message";
+
+"Dynamic-cell.title-label.text.like-your-post" = "like your post";
+"Dynamic-cell.title-label.text.comment-your-post" = "reply to your post";
+"Dynamic-cell.title-label.text.like-your-comment" = "like your comments";
+"Dynamic-cell.title-label.text.comment-your-comment" = "reply to your comment";
+"Dynamic-cell.title-label.text.follow-your" = "follow you";
+
+"server-notification-header.title-label.title" = "Notification";
+
+"chat-vc.title.fetching" = "Fetching";
+"chat-vc.title.fetch-failed" = "Fetch failed";
+"chat-vc.title.fetch-again" = "Fetch again";
+
+"dynamic-vc.title.normal" = "Dynamic";
+"dynamic-vc.title.fetching" = "Fetching";
+"dynamic-vc.title.fetch-failed" = "Fetch failed";
+"dynamic-vc.title.fetch-again" = "Fetch again";
+
+"dialogue-vc.normal" = "Dialogue";
+"dialogue-vc.title.fetching" = "Fetching";
+"dialogue-vc.title.fetch-again" = "Fetch again";
+"dialogue-vc.title.fetch-failed" = "Fetch failed";
+
+"chat-vc.toolbar.textfield.placeholder" = "Reply...";
+
+"user-info-view.logint-button.title" = "Login/Register";
+
+"post-comment-vc.right-bar-button.title" = "Post";
+
+"report-vm.other" = "Other";
+"report-vm.advertise" = "Advertise";
+"report-vm.sex" = "Sex";
+"report-vm.annoy" = "Annoy";
+"report-vm.disclosure-privacy" = "Disclosure privacy";
+
+"dynamic-cell.title-label.text.like-your-post" = "Like your post";
+"dynamic-cell.title-label.text.comment-your-post" = "Comment your post";
+"dynamic-cell.title-label.text.like-your-comment" = "Like your comment";
+"dynamic-cell.title-label.text.comment-your-comment" = "Comment your comment";
+"dynamic-cell.title-label.text.follow-your" = "Follow you";
+
+"dynamic-cell.nickname-label.text.anonymous" = "Anonymous";
+
+"post-comment-vc.toobar.textfield.title.reply-to-comment.anonymous" = "Anonymous";
+
+"user.marriage.secret" = "Secret";
+
+"user-coin-vc.task-cell.finish-button.completed" = "Completed";
+"user-coin-vc.task-cell.finish-button.incompleted" = "Incompleted";
+
+"user-coin-vc.table-cell.behavior" = "Behavior";
+"user-coin-vc.table-cell.coin" = "Coin";
+"user-coin-vc.table-cell.desc" = "Description";
+
+"user-coin-vc.title" = "Coin info";
+"user-coin-vc.task-label.title" = "Earn blue coin";
+"user-coin-vc.daily-label.title" = "Earn blue coin(Daily)";
+"user-coin-vc.coin-rule-button.title.rule" = "Coin rules";
+"user-coin-vc.coin-rule-button.title.tap%@" = "%@";
+
+"user-level-vc.title" = "Level info";
+
+"user-coin-details-vc.title" = "Blue coin details";
+
+"user-coin-detail-vc.table-cell.title" = "Time";
+"user-coin-detail-vc.table-cell.count" = "Count";
+"user-coin-detail-vc.table-cell.desc" = "Description";
+
+"user-coin-vc.right-bar-button.details" = "Details";
+
+"user-level-vc.right-bar-button.title" = "Details";
+
+"user-level-detail-vc.title" = "Details";
+
+"no-coin-indicator.title" = "Ops";
+"no-coin-indicator.indicator-label.text" = "No more blue coin.";
+
+"no-coin-indicator.earn-button.title" = "Earn blue coin";
+"no-coin-indicator.cancel-button.title" = "Cancel";
+
+"circle-detail-vc.send-post-success" = "Send post success";
+
+"chat-vc.no-coin-indicator.title" = "No coin to chat!";
+
+"show-image-delegate.save-image-success" = "Saved";
+
+"post-detail-vc.collect-success" = "Bookmarked";
+"post-detail-vc.cancel-collect-success" = "Cancel Bookmarked";
+
+"reset-password.bind-mobile.title" = "Bind mobile";
+
+"reset-password.reset-password-button.bind-mobile" = "Bind mobile";
+
+"login-vc.guide-view.content" = "Bruce is a private community, your friends from Contacts, micro letter, QQ will not know you in blue.\n\nBesides your phone number and your personal information will be kept strictly confidential.";
+"login-vc.guide-view.button.title" = "OK";
+
+"user-setting-vc.user-cell.unbound" = "Unbound";
+
+"reset-password-vc.prompt-label.binding-prompt" = "After successfully bound phone number, you can log in Blue by a new phone number and password.";
+
+"message-category-cell.title-label.title.secretary" = "Blue Secretary";
+
+"user-coin-vc.coin-rule-vc.title" = "Blue coin rules";
+
+"user-balance.coin-less-than-20" = "Less than 20 coins";
+"user-balance.coin-less-than-5" = "Only %@ coins";
+
+"user-coin-vc.desc-label.title" = "The credit is limited to Brooklyn Brooklyn community in virtual currency used to hold money in order to send private messages Brooklyn Oh, every send a private letter to consume a Brooklyn currency. To consort, the first effort to earn money now!";
+
+"user-level-vc.desc-label.title" = "As experience grows, each satisfy a certain value, grade will increase. The higher the level, you are standing in the community, the higher, more people will trust you more, worship.";
+
+"user-level-vc.table-cell.exp" = "Exp";
+
+"post-detail.share-alert.share-success" = "Share Success!";
+"post-detail.share-alert.share-failed" = "Share Failed!";
+
+"send-post-2-circle-selector.send-label.title.send-to-circle" = "Send to circle";
+"send-post-2-circle-selector.send-label.title.send-to" = "Send to";
+
+"post-tag-selection-vc.tag-container.did-receive-dulicate-tag" = "Can not add dulicate tag!";
+"post-tag-selection-vc.tag-container.cannot-add-tag-anymore" = "Can not add tag anymore.";
+
+"post-tag-selection.title" = "Add topic";
+"post-tag-hot-vc.hot-label.title" = "Hot topics";
+"post-tag-search-results-vc.promptor.title" = "Add new topic";
+
+"post-tag-selection-vc.tag-container.placeholder" = "Add topic";
+
+"post-tag-detail-selector.all-label.title" = "All";
+"post-tag-detail-selector.recommended-label.title" = "Recommended";
+
+"post-detail-async-view-model.featured-comments.header" = "Featured comments";
+"post-detail-async-view-model.all-comments.header" = "All comments";
+
+"post-detail-async-view-model.post-interaction.reply-success" = "Send success.";
+
+"post-detail-user-info-node.anonymous.nickname" = "Anonymous";
+
+"post-detail-node.liked-user-button.title-%@" = "Like %@";
+
+"post-detail-comment-reply-text-node.reply" = "Reply";
+
+"post-detail-comment-reply-text-node.anoymous" = "Anonymous";
+
+"post-detail-node.circle-text-node.from" = "From";
+
+"post-detail-comment-reply-text-node.copy" = "Copy";
+"post-detail-comment-reply-text-node.delete" = "Delete";
+
+"post-detail-comment-reply-node.more-comments%@" = "More comments(%@)";
+
+"circle-followed-post-user-info-node.follow" = "Follow";
+"circle-followed-post-user-info-node.did-follow" = "Followed";
+
+"circle-brief-async-node.quit" = "Quit";
+"circle-brief-async-node.join" = "Join";
+
+"circle-main-vc.circle-title" = "Circle";
+"circle-main-vc.hot-title" = "Hot";
+"circle-main-vc.follot-title" = "Follow";
+
+"circle-main-detail-vc.all" = "All";
+"circle-main-detail-vc.new" = "New";
+"circle-main-detail-vc.featured" = "Featured";
+
+"post-detail-async-vc.title" = "Post detail";
+"post-detail-async-vc.featured-comments-title" = "Featured comments";
+"post-detail-async-vc.comments-title" = "All Comments";
+
+"post-detail-all-comments-header.asc-title" = "Ascending";
+"post-detail-all-comments-header.desc-title" = "Descending";
+
+"post-detail-toolbar.reply-title" = "Reply to author...";
+
+"content-reply-view.send-title" = "Send";
+
+"post-detail-options-vc.cancel-title" = "Cancel";
+
+"post-detail-options-vc.report-label.title" = "Report";
+
+"post-detail-options.collect-button.collect" = "Collect";
+
+"post-detail-options.collect-button.did-collect" = "Did collect";
+
+"post-detail-option-reverse-label.Ascending" = "Ascending";
+
+"post-detail-option-reverse-label.Descending" = "Descending";
+
+"post-detail-share-vc.wechat-timeline.title" = "Wechat timeline";
+"post-detail-share-vc.wechat-session.title" = "Wechat sesstion";
+"post-detail-share-vc.sina.title" = "Sina";
+"post-detail-share-vc.qzone.title" = "QZone";
+"post-detail-share-vc.qq.title" = "QQ";
+"post-detail-share-vc.link.title" = "Share link";
+"post-detail-share-vc.cancel-title" = "Cancel";
+
+"share-manager.success" = "Share success.";
+"share-manager.copy-to-pasteboard-success" = "Did copy to the pasteboard.";
+
+"post-detail-async-view-model.collect-success" = "Collect success.";
+"post-detail-async-view-model.cancel-collect-success" = "Cancel collect success.";
+
+"post-liked-user-vc.title" = "Liked user";
+
+"post-detail-async-vc.reply-view.prompt" = "Good comment earn good prize.";
+
+"post-detail-async-vc.placeholder.reply-to-%@" = "Reply to %@";
+
+"post-detail-async-vm.reply-success" = "Reply success!";
+
+"post-detail-async-vc.reply-vc.title-%@" = "# %@";
+
+"post-comment-deatil-reply-async-vc.reply-view.placeholder.reply-to-reply-%@" = "Reply to %@";
+"post-comment-deatil-reply-async-vc.reply-view.placeholder.reply-to-comment-%@" = "Reply to %@";
+
+"circle-follow-header.prompt-label.title" = "Recommended user";
+"circle-follow-header.change-button.title" = " Change";
+
+"post-tag-title-view.post-count-label.title-prompt" = "Posts:";
+
+"post-tag.share-title-count-%@-tag-%@" = "%@ people join #%@#";
+
+"circle-search-vc.table-view.header.title" = "Hot circles";
+"circle-search-vc.title" = "Select circle";
+
+"send-post-2-vc.send" = "Send";
+
+"send-post-2-vc.send-success" = "Send success!";
+
+"send-post-2-vc.title" = "Send post";
+
+"circle-follow-footer-view.refresh-button.start-browsing" = "Start browing";
+
+"circle-detail-main-vc.OK" = "OK";
+
+"send-post-2-vc.should-cancel-edit" = "Do you want to cancel edit?";
+"send-post-2-vc.ok" = "OK";
+"send-post-2-vc.cancel" = "cancel";
+
+"post-tag.share-content" = "布鲁—专业的情趣用品测评和两性社区";
+
+"toy-home-guide-cell.hot-view.brand-title" = "Hot brands";
+
+"toy-home-guide-cell.hot-view.category-title" = "Hot categories";
+
+"post-common-author-node.anonymous" = "Anonymous";
+
+"post-detal-comment-user-info-node.up" = "Up";
+"post-comment-detail-reply-avc.reply-view.anonymous" = "Reply Anonymous";
+
+"toy-home-guide-tool-model.name.toy-collection" = "My collection";
+"toy-home-guide-tool-model.name.browsed-history" = "History";
+"toy-home-guide-tool-model.name.toy-following-rank" = "Follow ranking";
+
+"toy-home-vc.title.colleciton-rank" = "Collection Rank";
+"toy-home-vc.title.browsing-history" = "History";
+"toy-home-vc.title.user-collection" = "My collections";
+
+"good-post-category-node.title.evaluation" = "Evaluations";
+"good-post-category-node.title.relevant" = "Relevants";
+"good-post-category-node.title.video" = "Videos";
+
+"good-post-category-node.details.evaluation%@" = "%@ evaluations";
+"good-post-category-node.details.relevant%@" = "%@ posts";
+"good-post-category-node.details.video%@" = "%@ videos";
+
+"good-details-node.total%@" = "Total:%@";
+"good-detail-node.following" = "Following:";
+"good-details-node.desc" = "Details";
+
+"recommend-cell.circle-prompt.hot:%@" = "Hot: %@";
+"recommend-cell.tag-prompt.join:%@" = "%@ people joined";
+"recommend-cell.toy-prompt.follow:%@" = "%@ people followed";
+
+"good-details.toolbar.service" = "Service";
+"good-details.toolbar.collect" = "Collect";
+"good-details.toolbar.did-collect" = "Did collect";
+"good-details.toolbar.share" = "Share";
+"good-details.toolbar.buy" = "Buy";
+
+"chat-good-hint-cell.send-button.title" = "Send toy url";
+
+"good-exchange-list-vc.exchange-record" = "Record";
+"good-exchage-list-vc.title" = "Exchange mall";
+
+"good-exchange-list-cell.coin-label.title%@" = "Coin:%@";
+"good-exchange-list-cell.level-label.title%@" = "Level >= %@";
+
+"good-exchange-details-node.level-prompt-%@" = "Level >= %@";
+"good-exchange-details-node.coin-prompt-%@" = "Coin: %@";
+"good-exchange-details-node.inventory-prompt-%@" = "Inventory: %@";
+
+"good-exchange-details-node.no-address" = "No address";
+
+"good-exchange-details-toolbar.coin-prompt" = "Required coins:";
+"good-exchange-details-node.contact-prompt" = "Address:";
+
+"good-exchange-details-toolbar.exchange-button.title" = "Exchange";
+
+"good-exchange-details-vc.success-prompt" = "Exchange success";
+"good-exchange-details-vc.success-details" = "Your order has been successfully submitted!We will send as quick as we can.";
+"good-exchange-details-vc.ok" = "OK";
+
+"good-exchange-details-vc.address-prompt" = "You should provide your address.";
+
+"good-exchange-confirm-vc.order-type-prompt" = "Order type";
+"good-exchange-confirm-vc.order-type" = "Coin exchange";
+"good-exchange-confirm-vc.address-prompt" = "Address";
+"good-exchange-confirm-vc.required-coin" = "Required coin";
+"good-exchange-confirm-vc.confirm" = "Confirm";
+
+"good-logistics-header-view.prompt" = "Logistics details";
+"good-logistics-info-view.name-prompt" = "Company: ";
+"good-logistics-info-view.code-prompt" = "Code: ";
+
+
+"good-exchange-record-vc.closed" = "Closed";
+"good-exchange-record-vc.unpaid" = "Unpaid";
+"good-exchange-record-vc.didSend" = "Did send";
+"good-exchange-record-vc.completed" = "Competed";
+"good-exchange-record-Sending" = "Sending";
+
+"good-logistics.title" = "Logistics details";
+"good-exchange-order-detail-vc.title" = "Order details";
+"good-exchange-record-vc.title" = "Exchange records";
+"logistics-edit-vc.title" = "Edit logistics";
+
+"good-exchange-details-vc.uppdate-address-success" = "Update success";
+
+"good-exchange-details-vc.title" = "Exchange";
+
+"user-nav-cell.content-label.mall" = "Blue coin mall";
+
+"good-exchange-details-node.coin-prompt" = "coin";
+
+"chat-vc.insufficient-level-prompt" = "You should be level 3, then you can chat.";
+"char-vc.details" = "Details";
+
+"good-exchange-list-vc.defence-apple" = "兑换活动与设备生产商Apple Inc. 公司无关";
+
+"good-details.toolbar.shopping-cart" = "Add to cart";
+
+"toy-home-vc.origin-title" = "Toy";
+
+"toy-list-vc.user-collection" = "My collection";
+"toy-list-vc.following-rank" = "Following rank";
+"toy-list-vc.browsing-history" = "Browsing history";
+
+"toy-browsing-history-list-vc.alert-view.require-clear" = "Do you want to clear the history?";
+"toy-browsing-history-list-vc.alert-view.cancel" = "Cancel";
+
+"good-search-prompt-header.title" = "Popular searches";
+"good-search-prompt-history-header.title" = "Search History";
+
+"toy-list-vc.cannot-find" = "No results.";
+
+"shopping-cart-vc.title" = "My shopping cart";
+
+"shopping-cart-vc.toolbar.amount-prompt" = "Total:";
+
+"shopping-cart-vc.settle-button.settle" = "settle";
+
+"confirm-order-vc.total-price" = "Total price:";
+
+"confirm-order-vc.total-count-%@" = "Total %@";
+
+"confirm-order-vc.submit-button.title" = "Submit";
+
+"confirm-order-vc.title" = "Confirm order";
+
+"submit-order-vc.title" = "Submit";
+
+"order-details-vc.title" = "Order details";
+
+"payment-results-vc.title" = "Payment results";
+
+"user-orders-vc.title" = "My orders";
+
+"user-nav-cell.content-label.user-orders" = "My orders";
+
+
+"user-order-footer.delete-button.title" = "Delete order";
+"user-order-footer.cancel-button.title" = "Cancel order";
+"user-order.footer.submit-button.title" = "Submit";
+
+"user-order-footer.total-count-%@" = "Total count: %@";
+"user-order-footer.total-amout-%@" = "Total amount: %@";
+
+"good-detail-vc.add-cart-success" = "Success!";
+
+"shopping-cart-vc.no-inventory" = "There is no inventory.";
+
+"shopping-cart-vc.select-all-button.title" = "Select all";
+
+"confirm-order-vc.total-amout-label.amount-%@" = "Total amount: %@";
+
+"confirm-order-vc.message.add-address" = "You should fill the address.";
+
+
+"confirm-order-vc.error-message.parameters-error" = "Parameters error!";
+
+"shopping-cart-vc.error-message.no-selected-good" = "You have not choose goods.";
+
+"submit-order-vc.wx-error-message" = "No weixin.";
+
+"submit-order-vc.error-message.blue-coin" = "Do not use blue coin.";
+
+"good-order.order-id-desc-%@" = "Order id:%@";
+"good-order.status-desc.closed" = "Closed";
+"good-order.status-desc.unpaid" = "Unpaid";
+"good-order.status-desc.did-send" = "Did send";
+"good-order.status-desc.completed" = "Completed";
+"good-order.status-desc.ready-for-sending" = "Ready for sending";
+
+"good-mamager.error-message.invalid-shopping-count-%@" = "有%@件商品库存不足，请重新选择。";
+
+
+"good-order.payment-method.unpaid" = "Unpaid";
+"good-order.payment-method.alipay" = "Alipay";
+"good-order.payment-method.wechat-pay" = "Wechat pay";
+"good-order.payment-method.blue-coin" = "Blue coin";
+
+
+"good-order.payment-method.unknown" = "Unknown";
+
+"good-details.vc.title" = "Good details";
+
+"toy-category-second-vc.selection-prompt" = "Select one category";
+
+"toy-list-vc.no-collection" = "No collection.";
+
+"good-search-vc.back" = "Back";
+
+"shopping-cart-vc.empty-shopping-cart" = "Empty.";
+
+"shopping-cart-vc.invertory%@" = "Invertory%@";
+
+"user-order-vc.no-order" = "No order.";
+
+"toy-list-vc.browsing-history" = "No history";
+
+"good.share-title" = "Share.";

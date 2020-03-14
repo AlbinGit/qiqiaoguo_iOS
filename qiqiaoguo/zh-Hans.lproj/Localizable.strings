@@ -1,0 +1,905 @@
+/* Circle */
+"circle.title" = "圈子";
+
+/* No comment provided by engineer. */
+"Could not parse the service response" = "解析服务器的请求失败";
+
+/* Join */
+"home.joinCircleButton.join" = "加入";
+
+/* Feature */
+"home.segmented-control.feature" = "精选";
+
+/* Follow */
+"home.segmented-control.follow" = "关注";
+
+/* Home */
+"home.title" = "推荐";
+
+/* No comment provided by engineer. */
+"Invalid JSON array element: %@" = "解析服务器的请求失败";
+
+/* Me */
+"me.title" = "我";
+
+/* Message */
+"message.title" = "消息";
+
+/* No comment provided by engineer. */
+"Response wasn't an array or dictionary (%@): %@" = "解析服务器的请求失败";
+
+/* Advice */
+"setting.indicator-setting-cell.advice" = "意见反馈";
+
+/* Abount us */
+"setting.indicator-setting-cell.info" = "关于";
+
+/* Push message */
+"setting.indicator-setting-cell.push-notification" = "消息推送";
+
+/* Q&A */
+"setting.indicator-setting-cell.q&a" = "常见问题";
+
+/* User reviews */
+"setting.indicator-setting-cell.user-reviews" = "给应用评分";
+
+/* Log out */
+"setting.log-out-setting-cell.log-out" = "退出登录";
+
+/* Privacy password */
+"setting.switch-setting-cell.privacy-password" = "隐私密码";
+
+/*App recommaned */
+"setting.indicator-setting-cell.app-recommanded" = "应用推荐";
+
+/* Setting */
+"setting.title" = "设置";
+
+/* From */
+"follow.circle-button.from" = "来自";
+
+/* My circles */
+"circle.brief-circle-header.my-circles" = "我关注的圈子";
+
+/* Recommend */
+"circle.brief-circle-header.recommend" = "推荐给我的圈子";
+
+/* More circles */
+"circle.more-circle-cell.more-label.more circles" = "全部圈子";
+
+/* Enable passcode */
+"passcode-lock.enable-view-model.title" = "开启密码锁";
+
+/* Enter passcode */
+"passcode-lock.enable-view-model.enter-passcode" = "请输入密码";
+
+/* Re-enter passcode */
+"passcode-lock.enable-view-model.re-enter-passcode" = "请再输入密码";
+
+/* Enter passcode */
+"passcode-lock.enable-view-model.enter-passcode" = "请输入密码";
+
+/* Passcode did not match. Try again. */
+"passcode-lock.enable-view-model.try-again" = "两次输入的密码并不一致，请再试一次";
+
+/* Enter passcode */
+"passcode-lock.disable-view-model.enter-passcode" = "请输入密码";
+
+/* Disable passcode */
+"passcode-lock.disable-view-model.title" = "取消密码";
+
+/* Enter passcode */
+"passcode-lock.unlock-view-model.enter-passcode" = "请输入密码";
+
+/* Unlock */
+"passcode-lock.unlock-view-model.unlock" = "解锁";
+
+/* App recommended */
+"app-recommend.title" = "应用推荐";
+
+/* All */
+"circle.segmented-control.all" = "全部";
+
+/* New */
+"circle.segmented-control.new" = "新鲜";
+
+/* Feature */
+"circle.segmented-control.feature" = "精选";
+
+/* Download */
+"app-recommend.cell.download" = "下载  ";
+
+/* Post recommended opt cell */
+"post-recommended-optCell.add" = "加入";
+
+/* Post detial title */
+"post-detail.title" = "帖子详情";
+
+/* Post detail tableview header comment */
+"post-detail.table-view.header.comment" = "评论";
+
+/* Post detail alert controller title more */
+"post-detail.alert-controller.title.more" = "更多";
+
+/* Post detail alert controller collect action collect */
+"post-detail.alert-controller.collect-action.collect" = "收藏";
+
+/* Post detail alert controller cancel collect action cancel collect */
+"post-detail.alert-controller.cancel-collect-action.cancel-collect" = "取消收藏";
+
+/* Post detail alert controller report action report */
+"post-detail.alert-controller.report-action.report" = "举报";
+
+/* Post detail reported */
+"post-detail.reported" = "举报成功！我们会尽快处理，谢谢!";
+
+/* Post detail alert controller cancel action cancel */
+"post-detail.alert-controller.cancel-action.cancel" = "取消";
+
+/* Post detail look at lz */
+"post-detail.look-at-lz" = "只看楼主";
+
+/* Post detail opt cell lz */
+"post-detail-opt-cell.lz" = "楼主";
+
+/* Post detail opt cell like */
+"post-detail-opt-cell.like" = "赞TA";
+
+/* Post detail opt cell comment */
+"post-detail-opt-cell.comment" = "评论";
+
+/* Post detail opt cell share */
+"post-detail-opt-cell.share" = "分享";
+
+/* Post detail opt cell more */
+"post-detail-opt-cell.more" = "更多";
+
+/* Post detail opt cell like counts */
+"post-detail-opt-cell.like-count-%@" = "%@ 个赞";
+
+"post-detail.share-alert-controller.share-to-wechat-session-action" = "分享给微信好友";
+"post-detail.share-alert-controller.share-to-wechat-timeline-action" = "分享到微信朋友圈";
+"post-detail.share-alert-controller.share-to-qq-action" = "分享给QQ好友";
+"post-detail.share-alert-controller.share-to-qzone-action" = "分享到QQ空间";
+"post-detail.share-alert-controller.share-to-sina-action" = "分享到新浪微博";
+
+/* Post comment toolbar send button title send */
+"post-comment-toolbar.send-button.title.send" = "发送";
+"post-comment-toolbar.text-field.placeholder" = "回复楼主...";
+
+/* Other user header post */
+"other-user.header.post" = "TA的帖子";
+
+/* Other user hander info */
+"other-user.header.info" = "资料";
+
+"other-user.right-bar-button-item.title" = "更多";
+
+"other-user.alert-action.report" = "举报";
+
+"other-user.alert-controller.report" = "您的举报已经提交，我们会认真审核，谢谢您的支持！";
+
+/* Me title */
+"me.title" = "我";
+
+/* user nav cell content label my posts *" */
+"user-nav-cell.content-label.my-posts" = "我的帖子";
+
+/* user nav cell content label participated */
+"user-nav-cell.content-label.participated" = "我参与的";
+
+/* user nav cell content label my collections */
+"user-nav-cell.content-label.my-collections" = "我的收藏";
+
+/* user nav cell content label setting */
+"user-nav-cell.content-label.setting" = "设置";
+
+"personal.user-post.title.my-posts" = "我的帖子";
+
+"personal.user-post.title.Participated" = "我参与的";
+
+"personal.user-post.title.my-collections" = "我的收藏";
+
+"user.marriage.in-love" = "恋爱中";
+
+"user.marriage.single" = "单身";
+
+"user.marriage.married" = "已婚";
+
+"user.marriage.secrecy" = "保密";
+
+"user.marriage.divorced" = "离异";
+
+"user.gender.male" = "男生";
+
+"user.gender.female" = "女生";
+
+"user.birtyday.age-%@" = "%@岁";
+
+"user.default-gender" = "未知";
+
+"user.default-birthday" = "未知";
+
+"user.default-marriage" = "未知";
+
+"user.default-signature" = "用户太忙,没时间写~";
+
+"user-setting.alert-controller.title.gender" = "性别";
+
+"user-setting.cancel-action.cancel" = "取消";
+
+"user-setting.user-cell.avatar" = "更新头像";
+
+"user-setting.user-cell.mobile" = "手机号";
+
+"user-setting.user-cell.birthday" = "年龄";
+
+"user-setting.user-cell.marriage" = "婚恋状态";
+
+"user-setting.user-cell.signature" = "签名";
+
+"user-setting.user-cell.nickname" = "昵称";
+
+"user-setting.signature-edit.title.signature" = "签名";
+
+"user-setting.nicname-edit.title.nickname" = "昵称";
+
+"user-setting.title" = "修改资料";
+
+"setting.indicator-setting-cell.clear-cache" = "清除缓存";
+
+"setting.alert-controller.title.log-out" = "确认要退出登录吗?";
+
+"setting.alert-controller.title.confirm" = "确认";
+
+"setting.alert-controller.title.cancel" = "取消";
+
+"login.title" = "登录";
+
+"login.mobile-text-field.mobile" = "手机号";
+
+"login.password-text-field.password" = "密码";
+
+"login.reset-password-button.reset-password" = "重置密码";
+
+"login.login-button.login" = "登录";
+
+"login.register-button.register" = "注册";
+
+"reset-password.title" = "重置密码";
+
+"reset-password.mobile-text-field.mobile" = "手机";
+
+"reset-password.security-code-text-field.security-code" = "验证码";
+
+"reset-password.security-password-text-field.security-password" = "密码";
+
+"reset-password.reset-password-button.reset-password" = "重置密码";
+
+"reset-password.prompt-button.contact-us" = "联系我们";
+
+"security-view-model.sending" = "正在发送...";
+
+"security-view-model.resend" = "重新发送";
+
+"security-view-model.get-security-code" = "获取验证码";
+
+"reg-step1.title" = "注册";
+
+"reg-step1.mobile-text-field.mobile" = "手机号";
+
+"reg-step1.security-code-text-field.security-code" = "验证码";
+
+"reg-step1.next-step-button.next" = "下一步";
+
+"reg-step1.agree-component.agree" = "点击下一步即同意我们的";
+
+"reg-step1.agree-component.eula" = "用户协议";
+
+"reg-step2.title" = "注册";
+
+"reg-step2.nickname-text-field.title" = "昵称";
+
+"reg-step2.nickname-text-field.placeholder" = "1-12位合法字符";
+
+"reg-step2.password-text-field.title" = "密码";
+
+"reg-step2.password-text-field.placeholder" = "6-12位合法字符";
+
+"reg-step2.male-button.title" = " 男生";
+
+"reg-step2.female-button.title" = " 女生";
+
+"reg-step2.gender-prompt-label.title" = "请摸着良心提交，不能再更改性别了哦！";
+
+"reg-step2.agree-component.agree" = "点击完成注册即同意我们的";
+
+"reg-step2.agree-component.user-agreement" = "用户协议";
+
+"reg-step2.finish-button.title" = "完成注册";
+
+"date-addition.<1min" = "刚刚";
+
+"date-addition.1min-ago" = "1分钟前";
+
+"date-addition.%d-m" = "%d分钟前";
+
+"date-addition.1-hour-ago" = "1小时前";
+
+"date-addition.%d-h" = "%d小时前";
+
+"date-addition.yesterday" = "昨天";
+
+"date-addition.%d-day" = "%d天前";
+
+"date-addition.%d-month" = "%d个月前";
+
+"date-addition.%d-year" = "%d年前";
+
+"circle-brief.add-button.title" = "加入";
+"circle-brief.add-button.title.quit" = "退出";
+
+"date-addition.capricorn" = "摩羯座";
+"date-addition.aquarius" = "水瓶座";
+"date-addition.pisces" = "双鱼座";
+"date-addition.aries" = "白羊座";
+"date-addition.taurus" = "金牛座";
+"date-addition.gemini" = "双子座";
+"date-addition.cancer" = "巨蟹座";
+"date-addition.leo" = "狮子座";
+"date-addition.virgo" = "处女座";
+"date-addition.libra" = "天秤座";
+"date-addition.scorpio" = "天蝎座";
+"date-addition.sagittarius" = "射手座";
+"date-addition.capricorn" = "摩羯座";
+
+"other-user.age" = "年龄";
+"other-user.marriage" = "婚恋状态";
+"other-user.signature" = "签名";
+
+"user.not-logged-in" = "你还没有登录哦！";
+"user.empty-signature-prompt" = "暂无签名";
+
+"select-and-pick-image-view-model.avatar" = "头像";
+"select-and-pick-image-view-model.take-photo" = "拍照";
+"select-and-pick-image-view-model.get-from-photo-library" = "从相册选择";
+"select-and-pick-image-view-model.cancel" = "取消";
+
+"post-comment-opt-cell.lzButton.title" = "楼主";
+
+"comment.first-floor" = "沙发";
+"comment.%@-floor" = "%@ 楼";
+
+"or-separatorline.or" = "或";
+
+"send-post.right-bar-button.title" = "发送";
+"send-post.title-text-field.placeholder" = "标题（必填）";
+"send-post.content-text-view.placeholder" = "和朋友们分享一下吧～（选填）";
+
+"image-picker.title" = "相册";
+
+"image-picker.preview-button.title" = "预览";
+"image-picker.finish-button.title" = "完成";
+
+"setting.clear-cache-alert-controller.title" = "确认清理缓存吗?";
+"setting.clear-cache-alert-controller.confirm-button.title" = "确认";
+"setting.clear-cache-alert-controller.cancen-button.title" = "取消";
+"setting.cacheSizeString" = "计算中...";
+
+"EULA.title" = "使用条款及隐私政策";
+
+"post-detail.share-alert-controller.title" = "分享成功";
+"post-detail.share-alert-controller.ok-action.title" = "好的";
+"post-detail.share-alert-controller.no-share-action" = "分享成功！";
+
+"circle-more.title" = "全部圈子";
+
+"post-common-opt-cell.image-prompt-label.title.%@" = "共%@张";
+
+"alert-action.title.cancel" = "取消";
+"alert-action.title.ok" = "好的";
+
+"about.title" = "关于";
+
+"about.rate-app" = "给应用评分";
+
+"about.update" = "版本更新";
+
+"about.eula" = "用户使用协议";
+
+"about.version-prompt" = "已经是最新的版本了";
+
+"guide.1st-top-label.text" = "用最潮的玩具";
+"guide.2nd-top-label.text" = "话题百无禁忌";
+"guide.3rd-top-label.text" ="和达人一起";
+"guide.4th-top-label.text"= "我在布鲁";
+"guide.1st-bottom-label.text" = "一键解锁最in的你";
+"guide.2nd-buttom-label.text" = "只怕一不小心弄湿你";
+"guide.3rd-buttom-label.text" = "开发有情有趣的自己";
+"guide.4th-buttom-label.text" = "等你";
+"guide.ender-button.title" = "进入我吧";
+
+"base-vc.alert-action.title.read" = "查看";
+
+"post-detail.toolbar.placeholder.reply" = "回复楼主...";
+"post-detail.toolbar.placeholder.replyToComment %@" = "回复 %@";
+
+"send-post.toolbar.button.title" = " 匿名";
+
+"user.anonymous.nickname" = "匿名用户";
+
+"comment-reply-text-view.reply" = "回复";
+
+"comment-reply-text-view.menu-item.title.report" = "举报";
+
+"post-comment-cell.more-replies-button.title %@" = "查看更多%@条评论>>";
+
+"post-comment-vc.toolbar.placeholder.reply-to-comment %@" = "回复 %@";
+"post-comment.toolbar.placeholder.replyToReply %@" = "回复 %@";
+
+"post-comment.title" = "评论详情";
+
+"post-detail.table-view-action.report" = "举报";
+"post-detail.table-view-action.delete" = "删除";
+
+"ap-setting.title" = "推送消息";
+"ap-setting-view-model.system-item.title" = "通知";
+"ap-setting-view-model.comment-item.title" = "评论";
+"ap-setting-view-model.like-item.title" = "点赞";
+"ap-setting-view-model.follow.title" = "粉丝";
+"ap-setting-view-model.private-message.title" = "私信";
+
+"post-detail-vc.tableview-footer-view.prompt-label.text" = "还没有评论";
+"post-detail-vc.tableview-footer-view.comment-button.title" = "抢沙发";
+
+"user-post-vc.watermark-view.prompt.no-post" = "你还没有发布任何内容\n赶紧去发布一个吧！";
+"user-post-vc.watermark-view.prompt.no-collection" = "你还没有任何收藏\n赶紧去收藏一个吧!";
+"user-post.vc.watermark-view.prompt.no-participated" = "你还没有发表任何评论\n赶紧去评论一个吧！";
+
+"refresh-footer.no-more-date.title" = "—— 下面没有啦 ——";
+
+"about-vc.right-label.title.cn" = "伯骐科技  版权所有\n";
+"about-vc.right-label.title.en" = "Copyright © 2015-2018 blue69.cn All Rights Reserved.";
+
+"dynamic-vc.title" = "动态";
+
+"dialogue-vc.title" = "私信";
+
+"message-cell.detail-button.title" = "去看看>>";
+
+"user-info-view.following-button.title" = "关注";
+"user-info-view.foller-button.title" = "粉丝";
+"user-info-view.setting-button.title" = "编辑个人资料";
+"user-info-view.message-title-button.title" = "私信";
+"user-info-view.follow-title-button.title.unfollow" = "已关注";
+"user-info-view.follow-title-button.title.follow" = "关注TA";
+
+"personal-vc.users-vc.title.following" = "关注";
+"personal-vc.users-vc.title.follower" = "粉丝";
+
+"other-user-vc.users-vc.title.following" = "关注";
+"other-user-vc.users-vc.title.follower" = "粉丝";
+
+"message-category-cell.title-label.title.dynamic" = "动态";
+"message-category-cell.title-label.title.private-message" = "私信";
+
+"dynamic-cell.title-label.text.like-your-post" = "赞了你的帖子";
+"dynamic-cell.title-label.text.comment-your-post" = "回复了你的帖子";
+"dynamic-cell.title-label.text.like-your-comment" = "赞了你的评论";
+"dynamic-cell.title-label.text.comment-your-comment" = "回复了你的评论";
+"dynamic-cell.title-label.text.follow-your" = "关注了你";
+
+"server-notification-header.title-label.title" = "通知";
+
+"chat-vc.title.fetching" = "加载中...";
+"chat-vc.title.fetch-failed" = "加载失败";
+"chat-vc.title.fetch-again" = "重新加载...";
+
+"dynamic-vc.title.normal" = "动态";
+"dynamic-vc.title.fetching" = "加载中...";
+"dynamic-vc.title.fetch-failed" = "加载失败";
+"dynamic-vc.title.fetch-again" = "重新加载...";
+
+"dialogue-vc.normal" = "私信";
+"dialogue-vc.title.fetching" = "加载中...";
+"dialogue-vc.title.fetch-failed" = "加载失败";
+"dialogue-vc.title.fetch-again" = "重新加载...";
+
+"chat-vc.toolbar.textfield.placeholder" = "回复...";
+
+"user-info-view.logint-button.title" = "我要登录  /  注册";
+
+"post-comment-vc.right-bar-button.title" = "查看原帖";
+
+"report-vm.other" = "其他";
+"report-vm.advertise" = "广告";
+"report-vm.sex" = "色情";
+"report-vm.annoy" = "骚扰";
+"report-vm.disclosure-privacy" = "泄漏隐私";
+
+"dynamic-cell.title-label.text.like-your-post" = "赞了你的帖子";
+"dynamic-cell.title-label.text.comment-your-post" = "评论了你的帖子";
+"dynamic-cell.title-label.text.like-your-comment" = "赞了你的评论";
+"dynamic-cell.title-label.text.comment-your-comment" = "回复了你的评论";
+"dynamic-cell.title-label.text.follow-your" = "关注了你";
+
+"dynamic-cell.nickname-label.text.anonymous" = "匿名用户";
+
+"post-comment-vc.toobar.textfield.title.reply-to-comment.anonymous" = "匿名用户";
+
+"user.marriage.secret" = "保密";
+
+"user-coin-vc.task-cell.finish-button.completed" = "已完成";
+"user-coin-vc.task-cell.finish-button.incompleted" = "去完成";
+
+"user-coin-vc.table-cell.behavior" = "行为";
+"user-coin-vc.table-cell.coin" = "布鲁币";
+"user-coin-vc.table-cell.desc" = "说明";
+
+"user-coin-vc.title" = "我的布鲁币";
+"user-coin-vc.task-label.title" = "1、赚布鲁币（新手任务）";
+"user-coin-vc.daily-label.title" = "2、赚布鲁币（日常任务）";
+"user-coin-vc.coin-rule-button.title.rule" = "《布鲁币规则》";
+"user-coin-vc.coin-rule-button.title.tap%@" = "点击了解%@";
+
+"user-level-vc.title" = "我的等级";
+
+"user-coin-details-vc.title" = "布鲁币明细";
+
+"user-coin-detail-vc.table-cell.title" = "时间";
+"user-coin-detail-vc.table-cell.count" = "金额";
+"user-coin-detail-vc.table-cell.desc" = "说明";
+
+"user-coin-vc.right-bar-button.details" = "明细";
+
+"user-level-vc.right-bar-button.title" = "明细";
+
+"user-level-detail-vc.title" = "明细";
+
+"no-coin-indicator.title" = "天啦噜！";
+"no-coin-indicator.indicator-label.text" = "布鲁币花完了，该怎么办呢？";
+"no-coin-indicator.earn-button.title" = "去赚布鲁币";
+"no-coin-indicator.cancel-button.title" = "取消";
+
+"circle-detail-vc.send-post-success" = "发帖成功";
+
+"chat-vc.no-coin-indicator.title" = "布鲁币花完了，没法给TA发私信了，怎么办呢？";
+
+"show-image-delegate.save-image-success" = "保存图片成功";
+
+"post-detail-vc.collect-success" = "收藏成功";
+"post-detail-vc.cancel-collect-success" = "取消收藏成功";
+
+"reset-password.bind-mobile.title" = "绑定手机";
+
+"reset-password.reset-password-button.bind-mobile" = "绑定手机";
+
+"login-vc.guide-view.content" = "布鲁是私密社区，你在通讯录、微信、QQ、微博的好友绝对不会知道。\n\n除此以外你的手机号码以及你的个人资料都将被严格保密。";
+"login-vc.guide-view.button.title" = "好的";
+
+"user-setting-vc.user-cell.unbound" = "未绑定";
+
+"reset-password-vc.prompt-label.binding-prompt" = "成功绑定手机号后，可通过新手机号和密码登陆布鲁。";
+
+"message-category-cell.title-label.title.secretary" = "布鲁小秘书";
+
+"user-coin-vc.coin-rule-vc.title" = "布鲁币规则";
+
+"user-balance.coin-less-than-20" = "不足20布鲁币";
+"user-balance.coin-less-than-5" = "只剩下%@布鲁币";
+
+"user-coin-vc.desc-label.title" = "布鲁币是仅限在布鲁社区使用的虚拟货币，持有布鲁币才能发私信（1个/条）和兑换实物商品哦。大家快去布鲁币商城领取心仪的宝贝吧！\n\n什么？你的布鲁币还不够？那就努力赚币去吧～";
+"user-level-vc.desc-label.title" = "随着经验的增长，每满足一定的数值，等级也会随之增加。等级越高，你在社区的地位就越高，更多人也会对你更信任、崇拜。";
+
+"user-level-vc.table-cell.exp" = "经验";
+
+"post-detail.share-alert.share-success" = "分享成功!";
+"post-detail.share-alert.share-failed" = "分享失败!";
+
+"send-post-2-circle-selector.send-label.title.send-to-circle" = "发布到圈子（必选）";
+"send-post-2-circle-selector.send-label.title.send-to" = "发布到";
+
+"post-tag-selection-vc.tag-container.did-receive-dulicate-tag" = "不能添加重复的话题!";
+"post-tag-selection-vc.tag-container.cannot-add-tag-anymore" = "最多只能添加5个话题.";
+
+"post-tag-selection.title" = "添加话题";
+"post-tag-hot-vc.hot-label.title" = "热门话题";
+"post-tag-search-results-vc.promptor.title" = "创建新话题";
+
+"post-tag-selection-vc.tag-container.placeholder" = "添加话题";
+
+"post-tag-detail-selector.all-label.title" = "全部";
+"post-tag-detail-selector.recommended-label.title" = "推荐";
+
+"post-detail-async-view-model.featured-comments.header" = "精彩评论";
+"post-detail-async-view-model.all-comments.header" = "全部评论";
+
+"post-detail-async-view-model.post-interaction.reply-success" = "发送成功!";
+
+"post-detail-user-info-node.anonymous.nickname" = "匿名用户";
+
+"post-detail-node.liked-user-button.title-%@" = "赞 %@";
+
+"post-detail-comment-reply-text-node.reply" = "回复";
+
+"post-detail-comment-reply-text-node.anoymous" = "匿名用户";
+
+"post-detail-node.circle-text-node.from" = "来自";
+
+"post-detail-comment-reply-text-node.copy" = "复制";
+"post-detail-comment-reply-text-node.delete" = "删除";
+
+"post-detail-comment-reply-node.more-comments%@" = "查看更多%@条评论>>";
+
+"circle-followed-post-user-info-node.follow" = "关注";
+"circle-followed-post-user-info-node.did-follow" = "已关注";
+
+"circle-brief-async-node.quit" = "退出";
+"circle-brief-async-node.join" = "加入";
+
+"circle-main-vc.circle-title" = "圈子";
+"circle-main-vc.hot-title" = "热议";
+"circle-main-vc.follot-title" = "关注";
+
+"circle-main-detail-vc.all" = "全部";
+"circle-main-detail-vc.new" = "新鲜";
+"circle-main-detail-vc.featured" = "精华";
+
+"post-detail-async-vc.title" = "帖子详情";
+"post-detail-async-vc.featured-comments-title" = "精彩评论";
+"post-detail-async-vc.comments-title" = "全部评论";
+
+"post-detail-all-comments-header.asc-title" = "正序查看";
+"post-detail-all-comments-header.desc-title" = "倒序查看";
+
+"post-detail-toolbar.reply-title" = "回复楼主...";
+
+"content-reply-view.send-title" = "发送";
+
+"post-detail-options-vc.cancel-title" = "取消";
+
+"post-detail-options-vc.report-label.title" = "举报";
+
+"post-detail-options.collect-button.collect" = "收藏";
+
+"post-detail-options.collect-button.did-collect" = "已收藏";
+
+"post-detail-option-reverse-label.Ascending" = "正序";
+
+"post-detail-option-reverse-label.Descending" = "逆序";
+
+"post-detail-share-vc.wechat-timeline.title" = "微信朋友圈";
+"post-detail-share-vc.wechat-session.title" = "微信好友";
+"post-detail-share-vc.sina.title" = "新浪微博";
+"post-detail-share-vc.qzone.title" = "QQ空间";
+"post-detail-share-vc.qq.title" = "QQ好友";
+"post-detail-share-vc.link.title" = "复制链接";
+"post-detail-share-vc.cancel-title" = "取消分享";
+
+"share-manager.success" = "分享成功！";
+"share-manager.copy-to-pasteboard-success" = "已经复制到剪贴板!";
+
+"post-detail-async-view-model.collect-success" = "收藏成功！";
+"post-detail-async-view-model.cancel-collect-success" = "取消收藏成功!";
+
+"post-liked-user-vc.title" = "用户列表";
+
+"post-detail-async-vc.reply-view.prompt" = "精彩评论有额外奖励哦！";
+
+"post-detail-async-vc.placeholder.reply-to-%@" = "回复楼主...";
+
+"post-detail-async-vm.reply-success" = "回复成功!";
+
+"post-detail-async-vc.reply-vc.title-%@" = "%@ 楼评论";
+
+"post-comment-deatil-reply-async-vc.reply-view.placeholder.reply-to-reply-%@" = "回复 %@";
+"post-comment-deatil-reply-async-vc.reply-view.placeholder.reply-to-comment-%@" = "回复 %@";
+
+"circle-follow-header.prompt-label.title" = "推荐用户";
+"circle-follow-header.change-button.title" = " 换一批";
+
+"post-tag-title-view.post-count-label.title-prompt" = "话题数:";
+
+"post-tag.share-title-count-%@-tag-%@" = "已经有%@人参与#%@#，快来加入吧!";
+
+"circle-search-vc.table-view.header.title" = "热门圈子";
+"circle-search-vc.title" = "选择圈子";
+
+"send-post-2-vc.send" = "发送";
+
+"send-post-2-vc.send-success" = "发送成功!";
+
+"send-post-2-vc.title" = "发帖";
+
+"circle-follow-footer-view.refresh-button.start-browsing" = "开始浏览动态";
+
+"circle-detail-main-vc.OK" = "好的";
+
+"send-post-2-vc.should-cancel-edit" = "确认要放弃编辑吗?";
+"send-post-2-vc.ok" = "确定";
+"send-post-2-vc.cancel" = "取消";
+
+"post-tag.share-content" = "七巧国—用心做好每一天";
+
+"toy-home-guide-cell.hot-view.brand-title" = "热门品牌";
+
+"toy-home-guide-cell.hot-view.category-title" = "热门分类";
+
+"post-common-author-node.anonymous" = "匿名用户";
+
+"post-detal-comment-user-info-node.up" = "楼主";
+
+"post-comment-detail-reply-avc.reply-view.anonymous" = "回复 匿名用户";
+
+"toy-home-guide-tool-model.name.toy-collection" = "我的收藏";
+"toy-home-guide-tool-model.name.browsed-history" = "浏览历史";
+"toy-home-guide-tool-model.name.toy-following-rank" = "关注排行";
+
+"toy-home-vc.title.colleciton-rank" = "关注排行";
+"toy-home-vc.title.browsing-history" = "浏览历史";
+"toy-home-vc.title.user-collection" = "我的收藏";
+
+"good-post-category-node.title.evaluation" = "用户评测";
+"good-post-category-node.title.relevant" = "看看达人怎么玩";
+"good-post-category-node.title.video" = "相关视频";
+
+"good-post-category-node.details.evaluation%@" = "%@位用户体验";
+"good-post-category-node.details.relevant%@" = "%@个帖子";
+"good-post-category-node.details.video%@" = "%@个视频";
+
+"good-details-node.total%@" = "共%@张";
+"good-detail-node.following" = "总关注：";
+"good-details-node.desc" = "图文详情";
+
+"recommend-cell.circle-prompt.hot:%@" = "热度: %@";
+"recommend-cell.tag-prompt.join:%@" = "已有%@人参与";
+"recommend-cell.toy-prompt.follow:%@" = "已被%@人关注";
+
+"good-details.toolbar.service" = "客服";
+"good-details.toolbar.collect" = "收藏";
+"good-details.toolbar.did-collect" = "已收藏";
+"good-details.toolbar.share" = "分享";
+"good-details.toolbar.buy" = "去购买";
+
+"chat-good-hint-cell.send-button.title" = "发送宝贝链接";
+
+"good-exchange-list-vc.exchange-record" = "兑换记录";
+"good-exchage-list-vc.title" = "布鲁币商城";
+
+"good-exchange-list-cell.coin-label.title%@" = "布鲁币: %@";
+"good-exchange-list-cell.level-label.title%@" = "等级 >= %@";
+
+"good-exchange-details-node.level-prompt-%@" = "等级 >= %@";
+"good-exchange-details-node.coin-prompt-%@" = "布鲁币: %@";
+"good-exchange-details-node.inventory-prompt-%@" = "库存: %@";
+
+"good-exchange-details-node.no-address" = "未添加";
+
+"good-exchange-details-toolbar.coin-prompt" = "消耗布鲁币:";
+
+"good-exchange-details-node.contact-prompt" = "配送地址：";
+
+"good-exchange-details-toolbar.exchange-button.title" = "兑换";
+
+"good-exchange-details-vc.success-prompt" = "兑换成功";
+"good-exchange-details-vc.success-details" = "您申请的布鲁币兑换商品订单已经提交成功！我们会尽快为您发货，请注意查收商品包裹。";
+"good-exchange-details-vc.ok" = "好的";
+
+"good-exchange-details-vc.address-prompt" = "还没添加配送地址哦！";
+
+"good-exchange-confirm-vc.order-type-prompt" = "订单类型：";
+"good-exchange-confirm-vc.order-type" = "布鲁币兑换";
+"good-exchange-confirm-vc.address-prompt" = "收货地址：";
+"good-exchange-confirm-vc.required-coin" = "消费布鲁币";
+"good-exchange-confirm-vc.confirm" = "确认兑换";
+
+"good-logistics-header-view.prompt" = "物流跟踪";
+"good-logistics-info-view.name-prompt" = "承运公司: ";
+"good-logistics-info-view.code-prompt" = "运单编号: ";
+
+"good-exchange-record-vc.closed" = "已关闭";
+"good-exchange-record-vc.unpaid" = "未付款";
+"good-exchange-record-vc.didSend" = "已发货";
+"good-exchange-record-vc.completed" = "已完成";
+"good-exchange-record-Sending" = "正在备货";
+
+"good-logistics.title" = "物流详情";
+"good-exchange-order-detail-vc.title" = "订单详情";
+"good-exchange-record-vc.title" = "兑换记录";
+"logistics-edit-vc.title" = "编辑配送地址";
+
+"good-exchange-details-vc.uppdate-address-success" = "更新成功";
+
+"good-exchange-details-vc.title" = "兑换";
+
+"user-nav-cell.content-label.mall" = "布鲁币商城";
+
+"good-exchange-details-node.coin-prompt" = "布鲁币";
+
+"chat-vc.insufficient-level-prompt" = "等级达到LV3才能发私信哦，快去升级吧～";
+"char-vc.details" = "查看规则";
+"good-exchange-list-vc.defence-apple" = "兑换活动与设备生产商Apple Inc. 公司无关";
+
+"good-details.toolbar.shopping-cart" = "加入购物车";
+
+"toy-home-vc.origin-title" = "玩具";
+
+"toy-list-vc.user-collection" = "我的收藏";
+"toy-list-vc.following-rank" = "关注排行";
+"toy-list-vc.browsing-history" = "浏览历史";
+
+"toy-browsing-history-list-vc.alert-view.require-clear" = "确定清空浏览历史?";
+"toy-browsing-history-list-vc.alert-view.cancel" = "取消";
+
+"good-search-prompt-header.title" = "热门搜索";
+"good-search-prompt-history-header.title" = "历史搜索";
+
+"toy-list-vc.cannot-find" = "没有找到呢，还是找点别的吧～";
+
+"shopping-cart-vc.title" = "我的购物车";
+
+"shopping-cart-vc.toolbar.amount-prompt" = "合计:";
+
+"shopping-cart-vc.settle-button.settle" = "结算";
+
+"confirm-order-vc.total-price" = "合计:";
+
+"confirm-order-vc.total-count-%@" = "共 %@ 件商品";
+
+"confirm-order-vc.submit-button.title" = "提交订单";
+
+"confirm-order-vc.title" = "确认订单";
+
+"submit-order-vc.title" = "支付订单";
+
+"order-details-vc.title" = "订单详情";
+
+"payment-results-vc.title" = "支付结果";
+
+"user-orders-vc.title" = "我的订单";
+
+"user-nav-cell.content-label.user-orders" = "我的订单";
+
+"user-order-footer.delete-button.title" = "删除订单";
+"user-order-footer.cancel-button.title" = "取消订单";
+"user-order.footer.submit-button.title" = "去支付";
+
+"user-order-footer.total-count-%@" = "共 %@ 件商品";
+"user-order-footer.total-amout-%@" = "合计：%@";
+
+"good-detail-vc.add-cart-success" = "添加成功，我在购物车等你哦!";
+
+"shopping-cart-vc.no-inventory" = "抱歉，现在没有库存了！";
+
+"shopping-cart-vc.select-all-button.title" = "全选";
+
+"confirm-order-vc.total-amout-label.amount-%@" = "合计: %@";
+
+"confirm-order-vc.message.add-address" = "还没添加配送地址哦！";
+
+"confirm-order-vc.error-message.parameters-error" = "参数错误!";
+
+"shopping-cart-vc.error-message.no-selected-good" = "还没有选择任何商品哦！";
+
+"@submit-order-vc.wx-error-message" = "1、你还没有安装微信吧？2、微信版本太低，无法支付哦！";
+
+"submit-order-vc.error-message.blue-coin" = "暂时不支持布鲁币支付。";
+
+"good-order.order-id-desc-%@" = "订单编号: %@";
+"good-order.status-desc.closed" = "已关闭";
+"good-order.status-desc.unpaid" = "待支付";
+"good-order.status-desc.did-send" = "已发货";
+"good-order.status-desc.completed" = "已完成";
+"good-order.status-desc.ready-for-sending" = "正在备货";
+
+"good-mamager.error-message.invalid-shopping-count-%@" = "有%@件商品库存不足，请重新选择。";
+
+"good-order.payment-method.unpaid" = "待支付";
+"good-order.payment-method.alipay" = "支付宝";
+"good-order.payment-method.wechat-pay" = "微信支付";
+"good-order.payment-method.blue-coin" = "布鲁币";
+"good-order.payment-method.unknown" = "未知";
+
+"good-details.vc.title" = "玩具详情";
+
+"toy-category-second-vc.selection-prompt" = "请选择一个分类";
