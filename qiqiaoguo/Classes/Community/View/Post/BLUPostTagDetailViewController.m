@@ -51,9 +51,8 @@
                              action:@selector(handleSelection:)
                    forControlEvents:UIControlEventValueChanged];
 
-        _tableView = [[ASTableView alloc] initWithFrame:CGRectZero
-                                                  style:UITableViewStylePlain
-                                      asyncDataFetching:YES];
+        _tableView = [[ASTableView alloc] init];
+        _tableView.frame = CGRectZero;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.asyncDataSource = self;
         _tableView.asyncDelegate = self;

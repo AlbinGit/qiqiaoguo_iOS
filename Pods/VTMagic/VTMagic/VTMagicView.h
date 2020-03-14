@@ -3,12 +3,16 @@
 //  VTMagicView
 //
 //  Created by tianzhuo on 14-11-11.
-//  Copyright (c) 2014年 tianzhuo. All rights reserved.
+//  Copyright (c) 2014-2016 tianzhuo. All rights reserved.
+//  https://github.com/tianzhuo112/VTMagic.git
 //
 
 #import <UIKit/UIKit.h>
 #import "VTMagicProtocol.h"
+#import "VTMagicMacros.h"
 #import "VTEnumType.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @class VTMagicView;
 
@@ -24,22 +28,22 @@
 - (NSArray<__kindof NSString *> *)menuTitlesForMagicView:(VTMagicView *)magicView;
 
 /**
- *  根据index获取对应索引的menuItem
+ *  根据itemIndex加载对应的menuItem
  *
  *  @param magicView self
- *  @param index     当前索引
+ *  @param itemIndex 需要加载的菜单索引
  *
- *  @return 当前索引对应的按钮
+ *  @return 当前索引对应的菜单按钮
  */
 - (UIButton *)magicView:(VTMagicView *)magicView menuItemAtIndex:(NSUInteger)itemIndex;
 
 /**
- *  当前索引对应的控制器
+ *  根据pageIndex加载对应的页面控制器
  *
  *  @param magicView self
- *  @param index     当前索引
+ *  @param pageIndex 需要加载的页面索引
  *
- *  @return 控制器
+ *  @return 页面控制器
  */
 - (UIViewController *)magicView:(VTMagicView *)magicView viewControllerAtPage:(NSUInteger)pageIndex;
 
@@ -54,7 +58,7 @@
  *
  *  @param magicView      self
  *  @param viewController 当前页面展示的控制器
- *  @param index          当前控控制器对应的索引
+ *  @param pageIndex      当前控控制器对应的索引
  */
 - (void)magicView:(VTMagicView *)magicView viewDidAppear:(__kindof UIViewController *)viewController atPage:(NSUInteger)pageIndex;
 
@@ -63,7 +67,7 @@
  *
  *  @param magicView      self
  *  @param viewController 消失的视图控制器
- *  @param index          当前控制器对应的索引
+ *  @param pageIndex      消失的控制器对应的索引
  */
 - (void)magicView:(VTMagicView *)magicView viewDidDisappear:(__kindof UIViewController *)viewController atPage:(NSUInteger)pageIndex;
 
@@ -71,9 +75,29 @@
  *  选中导航菜单item时触发
  *
  *  @param magicView self
- *  @param itemIndex menuItem索引
+ *  @param itemIndex menuItem对应的索引
  */
 - (void)magicView:(VTMagicView *)magicView didSelectItemAtIndex:(NSUInteger)itemIndex;
+
+/**
+ *  根据itemIndex获取对应menuItem的宽度，若返回结果为0，内部将自动计算其宽度
+ *
+ *  @param magicView self
+ *  @param itemIndex menuItem对应的索引
+ *
+ *  @return menuItem的宽度
+ */
+- (CGFloat)magicView:(VTMagicView *)magicView itemWidthAtIndex:(NSUInteger)itemIndex;
+
+/**
+ *  根据itemIndex获取对应slider的宽度，若返回结果为0，内部将自动计算其宽度
+ *
+ *  @param magicView self
+ *  @param itemIndex slider对应的索引
+ *
+ *  @return slider的宽度
+ */
+- (CGFloat)magicView:(VTMagicView *)magicView sliderWidthAtIndex:(NSUInteger)itemIndex;
 
 @end
 
@@ -85,21 +109,21 @@
 /**
  *  数据源
  */
-@property (nonatomic, weak) id<VTMagicViewDataSource> dataSource;
+@property (nonatomic, weak, nullable) id<VTMagicViewDataSource> dataSource;
 
 /**
  *  代理
  *  若delegate为UIViewController并且实现了VTMagicProtocol协议，
  *  则主控制器(mainViewController)默认与其相同
  */
-@property (nonatomic, weak) id<VTMagicViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id<VTMagicViewDelegate> delegate;
 
 /**
  *  主控制器，若delegate遵循协议VTMagicProtocol，则默认与其相同
  *
- *  @warning 若继承自或直接实例化VTMagicController，则不需要设置该属性
+ *  @warning 若继承或直接实例化VTMagicController，则不需要设置该属性
  */
-@property (nonatomic, weak) UIViewController<VTMagicProtocol> *magicController;
+@property (nonatomic, weak, nullable) UIViewController<VTMagicProtocol> *magicController;
 
 /**
  *  切换样式，默认是VTSwitchStyleDefault
@@ -139,12 +163,12 @@
 /**
  *  顶部导航栏左侧视图项
  */
-@property (nonatomic, strong) UIView *leftNavigatoinItem;
+@property (nonatomic, strong, nullable) UIView *leftNavigatoinItem;
 
 /**
  *  顶部导航栏右侧视图项
  */
-@property (nonatomic, strong) UIView *rightNavigatoinItem;
+@property (nonatomic, strong, nullable) UIView *rightNavigatoinItem;
 
 /**
  *  当前屏幕上已加载的控制器
@@ -226,6 +250,11 @@
 @property (nonatomic, assign) BOOL needPreloading;
 
 /**
+ *  是否正在切换中，仅动画切换时为YES
+ */
+@property (nonatomic, assign, readonly, getter=isSwitching) BOOL switching;
+
+/**
  *  页面滑到两侧边缘时是否需要反弹效果，默认NO
  */
 @property (nonatomic, assign) BOOL bounces;
@@ -233,7 +262,7 @@
 /**
  *  底部是否需要扩展一个tabbar的高度，设置毛玻璃效果时或许有用，默认NO
  */
-@property (nonatomic, assign) BOOL needExtendBottom;
+@property (nonatomic, assign) BOOL needExtendBottom VT_DEPRECATED_IN("1.2.5");
 
 
 #pragma mark - color & size configurations
@@ -247,7 +276,7 @@
 /**
  *  顶部导航栏背景色
  */
-@property (nonatomic, strong) UIColor *navigationColor;
+@property (nonatomic, strong, nullable) UIColor *navigationColor;
 
 /**
  *  顶部导航条的高度，默认是44
@@ -257,7 +286,7 @@
 /**
  *  顶部导航栏底部分割线颜色
  */
-@property (nonatomic, strong) UIColor *separatorColor;
+@property (nonatomic, strong, nullable) UIColor *separatorColor;
 
 /**
  *  导航栏分割线高度，默认0.5个点
@@ -267,7 +296,7 @@
 /**
  *  顶部导航栏滑块颜色
  */
-@property (nonatomic, strong) UIColor *sliderColor;
+@property (nonatomic, strong, nullable) UIColor *sliderColor;
 
 /**
  *  顶部导航栏滑块高度，默认2
@@ -317,10 +346,10 @@
 @property (nonatomic, assign) CGFloat headerHeight;
 
 /**
- *  两个导航菜单item文本之间的间距，默认是25
+ *  两个导航菜单item文本之间的间距，默认是25，其优先级低于itemWidth
  *  如果菜单item包含图片，则实际间距可能会更小
  *
- *  @warning 该属性仅VTLayoutStyleDefault和VTLayoutStyleCenter样式下有效！
+ *  @warning 该属性在VTLayoutStyleDivide样式下无效
  */
 @property (nonatomic, assign) CGFloat itemSpacing;
 
@@ -331,9 +360,9 @@
 @property (nonatomic, assign) CGFloat itemScale;
 
 /**
- *  自定义item宽度
+ *  自定义item宽度，默认0，当设置改属性时，itemSpacing的设置无效
  *
- *  @warning 仅VTLayoutStyleCustom样式下有效
+ *  @warning 该属性在VTLayoutStyleDivide样式下无效
  */
 @property (nonatomic, assign) CGFloat itemWidth;
 
@@ -360,7 +389,7 @@
  *
  *  @param page 被定位的页面
  */
-- (void)reloadDataToPage:(NSUInteger)page;
+- (void)reloadDataToPage:(NSUInteger)pageIndex;
 
 /**
  *  更新菜单标题，但不重新加载页面
@@ -376,7 +405,7 @@
  *
  *  @return 可重用的menuItem
  */
-- (__kindof UIButton *)dequeueReusableItemWithIdentifier:(NSString *)identifier;
+- (nullable __kindof UIButton *)dequeueReusableItemWithIdentifier:(NSString *)identifier;
 
 /**
  *  根据缓存标识获取可重用的UIViewController
@@ -385,7 +414,7 @@
  *
  *  @return 可重用的UIViewController
  */
-- (__kindof UIViewController *)dequeueReusablePageWithIdentifier:(NSString *)identifier;
+- (nullable __kindof UIViewController *)dequeueReusablePageWithIdentifier:(NSString *)identifier;
 
 /**
  *  根据控制器获取对应的页面索引，仅当前显示的和预加载的控制器有相应索引，
@@ -405,7 +434,7 @@
  *
  *  @return UIViewController对象
  */
-- (__kindof UIViewController *)viewControllerAtPage:(NSUInteger)pageIndex;
+- (nullable __kindof UIViewController *)viewControllerAtPage:(NSUInteger)pageIndex;
 
 /**
  *  根据索引获取当前页面显示的menuItem，不在窗口上显示的则为nil
@@ -414,7 +443,7 @@
  *
  *  @return 当前索引对应的menuItem
  */
-- (__kindof UIButton *)menuItemAtIndex:(NSUInteger)index;
+- (nullable __kindof UIButton *)menuItemAtIndex:(NSUInteger)index;
 
 /**
  *  切换到指定页面
@@ -433,7 +462,7 @@
 
 /**
  *  取消菜单item的选中状态，可通过属性deselected获取当前状态
- *  取消选中后须调用方法reSelectMenuItem以恢复
+ *  取消选中后须调用方法reselectMenuItem以恢复
  */
 - (void)deselectMenuItem;
 
@@ -446,5 +475,7 @@
  *  清除所有缓存的页面
  */
 - (void)clearMemoryCache;
+
+NS_ASSUME_NONNULL_END
 
 @end

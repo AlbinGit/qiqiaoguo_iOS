@@ -6,19 +6,27 @@
 //  Copyright © 2016 Facebook. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <AsyncDisplayKit/ASAvailability.h>
 
-#import "NSIndexSet+ASHelpers.h"
+#if AS_TARGET_OS_IOS
+  #import <UIKit/UIKit.h>
+#else
+  #import <Cocoa/Cocoa.h>
+#endif
+
+#import <AsyncDisplayKit/NSIndexSet+ASHelpers.h>
 
 @implementation NSIndexSet (ASHelpers)
 
 - (NSIndexSet *)as_indexesByMapping:(NSUInteger (^)(NSUInteger))block
 {
   NSMutableIndexSet *result = [NSMutableIndexSet indexSet];
-  [self enumerateIndexesUsingBlock:^(NSUInteger idx, __unused BOOL * _Nonnull stop) {
-    NSUInteger newIndex = block(idx);
-    if (newIndex != NSNotFound) {
-      [result addIndex:newIndex];
+  [self enumerateRangesUsingBlock:^(NSRange range, BOOL * _Nonnull stop) {
+    for (NSUInteger i = range.location; i < NSMaxRange(range); i++) {
+      NSUInteger newIndex = block(i);
+      if (newIndex != NSNotFound) {
+        [result addIndex:newIndex];
+      }
     }
   }];
   return result;
@@ -49,11 +57,13 @@
 - (NSUInteger)as_indexChangeByInsertingItemsBelowIndex:(NSUInteger)index
 {
   __block NSUInteger newIndex = index;
-  [self enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
-    if (idx <= newIndex) {
-      newIndex += 1;
-    } else {
-      *stop = YES;
+  [self enumerateRangesUsingBlock:^(NSRange range, BOOL * _Nonnull stop) {
+    for (NSUInteger i = range.location; i < NSMaxRange(range); i++) {
+      if (i <= newIndex) {
+        newIndex += 1;
+      } else {
+        *stop = YES;
+      }
     }
   }];
   return newIndex - index;
@@ -64,12 +74,21 @@
   NSMutableString *result = [NSMutableString stringWithString:@"{ "];
   [self enumerateRangesUsingBlock:^(NSRange range, BOOL * _Nonnull stop) {
     if (range.length == 1) {
-      [result appendFormat:@"%lu ", (unsigned long)range.location];
+      [result appendFormat:@"%tu ", range.location];
     } else {
-      [result appendFormat:@"%lu-%lu ", (unsigned long)range.location, (unsigned long)NSMaxRange(range)];
+      [result appendFormat:@"%tu-%tu ", range.location, NSMaxRange(range) - 1];
     }
   }];
   [result appendString:@"}"];
+  return result;
+}
+
++ (NSIndexSet *)as_sectionsFromIndexPaths:(NSArray<NSIndexPath *> *)indexPaths
+{
+  NSMutableIndexSet *result = [NSMutableIndexSet indexSet];
+  for (NSIndexPath *indexPath in indexPaths) {
+    [result addIndex:indexPath.section];
+  }
   return result;
 }
 

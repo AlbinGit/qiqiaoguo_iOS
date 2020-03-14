@@ -1,0 +1,1 @@
+../../../WebASDKImageManager/WebASDKImageManager/SDWebASDKImageManagerOptions.h

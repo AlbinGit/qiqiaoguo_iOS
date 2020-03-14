@@ -9,9 +9,12 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <Foundation/Foundation.h>
+#import <AsyncDisplayKit/ASBaseDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
+AS_SUBCLASSING_RESTRICTED
 @interface ASHighlightOverlayLayer : CALayer
 
 /**
@@ -31,8 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithRects:(NSArray<NSValue *> *)rects;
 
-@property (nullable, atomic, strong) __attribute__((NSObject)) CGColorRef highlightColor;
-@property (atomic, weak) CALayer *targetLayer;
+@property (nullable, nonatomic, strong) __attribute__((NSObject)) CGColorRef highlightColor;
+@property (nonatomic, weak) CALayer *targetLayer;
 
 @end
 

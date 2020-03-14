@@ -19,6 +19,7 @@ static void * const kBackgroundImageURLKey = "kBackgroundImageURLKey";
             self.image = image;
         }
     }];
+
 }
 
 @end

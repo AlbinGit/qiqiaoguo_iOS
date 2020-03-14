@@ -18,14 +18,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ASCellNode;
 
+ASDISPLAYNODE_EXTERN_C_BEGIN
+
 typedef struct {
   CGFloat leadingBufferScreenfuls;
   CGFloat trailingBufferScreenfuls;
 } ASRangeTuningParameters;
 
-FOUNDATION_EXPORT ASRangeTuningParameters const ASRangeTuningParametersZero;
+struct ASDirectionalScreenfulBuffer {
+  CGFloat positiveDirection; // Positive relative to iOS Core Animation layer coordinate space.
+  CGFloat negativeDirection;
+};
+typedef struct ASDirectionalScreenfulBuffer ASDirectionalScreenfulBuffer;
 
-FOUNDATION_EXPORT BOOL ASRangeTuningParametersEqualToRangeTuningParameters(ASRangeTuningParameters lhs, ASRangeTuningParameters rhs);
+ASDISPLAYNODE_EXTERN_C_END
 
 @protocol ASLayoutController <NSObject>
 
@@ -33,17 +39,9 @@ FOUNDATION_EXPORT BOOL ASRangeTuningParametersEqualToRangeTuningParameters(ASRan
 
 - (ASRangeTuningParameters)tuningParametersForRangeMode:(ASLayoutRangeMode)rangeMode rangeType:(ASLayoutRangeType)rangeType;
 
-- (NSSet *)indexPathsForScrolling:(ASScrollDirection)scrollDirection rangeMode:(ASLayoutRangeMode)rangeMode rangeType:(ASLayoutRangeType)rangeType;
+- (NSSet<NSIndexPath *> *)indexPathsForScrolling:(ASScrollDirection)scrollDirection rangeMode:(ASLayoutRangeMode)rangeMode rangeType:(ASLayoutRangeType)rangeType;
 
 @optional
-
-- (void)insertNodesAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withSizes:(NSArray<NSValue *> *)nodeSizes;
-
-- (void)deleteNodesAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
-
-- (void)insertSections:(NSArray<NSArray <ASCellNode *>*> *)sections atIndexSet:(NSIndexSet *)indexSet;
-
-- (void)deleteSectionsAtIndexSet:(NSIndexSet *)indexSet;
 
 - (void)setVisibleNodeIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
 

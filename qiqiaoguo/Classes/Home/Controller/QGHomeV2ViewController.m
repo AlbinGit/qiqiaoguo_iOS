@@ -276,9 +276,10 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 #pragma mark 头部滚动视图banner
 - (void)createTableHeader {
     UIView *view=[[UIView alloc]init];
-    _bannerArray= [NSMutableArray array];
-    for (QGBannerModel *bannerModel in _dataModel.bannerList) {
-        [self.bannerArray addObject:bannerModel.cover];
+    _bannerArray= [[NSMutableArray alloc] init];
+    for (QGBannerModel *bannerModel11 in _dataModel.bannerList) {
+        NSLog(@"ssss11 %@",bannerModel11.activity_id);
+      // [self.bannerArray addObject:bannerModel.cover];
     }
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_WIDTH*0.625) imageURLStringsGroup:self.bannerArray];
     cycleScrollView.delegate = self;

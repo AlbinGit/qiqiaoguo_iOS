@@ -10,7 +10,7 @@
 //  of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "ASThread.h"
+#import <AsyncDisplayKit/ASThread.h>
 
 extern NSString *const ASAnimatedImageDefaultRunLoopMode;
 
@@ -28,7 +28,7 @@ extern NSString *const ASAnimatedImageDefaultRunLoopMode;
   NSUInteger _playedLoops;
 }
 
-@property (atomic, assign) CFTimeInterval lastDisplayLinkFire;
+@property (nonatomic, assign) CFTimeInterval lastDisplayLinkFire;
 
 @end
 

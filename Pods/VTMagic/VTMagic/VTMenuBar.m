@@ -7,8 +7,8 @@
 //
 
 #import "VTMenuBar.h"
-#import "UIScrollView+Magic.h"
-#import "VTCommon.h"
+#import "UIScrollView+VTMagic.h"
+#import "VTMagicMacros.h"
 
 static NSInteger const kVTMenuBarTag = 1000;
 
@@ -27,8 +27,7 @@ static NSInteger const kVTMenuBarTag = 1000;
 @implementation VTMenuBar
 @dynamic delegate;
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         _itemScale = 1.0;
@@ -45,11 +44,13 @@ static NSInteger const kVTMenuBarTag = 1000;
     return self;
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
-    if (_needSkipLayout && !self.isDecelerating) return;
+    if (_needSkipLayout && !self.isDecelerating) {
+        return;
+    }
+    
     UIButton *menuItem = nil;
     CGRect frame = CGRectZero;
     NSArray *indexList = [_visibleDict allKeys];
@@ -81,42 +82,41 @@ static NSInteger const kVTMenuBarTag = 1000;
 }
 
 #pragma mark - update menuItem state
-- (void)updateSelectedItem:(BOOL)transformScale
-{
+- (void)updateSelectedItem:(BOOL)transformScale {
     _selectedItem.selected = NO;
     UIButton *originalItem = _selectedItem;
     _selectedItem = _visibleDict[@(_currentIndex)];
     _selectedItem.selected = _deselected ? NO : YES;
-    if (!transformScale || 1.0 == _itemScale) return;
+    
+    if (!transformScale || 1.0 == _itemScale) {
+        return;
+    }
+    
     _selectedItem.titleLabel.layer.transform = CATransform3DMakeScale(_itemScale, _itemScale, _itemScale);
     if (![originalItem isEqual:_selectedItem]) {
         originalItem.titleLabel.layer.transform = CATransform3DIdentity;
     }
 }
 
-- (void)deselectMenuItem
-{
+- (void)deselectMenuItem {
     self.deselected = YES;
     _selectedItem.selected = NO;
 }
 
-- (void)reselectMenuItem
-{
+- (void)reselectMenuItem {
     self.deselected = NO;
     _selectedItem.selected = YES;
 }
 
 #pragma mark - functional methods
-- (void)reloadData
-{
+- (void)reloadData {
     [self resetCacheData];
     [self resetItemFrames];
     [self setNeedsLayout];
     [self layoutIfNeeded];
 }
 
--(void)resetCacheData
-{
+-(void)resetCacheData {
     [_indexList removeAllObjects];
     NSInteger pageCount = _menuTitles.count;
     for (NSInteger index = 0; index < pageCount; index++) {
@@ -133,10 +133,12 @@ static NSInteger const kVTMenuBarTag = 1000;
 }
 
 #pragma mark reset item frames
-- (void)resetItemFrames
-{
+- (void)resetItemFrames {
     [_frameList removeAllObjects];
-    if (!_menuTitles.count) return;
+    
+    if (!_menuTitles.count) {
+        return;
+    }
     
     UIButton *menuItem = nil;
     if (!_itemFont) {
@@ -151,9 +153,6 @@ static NSInteger const kVTMenuBarTag = 1000;
             break;
         case VTLayoutStyleCenter:
             [self resetFramesForCenter];
-            break;
-        case VTLayoutStyleCustom:
-            [self resetFramesForCustom];
             break;
         default:
             [self resetFramesForDefault];
@@ -170,23 +169,26 @@ static NSInteger const kVTMenuBarTag = 1000;
     }
 }
 
-- (void)resetFramesForDefault
-{
-    CGSize size = CGSizeZero;
+- (void)resetFramesForDefault {
+    CGFloat itemWidth = 0;
+    NSString *title = nil;
     CGRect frame = CGRectZero;
     CGFloat itemX = _menuInset.left;
     CGFloat height = self.frame.size.height;
     height -= _menuInset.top + _menuInset.bottom;
-    for (NSString *title in _menuTitles) {
-        size = [self sizeWithTitle:title];
-        frame = CGRectMake(itemX, _menuInset.top, size.width + _itemSpacing, height);
+    for (int index = 0; index < _menuTitles.count; index++) {
+        itemWidth = [self itemWidthAtIndex:index];
+        if (!itemWidth) {
+            title = [_menuTitles objectAtIndex:index];
+            itemWidth = _itemWidth ?: ([self sizeWithTitle:title].width + _itemSpacing);
+        }
+        frame = CGRectMake(itemX, _menuInset.top, itemWidth, height);
         [_frameList addObject:[NSValue valueWithCGRect:frame]];
         itemX += frame.size.width;
     }
 }
 
-- (void)resetFramesForDivide
-{
+- (void)resetFramesForDivide {
     CGRect frame = CGRectZero;
     NSInteger count = _menuTitles.count;
     CGFloat height = self.frame.size.height;
@@ -201,14 +203,16 @@ static NSInteger const kVTMenuBarTag = 1000;
     }
 }
 
-- (void)resetFramesForCenter
-{
+- (void)resetFramesForCenter {
     [self resetFramesForDefault];
     CGFloat menuWidth = CGRectGetWidth(self.frame);
     CGRect lastFame = [[_frameList lastObject] CGRectValue];
     CGFloat contentWidth = menuWidth - _menuInset.right;
     CGFloat itemOffset = (contentWidth - CGRectGetMaxX(lastFame))/2;
-    if (itemOffset <= 0) return;
+    if (itemOffset <= 0) {
+        return;
+    }
+    
     CGRect frame = CGRectZero;
     NSArray *frames = [NSArray arrayWithArray:_frameList];
     [_frameList removeAllObjects];
@@ -219,25 +223,18 @@ static NSInteger const kVTMenuBarTag = 1000;
     }
 }
 
-- (void)resetFramesForCustom
-{
-    CGRect frame = CGRectZero;
-    NSInteger count = _menuTitles.count;
-    CGFloat height = self.frame.size.height;
-    height -= _menuInset.top + _menuInset.bottom;
-    frame.origin = CGPointMake(_menuInset.left, _menuInset.top);
-    frame.size = CGSizeMake(_itemWidth, height);
-    for (int index = 0; index < count; index++) {
-        [_frameList addObject:[NSValue valueWithCGRect:frame]];
-        frame.origin.x += _itemWidth;
-    }
+- (CGFloat)itemWidthAtIndex:(NSUInteger)itemIndex {
+    return [self.delegate menuBar:self itemWidthAtIndex:itemIndex];
 }
 
 #pragma mark reset slider frames
-- (void)resetSliderFrames
-{
+- (void)resetSliderFrames {
     [_sliderList removeAllObjects];
-    if (!_menuTitles.count) return;
+
+    if (!_menuTitles.count) {
+        return;
+    }
+    
     switch (_sliderStyle) {
         case VTSliderStyleBubble:
             [self resetSliderForBubble];
@@ -248,30 +245,31 @@ static NSInteger const kVTMenuBarTag = 1000;
     }
 }
 
-- (void)resetSliderForDefault
-{
+- (void)resetSliderForDefault {
     NSInteger index = 0;
     CGRect itemFrame = CGRectZero;
     CGFloat sliderY = CGRectGetHeight(self.frame) - _sliderHeight + _sliderOffset;
     CGRect frame = CGRectMake(0, sliderY, 0, _sliderHeight);
     for (NSString *title in _menuTitles) {
-        index = [_menuTitles indexOfObject:title];
         itemFrame = [self itemFrameAtIndex:index];
-        if (_sliderWidth) {
-            frame.size.width = _sliderWidth;
-        } else if (CGFLOAT_MAX != _sliderExtension) {
-            frame.size.width = [self sizeWithTitle:title].width;
-            frame.size.width += _sliderExtension * 2;
-        } else {
-            frame.size.width = itemFrame.size.width;
+        frame.size.width = [self sliderWidthAtIndex:index];
+        if (!CGRectGetWidth(frame)) {
+            if (_sliderWidth) {
+                frame.size.width = _sliderWidth;
+            } else if (CGFLOAT_MAX != _sliderExtension) {
+                frame.size.width = [self sizeWithTitle:title].width;
+                frame.size.width += _sliderExtension * 2;
+            } else {
+                frame.size.width = itemFrame.size.width;
+            }
         }
         frame.origin.x = CGRectGetMidX(itemFrame) - frame.size.width/2;
         [_sliderList addObject:[NSValue valueWithCGRect:frame]];
+        index++;
     }
 }
 
-- (void)resetSliderForBubble
-{
+- (void)resetSliderForBubble {
     NSInteger index = 0;
     CGSize size = CGSizeZero;
     CGRect frame = CGRectZero;
@@ -279,7 +277,6 @@ static NSInteger const kVTMenuBarTag = 1000;
     CGPoint bubblePoint = CGPointZero;
     for (NSString *title in _menuTitles) {
         size = [self sizeWithTitle:title];
-        index = [_menuTitles indexOfObject:title];
         itemFrame = [self itemFrameAtIndex:index];
         size.width += _bubbleInset.left + _bubbleInset.right;
         size.height += _bubbleInset.top + _bubbleInset.bottom;
@@ -287,11 +284,15 @@ static NSInteger const kVTMenuBarTag = 1000;
         bubblePoint.y = CGRectGetMidY(itemFrame) - size.height/2;
         frame = (CGRect){bubblePoint, size};
         [_sliderList addObject:[NSValue valueWithCGRect:frame]];
+        index++;
     }
 }
 
-- (CGSize)sizeWithTitle:(NSString *)title
-{
+- (CGFloat)sliderWidthAtIndex:(NSUInteger)itemIndex {
+    return [self.delegate menuBar:self sliderWidthAtIndex:itemIndex];
+}
+
+- (CGSize)sizeWithTitle:(NSString *)title {
     CGSize size = CGSizeZero;
     if ([title respondsToSelector:@selector(sizeWithAttributes:)]) {
         size = [title sizeWithAttributes:@{NSFontAttributeName : _itemFont}];
@@ -305,25 +306,26 @@ static NSInteger const kVTMenuBarTag = 1000;
 }
 
 #pragma mark - 查询
-- (CGRect)itemFrameAtIndex:(NSUInteger)index
-{
-    if (_frameList.count <= index) return CGRectZero;
+- (CGRect)itemFrameAtIndex:(NSUInteger)index {
+    if (_frameList.count <= index) {
+        return CGRectZero;
+    }
     return [_frameList[index] CGRectValue];
 }
 
-- (UIButton *)itemAtIndex:(NSUInteger)index
-{
+- (UIButton *)itemAtIndex:(NSUInteger)index {
     return [self itemAtIndex:index autoCreate:NO];
 }
 
-- (UIButton *)createItemAtIndex:(NSUInteger)index
-{
+- (UIButton *)createItemAtIndex:(NSUInteger)index {
     return [self itemAtIndex:index autoCreate:YES];
 }
 
-- (UIButton *)itemAtIndex:(NSUInteger)index autoCreate:(BOOL)autoCreate
-{
-    if (_menuTitles.count <= index) return nil;
+- (UIButton *)itemAtIndex:(NSUInteger)index autoCreate:(BOOL)autoCreate {
+    if (_menuTitles.count <= index) {
+        return nil;
+    }
+    
     UIButton *menuItem = _visibleDict[@(index)];
     if (autoCreate && !menuItem) {
         menuItem = [self loadItemAtIndex:index];
@@ -331,8 +333,7 @@ static NSInteger const kVTMenuBarTag = 1000;
     return menuItem;
 }
 
-- (UIButton *)loadItemAtIndex:(NSInteger)index
-{
+- (UIButton *)loadItemAtIndex:(NSInteger)index {
     UIButton *menuItem = [_datasource menuBar:self menuItemAtIndex:index];
     NSAssert([menuItem isKindOfClass:[UIButton class]], @"The class of menu item:%@ must be UIButton", menuItem);
     if (menuItem) {
@@ -349,14 +350,14 @@ static NSInteger const kVTMenuBarTag = 1000;
     return menuItem;
 }
 
-- (CGRect)sliderFrameAtIndex:(NSUInteger)index
-{
-    if (_sliderList.count <= index) return CGRectZero;
+- (CGRect)sliderFrameAtIndex:(NSUInteger)index {
+    if (_sliderList.count <= index) {
+        return CGRectZero;
+    }
     return [_sliderList[index] CGRectValue];
 }
 
-- (UIButton *)dequeueReusableItemWithIdentifier:(NSString *)identifier
-{
+- (UIButton *)dequeueReusableItemWithIdentifier:(NSString *)identifier {
     _identifier = identifier;
     UIButton *menuItem = [_cacheSet anyObject];
     if (menuItem) {
@@ -366,9 +367,8 @@ static NSInteger const kVTMenuBarTag = 1000;
 }
 
 #pragma mark - item 点击事件
-- (void)menuItemClick:(id)sender
-{
-    NSInteger itemIndex = [(UIButton *)sender tag] - kVTMenuBarTag;
+- (void)menuItemClick:(UIButton *)sender {
+    NSInteger itemIndex = sender.tag - kVTMenuBarTag;
     if ([self.delegate respondsToSelector:@selector(menuBar:didSelectItemAtIndex:)]) {
         [self.delegate menuBar:self didSelectItemAtIndex:itemIndex];
     }

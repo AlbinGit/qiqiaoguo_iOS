@@ -15,6 +15,8 @@
 
 - (void)shouldShowNoCommentPrompt:(BOOL)show
                     fromViewModel:(BLUPostDetailAsyncViewModel *)viewModel {
+    
+
     if (show) {
         BLUPostDetailTakeSofaFooterView *footerView =
         [BLUPostDetailTakeSofaFooterView new];
