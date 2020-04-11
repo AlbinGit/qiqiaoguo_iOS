@@ -2322,7 +2322,7 @@
 		A4027C831D3E9335004EFD9B /* QGEduFristActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGEduFristActivityCell.m; sourceTree = "<group>"; };
 		A4027C841D3E9335004EFD9B /* QGEduFristActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QGEduFristActivityCell.xib; sourceTree = "<group>"; };
 		A4027C871D3E96C8004EFD9B /* QGEduFristActivityListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGEduFristActivityListCell.m; sourceTree = "<group>"; };
-		A425460F1CF30A760097382F /* 七巧国测试.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "七巧国测试.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A425460F1CF30A760097382F /* 七巧国.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "七巧国.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A425461E1CF30A760097382F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A42546211CF30A760097382F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42546231CF30A760097382F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -5137,7 +5137,7 @@
 		A42546101CF30A760097382F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A425460F1CF30A760097382F /* 七巧国测试.app */,
+				A425460F1CF30A760097382F /* 七巧国.app */,
 				A42546281CF30A760097382F /* qiqiaoguoTests.xctest */,
 				A42546331CF30A760097382F /* qiqiaoguoUITests.xctest */,
 			);
@@ -5230,7 +5230,7 @@
 			);
 			name = qiqiaoguo;
 			productName = qiqiaoguo;
-			productReference = A425460F1CF30A760097382F /* 七巧国测试.app */;
+			productReference = A425460F1CF30A760097382F /* 七巧国.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A42546271CF30A760097382F /* qiqiaoguoTests */ = {
@@ -5281,7 +5281,7 @@
 				TargetAttributes = {
 					A425460E1CF30A760097382F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = VKCNMB93F7;
+						DevelopmentTeam = AUVDLZTKHF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -6295,9 +6295,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2017060114;
+				CURRENT_PROJECT_VERSION = 2017060116;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = VKCNMB93F7;
+				DEVELOPMENT_TEAM = AUVDLZTKHF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6321,11 +6321,12 @@
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
 				);
-				MARKETING_VERSION = 3.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyh1111.biaoboss;
-				PRODUCT_NAME = "七巧国测试";
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo;
+				PRODUCT_NAME = "七巧国";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
 					"-Wno-shorten-64-to-32",
 					"-Wno-ambiguous-macro",
@@ -6343,9 +6344,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2017060114;
+				CURRENT_PROJECT_VERSION = 2017060116;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = VKCNMB93F7;
+				DEVELOPMENT_TEAM = AUVDLZTKHF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6369,11 +6370,12 @@
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
 				);
-				MARKETING_VERSION = 3.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyh1111.biaoboss;
-				PRODUCT_NAME = "七巧国测试";
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo;
+				PRODUCT_NAME = "七巧国";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
 					"-Wno-shorten-64-to-32",
 					"-Wno-ambiguous-macro",
