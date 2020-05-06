@@ -59,20 +59,21 @@
 - (void)setModelListModel:(QGEducateListtModel *)model item:(NSInteger)index {
  
     
-    if (index == 0) {
-        [_imageView setImage:[UIImage imageNamed:@"ic_yuweng"]];
-           _nameLable.text = @"语文";
-    } else if(index == 1)  {
-        [_imageView setImage:[UIImage imageNamed:@"ic_shuxue"]];
-         _nameLable.text = @"数学";
-    } else if(index == 2)  {
-        [_imageView setImage:[UIImage imageNamed:@"ic_yingyu"]];
-          _nameLable.text = @"英语";
-    } else {
-        [_imageView setImage:[UIImage imageNamed:@"ic_zonghe"]];
-         _nameLable.text = @"综合";
-    }
-   // [_imageView sd_setImageWithURL:[NSURL URLWithString:model.logo] placeholderImage:nil];
+//    if (index == 0) {
+//        [_imageView setImage:[UIImage imageNamed:@"ic_yuweng"]];
+//           _nameLable.text = @"语文";
+//    } else if(index == 1)  {
+//        [_imageView setImage:[UIImage imageNamed:@"ic_shuxue"]];
+//         _nameLable.text = @"数学";
+//    } else if(index == 2)  {
+//        [_imageView setImage:[UIImage imageNamed:@"ic_yingyu"]];
+//          _nameLable.text = @"英语";
+//    } else {
+//        [_imageView setImage:[UIImage imageNamed:@"ic_zonghe"]];
+//         _nameLable.text = @"综合";
+//    }
+    _nameLable.text = model.name;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.logo] placeholderImage:nil];
  
  
     _nameLable.textColor = QGMainContentColor;
