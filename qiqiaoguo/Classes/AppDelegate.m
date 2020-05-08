@@ -49,14 +49,11 @@
         self.window.rootViewController =[[QGTabBarViewController alloc] init];
         
     }
-    
 	//直接进入视频
-	QGVideoChatViewController * videoVC = [[QGVideoChatViewController alloc]init];
-	UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:videoVC];
-	self.window.rootViewController = nav;
+//	QGVideoChatViewController * videoVC = [[QGVideoChatViewController alloc]init];
+//	UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:videoVC];
+//	self.window.rootViewController = nav;
 
-	
-	
     [self showAdvertisingPage];
 
     

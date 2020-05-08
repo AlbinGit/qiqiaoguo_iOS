@@ -47,6 +47,8 @@
 #import "QGEduClassViewController.h"
 #import "QGHomevideoListCell.h"
 #import "QGHomePostListV2TabCell.h"
+
+#import "QGClassPoplView.h"
 #define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
 #define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
 typedef NS_ENUM(NSUInteger, QGHomeCellType) {
@@ -88,6 +90,10 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 @property (nonatomic, strong) NSMutableArray   *postfirstRowCellCountArray;
 @property (nonatomic,assign) CGFloat postHeight;
 @property (nonatomic,assign) CGFloat videoHeight;
+
+/**班级弹出视图*/
+@property (nonatomic,strong) QGClassPoplView *classPopView;
+
 @end
 @implementation QGHomeV2ViewController
 
@@ -380,23 +386,34 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 }
 - (void)CityBtnClick:(UIButton *)button
 {
-        PL_CODE_WEAK(weakSelf);
-        QGSwitchCityViewController *cityVC=[[QGSwitchCityViewController alloc]init];
-        cityVC.result = _item.item;
-        cityVC.cityNames = weakSelf.shopCityLists;
-        cityVC.cityTitle = _cityTitile;
-        __weak __typeof(UIButton *)btn = button;
-        [cityVC setCityBlock:^(QGShopCityModel *cityModel) {
-        [btn setTitle:cityModel.name forState:UIControlStateNormal];
-        [weakSelf updateCityBtnFrameWithTitle:cityModel.name];
-        [SAUserDefaults saveValue:cityModel.sid forKey:USERDEFAULTS_SID];
-        [SAUserDefaults saveValue:cityModel.platform_id forKey:USERDEFAULTS_Platform_id];
-        [weakSelf requestFirstDataMethod:SARefreshPullDownType];
-        }];
-        [weakSelf.navigationController pushViewController:cityVC animated:YES];
+//        PL_CODE_WEAK(weakSelf);
+//        QGSwitchCityViewController *cityVC=[[QGSwitchCityViewController alloc]init];
+//        cityVC.result = _item.item;
+//        cityVC.cityNames = weakSelf.shopCityLists;
+//        cityVC.cityTitle = _cityTitile;
+//        __weak __typeof(UIButton *)btn = button;
+//        [cityVC setCityBlock:^(QGShopCityModel *cityModel) {
+//        [btn setTitle:cityModel.name forState:UIControlStateNormal];
+//        [weakSelf updateCityBtnFrameWithTitle:cityModel.name];
+//        [SAUserDefaults saveValue:cityModel.sid forKey:USERDEFAULTS_SID];
+//        [SAUserDefaults saveValue:cityModel.platform_id forKey:USERDEFAULTS_Platform_id];
+//        [weakSelf requestFirstDataMethod:SARefreshPullDownType];
+//        }];
+//        [weakSelf.navigationController pushViewController:cityVC animated:YES];
+	
+	[self.view addSubview:self.classPopView];
+	_classPopView.selectBlock = ^(NSString * _Nonnull className) {
+		NLog(@"%@",className);
+	};
 }
 
-
+- (QGClassPoplView *)classPopView
+{
+	if (!_classPopView) {
+		_classPopView = [[QGClassPoplView alloc]initWithFrame:self.view.bounds];
+	}
+	return _classPopView;
+}
 -(void)getLoaction
 {
 }
