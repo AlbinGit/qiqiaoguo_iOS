@@ -21,7 +21,7 @@
 #import "QGHttpManager+User.h"
 #import "BLUAppManager.h"
 #import "QGAdvertisingView.h"
-
+#import "QGVideoChatViewController.h"
 @interface AppDelegate ()
 
 @property (nonatomic, strong)QGAdvertisingView *adView;
@@ -50,6 +50,13 @@
         
     }
     
+	//直接进入视频
+	QGVideoChatViewController * videoVC = [[QGVideoChatViewController alloc]init];
+	UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:videoVC];
+	self.window.rootViewController = nav;
+
+	
+	
     [self showAdvertisingPage];
 
     

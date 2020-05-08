@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '8.0'
 
 target 'qiqiaoguo' do
@@ -21,4 +23,5 @@ target 'qiqiaoguo' do
     pod 'FMDB'
     pod 'Masonry'
     pod 'VTMagic'
+    pod 'AliRTCSdk'
 end

@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AliRTCSdk (1.17.2):
+    - AliRTCSdk/AliRTCSdk (= 1.17.2)
+  - AliRTCSdk/AliRTCSdk (1.17.2)
   - AsyncDisplayKit (1.9.81):
     - AsyncDisplayKit/PINRemoteImage (= 1.9.81)
   - AsyncDisplayKit/ASDealloc2MainObject (1.9.81)
@@ -46,8 +49,8 @@ PODS:
     - libextobjc/EXTScope (= 0.4.1)
     - libextobjc/EXTSelectorChecking (= 0.4.1)
     - libextobjc/EXTSynthesize (= 0.4.1)
-    - libextobjc/NSInvocation+EXT (= 0.4.1)
-    - libextobjc/NSMethodSignature+EXT (= 0.4.1)
+    - "libextobjc/NSInvocation+EXT (= 0.4.1)"
+    - "libextobjc/NSMethodSignature+EXT (= 0.4.1)"
     - libextobjc/RuntimeExtensions (= 0.4.1)
     - libextobjc/UmbrellaHeader (= 0.4.1)
   - libextobjc/EXTADT (0.4.1):
@@ -66,9 +69,9 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/EXTSynthesize (0.4.1):
     - libextobjc/RuntimeExtensions
-  - libextobjc/NSInvocation+EXT (0.4.1):
+  - "libextobjc/NSInvocation+EXT (0.4.1)":
     - libextobjc/RuntimeExtensions
-  - libextobjc/NSMethodSignature+EXT (0.4.1):
+  - "libextobjc/NSMethodSignature+EXT (0.4.1)":
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
@@ -108,6 +111,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - AliRTCSdk
   - AsyncDisplayKit
   - CocoaLumberjack
   - Colours
@@ -127,8 +131,34 @@ DEPENDENCIES:
   - VTMagic
   - WebASDKImageManager
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AliRTCSdk
+    - AsyncDisplayKit
+    - CocoaLumberjack
+    - Colours
+    - FMDB
+    - IQKeyboardManager
+    - libextobjc
+    - libqrencode
+    - MagicalRecord
+    - Mantle
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - PINCache
+    - PINRemoteImage
+    - ReactiveCocoa
+    - SDWebImage
+    - UMengAnalytics
+    - VTMagic
+    - WebASDKImageManager
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AliRTCSdk: 8731964f87fb21cfb2102b7b16af114dd680e465
   AsyncDisplayKit: 011ea22a76a79a5bbfc14501fede6e0196a3c2f0
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
@@ -150,6 +180,6 @@ SPEC CHECKSUMS:
   VTMagic: c69c1dd7481e0f3f4c0b2a6f27803dde55455c96
   WebASDKImageManager: 15f6abbac6b53b4b216e27fba0acf74c49a64d4c
 
-PODFILE CHECKSUM: fe658d391bd207327a934c42a208310c1488227d
+PODFILE CHECKSUM: 67a7c842d0c2912e31f58619dd9759c698ca0fd4
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.9.0.beta.2

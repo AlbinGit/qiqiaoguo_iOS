@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3817AE442463B35800B7D1F2 /* QGVideoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817AE432463B35800B7D1F2 /* QGVideoChatViewController.m */; };
+		3817AE472463D6E200B7D1F2 /* QGHttpManager+VideoChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817AE462463D6E200B7D1F2 /* QGHttpManager+VideoChat.m */; };
+		381DABD12464E90F004207B9 /* RTCSampleRemoteUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCB2464E90E004207B9 /* RTCSampleRemoteUserModel.m */; };
+		381DABD22464E90F004207B9 /* RTCSampleRemoteUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCC2464E90E004207B9 /* RTCSampleRemoteUserManager.m */; };
+		381DABD32464E90F004207B9 /* UIViewController+RTCSampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */; };
 		3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */; };
 		3A5CCE7E1D0516EB009EDFD8 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE31D0516EA009EDFD8 /* NSString+Hashing.m */; };
 		3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE51D0516EA009EDFD8 /* UIBarButtonItem+MQExtension.m */; };
@@ -790,6 +795,16 @@
 /* Begin PBXFileReference section */
 		19D8DF33E1F4153D3E11FE71 /* Pods-qiqiaoguo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiqiaoguo.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo.release.xcconfig"; sourceTree = "<group>"; };
 		27CB1698497CAC6809604B19 /* libPods-qiqiaoguo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-qiqiaoguo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3817AE422463B35800B7D1F2 /* QGVideoChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVideoChatViewController.h; sourceTree = "<group>"; };
+		3817AE432463B35800B7D1F2 /* QGVideoChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVideoChatViewController.m; sourceTree = "<group>"; };
+		3817AE452463D6E200B7D1F2 /* QGHttpManager+VideoChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QGHttpManager+VideoChat.h"; sourceTree = "<group>"; };
+		3817AE462463D6E200B7D1F2 /* QGHttpManager+VideoChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QGHttpManager+VideoChat.m"; sourceTree = "<group>"; };
+		381DABCB2464E90E004207B9 /* RTCSampleRemoteUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSampleRemoteUserModel.m; sourceTree = "<group>"; };
+		381DABCC2464E90E004207B9 /* RTCSampleRemoteUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSampleRemoteUserManager.m; sourceTree = "<group>"; };
+		381DABCD2464E90F004207B9 /* UIViewController+RTCSampleAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTCSampleAlert.h"; sourceTree = "<group>"; };
+		381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTCSampleAlert.m"; sourceTree = "<group>"; };
+		381DABCF2464E90F004207B9 /* RTCSampleRemoteUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSampleRemoteUserModel.h; sourceTree = "<group>"; };
+		381DABD02464E90F004207B9 /* RTCSampleRemoteUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSampleRemoteUserManager.h; sourceTree = "<group>"; };
 		3A5CCDE01D0516EA009EDFD8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		3A5CCDE21D0516EA009EDFD8 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -2403,6 +2418,21 @@
 				19D8DF33E1F4153D3E11FE71 /* Pods-qiqiaoguo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3817AE412463B2F000B7D1F2 /* VideoChat */ = {
+			isa = PBXGroup;
+			children = (
+				381DABD02464E90F004207B9 /* RTCSampleRemoteUserManager.h */,
+				381DABCC2464E90E004207B9 /* RTCSampleRemoteUserManager.m */,
+				381DABCF2464E90F004207B9 /* RTCSampleRemoteUserModel.h */,
+				381DABCB2464E90E004207B9 /* RTCSampleRemoteUserModel.m */,
+				381DABCD2464E90F004207B9 /* UIViewController+RTCSampleAlert.h */,
+				381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */,
+				3817AE422463B35800B7D1F2 /* QGVideoChatViewController.h */,
+				3817AE432463B35800B7D1F2 /* QGVideoChatViewController.m */,
+			);
+			path = VideoChat;
 			sourceTree = "<group>";
 		};
 		3A5CCDDE1D0516EA009EDFD8 /* Main */ = {
@@ -5118,6 +5148,8 @@
 				676D01BA1D3F105C005694F5 /* QGHttpManager+Search.m */,
 				884B16111D45B40D001FED6A /* QGHttpManager+ShopCar.h */,
 				884B16121D45B40D001FED6A /* QGHttpManager+ShopCar.m */,
+				3817AE452463D6E200B7D1F2 /* QGHttpManager+VideoChat.h */,
+				3817AE462463D6E200B7D1F2 /* QGHttpManager+VideoChat.m */,
 			);
 			path = NetworkTool;
 			sourceTree = "<group>";
@@ -5205,6 +5237,7 @@
 				3AE256DB1D051C3500E56DC9 /* Me */,
 				3AE256E91D051C4200E56DC9 /* Shopcart */,
 				8809C2C71D24F87100762708 /* NotiMessage */,
+				3817AE412463B2F000B7D1F2 /* VideoChat */,
 				676D019A1D3F1037005694F5 /* Serach */,
 			);
 			path = Classes;
@@ -5281,7 +5314,7 @@
 				TargetAttributes = {
 					A425460E1CF30A760097382F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AUVDLZTKHF;
+						DevelopmentTeam = 773KFNZFJ9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -5385,13 +5418,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7C7BA40C74FA7D6114BAD9E5 /* [CP] Check Pods Manifest.lock */ = {
@@ -5400,13 +5438,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-qiqiaoguo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		81CF8427F4B70C63076B5CF7 /* [CP] Embed Pods Frameworks */ = {
@@ -5415,13 +5456,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-frameworks.sh",
+				"${PODS_ROOT}/AliRTCSdk/AliRTCSdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AliRTCSdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -5437,6 +5481,7 @@
 				888BD7E51D110599005E838D /* BLUContentParagraphMO+CoreDataProperties.m in Sources */,
 				67637D7A1D2B86D40034706E /* QGHttpManager+Activity.m in Sources */,
 				6776E7121D40C77B0016EF17 /* UIView+ModifyFrame.m in Sources */,
+				381DABD12464E90F004207B9 /* RTCSampleRemoteUserModel.m in Sources */,
 				A4496EFB1D54E52600289035 /* QGTicklistModel.m in Sources */,
 				672A19E01D2D2EDC0005DD1C /* QGCourLIstGroupCollectionViewCell.m in Sources */,
 				888BD7AF1D110599005E838D /* BLUPostTransitionDelegate.m in Sources */,
@@ -5666,6 +5711,7 @@
 				3A7487C31D0D0C900094B8F8 /* QGNotifiCationConst.m in Sources */,
 				888BD82C1D11059A005E838D /* UILabel+BLUAddition.m in Sources */,
 				676315D21D3DBAFD00658AFD /* QGSecKillDetailViewController.m in Sources */,
+				3817AE442463B35800B7D1F2 /* QGVideoChatViewController.m in Sources */,
 				67098C291D51D26500019FD2 /* QGActSignSaveViewController.m in Sources */,
 				888BD7B11D110599005E838D /* BLUUserTransitionDelegate.m in Sources */,
 				888BD89C1D11059A005E838D /* BLUUserSimpleInfoView.m in Sources */,
@@ -5759,6 +5805,7 @@
 				888BD7B31D110599005E838D /* BLUViewController+PageRedirection.m in Sources */,
 				888BD7FB1D110599005E838D /* BLUMessageCategoryMO+CoreDataProperties.m in Sources */,
 				888BD7B21D110599005E838D /* BLUViewControllerRedirectController.m in Sources */,
+				381DABD22464E90F004207B9 /* RTCSampleRemoteUserManager.m in Sources */,
 				674E5E251D20C708008912EF /* QGGetGoodsListByCategoryIdHttpDownload.m in Sources */,
 				888BD8211D11059A005E838D /* BLUSolidLine.m in Sources */,
 				888BD8371D11059A005E838D /* BLUCircleFollowedPostUserInfoNode.m in Sources */,
@@ -5937,6 +5984,7 @@
 				888BD8791D11059A005E838D /* BLUPostRecommendNode.m in Sources */,
 				888BD8C61D11059A005E838D /* BLUPostDetailAsyncViewController+ViewModel.m in Sources */,
 				888BD8AA1D11059A005E838D /* BLUCircleMoreViewController.m in Sources */,
+				381DABD32464E90F004207B9 /* UIViewController+RTCSampleAlert.m in Sources */,
 				888BD7E41D110599005E838D /* BLUContentParagraph.m in Sources */,
 				6751114A1D4760E900E24F4A /* QGSaveService.m in Sources */,
 				6739DC671D867E6A00F8E40B /* QGEduSignSaveViewController.m in Sources */,
@@ -6015,6 +6063,7 @@
 				674E5E301D20C708008912EF /* QGSubjectView.m in Sources */,
 				3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */,
 				884C066F1D3615E300599EBD /* QGUserInfoSettingViewController.m in Sources */,
+				3817AE472463D6E200B7D1F2 /* QGHttpManager+VideoChat.m in Sources */,
 				888BD87E1D11059A005E838D /* BLUPostTagDetailViewController.m in Sources */,
 				8809C2C61D24F6BD00762708 /* QGHttpManager+Message.m in Sources */,
 				3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */,
@@ -6297,7 +6346,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = AUVDLZTKHF;
+				DEVELOPMENT_TEAM = 773KFNZFJ9;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6322,7 +6371,7 @@
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
 				);
 				MARKETING_VERSION = 3.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo2222222;
 				PRODUCT_NAME = "七巧国";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -6346,7 +6395,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = AUVDLZTKHF;
+				DEVELOPMENT_TEAM = 773KFNZFJ9;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6371,7 +6420,7 @@
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
 				);
 				MARKETING_VERSION = 3.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo2222222;
 				PRODUCT_NAME = "七巧国";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
