@@ -12,6 +12,9 @@
 		381DABD12464E90F004207B9 /* RTCSampleRemoteUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCB2464E90E004207B9 /* RTCSampleRemoteUserModel.m */; };
 		381DABD22464E90F004207B9 /* RTCSampleRemoteUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCC2464E90E004207B9 /* RTCSampleRemoteUserManager.m */; };
 		381DABD32464E90F004207B9 /* UIViewController+RTCSampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */; };
+		381DABD6246523D3004207B9 /* QGClassPoplView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABD5246523D3004207B9 /* QGClassPoplView.m */; };
+		381DABD924652B7A004207B9 /* QGCollectionViewClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */; };
+		383EA420246647AD00E1DB2C /* QGClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383EA41F246647AD00E1DB2C /* QGClassModel.m */; };
 		3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */; };
 		3A5CCE7E1D0516EB009EDFD8 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE31D0516EA009EDFD8 /* NSString+Hashing.m */; };
 		3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE51D0516EA009EDFD8 /* UIBarButtonItem+MQExtension.m */; };
@@ -805,6 +808,12 @@
 		381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTCSampleAlert.m"; sourceTree = "<group>"; };
 		381DABCF2464E90F004207B9 /* RTCSampleRemoteUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSampleRemoteUserModel.h; sourceTree = "<group>"; };
 		381DABD02464E90F004207B9 /* RTCSampleRemoteUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSampleRemoteUserManager.h; sourceTree = "<group>"; };
+		381DABD4246523D3004207B9 /* QGClassPoplView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGClassPoplView.h; sourceTree = "<group>"; };
+		381DABD5246523D3004207B9 /* QGClassPoplView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGClassPoplView.m; sourceTree = "<group>"; };
+		381DABD724652B7A004207B9 /* QGCollectionViewClassCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGCollectionViewClassCell.h; sourceTree = "<group>"; };
+		381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGCollectionViewClassCell.m; sourceTree = "<group>"; };
+		383EA41E246647AD00E1DB2C /* QGClassModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGClassModel.h; sourceTree = "<group>"; };
+		383EA41F246647AD00E1DB2C /* QGClassModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGClassModel.m; sourceTree = "<group>"; };
 		3A5CCDE01D0516EA009EDFD8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		3A5CCDE21D0516EA009EDFD8 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -2684,6 +2693,8 @@
 				676315DA1D3DF70F00658AFD /* QGPostListModel.m */,
 				A4A8176D1D47C62200AF9F9C /* QGGetLocationCityModel.h */,
 				A4A8176E1D47C62200AF9F9C /* QGGetLocationCityModel.m */,
+				383EA41E246647AD00E1DB2C /* QGClassModel.h */,
+				383EA41F246647AD00E1DB2C /* QGClassModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2728,6 +2739,10 @@
 				67477A0E1D87E576006649E2 /* QGCollectionFooterLineView.m */,
 				8868B0EF1D94C16F00290EF9 /* QGAdvertisingView.h */,
 				8868B0F01D94C16F00290EF9 /* QGAdvertisingView.m */,
+				381DABD4246523D3004207B9 /* QGClassPoplView.h */,
+				381DABD5246523D3004207B9 /* QGClassPoplView.m */,
+				381DABD724652B7A004207B9 /* QGCollectionViewClassCell.h */,
+				381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5619,6 +5634,7 @@
 				888BD8951D11059A005E838D /* BLUUserIndicatorCell.m in Sources */,
 				676D01B71D3F1037005694F5 /* QGSearchResultGoodsCell.m in Sources */,
 				888BD8531D11059A005E838D /* BLUDialogueCell.m in Sources */,
+				381DABD6246523D3004207B9 /* QGClassPoplView.m in Sources */,
 				8816B9551D372F8600F3E0AD /* QGCategoryButton.m in Sources */,
 				88548D901D435FC60001423E /* QGShopCarCellHeader.m in Sources */,
 				888BD83A1D11059A005E838D /* BLUCircleSearchResultsViewController.m in Sources */,
@@ -5874,6 +5890,7 @@
 				888BD88F1D11059A005E838D /* BLUGenderButton.m in Sources */,
 				888BD88D1D11059A005E838D /* BLUAvatarButton.m in Sources */,
 				888BD8B01D11059A005E838D /* BLUImageViewerViewController.m in Sources */,
+				383EA420246647AD00E1DB2C /* QGClassModel.m in Sources */,
 				888BD82D1D11059A005E838D /* UITableView+BLUAddition.m in Sources */,
 				888BD8A91D11059A005E838D /* BLUCircleMainViewController.m in Sources */,
 				888BD8421D11059A005E838D /* BLUContentReplyView.m in Sources */,
@@ -5960,6 +5977,7 @@
 				888BD8761D11059A005E838D /* BLUPostLikedUserCollectionViewCell.m in Sources */,
 				886AE3551D4A146100C79D6C /* QGGoodLogisticsCell.m in Sources */,
 				888BD80A1D110599005E838D /* BLUServerNotificationMO.m in Sources */,
+				381DABD924652B7A004207B9 /* QGCollectionViewClassCell.m in Sources */,
 				672A19DA1D2D2EDC0005DD1C /* QGTeacherPhotoModel.m in Sources */,
 				672A19A21D2D2EDC0005DD1C /* QGEduTeacherModel.m in Sources */,
 				3AE256E81D051C3500E56DC9 /* MQAddBtnView.m in Sources */,

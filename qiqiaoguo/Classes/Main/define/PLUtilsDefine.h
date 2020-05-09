@@ -21,9 +21,13 @@ typedef NS_ENUM(NSInteger, SARefreshType)
 #define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
 //#define QQG_BASE_APIURLString  @"http://api.qqg.blue69.cn"
 ////#define QQG_BASE_APIURLString  @"http://192.168.2.186:8001"
+#define QG_NEW_APIURLString  @"http://t.api.qiqiaoguo.com"
+
 #else
 //#define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
 #define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
+
+#define QG_NEW_APIURLString  @"http://t.api.qiqiaoguo.com"
 
 #endif
 
