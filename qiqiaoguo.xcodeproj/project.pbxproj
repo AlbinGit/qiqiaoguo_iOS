@@ -14,6 +14,7 @@
 		381DABD32464E90F004207B9 /* UIViewController+RTCSampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */; };
 		381DABD6246523D3004207B9 /* QGClassPoplView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABD5246523D3004207B9 /* QGClassPoplView.m */; };
 		381DABD924652B7A004207B9 /* QGCollectionViewClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */; };
+		383EA420246647AD00E1DB2C /* QGClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383EA41F246647AD00E1DB2C /* QGClassModel.m */; };
 		3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */; };
 		3A5CCE7E1D0516EB009EDFD8 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE31D0516EA009EDFD8 /* NSString+Hashing.m */; };
 		3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE51D0516EA009EDFD8 /* UIBarButtonItem+MQExtension.m */; };
@@ -811,6 +812,8 @@
 		381DABD5246523D3004207B9 /* QGClassPoplView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGClassPoplView.m; sourceTree = "<group>"; };
 		381DABD724652B7A004207B9 /* QGCollectionViewClassCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGCollectionViewClassCell.h; sourceTree = "<group>"; };
 		381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGCollectionViewClassCell.m; sourceTree = "<group>"; };
+		383EA41E246647AD00E1DB2C /* QGClassModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGClassModel.h; sourceTree = "<group>"; };
+		383EA41F246647AD00E1DB2C /* QGClassModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGClassModel.m; sourceTree = "<group>"; };
 		3A5CCDE01D0516EA009EDFD8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		3A5CCDE21D0516EA009EDFD8 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -2690,6 +2693,8 @@
 				676315DA1D3DF70F00658AFD /* QGPostListModel.m */,
 				A4A8176D1D47C62200AF9F9C /* QGGetLocationCityModel.h */,
 				A4A8176E1D47C62200AF9F9C /* QGGetLocationCityModel.m */,
+				383EA41E246647AD00E1DB2C /* QGClassModel.h */,
+				383EA41F246647AD00E1DB2C /* QGClassModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5885,6 +5890,7 @@
 				888BD88F1D11059A005E838D /* BLUGenderButton.m in Sources */,
 				888BD88D1D11059A005E838D /* BLUAvatarButton.m in Sources */,
 				888BD8B01D11059A005E838D /* BLUImageViewerViewController.m in Sources */,
+				383EA420246647AD00E1DB2C /* QGClassModel.m in Sources */,
 				888BD82D1D11059A005E838D /* UITableView+BLUAddition.m in Sources */,
 				888BD8A91D11059A005E838D /* BLUCircleMainViewController.m in Sources */,
 				888BD8421D11059A005E838D /* BLUContentReplyView.m in Sources */,

@@ -49,6 +49,7 @@
 #import "QGHomePostListV2TabCell.h"
 
 #import "QGClassPoplView.h"
+#import "QGClassModel.h"
 #define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
 #define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
 typedef NS_ENUM(NSUInteger, QGHomeCellType) {
@@ -93,6 +94,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 
 /**班级弹出视图*/
 @property (nonatomic,strong) QGClassPoplView *classPopView;
+@property (nonatomic,strong) NSIndexPath *myIndexPath;
 
 @end
 @implementation QGHomeV2ViewController
@@ -265,7 +267,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 
 - (void)updateCityBtnFrameWithTitle:(NSString *)title
 {
-    _cityTitile = title;
+//    _cityTitile = title;
     CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_sortBtn.titleFont, NSFontAttributeName, nil]];
     float citybtnW = 18 + btntitleSize.width;
     [_sortBtn mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -370,7 +372,8 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
                         [[SAAlert sharedInstance] confirmClick:^{
                             __weak __typeof(UIButton *)btn = button;
                             [btn setTitle:item.item.name forState:UIControlStateNormal];
-                            [weakSelf updateCityBtnFrameWithTitle:item.item.name];
+//                            [weakSelf updateCityBtnFrameWithTitle:item.item.name];
+							_cityTitile = item.item.name;
                             [SAUserDefaults saveValue:item.item.sid forKey:USERDEFAULTS_SID];
                             [SAUserDefaults saveValue:item.item.platform_id forKey:USERDEFAULTS_Platform_id];
                         }];
@@ -386,7 +389,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 }
 - (void)CityBtnClick:(UIButton *)button
 {
-//        PL_CODE_WEAK(weakSelf);
+        PL_CODE_WEAK(weakSelf);
 //        QGSwitchCityViewController *cityVC=[[QGSwitchCityViewController alloc]init];
 //        cityVC.result = _item.item;
 //        cityVC.cityNames = weakSelf.shopCityLists;
@@ -402,11 +405,43 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 //        [weakSelf.navigationController pushViewController:cityVC animated:YES];
 	
 	[self.view addSubview:self.classPopView];
-	_classPopView.selectBlock = ^(NSString * _Nonnull className) {
-		NLog(@"%@",className);
+	
+	[_classPopView cityBtnFrameWithTitle:_cityTitile];
+	
+	_classPopView.selectBlock = ^(QGClassListModel * _Nonnull model, NSIndexPath * _Nonnull indexPath) {
+		[weakSelf updateCityBtnFrameWithTitle:model.title];
+        [SAUserDefaults saveValue:model.title forKey:USERDEFAULTS_Class];
+		[SAUserDefaults saveValue:[NSString stringWithFormat:@"%ld-%ld",(long)indexPath.row,indexPath.section] forKey:USERDEFAULTS_IndexPath];
 	};
-}
+	
+	[_classPopView.localButton addClick:^(UIButton *button) {
+		QGSwitchCityViewController *cityVC=[[QGSwitchCityViewController alloc]init];
+		cityVC.result = weakSelf.item.item;
+		cityVC.cityNames = weakSelf.shopCityLists;
+		cityVC.cityTitle = weakSelf.cityTitile;
+		[weakSelf.navigationController pushViewController:cityVC animated:YES];
+		
+		[cityVC setCityBlock:^(QGShopCityModel *cityModel) {
+		[button setTitle:cityModel.name forState:UIControlStateNormal];
+		[weakSelf.classPopView cityBtnFrameWithTitle:cityModel.name];
+		_cityTitile = cityModel.name;
+		[SAUserDefaults saveValue:cityModel.sid forKey:USERDEFAULTS_SID];
+		[SAUserDefaults saveValue:cityModel.platform_id forKey:USERDEFAULTS_Platform_id];
+		[weakSelf requestFirstDataMethod:SARefreshPullDownType];
+		}];
 
+	}];
+}
+//- (void)updateClassPopViewCityBtnFrameWithTitle:(NSString *)title
+//{
+//	CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_classPopView.localButton.titleFont, NSFontAttributeName, nil]];
+//
+//	   [_classPopView.localButton setTitle:title];
+//	   [_classPopView.localButton.titleLabel sizeToFit];
+//	   [_classPopView.localButton.imageView sizeToFit];
+//	   [_classPopView.localButton setImageEdgeInsets:UIEdgeInsetsMake(0, _classPopView.localButton.titleLabel.width+10, 0, -_classPopView.localButton.titleLabel.width-5)];
+//	   [_classPopView.localButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_classPopView.localButton.imageView.width-10 , 0, _classPopView.localButton.imageView.width)];
+//}
 - (QGClassPoplView *)classPopView
 {
 	if (!_classPopView) {
@@ -425,8 +460,16 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         QGShopCityModel * shopCityModel = _shopCityLists[0];
         if ([shopCityModel.is_default integerValue]==1)
         {
-        [_sortBtn setTitle:shopCityModel.name forState:UIControlStateNormal];
-        [self updateCityBtnFrameWithTitle:shopCityModel.name];
+//        [_sortBtn setTitle:shopCityModel.name forState:UIControlStateNormal];
+//        [self updateCityBtnFrameWithTitle:shopCityModel.name];
+			_cityTitile = shopCityModel.name;
+			NSString * className = [SAUserDefaults getValueWithKey:USERDEFAULTS_Class];
+			if (className.length>0) {
+				[self updateCityBtnFrameWithTitle:className];
+			}else
+			{
+				[self updateCityBtnFrameWithTitle:@"全部"];
+			}
         [SAUserDefaults saveValue:shopCityModel.sid forKey:USERDEFAULTS_SID];
         [SAUserDefaults saveValue:shopCityModel.platform_id forKey:USERDEFAULTS_Platform_id];
         [self requestFirstDataMethod:SARefreshPullUpType];
@@ -436,7 +479,6 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [SAUserDefaults saveValue:@"50" forKey:USERDEFAULTS_Platform_id];
         [self showTopIndicatorWithError:error];
     }];
-    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -502,8 +544,6 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         return cell;
     }
 }
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     QGHomeCellType type = [self getCellTypeWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.section]];
     
@@ -526,8 +566,6 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     }];
     
 }
-
-
 - (void)QGHomePostListV2TabCellMoreBtnClicked:(QGHomePostListV2TabCell *)sender {
     
     PL_CODE_WEAK(ws)

@@ -6,7 +6,7 @@
 //
 
 #import "QGCollectionViewClassCell.h"
-
+#import "QGClassModel.h"
 @interface QGCollectionViewClassCell()
 
 @property (nonatomic,strong) UILabel *titleLabel;
@@ -36,6 +36,11 @@
 		[self.contentView addSubview:label];
 		label;
 	});
+}
+- (void)setModel:(QGClassListModel *)model
+{
+	_model = model;
+	_titleLabel.text = model.title;
 }
 - (void)setSelected:(BOOL)selected
 {

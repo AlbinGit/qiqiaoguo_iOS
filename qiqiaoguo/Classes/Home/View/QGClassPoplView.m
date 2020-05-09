@@ -8,6 +8,7 @@
 #import "QGClassPoplView.h"
 #import "QGCollectionViewClassCell.h"
 #import "QGSerachViewController.h"
+#import "QGClassModel.h"
 static NSString * cell_id = @"cell_id";
 static const CGFloat kLineSpaceing = 15;  // 行间距 横向
 static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
@@ -18,7 +19,9 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) UIButton *categoryButton;
-@property (nonatomic,strong) UILabel *localLabel;
+//@property (nonatomic,strong) UIButton *localButton;
+@property (nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic,strong) NSMutableArray *sublistArray;
 
 @end
 
@@ -28,6 +31,7 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
     if (self = [super initWithFrame:frame]) {
 //        _imageArray = [[NSMutableArray alloc]init];
         [self p_creatUI];
+		[self p_configData];
     }
     return self;
 }
@@ -65,7 +69,8 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 #pragma collection
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-	NSArray * arr = @[@"幼儿园",@"一年级",@"高中"];
+		QGClassModel * model = _dataArray[indexPath.section];
+
 		if (kind == UICollectionElementKindSectionHeader) {
 			static NSString * colID = @"Header";
 			UICollectionReusableView * headSectionView = [[UICollectionReusableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
@@ -80,7 +85,7 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 			sectionTitle.textAlignment = NSTextAlignmentLeft;
 			sectionTitle.textColor = [UIColor blackColor];
 			sectionTitle.font = FONT_SYSTEM(18);
-			sectionTitle.text = arr[indexPath.section];
+			sectionTitle.text = model.category_name;
 			[headSectionView addSubview:sectionTitle];
 			return headSectionView;
 		}
@@ -91,21 +96,17 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-	return 3;
+	return _dataArray.count;
 }
 //Item数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-	if (section == 0) {
-		return 3;
+	QGClassModel *model;
+	if (_dataArray.count>0) {
+		model= _dataArray[section];
 	}
-	else if(section == 1)
-	{
-		return 5;
-	}else
-	{
-		return 6;
-	}
+
+	return model.sublist.count;
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -120,21 +121,45 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 //Item
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-		QGCollectionViewClassCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell_id forIndexPath:indexPath];
+	QGClassModel * model;
+	QGClassListModel * subModel;
+	if (_dataArray.count>0) {
+		model = _dataArray[indexPath.section];
+		subModel = model.sublist[indexPath.row];
+	}
+		
+	QGCollectionViewClassCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell_id forIndexPath:indexPath];
 		dispatch_async(dispatch_get_main_queue(), ^{
-			if (indexPath.section ==0&&indexPath.row == 1) {
-				[self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
-			}
+			NSIndexPath * myIndexPath;
+			NSString * str = [[NSUserDefaults standardUserDefaults]objectForKey:USERDEFAULTS_IndexPath];
+			NSArray * arr = [str componentsSeparatedByString:@"-"];
+			if (arr.count>0) {
+				myIndexPath = [NSIndexPath indexPathForRow:[arr[0] integerValue] inSection:[arr[1] integerValue]];
+				if (indexPath == myIndexPath) {
+					[self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+				}
+			}			
 		});
+		cell.model = subModel;
 		return cell;
 }
 //点击
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	NLog(@"点击了item %ld",indexPath.row)
-	if (_selectBlock) {
-		_selectBlock(@"选择的年级");
+	QGClassModel * model;
+	QGClassListModel * subModel;
+	if (_dataArray.count>0) {
+		model = _dataArray[indexPath.section];
+		subModel = model.sublist[indexPath.row];
 	}
+	if (_selectBlock) {
+		_selectBlock(subModel,indexPath);
+	}
+//	[_categoryButton setTitle:subModel.title];
+	[self updateCategoryBtnFrameWithTitle:subModel.title];
+	[self removeFromSuperview];
+
 }
 
 
@@ -166,54 +191,84 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 - (void)p_creatTitleSubView
 {
 	CGFloat edgeBtnWidth = 50;
-	CGFloat marginX = 20;
 	_categoryButton = [UIButton makeThemeButtonWithType:BLUButtonTypeDefault];
 	_categoryButton.titleColor = QGTitleColor;
 	UIImage *image = [[UIImage imageNamed:@"search-drop-down-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	[_categoryButton setImage:image forState:UIControlStateNormal];
-	[_categoryButton.imageView sizeToFit];
-	[_categoryButton setTitle:@"小班"];
 	_categoryButton.titleLabel.font = FONT_CUSTOM(18);
+	[_categoryButton setTitle:[SAUserDefaults getValueWithKey:USERDEFAULTS_Class]];
+	[_categoryButton.imageView sizeToFit];
 	[_categoryButton.titleLabel sizeToFit];
-	_categoryButton.frame = CGRectMake(10, 10, edgeBtnWidth, 40);
+	_categoryButton.frame = CGRectMake(12, 10, edgeBtnWidth, 40);
 	[_categoryButton setImageEdgeInsets:UIEdgeInsetsMake(0, _categoryButton.titleLabel.width+5, 0, -_categoryButton.titleLabel.width-5)];
 	[_categoryButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_categoryButton.imageView.width-5 , 0, _categoryButton.imageView.width)];
+//	[self updateCategoryBtnFrameWithTitle:[SAUserDefaults getValueWithKey:@"USERDEFAULTS_Class"]];
 	_categoryButton.backgroundColor = [UIColor whiteColor];
 	[_titleView addSubview:_categoryButton];
-	
-	UIButton * bgBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-	bgBtn.frame = CGRectMake(_categoryButton.right+marginX , 10, SCREEN_WIDTH-(edgeBtnWidth+marginX)*2, 40);
-	bgBtn.layer.masksToBounds = YES;
-	bgBtn.layer.cornerRadius = 15;
-	[bgBtn addClick:^(UIButton *button) {		
-		UIViewController *viewController =[SAUtils findViewControllerWithView:self];
-		QGSerachViewController * vc = [[QGSerachViewController alloc]init];
-		[viewController.navigationController pushViewController:vc animated:YES];
-	}];
-	bgBtn.backgroundColor = PL_COLOR_230;
-	[_titleView addSubview:bgBtn];
-	
-    //搜索图片
-    UIImageView *serchImv = [[UIImageView alloc]initWithFrame:CGRectMake(7, 25/2, 15, 15)];
-    serchImv.image = [UIImage imageNamed:@"icon_classification_search"];
-    [bgBtn addSubview:serchImv];//search-drop-down-icon
+		
+	UIButton * localBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	localBtn.frame = CGRectMake(SCREEN_WIDTH-edgeBtnWidth-50-12 , 10, edgeBtnWidth+50, 40);
+//	[localBtn setTitle:@"北京"];
+	UIImage *image2 = [[UIImage imageNamed:@"search-drop-down-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+	[localBtn setImage:image2 forState:UIControlStateNormal];
+	[localBtn setImageEdgeInsets:UIEdgeInsetsMake(0, localBtn.titleLabel.width+5, 0, -localBtn.titleLabel.width-5)];
+	[localBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -localBtn.imageView.width-5 , 0, localBtn.imageView.width)];
+	[localBtn setTitleColor:QGTitleColor];
+	[_titleView addSubview:localBtn];
+	_localButton = localBtn;
 
-	UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(serchImv.right+5, 0, bgBtn.width-7-serchImv.width, bgBtn.height)];
-	label.text = @"输入商家、分类或商圈";
-	label.font = FONT_SYSTEM(14);
-	label.textColor = PL_COLOR_gray;
-	[bgBtn addSubview:label];
-	
-	_localLabel = [[UILabel alloc]initWithFrame:CGRectMake(bgBtn.right+5, _categoryButton.y, edgeBtnWidth, 40)];
-	_localLabel.text = @"北京";
-	_localLabel.backgroundColor = [UIColor whiteColor];
-	_localLabel.textAlignment = NSTextAlignmentCenter;
-	_localLabel.textColor = [UIColor blackColor];
-	[_titleView addSubview:_localLabel];
-	
 }
 
+- (void)p_configData
+{
+	_dataArray = [NSMutableArray array];
+	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+	NSDictionary * param = @{
+		@"platform_id":[SAUserDefaults getValueWithKey:USERDEFAULTS_Platform_id],
+		@"client_type":@"ios",
+		@"verion":[infoDictionary objectForKey:@"CFBundleShortVersionString"]
+	};
+	[QGHttpManager get:[NSString stringWithFormat:@"%@/Phone/Edu/getSystemCategory",QG_NEW_APIURLString] params:param success:^(id responseObj) {
+		NLog(@"%@",responseObj);
+		_dataArray = [QGClassModel mj_objectArrayWithKeyValuesArray:responseObj[@"extra"][@"items"]];
+		[_collectionView reloadData];
+	} failure:^(NSError *error) {
+		
+	}];
 
+}
 
+- (void)updateCategoryBtnFrameWithTitle:(NSString *)title
+{
+    CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_categoryButton.titleFont, NSFontAttributeName, nil]];
+    float citybtnW = 18 + btntitleSize.width;
+    [_categoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo([NSNumber numberWithFloat:citybtnW]);
+		make.left.mas_offset(12);
+		make.top.mas_offset(10);
+		make.height.mas_equalTo(40);
+    }];
+    [_categoryButton setTitle:title];
+    [_categoryButton.titleLabel sizeToFit];
+    [_categoryButton.imageView sizeToFit];
+    [_categoryButton setImageEdgeInsets:UIEdgeInsetsMake(0, _categoryButton.titleLabel.width+5, 0, -_categoryButton.titleLabel.width-5)];
+    [_categoryButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_categoryButton.imageView.width-5 , 0, _categoryButton.imageView.width)];
+}
+- (void)cityBtnFrameWithTitle:(NSString *)title
+{
+    CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_localButton.titleFont, NSFontAttributeName, nil]];
+    float citybtnW = 18 + btntitleSize.width;
+    [_localButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo([NSNumber numberWithFloat:citybtnW]);
+		make.right.mas_offset(-12);
+		make.top.mas_offset(10);
+		make.height.mas_equalTo(40);
+    }];
+    [_localButton setTitle:title];
+    [_localButton.titleLabel sizeToFit];
+    [_localButton.imageView sizeToFit];
+    [_localButton setImageEdgeInsets:UIEdgeInsetsMake(0, _localButton.titleLabel.width+5, 0, -_localButton.titleLabel.width-5)];
+    [_localButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_localButton.imageView.width-5 , 0, _localButton.imageView.width)];
+}
 
 @end

@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class QGClassListModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QGCollectionViewClassCell : UICollectionViewCell
+@property (nonatomic,strong) QGClassListModel *model;
 
 @end
 
