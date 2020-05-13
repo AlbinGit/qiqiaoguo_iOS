@@ -29,6 +29,8 @@
  */
 @property(nonatomic, assign) BOOL isJoinChannel;
 
+@property (nonatomic,strong) UIButton  *channelBtn1;
+@property (nonatomic,strong) UIButton  *channelBtn2;
 
 
 
@@ -92,20 +94,19 @@
 	[_chooseView addSubview:channelBtn1];
 	[channelBtn1 addClick:^(UIButton *button) {
 		[weakSelf.chooseView setHidden:YES];
-			[weakSelf getChannelID:YES];
+			[weakSelf getChannelID:NO];
 	}];
 	
 	
 	UIButton *channelBtn2 = [UIButton buttonWithType:UIButtonTypeCustom];
 	[channelBtn2 setTitle:@"选择频道2" forState:UIControlStateNormal];
 	channelBtn2.backgroundColor = [UIColor greenColor];
-
 	channelBtn2.frame = CGRectMake(50, channelBtn1.bottom+30, SCREEN_WIDTH-100, 45);
 	[_chooseView addSubview:channelBtn2];
 
 	[channelBtn2 addClick:^(UIButton *button) {
 		[weakSelf.chooseView setHidden:YES];
-			[weakSelf getChannelID:NO];
+			[weakSelf getChannelID:YES];
 	}];
 }
 #pragma mark - initializeSDK
