@@ -19,10 +19,9 @@
              @"activityList":@"QGEduActivityListModel",
              @"cateList":@"QGEducateListtModel",
              @"courseList":@"QGCourseInfoModel",
-             @"videoList":@"QGEduVideoListModel"};
-    
-    
-
+             @"videoList":@"QGEduVideoListModel",
+             @"teacherList":@"QQGTeacherListModel",
+    };
 }
 @end
 
@@ -31,3 +30,6 @@
 
 @end
 
+@implementation QQGTeacherListModel
+
+@end

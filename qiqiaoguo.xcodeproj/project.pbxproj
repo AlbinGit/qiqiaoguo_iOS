@@ -775,6 +775,8 @@
 		A4625BFE1D4A7696009859C3 /* QGWeiXInPayHttpDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = A4625BFD1D4A7696009859C3 /* QGWeiXInPayHttpDownload.m */; };
 		A4A817661D47B49300AF9F9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A817651D47B49300AF9F9C /* main.m */; };
 		A4A8176F1D47C62200AF9F9C /* QGGetLocationCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8176E1D47C62200AF9F9C /* QGGetLocationCityModel.m */; };
+		AA34A46D24715739004B3C38 /* QQGCourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA34A46C24715739004B3C38 /* QQGCourseTableViewCell.m */; };
+		AA84D923247178D1001C41A9 /* QQGTeacherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA84D922247178D1001C41A9 /* QQGTeacherTableViewCell.m */; };
 		D449B80D22C5F142007B1C89 /* screenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D449B80C22C5F142007B1C89 /* screenImage.png */; };
 /* End PBXBuildFile section */
 
@@ -2368,6 +2370,10 @@
 		A4A817651D47B49300AF9F9C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4A8176D1D47C62200AF9F9C /* QGGetLocationCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGGetLocationCityModel.h; sourceTree = "<group>"; };
 		A4A8176E1D47C62200AF9F9C /* QGGetLocationCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGGetLocationCityModel.m; sourceTree = "<group>"; };
+		AA34A46B24715739004B3C38 /* QQGCourseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQGCourseTableViewCell.h; sourceTree = "<group>"; };
+		AA34A46C24715739004B3C38 /* QQGCourseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQGCourseTableViewCell.m; sourceTree = "<group>"; };
+		AA84D921247178D1001C41A9 /* QQGTeacherTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQGTeacherTableViewCell.h; sourceTree = "<group>"; };
+		AA84D922247178D1001C41A9 /* QQGTeacherTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQGTeacherTableViewCell.m; sourceTree = "<group>"; };
 		D449B80C22C5F142007B1C89 /* screenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenImage.png; sourceTree = "<group>"; };
 		EC0C10A06594B7D1AB3ED2D3 /* Pods-qiqiaoguo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiqiaoguo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2743,6 +2749,10 @@
 				381DABD5246523D3004207B9 /* QGClassPoplView.m */,
 				381DABD724652B7A004207B9 /* QGCollectionViewClassCell.h */,
 				381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */,
+				AA34A46B24715739004B3C38 /* QQGCourseTableViewCell.h */,
+				AA34A46C24715739004B3C38 /* QQGCourseTableViewCell.m */,
+				AA84D921247178D1001C41A9 /* QQGTeacherTableViewCell.h */,
+				AA84D922247178D1001C41A9 /* QQGTeacherTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5518,6 +5528,7 @@
 				8816B95B1D37696800F3E0AD /* QGMyParticipateViewController.m in Sources */,
 				888BD8031D110599005E838D /* BLURecommend.m in Sources */,
 				67FAFD0F1D8921FA0076A95D /* QGEducationOrderListViewController.m in Sources */,
+				AA84D923247178D1001C41A9 /* QQGTeacherTableViewCell.m in Sources */,
 				88D407411D66F26700DD65E3 /* UIView+FSExtension.m in Sources */,
 				6739DC771D869E0500F8E40B /* QGShoppingCartModel.m in Sources */,
 				888496F01D420A26006403BD /* QGActivOrderFooterCell.m in Sources */,
@@ -5594,6 +5605,7 @@
 				888BD8161D110599005E838D /* BLUAlertView.m in Sources */,
 				67DF93E41D927ECC00B55F69 /* QGEduOrderHeaderCell.m in Sources */,
 				672A19991D2D2EDC0005DD1C /* QGCourseTeacherCollectionViewCell.m in Sources */,
+				AA34A46D24715739004B3C38 /* QQGCourseTableViewCell.m in Sources */,
 				888BD7CD1D110599005E838D /* BLUServer.m in Sources */,
 				888BD87F1D11059A005E838D /* BLUPostTagTextAttachment.m in Sources */,
 				888BD85D1D11059A005E838D /* BLUPostCommentToolbar.m in Sources */,

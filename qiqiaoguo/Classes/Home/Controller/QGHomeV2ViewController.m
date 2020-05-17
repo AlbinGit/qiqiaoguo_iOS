@@ -50,17 +50,22 @@
 
 #import "QGClassPoplView.h"
 #import "QGClassModel.h"
+
+#import "QQGCourseTableViewCell.h"
+#import "QQGTeacherTableViewCell.h"
+
 #define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
 #define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
 typedef NS_ENUM(NSUInteger, QGHomeCellType) {
-    QGHomeCellTypeEdu,
-    QGHomeCellTypeVideo,
-    QGHomeCellTypePost,
-    QGHomeCellTypeCourse,
+    QGHomeCellTypeEdu,//附近课程、附近机构
+    QGHomeCellTypeVideo,//帖子
+    QGHomeCellTypePost,//热门文章
+    QGHomeCellTypeCourse,//精品课程
+    QGHomeCellTypeTeacher,//名师风采
 };
 
 
-@interface QGHomeV2ViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate,CLLocationManagerDelegate,QGHomevideoListCellDelegate,QGHomePostListV2TabCellDelegate,QGCollectionFooterLineViewDelegate>
+@interface QGHomeV2ViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate,CLLocationManagerDelegate,QGHomevideoListCellDelegate,QGHomePostListV2TabCellDelegate,QGCollectionFooterLineViewDelegate,QQGCourseTableViewCellDelegate>
 {
     CLLocationManager *locationManager;
 }
@@ -89,8 +94,10 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 @property (nonatomic,strong)NSMutableArray *dataSource;
 @property (nonatomic, strong) NSMutableArray   *firstRowCellCountArray;
 @property (nonatomic, strong) NSMutableArray   *postfirstRowCellCountArray;
+@property (nonatomic, strong) NSMutableArray   *coursefirstRowCellCountArray;
 @property (nonatomic,assign) CGFloat postHeight;
 @property (nonatomic,assign) CGFloat videoHeight;
+@property (nonatomic,assign) CGFloat courseHeight;
 
 /**班级弹出视图*/
 @property (nonatomic,strong) QGClassPoplView *classPopView;
@@ -122,7 +129,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     _postList = [[NSMutableArray alloc] init];
     _firstRowCellCountArray = [NSMutableArray array];
     _postfirstRowCellCountArray = [NSMutableArray array];
-  
+    _coursefirstRowCellCountArray = [NSMutableArray array];
     
   }
 
@@ -231,6 +238,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [self createTableHeader];
         [self addpostHeghtCell];
         [self addvideoHeightCell];
+        [self addcourseHeghtCell];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
@@ -257,6 +265,14 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     _postHeight = y+44+itemHeight;
 }
 
+- (void)addcourseHeghtCell {
+    CGFloat itemWidth  = (MQScreenW-3*10)/2.0;
+    CGFloat itemHeight = itemWidth*9/16;
+    int totalCol = 2;
+    int row = (_dataModel.courseList.count-1) / totalCol;
+    CGFloat y = (itemHeight + 50) * row;
+    _courseHeight = itemHeight +44 +y+50;
+}
 
 - (void)updateUserMessageCount{
     if (self.messageCount > 0) {
@@ -488,20 +504,21 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ((section == [self getDataCount]-1) && (_dataModel.courseList.count > 0)) {
-        return _dataModel.courseList.count;
-    }else {
+//    if ((section == [self getDataCount]-1) && (_dataModel.courseList.count > 0)) {
+//        return _dataModel.courseList.count;
+//    }else {
         
         return 1;
-    }
+//    }
 }
 - (NSInteger)getDataCount{
-       NSInteger count = 0;
-       count += _dataModel.postList.count > 0;
-       count += _dataModel.courseList.count > 0;
-       count += _dataModel.videoList.count > 0;
-       count += _dataModel.bannerList.count>0;
-       return count;
+    NSInteger count = 0;
+    count += _dataModel.postList.count > 0;
+    count += _dataModel.courseList.count > 0;
+    count += _dataModel.videoList.count > 0;
+    count += _dataModel.bannerList.count>0;
+    count += _dataModel.teacherList.count>0;
+    return count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -537,23 +554,38 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         cell.postList = _dataModel.postList;
         cell.delegate = self;
         return cell;
-    }else {
-        PL_CELL_CREATEMETHOD(QGSearchCourseTableViewCell, @"searchCourse")
-        cell.model = _dataModel.courseList[indexPath.row];
+    }
+    else if (type == QGHomeCellTypeTeacher) {
+        PL_CELL_CREATEMETHOD(QQGTeacherTableViewCell,@"teacher") ;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.dataSource = _dataModel.teacherList;
+        [cell.collectionView reloadData];
         return cell;
+    }
+    else {
+        PL_CELL_CREATEMETHOD(QQGCourseTableViewCell,@"searchCourse") ;
+        cell.delegate =self;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        cell.dataSource = _dataModel.courseList;
+        [cell.collectionView reloadData];
+        return cell;
+        
+//        PL_CELL_CREATEMETHOD(QGSearchCourseTableViewCell, @"searchCourse")
+//        cell.model = _dataModel.courseList[indexPath.row];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell;
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    QGHomeCellType type = [self getCellTypeWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.section]];
+//    QGHomeCellType type = [self getCellTypeWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.section]];
     
-    if (type == QGHomeCellTypeCourse) {
-        QGCourseInfoModel * model =  _dataModel.courseList[indexPath.row];
-        
-        QGCourseDetailViewController *vc =[[QGCourseDetailViewController alloc] init];
-        vc.course_id =model.id;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+//    if (type == QGHomeCellTypeCourse) {
+//        QGCourseInfoModel * model =  _dataModel.courseList[indexPath.row];
+//        
+//        QGCourseDetailViewController *vc =[[QGCourseDetailViewController alloc] init];
+//        vc.course_id =model.id;
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
     
 }
 - (void)QGHomevideoListCellMoreBtnClicked:(QGHomevideoListCell *)sender {
@@ -578,6 +610,16 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     
 }
 
+- (void)QQGCourseTableViewCellMoreBtnClicked:(QQGCourseTableViewCell *)sender {
+    PL_CODE_WEAK(ws)
+    [UIView animateWithDuration:0.5f animations:^{
+        [ws.coursefirstRowCellCountArray addObject:_dataModel.courseList];
+        [sender.collectionView reloadData];
+        [ws.tableView beginUpdates];
+        [ws.tableView endUpdates];
+    }];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 { QGHomeCellType type = [self getCellTypeWithIndexPath:indexPath];
     if (type == QGHomeCellTypeEdu)
@@ -585,7 +627,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         CGFloat height = width*0.38;
         return height;
     }else if(type == QGHomeCellTypeVideo)  {
-        if (_firstRowCellCountArray.count>0 || _dataSource.count<3) {
+        if (_firstRowCellCountArray.count>0 || _dataModel.courseList.count<3) {
             
             return _videoHeight;
         }else  {
@@ -603,29 +645,57 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
             CGFloat itemHeight = itemWidth*0.53+8;
             return itemHeight*2+44;
         }
-    }else {
-        return 245.7;
+    } else if (type == QGHomeCellTypeTeacher) {
+        CGFloat itemWidth  = (MQScreenW-4*10)/3.0;
+        return itemWidth + 40;
+    }
+    else {
+        if (_coursefirstRowCellCountArray.count>0 || _dataSource.count<3) {
+            return _courseHeight;
+        }else  {
+            CGFloat itemWidth  = (MQScreenW-3*10)/2.0;
+            CGFloat itemHeight = itemWidth*9/16;
+            return (itemHeight +50)*2+44;
+        }
+        //        return 245.7;
     }
 }
 - (QGHomeCellType)getCellTypeWithIndexPath:(NSIndexPath *)indexPath{
-    QGHomeCellType type = QGHomeCellTypeCourse;
-    
-    if (indexPath.section == 0) {
-        type = QGHomeCellTypeEdu;
+    NSMutableArray *array = [NSMutableArray array];
+    if (_dataModel.teacherList.count > 0) {
+        [array addObject:@(QGHomeCellTypeTeacher)];
     }
-    else
-        if (indexPath.section == 1) {
-            
-            if (_dataModel.videoList.count > 0) {
-                type = QGHomeCellTypeVideo;
-            }else{
-                
-                type = _dataModel.postList.count> 0 ? QGHomeCellTypePost : QGHomeCellTypeCourse;
-            }
-        }else if(indexPath.section == 2){
-            type = (_dataModel.videoList.count > 0 && _dataModel.postList.count>0) ? QGHomeCellTypePost : QGHomeCellTypeCourse;
-        }
-    return type;
+    if (_dataModel.courseList.count > 0) {
+        [array addObject:@(QGHomeCellTypeCourse)];
+    }
+    if (_dataModel.postList.count > 0) {
+        [array addObject:@(QGHomeCellTypePost)];
+    }
+    if (_dataModel.videoList.count > 0) {
+        [array addObject:@(QGHomeCellTypeVideo)];
+    }
+    [array addObject:@(QGHomeCellTypeEdu)];
+    return [array[indexPath.section] intValue];
+//    QGHomeCellType type = QGHomeCellTypeCourse;
+//    if (indexPath.section == 0) {
+//        type = QGHomeCellTypeEdu;
+//    }
+//    else
+//        if (indexPath.section == 1) {
+//            if (_dataModel.courseList.count > 0) {
+//
+//            }
+//            type = QGHomeCellTypeCourse;
+//            if (_dataModel.videoList.count > 0) {
+//                type = QGHomeCellTypeVideo;
+//            }else{
+//
+//                type = _dataModel.postList.count> 0 ? QGHomeCellTypePost : QGHomeCellTypeCourse;
+//            }
+//        }else if(indexPath.section == 2){
+//            type = (_dataModel.videoList.count > 0 && _dataModel.postList.count>0) ? QGHomeCellTypePost : QGHomeCellTypeCourse;
+//        }
+//    return type;
 }
 #pragma mark 头部视图
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -643,7 +713,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [view addSubview:nickImageView];
         UILabel *Lab=[[UILabel alloc]init];
         Lab.font=FONT_CUSTOM(16);
-        Lab.text=@"名师风采";
+        Lab.text=@"你可能感兴趣的帖子";
         Lab.textColor =[UIColor colorFromHexString:@"666666"];
         [view addSubview:Lab];
         [nickImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -660,10 +730,12 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     }
     else if (type == QGHomeCellTypePost)
     {
-        view =[self createSectionHeaderView:@"你可能感兴趣的帖子" ];
+        view =[self createSectionHeaderView:@"热门文章"];
     }else if (type == QGHomeCellTypeCourse) {
         
-        view =[self createSectionHeaderView:@"推荐课程" ];
+        view =[self createSectionHeaderView:@"精品课程"];
+    } else if (type == QGHomeCellTypeTeacher) {
+        view = [self createSectionHeaderView:@"名师风采"];
     }
     return view;
 }

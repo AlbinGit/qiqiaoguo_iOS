@@ -8,7 +8,7 @@
 
 
 #define QGStoreCityURLString QQG_BASE_APIURLString@"/Phone"//七巧国商城地址
-
+#define QQGStoreCityURLString QG_NEW_APIURLString@"/Phone"//七巧国商城地址(新)
 #define QGStoreEduURLString QQG_BASE_APIURLString@"/Phone"//七巧国教育地址
 #import "QGHttpDownloadConst.h"
 
@@ -51,7 +51,7 @@ NSString *const QGGetSeckillGoodsInfoPath=QGStoreCityURLString@"/getSeckillingGo
 NSString *const QGCheckSeckillingBuyCountPath=QGStoreCityURLString@"/checkSeckillingBuyCount";
 NSString *const QGGetGoodsForSeckillingPath=QGStoreCityURLString@"/getGoodsForSeckilling";
 NSString *const QGGetSkillInfoPath=QGStoreCityURLString@"/Home/getIndex";//首页请求
-NSString *const QGGetSkillInfoPathV2=QGStoreCityURLString@"/Home/getIndexV2";//首页请求v2
+NSString *const QGGetSkillInfoPathV2=QQGStoreCityURLString"/Home/getIndexV2";//首页请求v2
 NSString *const QGGetCityPath=QGStoreCityURLString@"/Home/getCityList";//首页城市定位
 NSString *const QGGetLocationCityPath = QGStoreCityURLString@"/Home/getLocationCity";//首页城市定位
 NSString *const QGGetSeacherGoodsPath = QGStoreEduURLString @"/Mall/getGoodsList";

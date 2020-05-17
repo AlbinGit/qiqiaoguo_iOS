@@ -33,6 +33,8 @@
 @property (nonatomic,strong)NSArray *cateList;//videoList
 @property (nonatomic,strong)NSMutableArray *videoList;//courseList
 @property (nonatomic,strong)NSArray *courseList;
+
+@property (nonatomic,strong)NSArray *teacherList;//名师风采
 @end
 
 
@@ -51,6 +53,14 @@
 @property (nonatomic,copy)NSString *status;
 @property (nonatomic,copy) NSString *id;
 @property (nonatomic,copy) NSString *sid;
+@end
+
+@interface QQGTeacherListModel : NSObject
+
+@property (nonatomic,copy)NSString *teacher_id;
+@property (nonatomic,copy)NSString *headimg;
+@property (nonatomic,copy)NSString *teacher_name;
+
 @end
 
 
