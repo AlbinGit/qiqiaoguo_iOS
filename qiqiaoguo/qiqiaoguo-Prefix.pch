@@ -50,5 +50,6 @@
 
 #define Height_BottomSafe (IS_IPhoneX_All? 34.0f:0.0f)
 
+#define kTopEdgeHeight        (IS_IPhoneX_All ? (24) : (0))
 
 #endif /* qiqiaoguo_Prefix_pch */

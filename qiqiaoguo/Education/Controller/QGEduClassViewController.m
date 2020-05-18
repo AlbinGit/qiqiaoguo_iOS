@@ -139,7 +139,7 @@ static NSString * const reuseIdentifier = @"QGCategroyFoodCell";
     
     
     self.navImageView.alpha=0;
-    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
+    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, Height_TopBar)];
     _navBGView.backgroundColor = RGBA(255, 255, 255 ,1);
     [self.view addSubview:_navBGView];
 
@@ -161,20 +161,20 @@ static NSString * const reuseIdentifier = @"QGCategroyFoodCell";
     
     kClearBackground(searchView);
     [_navBGView addSubview:searchView];
-    UIImageView *searchBg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, searchView.width, 30)];
+    UIImageView *searchBg = [[UIImageView alloc]initWithFrame:CGRectMake(0, kTopEdgeHeight, searchView.width, 30)];
     searchBg.backgroundColor =  APPBackgroundColor;
     searchBg.layer.masksToBounds = YES;
     searchBg.layer.cornerRadius = 5;
     [searchView addSubview:searchBg];
     _searchBg = searchBg;
     //搜索图片
-    UIImageView *serchImv = [[UIImageView alloc]initWithFrame:CGRectMake(7, 8, 15, 15)];
+    UIImageView *serchImv = [[UIImageView alloc]initWithFrame:CGRectMake(7, 8+kTopEdgeHeight, 15, 15)];
     serchImv.image = [UIImage imageNamed:@"icon_classification_search"];
     [searchView addSubview:serchImv];//search-drop-down-icon
     _searchimg = serchImv;
     
     //搜索框
-    _search = [[UITextField alloc]initWithFrame:CGRectMake(32, -6, searchView.width, 44)];
+    _search = [[UITextField alloc]initWithFrame:CGRectMake(32, -6+kTopEdgeHeight, searchView.width, 44)];
     _search.delegate = self;
     //        _search.textColor =PL_UTILS_COLORRGB(60, 60, 60);
     _search.returnKeyType = UIReturnKeySearch;
@@ -185,7 +185,8 @@ static NSString * const reuseIdentifier = @"QGCategroyFoodCell";
     
     [searchView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_returnBtn.mas_right).offset(5);
-        make.top.equalTo(@23);
+//        make.top.equalTo(@23);
+        make.top.mas_equalTo(23+kTopEdgeHeight);
         make.height.equalTo(@44);
         make.right.equalTo(_navBGView).offset(-50);
     }];
@@ -219,7 +220,7 @@ static NSString * const reuseIdentifier = @"QGCategroyFoodCell";
 {
     //消息
     UIView * bottomView = [[UIView alloc] init];
-    bottomView.frame=CGRectMake(SCREEN_WIDTH-7-40, 20, 40, 40);
+    bottomView.frame=CGRectMake(SCREEN_WIDTH-7-40, 20+kTopEdgeHeight, 40, 40);
     bottomView.backgroundColor = [UIColor clearColor];
     
     UIButton * messageBtn = [UIButton buttonWithType:UIButtonTypeCustom];

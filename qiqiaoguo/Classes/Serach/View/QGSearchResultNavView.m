@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-        self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64);
+        self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, Height_TopBar);
         
         _backButton = [UIButton makeThemeButtonWithType:BLUButtonTypeDefault];
         _backButton.image = [[UIImage imageNamed:@"nav-back-icon"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

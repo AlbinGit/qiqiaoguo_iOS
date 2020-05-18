@@ -228,7 +228,7 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 		@"client_type":@"ios",
 		@"verion":[infoDictionary objectForKey:@"CFBundleShortVersionString"]
 	};
-	[QGHttpManager get:[NSString stringWithFormat:@"%@/Phone/Edu/getSystemCategory",QG_NEW_APIURLString] params:param success:^(id responseObj) {
+	[QGHttpManager get:[NSString stringWithFormat:@"%@/Phone/Edu/getSystemCategory",QQG_BASE_APIURLString] params:param success:^(id responseObj) {
 		NLog(@"%@",responseObj);
 		_dataArray = [QGClassModel mj_objectArrayWithKeyValuesArray:responseObj[@"extra"][@"items"]];
 		[_collectionView reloadData];

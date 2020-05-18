@@ -13,6 +13,8 @@
 @required
 - (void)QQGCourseTableViewCellMoreBtnClicked:(QQGCourseTableViewCell *)sender;
 
+- (void)QQGCourseTableViewCellFoldBtnClicked:(QQGCourseTableViewCell *)sender;
+
 @end
 
 @interface QQGCourseTableViewCell : UITableViewCell<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,QGCollectionVideoFooterViewDelegate>

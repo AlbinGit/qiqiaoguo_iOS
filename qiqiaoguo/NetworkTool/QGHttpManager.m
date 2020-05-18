@@ -359,8 +359,12 @@ NSString *  QGApiObjectKeycontent     = @"content";
         if (success) {
             
             id result = [resultClass mj_objectWithKeyValues:responseObj[@"extra"]];
-           NSLog(@"result== %@   path==%@,",responseObj,url);
-        
+//           NSLog(@"result== %@   path==%@,",responseObj,url);
+		NSMutableDictionary * muDic = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)responseObj];
+		NSData * data = [NSJSONSerialization dataWithJSONObject:muDic options:NSJSONWritingPrettyPrinted error:nil];
+		NSString * strda = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+		NSLog(@"%@",strda);
+			
             success(result);
             [[SAProgressHud sharedInstance] removeGifLoadingViewFromSuperView];
         }

@@ -76,12 +76,17 @@
 /**显示“立即插班”或“立即报名”按钮状态(1=立即插班/0=立即报名/-1=立即插班按钮为灰色)*/
 @property(nonatomic,copy)NSString *is_insert_class;
 
+@property(nonatomic,assign)BOOL is_new;
+@property(nonatomic,assign)BOOL is_hot;
+
+
 @property(nonatomic,copy)NSString *type;
 @property(nonatomic,copy)NSString *is_publish;
 @property(nonatomic,copy)NSString *createdate;
 @property(nonatomic,copy)NSString *class_price;
 @property(nonatomic,copy)NSString *section;
 @property(nonatomic,copy)NSString *class_end_date;
+
 
 
 /**插班状态*/

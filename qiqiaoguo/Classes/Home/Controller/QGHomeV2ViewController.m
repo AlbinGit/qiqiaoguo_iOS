@@ -139,7 +139,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 }
 -(void)add_viewUI {
     if (_tableView==nil) {
-        _tableView =[[SASRefreshTableView alloc]  initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-49) style:UITableViewStyleGrouped];
+        _tableView =[[SASRefreshTableView alloc]  initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-Height_TapBar) style:UITableViewStyleGrouped];
         _tableView.delegate=self;
         _tableView.dataSource=self;
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
@@ -619,6 +619,15 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [ws.tableView endUpdates];
     }];
 }
+- (void)QQGCourseTableViewCellFoldBtnClicked:(QQGCourseTableViewCell *)sender {
+    PL_CODE_WEAK(ws)
+    [UIView animateWithDuration:0.5f animations:^{
+        [ws.coursefirstRowCellCountArray removeAllObjects];
+        [sender.collectionView reloadData];
+        [ws.tableView beginUpdates];
+        [ws.tableView endUpdates];
+    }];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 { QGHomeCellType type = [self getCellTypeWithIndexPath:indexPath];
@@ -733,9 +742,12 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         view =[self createSectionHeaderView:@"热门文章"];
     }else if (type == QGHomeCellTypeCourse) {
         
-        view =[self createSectionHeaderView:@"精品课程"];
+//        view =[self createSectionHeaderView:@"精品课程"];
+		view = [self createSectionIconImgHeaderView:@"精品课程" andImgName:@"ic_课程"];		
     } else if (type == QGHomeCellTypeTeacher) {
-        view = [self createSectionHeaderView:@"名师风采"];
+//        view = [self createSectionHeaderView:@"名师风采"];
+		view = [self createSectionIconImgHeaderView:@"名师风采" andImgName:@"ic_老师"];
+
     }
     return view;
 }
@@ -788,6 +800,44 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     }];
     return view;
 }
+
+- (UIView *)createSectionIconImgHeaderView:(NSString *)sectionName andImgName:(NSString *)imgName
+{
+    UIView *view=[[UIView alloc]init];
+    view.backgroundColor = [UIColor whiteColor];
+    view.frame=CGRectMake(0, 0, SCREEN_WIDTH, 44);
+    	
+	UIImageView *nickImageView=[[UIImageView alloc]init];
+//	nickImageView.frame=CGRectMake(9, 11, 22, 22);
+	nickImageView.image = [UIImage imageNamed:imgName];
+	[view addSubview:nickImageView];
+
+	
+    UILabel *Lab=[[UILabel alloc]init];
+    Lab.font=FONT_CUSTOM(16);
+    Lab.text=sectionName;
+    Lab.textColor =[UIColor colorFromHexString:@"666666"];
+    UIView *lineView = [UIView new];
+    lineView.frame = CGRectMake(10, 44, self.view.width-20, QGOnePixelLineHeight);
+    lineView.backgroundColor = QGlineBackgroundColor;
+    [view addSubview:lineView];
+    [view addSubview:Lab];
+    [nickImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(view.mas_left).offset(10);
+        make.centerY.equalTo(view.mas_centerY);
+        make.width.equalTo(@22);
+        make.height.equalTo(@22);
+        
+    }];
+    [Lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(nickImageView.mas_right).offset(6);
+        make.centerY.equalTo(view.mas_centerY);
+    }];
+    return view;
+}
+
+
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

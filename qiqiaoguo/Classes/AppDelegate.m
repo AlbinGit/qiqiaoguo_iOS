@@ -57,6 +57,13 @@
     [self showAdvertisingPage];
 
     
+	
+	if (@available(iOS 11.0, *)) {
+		UITableView.appearance.estimatedRowHeight = 0;
+		UITableView.appearance.estimatedSectionFooterHeight = 0;
+		UITableView.appearance.estimatedSectionHeaderHeight = 0;
+	}
+	
     //向微信注册
     [WXApi registerApp:kWXAppId withDescription:@"qiqiaoguo"];
   //  [self OpenNetworkMonitored];// 开启网络监控

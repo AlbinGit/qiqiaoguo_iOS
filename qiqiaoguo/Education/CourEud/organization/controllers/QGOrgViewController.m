@@ -113,7 +113,7 @@
     webheight = 0;
     [self p_createFooterView];
     [self p_createUI];
-    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
+    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, Height_TopBar)];
     _navBGView.backgroundColor = RGBA(255, 255, 255 ,0);
     [self.view addSubview:_navBGView];
     
@@ -137,7 +137,7 @@
     _navTitle.font = [UIFont systemFontOfSize:17];
     _navTitle.textColor = [UIColor blackColor];
     [self.view addSubview:_navTitle];
-    UIView *vv = [[UIView alloc] initWithFrame:CGRectMake(0, 64, MQScreenW, 1)];
+    UIView *vv = [[UIView alloc] initWithFrame:CGRectMake(0, Height_TopBar, MQScreenW, 1)];
     vv.backgroundColor =COLOR(243, 243, 243, 0);
     [self.view addSubview:vv];
     self.viewline = vv;
@@ -172,7 +172,7 @@
 {
     if (_tableView1==nil)
     {
-        _tableView1 =[[SASRefreshTableView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-54) style:UITableViewStyleGrouped];
+        _tableView1 =[[SASRefreshTableView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-54-Height_BottomSafe) style:UITableViewStyleGrouped];
         _tableView1.delegate=self;
         _tableView1.dataSource=self;
         _tableView1.tag=1;
@@ -187,7 +187,7 @@
 {
     if (_tableView2 == nil)
     {
-        _tableView2 = [[SASRefreshTableView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-54) style:UITableViewStylePlain];
+        _tableView2 = [[SASRefreshTableView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT+kTopEdgeHeight, SCREEN_WIDTH, SCREEN_HEIGHT-54-Height_BottomSafe) style:UITableViewStylePlain];
         _tableView2.delegate = self;
         _tableView2.dataSource = self;
         _tableView2.tag=2;
@@ -202,7 +202,7 @@
     _commentCellHeightArray = [NSMutableArray array];
     _headerView = [[UIView alloc]init];
     _headerView.userInteractionEnabled = YES;
-    _headerImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 250)];
+    _headerImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, -54, SCREEN_WIDTH, 250+54)];
     _headerImageView.image = [UIImage imageNamed:@"QGBackGroundImage"];
     _headerImageView.clipsToBounds = YES;
     _headerImageView.userInteractionEnabled = YES;
@@ -325,7 +325,7 @@
     self.tableView1.tableHeaderView = _headerView;
     
   
-    UILabel * line = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 54, SCREEN_WIDTH, 1)];
+    UILabel * line = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 54-Height_BottomSafe, SCREEN_WIDTH, 1)];
     line.backgroundColor = APPBackgroundColor;
     [self.view addSubview:line];
     // 底部收藏分享客服按钮

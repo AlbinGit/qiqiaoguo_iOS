@@ -507,9 +507,10 @@
 - (void)createNavImageView
 {
     _navImageView = [[SAImageView alloc]init];
-    _navImageView.frame = CGRectMake(0, 0, self.view.width, PL_UTILS_IOS7 ? 64 : 44);
+//    _navImageView.frame = CGRectMake(0, 0, self.view.width, PL_UTILS_IOS7 ? 64 : 44);
+    _navImageView.frame = CGRectMake(0, 0, self.view.width, IS_IPhoneX_All ? Height_TopBar : 64);
     _navImageView.backgroundColor = [UIColor whiteColor];
-    UIView *vc = [[UIView alloc] initWithFrame:CGRectMake(0, 63, self.view.width, 1)];
+    UIView *vc = [[UIView alloc] initWithFrame:CGRectMake(0, Height_TopBar-1, self.view.width, 1)];
     vc.backgroundColor = COLOR(222, 222, 222, 1);
     [_navImageView addSubview:vc];
     [self.view addSubview:_navImageView];

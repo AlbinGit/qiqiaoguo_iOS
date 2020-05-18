@@ -99,7 +99,7 @@
 {
     if ( _bottomScrollView== nil)
     {
-        _bottomScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT-self.navImageView.maxY-54)];
+        _bottomScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,Height_TopBar, SCREEN_WIDTH, SCREEN_HEIGHT-self.navImageView.maxY-54-Height_BottomSafe)];
         _bottomScrollView.contentSize = CGSizeMake(SCREEN_WIDTH,(SCREEN_HEIGHT-self.navImageView.maxY-54)*2);
         //设置分页效果
         _bottomScrollView.pagingEnabled = YES;
@@ -127,7 +127,7 @@
 {
     if (_tableView2 == nil)
     {
-        _tableView2 = [[SASRefreshTableView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-54-64, SCREEN_WIDTH, SCREEN_HEIGHT-self.navImageView.maxY-54) style:UITableViewStylePlain];
+        _tableView2 = [[SASRefreshTableView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-54-Height_TopBar, SCREEN_WIDTH, SCREEN_HEIGHT-self.navImageView.maxY-54) style:UITableViewStylePlain];
         _tableView2.delegate = self;
         _tableView2.dataSource = self;
         _tableView2.tag=2;
@@ -201,7 +201,7 @@
     }
     
     
-    _headerView.frame = CGRectMake(0, 0,MQScreenW, colorView.maxY);
+    _headerView.frame = CGRectMake(0, Height_TopBar,MQScreenW, colorView.maxY);
     
     _tableView1.tableHeaderView = _headerView;
     // 线
@@ -258,7 +258,7 @@
     }
     
     
-    _sign = [[UIButton alloc] initWithFrame:CGRectMake(MQScreenW*2/3, SCREEN_HEIGHT - 54, MQScreenW*1/3 , 54)];
+    _sign = [[UIButton alloc] initWithFrame:CGRectMake(MQScreenW*2/3, SCREEN_HEIGHT - Height_TopBar+10, MQScreenW*1/3 , 54)];
     _sign.backgroundColor = COLOR(250, 29, 73, 1);
     [_sign setBackgroundImage:[UIImage imageWithColor:COLOR(224, 225, 226, 1)] forState:UIControlStateDisabled];
     PL_CODE_WEAK(weakSelf)
@@ -279,7 +279,8 @@
     [_sign setTitleColor:[UIColor whiteColor]];
     [self.view addSubview:_sign];
     
-    QGaddFooterView *footer = [[QGaddFooterView alloc] initWithFrame:CGRectMake(0, 0, MQScreenW, 60)];
+//    QGaddFooterView *footer = [[QGaddFooterView alloc] initWithFrame:CGRectMake(0, 0, MQScreenW, 60)];
+    QGaddFooterView *footer = [[QGaddFooterView alloc] initWithFrame:CGRectMake(0, 0, MQScreenW, Height_TopBar+16)];
 
     footer.title.text = @"继续拖动，查看课程详情";
     self.tableView1.tableFooterView = footer;

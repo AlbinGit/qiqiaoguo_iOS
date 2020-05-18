@@ -14,20 +14,22 @@ typedef NS_ENUM(NSInteger, SARefreshType)
 };
 
 //---------------------环境切换---------------1测试 0 正式
-#define QGDEBUG 0
+#define QGDEBUG 1
 //#warning 切换正式环境时需修改极光推送的plist文件中的APS_FOR_PRODUCTION设置成生产环境(1)
 
 #if QGDEBUG
-#define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
+//#define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
 //#define QQG_BASE_APIURLString  @"http://api.qqg.blue69.cn"
 ////#define QQG_BASE_APIURLString  @"http://192.168.2.186:8001"
-#define QG_NEW_APIURLString  @"http://t.api.qiqiaoguo.com"
+#define QQG_BASE_APIURLString  @"http://t.api.qiqiaoguo.com"
+
+//#define QG_NEW_APIURLString  @"http://t.api.qiqiaoguo.com"
 
 #else
 //#define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
 #define QQG_BASE_APIURLString  @"http://api.qiqiaoguo.com"
 
-#define QG_NEW_APIURLString  @"http://t.api.qiqiaoguo.com"
+//#define QG_NEW_APIURLString  @"http://t.api.qiqiaoguo.com"
 
 #endif
 

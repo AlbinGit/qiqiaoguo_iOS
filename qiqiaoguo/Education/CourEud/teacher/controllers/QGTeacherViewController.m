@@ -75,17 +75,25 @@
 - (void)p_createUI {
     
     // tableView
-    _tableView = [[SASRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - kBtnHeight) style:UITableViewStyleGrouped];
+    _tableView = [[SASRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - kBtnHeight-Height_BottomSafe) style:UITableViewStyleGrouped];
     _tableView.backgroundColor = COLOR(243, 245, 246, 1);
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//	if (IOS_VERSION>11.0) {
+//		_tableView.estimatedRowHeight = 0;
+//		_tableView.estimatedSectionFooterHeight = 0;
+//		_tableView.estimatedSectionHeaderHeight = 0;
+//	}
+	[_tableView setContentOffset:CGPointMake(0, 0.5)];
+	self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:_tableView];
+	
     // 头视图
     _headerView = [[UIView alloc]init];
     _headerView.backgroundColor = [UIColor whiteColor];
     // 背景图
-    _backImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 250)];
+    _backImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, -54, SCREEN_WIDTH, 250+54)];
     [_backImageView sd_setImageWithURL:[NSURL URLWithString:_result.item.bg_img] placeholderImage:nil];
     _backImageView.clipsToBounds = YES;
     _backImageView.userInteractionEnabled = YES;
@@ -173,7 +181,7 @@
         [arr addObject:tag.tag_name];
     }
     
-    QGTypeView* view = [[QGTypeView alloc] initWithFrame:CGRectMake(0,_backImageView.maxY, MQScreenW, 45) andDatasource:arr :nil];
+    QGTypeView* view = [[QGTypeView alloc] initWithFrame:CGRectMake(0,_backImageView.maxY, MQScreenW, 45+Height_BottomSafe) andDatasource:arr :nil];
     
     [_headerView addSubview:view];
     if (_result.item.tagList.count>0) {
@@ -196,7 +204,7 @@
     }];
     
     // 线
-    UILabel * line = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 54, SCREEN_WIDTH, 1)];
+    UILabel * line = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 54-Height_BottomSafe, SCREEN_WIDTH, 1)];
     line.backgroundColor = APPBackgroundColor;
     [self.view addSubview:line];
     
@@ -300,7 +308,7 @@
     ll1.backgroundColor =COLOR(242, 243, 244, 1);
     [_headerView addSubview:ll1];
     _headerView.frame = CGRectMake(0, 0, MQScreenW, ll1.maxY );
-    
+
     _tableView.tableHeaderView = _headerView;
 }
 

@@ -8,7 +8,7 @@
 
 
 #define QGStoreCityURLString QQG_BASE_APIURLString@"/Phone"//七巧国商城地址
-#define QQGStoreCityURLString QG_NEW_APIURLString@"/Phone"//七巧国商城地址(新)
+#define QQGStoreCityURLString QQG_BASE_APIURLString@"/Phone"//七巧国商城地址(新)
 #define QGStoreEduURLString QQG_BASE_APIURLString@"/Phone"//七巧国教育地址
 #import "QGHttpDownloadConst.h"
 
