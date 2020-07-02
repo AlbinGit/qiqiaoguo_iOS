@@ -1,0 +1,6 @@
+framework module TTTClassKit {
+  umbrella header "TTTClassKit.h"
+
+  export *
+  module * { export * }
+}

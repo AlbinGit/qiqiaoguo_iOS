@@ -117,6 +117,7 @@
 		38AC1ABF24973F5400371E3F /* QGStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1ABE24973F5400371E3F /* QGStudyController.m */; };
 		38AC1AC324975AB600371E3F /* QGstudyProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1AC224975AB600371E3F /* QGstudyProgressView.m */; };
 		38AC1AC624977ED500371E3F /* QGStudyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1AC524977ED500371E3F /* QGStudyCell.m */; };
+		38DE34EE24ADC9F70066FECB /* TTTClassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DE34ED24ADC9F70066FECB /* TTTClassKit.framework */; };
 		3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */; };
 		3A5CCE7E1D0516EB009EDFD8 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE31D0516EA009EDFD8 /* NSString+Hashing.m */; };
 		3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE51D0516EA009EDFD8 /* UIBarButtonItem+MQExtension.m */; };
@@ -1111,6 +1112,7 @@
 		38AC1AC224975AB600371E3F /* QGstudyProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGstudyProgressView.m; sourceTree = "<group>"; };
 		38AC1AC424977ED500371E3F /* QGStudyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGStudyCell.h; sourceTree = "<group>"; };
 		38AC1AC524977ED500371E3F /* QGStudyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGStudyCell.m; sourceTree = "<group>"; };
+		38DE34ED24ADC9F70066FECB /* TTTClassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTTClassKit.framework; sourceTree = "<group>"; };
 		3A5CCDE01D0516EA009EDFD8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		3A5CCDE21D0516EA009EDFD8 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -2703,6 +2705,7 @@
 				886665A81D055A4400FA64DF /* CoreMotion.framework in Frameworks */,
 				881A24411D17886900C2582B /* libWeiboSDK.a in Frameworks */,
 				886665A11D05571A00FA64DF /* jpush-ios-2.1.7.a in Frameworks */,
+				38DE34EE24ADC9F70066FECB /* TTTClassKit.framework in Frameworks */,
 				886665F21D05610900FA64DF /* libSocialWechat.a in Frameworks */,
 				881A244C1D17888B00C2582B /* TencentOpenAPI.framework in Frameworks */,
 				886665A61D0559A200FA64DF /* AlipaySDK.framework in Frameworks */,
@@ -3106,6 +3109,14 @@
 				38AC1AC524977ED500371E3F /* QGStudyCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		38DE34EC24ADC9B30066FECB /* 3TLib */ = {
+			isa = PBXGroup;
+			children = (
+				38DE34ED24ADC9F70066FECB /* TTTClassKit.framework */,
+			);
+			path = 3TLib;
 			sourceTree = "<group>";
 		};
 		3A5CCDDE1D0516EA009EDFD8 /* Main */ = {
@@ -5877,6 +5888,7 @@
 		A42546111CF30A760097382F /* qiqiaoguo */ = {
 			isa = PBXGroup;
 			children = (
+				38DE34EC24ADC9B30066FECB /* 3TLib */,
 				883DD7A71D8FD3EA004711D2 /* qiqiaoguo.entitlements */,
 				88FC4E211D0FF8AC00B15624 /* NetworkTool */,
 				A425466A1CF3F7C20097382F /* Classes */,
