@@ -118,6 +118,20 @@
 		38AC1AC324975AB600371E3F /* QGstudyProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1AC224975AB600371E3F /* QGstudyProgressView.m */; };
 		38AC1AC624977ED500371E3F /* QGStudyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1AC524977ED500371E3F /* QGStudyCell.m */; };
 		38DE34EE24ADC9F70066FECB /* TTTClassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DE34ED24ADC9F70066FECB /* TTTClassKit.framework */; };
+		38DE350324ADCF7B0066FECB /* 3TClass.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34F124ADCF7A0066FECB /* 3TClass.bundle */; };
+		38DE350424ADCF7B0066FECB /* emoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34F224ADCF7A0066FECB /* emoji.bundle */; };
+		38DE350524ADCF7B0066FECB /* InnerStickersInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34F324ADCF7A0066FECB /* InnerStickersInfo.plist */; };
+		38DE350624ADCF7B0066FECB /* TTTRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DE34F424ADCF7A0066FECB /* TTTRtcEngineKit.framework */; };
+		38DE350724ADCF7B0066FECB /* docs-wb.html in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34F624ADCF7B0066FECB /* docs-wb.html */; };
+		38DE350824ADCF7B0066FECB /* ttt-whiteboard.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34F824ADCF7B0066FECB /* ttt-whiteboard.min.js */; };
+		38DE350924ADCF7B0066FECB /* ic_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34FA24ADCF7B0066FECB /* ic_close.png */; };
+		38DE350A24ADCF7B0066FECB /* mouse_eraser.ico in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34FC24ADCF7B0066FECB /* mouse_eraser.ico */; };
+		38DE350B24ADCF7B0066FECB /* mouse_pen.ico in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34FD24ADCF7B0066FECB /* mouse_pen.ico */; };
+		38DE350C24ADCF7B0066FECB /* ic_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34FE24ADCF7B0066FECB /* ic_arrow.png */; };
+		38DE350D24ADCF7B0066FECB /* pagearr.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DE34FF24ADCF7B0066FECB /* pagearr.png */; };
+		38DE350E24ADCF7B0066FECB /* ic_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DE350024ADCF7B0066FECB /* ic_check.png */; };
+		38DE350F24ADCF7B0066FECB /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 38DE350124ADCF7B0066FECB /* jquery.min.js */; };
+		38DE351024ADCF7B0066FECB /* docs-wb.js in Resources */ = {isa = PBXBuildFile; fileRef = 38DE350224ADCF7B0066FECB /* docs-wb.js */; };
 		3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */; };
 		3A5CCE7E1D0516EB009EDFD8 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE31D0516EA009EDFD8 /* NSString+Hashing.m */; };
 		3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE51D0516EA009EDFD8 /* UIBarButtonItem+MQExtension.m */; };
@@ -1113,6 +1127,20 @@
 		38AC1AC424977ED500371E3F /* QGStudyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGStudyCell.h; sourceTree = "<group>"; };
 		38AC1AC524977ED500371E3F /* QGStudyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGStudyCell.m; sourceTree = "<group>"; };
 		38DE34ED24ADC9F70066FECB /* TTTClassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTTClassKit.framework; sourceTree = "<group>"; };
+		38DE34F124ADCF7A0066FECB /* 3TClass.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 3TClass.bundle; sourceTree = "<group>"; };
+		38DE34F224ADCF7A0066FECB /* emoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = emoji.bundle; sourceTree = "<group>"; };
+		38DE34F324ADCF7A0066FECB /* InnerStickersInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = InnerStickersInfo.plist; sourceTree = "<group>"; };
+		38DE34F424ADCF7A0066FECB /* TTTRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTTRtcEngineKit.framework; sourceTree = "<group>"; };
+		38DE34F624ADCF7B0066FECB /* docs-wb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "docs-wb.html"; sourceTree = "<group>"; };
+		38DE34F824ADCF7B0066FECB /* ttt-whiteboard.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "ttt-whiteboard.min.js"; sourceTree = "<group>"; };
+		38DE34FA24ADCF7B0066FECB /* ic_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_close.png; sourceTree = "<group>"; };
+		38DE34FC24ADCF7B0066FECB /* mouse_eraser.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = mouse_eraser.ico; sourceTree = "<group>"; };
+		38DE34FD24ADCF7B0066FECB /* mouse_pen.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = mouse_pen.ico; sourceTree = "<group>"; };
+		38DE34FE24ADCF7B0066FECB /* ic_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow.png; sourceTree = "<group>"; };
+		38DE34FF24ADCF7B0066FECB /* pagearr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagearr.png; sourceTree = "<group>"; };
+		38DE350024ADCF7B0066FECB /* ic_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_check.png; sourceTree = "<group>"; };
+		38DE350124ADCF7B0066FECB /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
+		38DE350224ADCF7B0066FECB /* docs-wb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "docs-wb.js"; sourceTree = "<group>"; };
 		3A5CCDE01D0516EA009EDFD8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		3A5CCDE21D0516EA009EDFD8 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -2684,6 +2712,7 @@
 				383A1524248F703A00780E19 /* libresolv.tbd in Frameworks */,
 				383A1522248F702B00780E19 /* libicucore.tbd in Frameworks */,
 				383A1520248F701000780E19 /* libiconv.tbd in Frameworks */,
+				38DE350624ADCF7B0066FECB /* TTTRtcEngineKit.framework in Frameworks */,
 				383A151E248F6FF900780E19 /* libxml2.tbd in Frameworks */,
 				383A151C248F6FC000780E19 /* ReplayKit.framework in Frameworks */,
 				885CDF5F1D6E8CB1004A0C1C /* JavaScriptCore.framework in Frameworks */,
@@ -3114,9 +3143,55 @@
 		38DE34EC24ADC9B30066FECB /* 3TLib */ = {
 			isa = PBXGroup;
 			children = (
+				38DE34F124ADCF7A0066FECB /* 3TClass.bundle */,
+				38DE34F524ADCF7B0066FECB /* docsWbH5 */,
+				38DE34F224ADCF7A0066FECB /* emoji.bundle */,
+				38DE34F324ADCF7A0066FECB /* InnerStickersInfo.plist */,
+				38DE34F424ADCF7A0066FECB /* TTTRtcEngineKit.framework */,
 				38DE34ED24ADC9F70066FECB /* TTTClassKit.framework */,
 			);
 			path = 3TLib;
+			sourceTree = "<group>";
+		};
+		38DE34F524ADCF7B0066FECB /* docsWbH5 */ = {
+			isa = PBXGroup;
+			children = (
+				38DE34F624ADCF7B0066FECB /* docs-wb.html */,
+				38DE34F724ADCF7B0066FECB /* 3ttlive-wb */,
+			);
+			path = docsWbH5;
+			sourceTree = "<group>";
+		};
+		38DE34F724ADCF7B0066FECB /* 3ttlive-wb */ = {
+			isa = PBXGroup;
+			children = (
+				38DE34F824ADCF7B0066FECB /* ttt-whiteboard.min.js */,
+				38DE34F924ADCF7B0066FECB /* img */,
+				38DE350124ADCF7B0066FECB /* jquery.min.js */,
+				38DE350224ADCF7B0066FECB /* docs-wb.js */,
+			);
+			path = "3ttlive-wb";
+			sourceTree = "<group>";
+		};
+		38DE34F924ADCF7B0066FECB /* img */ = {
+			isa = PBXGroup;
+			children = (
+				38DE34FA24ADCF7B0066FECB /* ic_close.png */,
+				38DE34FB24ADCF7B0066FECB /* mouse */,
+				38DE34FE24ADCF7B0066FECB /* ic_arrow.png */,
+				38DE34FF24ADCF7B0066FECB /* pagearr.png */,
+				38DE350024ADCF7B0066FECB /* ic_check.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		38DE34FB24ADCF7B0066FECB /* mouse */ = {
+			isa = PBXGroup;
+			children = (
+				38DE34FC24ADCF7B0066FECB /* mouse_eraser.ico */,
+				38DE34FD24ADCF7B0066FECB /* mouse_pen.ico */,
+			);
+			path = mouse;
 			sourceTree = "<group>";
 		};
 		3A5CCDDE1D0516EA009EDFD8 /* Main */ = {
@@ -6074,21 +6149,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DE350424ADCF7B0066FECB /* emoji.bundle in Resources */,
+				38DE350C24ADCF7B0066FECB /* ic_arrow.png in Resources */,
+				38DE350524ADCF7B0066FECB /* InnerStickersInfo.plist in Resources */,
 				6776E70F1D40C77B0016EF17 /* QGProductDetailsCell.xib in Resources */,
 				674E5E2B1D20C708008912EF /* QGCategoryCell.xib in Resources */,
 				3850F4CC24A1CDA8008A6B3C /* TZImagePickerController.bundle in Resources */,
 				D449B80D22C5F142007B1C89 /* screenImage.png in Resources */,
+				38DE350D24ADCF7B0066FECB /* pagearr.png in Resources */,
 				672A18C21D2D2A8A0005DD1C /* QGActivityDetailCell.xib in Resources */,
 				886665A51D0559A200FA64DF /* AlipaySDK.bundle in Resources */,
+				38DE350824ADCF7B0066FECB /* ttt-whiteboard.min.js in Resources */,
 				672A19981D2D2EDC0005DD1C /* QGCourseDetail.xib in Resources */,
 				384ADA62249AFD6100E9D9B7 /* province_data.json in Resources */,
 				3850F4A424A18B23008A6B3C /* 讲师端服务协议20200619-讲师版V1.0(2)(1).docx in Resources */,
+				38DE350324ADCF7B0066FECB /* 3TClass.bundle in Resources */,
 				67539C091D347BA100F838B0 /* QGOptimalProductPhotoCell.xib in Resources */,
 				886665F41D05610A00FA64DF /* README.txt in Resources */,
 				A42546221CF30A760097382F /* LaunchScreen.storyboard in Resources */,
 				675BA2171D4AFD9600BBC1F5 /* QGActOrderCell.xib in Resources */,
 				A4027C861D3E9335004EFD9B /* QGEduFristActivityCell.xib in Resources */,
+				38DE351024ADCF7B0066FECB /* docs-wb.js in Resources */,
 				A425461F1CF30A760097382F /* Assets.xcassets in Resources */,
+				38DE350A24ADCF7B0066FECB /* mouse_eraser.ico in Resources */,
 				672A19D01D2D2EDC0005DD1C /* QGOrgTeacherTableViewCell.xib in Resources */,
 				6739DC711D86915900F8E40B /* QGEduOrderCell.xib in Resources */,
 				675BA2191D4AFD9600BBC1F5 /* QGActOrderListCell.xib in Resources */,
@@ -6097,8 +6180,10 @@
 				8804BA651D485EC8000D75A3 /* district.sqlite in Resources */,
 				6776E7071D40C77B0016EF17 /* QGAttributePopViewCell.xib in Resources */,
 				A4027C811D3E786C004EFD9B /* QGPhotoCell.xib in Resources */,
+				38DE350F24ADCF7B0066FECB /* jquery.min.js in Resources */,
 				676C4D111D3874E400FC8CBF /* QGAddBtnView.xib in Resources */,
 				67071FBC1D7FB9DE0068BA97 /* QGVideoListCollectionViewCell.xib in Resources */,
+				38DE350B24ADCF7B0066FECB /* mouse_pen.ico in Resources */,
 				67C905051D266B61004725D0 /* QGEduGroupCollectionViewCell.xib in Resources */,
 				675155EE1D55DA480011C7B1 /* QGTeacherListTableViewCell.xib in Resources */,
 				886665F11D05610900FA64DF /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -6106,9 +6191,12 @@
 				672A19E11D2D2EDC0005DD1C /* QGCourLIstGroupCollectionViewCell.xib in Resources */,
 				384ADA63249AFD6100E9D9B7 /* province_data.xml in Resources */,
 				881A244D1D17888B00C2582B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				38DE350E24ADCF7B0066FECB /* ic_check.png in Resources */,
+				38DE350724ADCF7B0066FECB /* docs-wb.html in Resources */,
 				6776E7041D40C77B0016EF17 /* QGAttributeBuyCell.xib in Resources */,
 				883F39951D1146BD00CD893C /* Localizable.strings in Resources */,
 				881A24421D17886900C2582B /* WeiboSDK.bundle in Resources */,
+				38DE350924ADCF7B0066FECB /* ic_close.png in Resources */,
 				886665E71D05610900FA64DF /* UMSocialLocalizable.strings in Resources */,
 				676277B91D33990D003D5919 /* QGOptimalProductSkillTableViewCell.xib in Resources */,
 			);
