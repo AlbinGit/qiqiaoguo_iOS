@@ -11,7 +11,9 @@
 @implementation QGSeacherOrgHttpDownload
 
 - (NSString *)path {
-    return QGGetSeacherOrgPath;
+//    return QGGetSeacherOrgPath;
+	
+	return QGGetSeacherTeacherPath;
 }
 
 - (NSString *)method

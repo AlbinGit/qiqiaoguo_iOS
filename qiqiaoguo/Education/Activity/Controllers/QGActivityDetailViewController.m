@@ -303,7 +303,7 @@
     _sign.backgroundColor = COLOR(250, 29, 73, 1);
     [_sign setBackgroundImage:[UIImage imageWithColor:COLOR(224, 225, 226, 1)] forState:UIControlStateDisabled];
     PL_CODE_WEAK(weakSelf)
-    [_sign setTitle:@"立即报名"];
+    [_sign setTitle:@"立即报名" forState:UIControlStateNormal];
     _sign.enabled = YES;
     [_sign addClick:^(UIButton *button) {
         [weakSelf  addsignBtn];

@@ -72,20 +72,34 @@ static const CGFloat kIndicatorImageViewHeight = 16;
     _AdviceType = AdviceType;
     _showSeparatorLine = YES;
     switch (AdviceType) {
-        case QGUserAdiceTypePost: {
-            _promptImageView.image = [UIImage imageNamed:@"icon_personal_post"];
-            _contentLabel.text = @"我的发布";
-        } break;
-        case QGUserAdiceTypeActivity: {
-            _promptImageView.image = [UIImage imageNamed:@"icon＿my_activity"];
-            _contentLabel.text = @"我参与的";
-        } break;
-        case QGUserAdiceTypeCollection: {
-            _promptImageView.image = [UIImage imageNamed:@"icon_personal_collection"];
-            _contentLabel.text = @"我的收藏";
-            _solidLine.hidden = YES;
-        } break;
+//        case QGUserAdiceTypePost: {
+//            _promptImageView.image = [UIImage imageNamed:@"icon_personal_post"];
+//            _contentLabel.text = @"我的发布";
+//        } break;
+//        case QGUserAdiceTypeActivity: {
+//            _promptImageView.image = [UIImage imageNamed:@"icon＿my_activity"];
+//            _contentLabel.text = @"我参与的";
+//        } break;
+//        case QGUserAdiceTypeCollection: {
+//            _promptImageView.image = [UIImage imageNamed:@"icon_personal_collection"];
+//            _contentLabel.text = @"我的收藏";
+//            _solidLine.hidden = YES;
+//        } break;
         
+			case QGUserAdiceTypePost: {
+				_promptImageView.image = [UIImage imageNamed:@"ic_我参与的"];
+				_contentLabel.text = @"我参与的";
+			} break;
+			case QGUserAdiceTypeActivity: {
+				_promptImageView.image = [UIImage imageNamed:@"ic_我的订单"];
+				_contentLabel.text = @"我的订单";
+			} break;
+			case QGUserAdiceTypeCollection: {
+				_promptImageView.image = [UIImage imageNamed:@"ic_老师入驻"];
+				_contentLabel.text = @"老师入驻";
+				_solidLine.hidden = YES;
+			} break;
+
         default: break;
     }
     [self setNeedsLayout];

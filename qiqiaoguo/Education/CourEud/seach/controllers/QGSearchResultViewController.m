@@ -356,9 +356,11 @@ static const CGFloat ScreeningHeight = 50;
     
     [QGHttpManager courseInfoWithParam:hd success:^(QGCourseInfoResultModel *result) {
     
-        NSArray * listArray; // 机构
+        NSArray * listArray; // 机构换成了老师
         if (_searchOptionType == QGSearchOptionTypeInstitution){
-            listArray = [QGSearchOrgModel mj_objectArrayWithKeyValuesArray:result.items];
+//            listArray = [QGSearchOrgModel mj_objectArrayWithKeyValuesArray:result.items];
+            listArray = [QGEduTeacherModel mj_objectArrayWithKeyValuesArray:result.items];
+
         }
         else if (_searchOptionType == QGSearchOptionTypeCourse){
             //课程
@@ -450,10 +452,15 @@ static const CGFloat ScreeningHeight = 50;
         return cell;
     }
     else if (_searchOptionType == QGSearchOptionTypeInstitution) { // 机构
-        PL_CELL_NIB_CREATE(QGOrgTeacherTableViewCell)
+//        PL_CELL_NIB_CREATE(QGOrgTeacherTableViewCell)
+//        cell.model = _dataArray[indexPath.row];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell;
+        PL_CELL_NIB_CREATE(QGTeacherListTableViewCell)//老师
         cell.model = _dataArray[indexPath.row];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
+
     }
     else if (_searchOptionType == QGSearchOptionTypeGoods) { // 商品
         PL_CELL_CREATEMETHOD(QGMillSingleStoreCell, @"storecell")
@@ -589,10 +596,17 @@ static const CGFloat ScreeningHeight = 50;
         [self.navigationController pushViewController:ctr animated:YES];
     } else if (_searchOptionType == QGSearchOptionTypeInstitution) {
         // 点击跳到机构主页
-        QGOrgViewController *orgCtl = [[QGOrgViewController alloc]init];
-        QGSearchOrgModel * model = _dataArray[indexPath.row];
-        orgCtl.org_id = model.org_id;
-        [self.navigationController pushViewController:orgCtl animated:YES];
+//        QGOrgViewController *orgCtl = [[QGOrgViewController alloc]init];
+//        QGSearchOrgModel * model = _dataArray[indexPath.row];
+//        orgCtl.org_id = model.org_id;
+//        [self.navigationController pushViewController:orgCtl animated:YES];
+		
+        // 点击跳到老师主页
+        QGTeacherViewController * ctr = [[QGTeacherViewController alloc]init];
+        QGEduTeacherModel *model = _dataArray[indexPath.row];
+        ctr.teacher_id = model.teacher_id;
+        [self.navigationController pushViewController:ctr animated:YES];
+
     }else if(_searchOptionType == QGSearchOptionTypeGoods) {
         
         QGProductDetailsViewController *vc = [[QGProductDetailsViewController alloc] init];

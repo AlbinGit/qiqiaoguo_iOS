@@ -159,9 +159,10 @@
     
     UIView *contentView = [UIView new];
     UIButton *courseButton = [self configButtonTitle:@"课程" image:@"search-course"];
-    UIButton *institutionsButton = [self configButtonTitle:@"机构" image:@"search-institutions"];
-   // UIButton *goodsButton = [self configButtonTitle:@"商品" image:@"search-goods"];
-    
+//    UIButton *institutionsButton = [self configButtonTitle:@"机构" image:@"search-institutions"];
+//    UIButton *goodsButton = [self configButtonTitle:@"商品" image:@"search-goods"];
+    UIButton *institutionsButton = [self configButtonTitle:@"老师" image:@"search-institutions"];
+
     UIView * ButtonBottomLine = [UIView new];
     ButtonBottomLine.backgroundColor = QGCellbottomLineColor;
     
@@ -210,7 +211,8 @@
     
     UIButton *button = [UIButton new];
     button.titleFont = [UIFont systemFontOfSize:14.0];
-    button.title = title;
+//    button.title = title;
+	[button setTitle:title forState:UIControlStateNormal];
     button.titleColor = QGMainContentColor;
     button.image = [UIImage imageNamed:imageName];
     button.contentEdgeInsets = UIEdgeInsetsMake(15, 30, 15, 35);

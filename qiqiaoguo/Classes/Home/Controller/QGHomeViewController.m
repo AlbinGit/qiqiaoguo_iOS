@@ -267,7 +267,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     [_sortBtn mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo([NSNumber numberWithFloat:citybtnW]);
     }];
-    [_sortBtn setTitle:title];
+    [_sortBtn setTitle:title forState:UIControlStateNormal];
     [_sortBtn.titleLabel sizeToFit];
     [_sortBtn.imageView sizeToFit];
     [_sortBtn setImageEdgeInsets:UIEdgeInsetsMake(0, _sortBtn.titleLabel.width+5, 0, -_sortBtn.titleLabel.width-5)];
@@ -654,7 +654,7 @@ else
     //更多
     UIButton* moreBtn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 44)];
     
-    [moreBtn setTitle:sectionName];
+    [moreBtn setTitle:sectionName forState:UIControlStateNormal];
     [moreBtn setTitleFont:FONT_CUSTOM(16)];
     [moreBtn setTitleColor:[UIColor colorFromHexString:@"999999"]];
     [moreBtn setImage:[UIImage imageNamed:imageName] forState:(UIControlStateNormal)];

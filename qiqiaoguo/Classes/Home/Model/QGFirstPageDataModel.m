@@ -21,6 +21,7 @@
              @"courseList":@"QGCourseInfoModel",
              @"videoList":@"QGEduVideoListModel",
              @"teacherList":@"QQGTeacherListModel",
+			 @"momentList":@"QGNewTeacherStateModel",
     };
 }
 @end

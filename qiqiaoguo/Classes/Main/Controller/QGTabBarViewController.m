@@ -17,8 +17,8 @@
 #import "BLUCircleMainViewController.h"
 #import "QGPayResultViewController.h"
 #import "QGOrderPayViewController.h"
-
-
+#import "QGFindController.h"//发现
+#import "QGStudyController.h"//学习
 @interface QGTabBarViewController ()
 
 @end
@@ -29,18 +29,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     QGHomeV2ViewController *home = [[QGHomeV2ViewController alloc] init];
-    [self addOneChildVc:home title:@"首页" imageName:[UIImage imageNamed:@"home_page"] SelectedImageName:[UIImage imageWithNamed:@"home_page_choose"]];
+    [self addOneChildVc:home title:@"首页" imageName:[UIImage imageNamed:@"ic_首页"] SelectedImageName:[UIImage imageWithNamed:@"ic_首页_pr"]];
     
-    QGActivityHomeViewController *class = [[QGActivityHomeViewController alloc] init];
-    [self addOneChildVc:class title:@"活动" imageName:[UIImage imageNamed:@"Activity_icon"] SelectedImageName:[UIImage imageWithNamed:@"Activity_icon_choose"]];
+//    QGActivityHomeViewController *class = [[QGActivityHomeViewController alloc] init];
+//    [self addOneChildVc:class title:@"发现" imageName:[UIImage imageNamed:@"ic_发现"] SelectedImageName:[UIImage imageWithNamed:@"ic_发现_pr"]];
     
-    BLUCircleMainViewController *found = [[BLUCircleMainViewController alloc] init];
-    [self addOneChildVc:found title:@"社区" imageName:[UIImage imageWithNamed:@"community_icon"] SelectedImageName:[UIImage imageWithNamed:@"community_icon_choose"]];
-    
-//    QGOptimalProductViewController *shop = [[QGOptimalProductViewController alloc]init];
-//    [self addOneChildVc:shop title:@"优品" imageName:[UIImage imageNamed:@"optimal_product"] SelectedImageName:[UIImage imageWithNamed:@"optimal_product_choose"]];
+	QGFindController *class = [[QGFindController alloc] init];
+    [self addOneChildVc:class title:@"发现" imageName:[UIImage imageNamed:@"ic_发现"] SelectedImageName:[UIImage imageWithNamed:@"ic_发现_pr"]];
+	
+//    BLUCircleMainViewController *found = [[BLUCircleMainViewController alloc] init];
+//    [self addOneChildVc:found title:@"学习" imageName:[UIImage imageWithNamed:@"ic_学习"] SelectedImageName:[UIImage imageWithNamed:@"ic_学习_pr"]];
+    QGStudyController *found = [[QGStudyController alloc] init];
+    [self addOneChildVc:found title:@"学习" imageName:[UIImage imageWithNamed:@"ic_学习"] SelectedImageName:[UIImage imageWithNamed:@"ic_学习_pr"]];
+
+	
     QGPersonalViewController *me = [[QGPersonalViewController alloc] init];
-    [self addOneChildVc:me title:@"我" imageName:[UIImage imageNamed:@"me_icon"] SelectedImageName:[UIImage imageWithNamed:@"me_icon_choose"]];
+    [self addOneChildVc:me title:@"我的" imageName:[UIImage imageNamed:@"ic_我的"] SelectedImageName:[UIImage imageWithNamed:@"ic_我的_pr"]];
 }
 
 
@@ -85,6 +89,9 @@
     self.selectedIndex = index;
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 @end
 

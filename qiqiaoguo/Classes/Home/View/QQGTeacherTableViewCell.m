@@ -7,7 +7,7 @@
 
 #import "QQGTeacherTableViewCell.h"
 #import "QGTeacherViewController.h"
-
+#import "QGNewTeacherDetailController.h"
 @interface QQGTeacherTableViewitemCell : UICollectionViewCell
 
 @property (nonatomic,strong) UIImageView *imgView;
@@ -95,7 +95,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     QQGTeacherListModel *model = _dataSource[indexPath.row];
-    QGTeacherViewController *vc = [[QGTeacherViewController alloc] init];
+    QGNewTeacherDetailController *vc = [[QGNewTeacherDetailController alloc] init];
     vc.teacher_id = model.teacher_id;
     UIViewController *viewController = [SAUtils findViewControllerWithView:self];
     [viewController.navigationController pushViewController:vc animated:YES];

@@ -35,6 +35,9 @@
 @property (nonatomic,strong)NSArray *courseList;
 
 @property (nonatomic,strong)NSArray *teacherList;//名师风采
+
+@property (nonatomic,strong)NSArray *momentList;
+
 @end
 
 

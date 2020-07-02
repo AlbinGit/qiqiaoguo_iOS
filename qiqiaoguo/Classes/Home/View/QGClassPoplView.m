@@ -153,10 +153,35 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 		model = _dataArray[indexPath.section];
 		subModel = model.sublist[indexPath.row];
 	}
-	if (_selectBlock) {
-		_selectBlock(subModel,indexPath);
+	
+	NSIndexPath * myIndexPath;
+	NSString * str = [[NSUserDefaults standardUserDefaults]objectForKey:USERDEFAULTS_IndexPath];
+	NSArray * arr = [str componentsSeparatedByString:@"-"];
+	if (arr.count>0) {
+		myIndexPath = [NSIndexPath indexPathForRow:[arr[0] integerValue] inSection:[arr[1] integerValue]];
+		if (indexPath == myIndexPath) {
+			if (_selectBlock) {
+				_selectBlock(nil,indexPath);
+				[[NSUserDefaults standardUserDefaults]removeObjectForKey:USERDEFAULTS_IndexPath];
+			}
+		}else
+		{
+			if (_selectBlock) {
+				_selectBlock(subModel,indexPath);
+			}
+		}
+	}else
+	{
+		if (_selectBlock) {
+			_selectBlock(subModel,indexPath);
+		}
+
 	}
-//	[_categoryButton setTitle:subModel.title];
+
+	
+//	if (_selectBlock) {
+//		_selectBlock(subModel,indexPath);
+//	}
 	[self updateCategoryBtnFrameWithTitle:subModel.title];
 	[self removeFromSuperview];
 
@@ -191,24 +216,20 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 - (void)p_creatTitleSubView
 {
 	CGFloat edgeBtnWidth = 50;
-	_categoryButton = [UIButton makeThemeButtonWithType:BLUButtonTypeDefault];
+//	_categoryButton = [UIButton makeThemeButtonWithType:BLUButtonTypeDefault];
+	_categoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	_categoryButton.titleColor = QGTitleColor;
-	UIImage *image = [[UIImage imageNamed:@"search-drop-down-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-	[_categoryButton setImage:image forState:UIControlStateNormal];
 	_categoryButton.titleLabel.font = FONT_CUSTOM(18);
-	[_categoryButton setTitle:[SAUserDefaults getValueWithKey:USERDEFAULTS_Class]];
-	[_categoryButton.imageView sizeToFit];
-	[_categoryButton.titleLabel sizeToFit];
-	_categoryButton.frame = CGRectMake(12, 10, edgeBtnWidth, 40);
-	[_categoryButton setImageEdgeInsets:UIEdgeInsetsMake(0, _categoryButton.titleLabel.width+5, 0, -_categoryButton.titleLabel.width-5)];
-	[_categoryButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_categoryButton.imageView.width-5 , 0, _categoryButton.imageView.width)];
-//	[self updateCategoryBtnFrameWithTitle:[SAUserDefaults getValueWithKey:@"USERDEFAULTS_Class"]];
+	NSString * titleStr = [SAUserDefaults getValueWithKey:USERDEFAULTS_Class];
+	if (titleStr.length<=0) {
+		titleStr = @"全部";
+	}
+	[self updateCategoryBtnFrameWithTitle:titleStr];
 	_categoryButton.backgroundColor = [UIColor whiteColor];
 	[_titleView addSubview:_categoryButton];
 		
 	UIButton * localBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 	localBtn.frame = CGRectMake(SCREEN_WIDTH-edgeBtnWidth-50-12 , 10, edgeBtnWidth+50, 40);
-//	[localBtn setTitle:@"北京"];
 	UIImage *image2 = [[UIImage imageNamed:@"search-drop-down-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	[localBtn setImage:image2 forState:UIControlStateNormal];
 	[localBtn setImageEdgeInsets:UIEdgeInsetsMake(0, localBtn.titleLabel.width+5, 0, -localBtn.titleLabel.width-5)];
@@ -242,33 +263,27 @@ static const CGFloat kItermSpaceing = 15;  // 列间距 纵向之间的间距
 {
     CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_categoryButton.titleFont, NSFontAttributeName, nil]];
     float citybtnW = 18 + btntitleSize.width;
-    [_categoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo([NSNumber numberWithFloat:citybtnW]);
-		make.left.mas_offset(12);
-		make.top.mas_offset(10);
-		make.height.mas_equalTo(40);
-    }];
-    [_categoryButton setTitle:title];
-    [_categoryButton.titleLabel sizeToFit];
-    [_categoryButton.imageView sizeToFit];
-    [_categoryButton setImageEdgeInsets:UIEdgeInsetsMake(0, _categoryButton.titleLabel.width+5, 0, -_categoryButton.titleLabel.width-5)];
-    [_categoryButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_categoryButton.imageView.width-5 , 0, _categoryButton.imageView.width)];
+	_categoryButton.frame = CGRectMake(12, 10, citybtnW, 40);
+
+	[_categoryButton setTitle:title forState:UIControlStateNormal];
+	[_categoryButton setImage:[UIImage imageNamed:@"ic_选择学习阶段"] forState:UIControlStateNormal];
+	
+    [_categoryButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_categoryButton.imageView.image.size.width , 0, _categoryButton.imageView.image.size.width)];
+    [_categoryButton setImageEdgeInsets:UIEdgeInsetsMake(0, _categoryButton.titleLabel.width, 0, -_categoryButton.titleLabel.bounds.size.width)];
 }
 - (void)cityBtnFrameWithTitle:(NSString *)title
 {
     CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_localButton.titleFont, NSFontAttributeName, nil]];
     float citybtnW = 18 + btntitleSize.width;
-    [_localButton mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo([NSNumber numberWithFloat:citybtnW]);
-		make.right.mas_offset(-12);
-		make.top.mas_offset(10);
-		make.height.mas_equalTo(40);
-    }];
-    [_localButton setTitle:title];
-    [_localButton.titleLabel sizeToFit];
-    [_localButton.imageView sizeToFit];
-    [_localButton setImageEdgeInsets:UIEdgeInsetsMake(0, _localButton.titleLabel.width+5, 0, -_localButton.titleLabel.width-5)];
-    [_localButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_localButton.imageView.width-5 , 0, _localButton.imageView.width)];
+
+	_localButton.frame = CGRectMake(SCREEN_WIDTH-12-citybtnW-12, 10, citybtnW, 40);
+
+	[_localButton setTitle:title forState:UIControlStateNormal];
+	[_localButton setImage:[UIImage imageNamed:@"ic_选择学习阶段"] forState:UIControlStateNormal];
+	
+    [_localButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_localButton.imageView.image.size.width , 0, _localButton.imageView.image.size.width)];
+    [_localButton setImageEdgeInsets:UIEdgeInsetsMake(0, _localButton.titleLabel.width, 0, -_localButton.titleLabel.bounds.size.width)];
+
 }
 
 @end

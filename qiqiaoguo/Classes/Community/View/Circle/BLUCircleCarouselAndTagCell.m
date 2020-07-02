@@ -120,7 +120,7 @@
     UIButton *btn =[UIButton new];
     btn.titleFont = [UIFont fontWithName:@"STHeitiSC-Light" size:14];
     btn.backgroundColor=[UIColor clearColor];
-    [btn setTitle:@"更多"];
+    [btn setTitle:@"更多" forState:UIControlStateNormal];
     [btn setTitleColor:BLUThemeMainColor];
     btn.tag = -1;
     [btn sizeToFit];

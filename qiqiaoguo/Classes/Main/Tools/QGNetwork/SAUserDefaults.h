@@ -30,7 +30,9 @@
 #define USERINFONEEDUPDATE @"userInfoNeedUpdate"//用户信息需要刷新
 #define USERDEFAULTS_Class @"userClass" // 用户班级
 #define USERDEFAULTS_IndexPath @"indexPath" // 记录选中
+#define USERDEFAULTS_ClassID @"userClassID" // 用户班级ID
 
+#define USERDEFAULTS_City @"USERDEFAULTS_City" //城市
 
 #define PLATFORMID [SAUserDefaults getValueWithKey:USERDEFAULTS_Platform_id]
 

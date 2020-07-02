@@ -68,7 +68,7 @@ const NSString *BLUUserBlurViewFemaleImageCacheKey = @"BLUUserBlurViewFemaleImag
 - (void)setUser:(BLUUser *)user {
     _user = user;
     self.backgroundColor = BLUThemeMainColor;
-    _blurImageView.image = [UIImage imageNamed:@"user-info-bkg"];
+    _blurImageView.image = [UIImage imageNamed:@"img_bg"];
 }
 
 @end

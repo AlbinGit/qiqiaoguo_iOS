@@ -108,6 +108,13 @@ PODS:
   - WebASDKImageManager (1.1.1):
     - AsyncDisplayKit/Core (~> 1.9)
     - SDWebImage/Core (~> 3.7)
+  - ZFPlayer (3.3.1):
+    - ZFPlayer/Core (= 3.3.1)
+  - ZFPlayer/AVPlayer (3.3.1):
+    - ZFPlayer/Core
+  - ZFPlayer/ControlView (3.3.1):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (3.3.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -130,6 +137,9 @@ DEPENDENCIES:
   - UMengAnalytics
   - VTMagic
   - WebASDKImageManager
+  - ZFPlayer
+  - ZFPlayer/AVPlayer
+  - ZFPlayer/ControlView
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -155,6 +165,7 @@ SPEC REPOS:
     - UMengAnalytics
     - VTMagic
     - WebASDKImageManager
+    - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -179,7 +190,8 @@ SPEC CHECKSUMS:
   UMengAnalytics: 19b28253793d77dff10fb7d502faad1fb6b8ce4a
   VTMagic: c69c1dd7481e0f3f4c0b2a6f27803dde55455c96
   WebASDKImageManager: 15f6abbac6b53b4b216e27fba0acf74c49a64d4c
+  ZFPlayer: 8a6021a3c45e281f2abd24dca5c88915af770a7e
 
-PODFILE CHECKSUM: 67a7c842d0c2912e31f58619dd9759c698ca0fd4
+PODFILE CHECKSUM: e657928f887c355345ff876b52f3e337f42cbf4d
 
 COCOAPODS: 1.9.0.beta.2

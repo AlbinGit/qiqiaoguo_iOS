@@ -65,6 +65,11 @@ NSString * const BLUUserKeyLoginTimes               = @"loginTimes";
              @"isCheckIn" : @"is_checkIn_status",
              
 
+             @"is_checkIn_status" : @"is_checkIn_status",
+             @"collection_course_count" : @"collection_course_count",
+             @"following_teacher_count" : @"following_teacher_count",
+             @"teacher_id" : @"teacher_id",
+
 #ifdef BLUUserPropertyUnavailable
              @"createDate": @"create_date",
              @"modifyDate": @"modify_date",
@@ -316,9 +321,24 @@ NSString * const BLUUserKeyLoginTimes               = @"loginTimes";
     return [BLUUser descForSignature:self.signature];
 }
 
-- (NSString *)levelDesc {
-    return [NSString stringWithFormat:@"LV%@", @(self.level)];
-}
+//- (NSString *)levelDesc {
+//    return [NSString stringWithFormat:@"LV%@", @(self.level)];
+//}
+//- (NSString *)user_heckIn_status {
+//    return [BLUUser descForMarriage:self.is_checkIn_status];
+//}
+//- (NSString *)collectionCount {
+//    return [BLUUser descForMarriage:self.collection_course_count];
+//}
+//- (NSString *)followingCount {
+//    return [BLUUser descForMarriage:self.following_teacher_count];
+//}
+//- (NSString *)userTeacherId {
+//    return [BLUUser descForMarriage:self.teacher_id];
+//}
+
+
+
 
 + (NSString *)descForMarriage:(BLUUserMarriage)marriage {
     NSString *desc = nil;
@@ -338,6 +358,20 @@ NSString * const BLUUserKeyLoginTimes               = @"loginTimes";
         case BLUUserMarriageDivorced: {
             desc = NSLocalizedString(@"user.marriage.divorced", @"Divorced");
         } break;
+//			case BLUUserMarriageCheck: {
+//				desc = NSLocalizedString(@"user.marriage.divorced", @"Divorced");
+//			} break;
+//			case BLUUserMarriageDivorced: {
+//				desc = NSLocalizedString(@"user.marriage.divorced", @"Divorced");
+//			} break;
+//			case BLUUserMarriageDivorced: {
+//				desc = NSLocalizedString(@"user.marriage.divorced", @"Divorced");
+//			} break;
+//			case BLUUserMarriageDivorced: {
+//				desc = NSLocalizedString(@"user.marriage.divorced", @"Divorced");
+//			} break;
+
+			
         default: {
             desc = [BLUUser defaultMarriageDesc];
         } break;

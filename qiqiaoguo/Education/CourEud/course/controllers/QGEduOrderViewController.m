@@ -84,7 +84,7 @@
     // button.backgroundColor = COLOR(224, 225, 226, 1);
     button.backgroundColor = COLOR(250, 29, 73, 1);
     PL_CODE_WEAK(weakSelf)
-    [button setTitle:@"提交订单"];
+    [button setTitle:@"提交订单" forState:UIControlStateNormal];
     [button addClick:^(UIButton *button) {
         [weakSelf  addsignBtn];
         
@@ -98,7 +98,7 @@
 }
 
 - (void)addCallMan {
-    UIButton *lab = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, MQScreenW, 44)];
+    UIButton *lab = [[UIButton alloc] initWithFrame:CGRectMake(0, 64+kTopEdgeHeight, MQScreenW, 44)];
     lab.backgroundColor = [UIColor whiteColor];
     [lab setTitleFont:[UIFont systemFontOfSize:15]];
     lab.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;

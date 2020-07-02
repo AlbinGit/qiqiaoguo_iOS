@@ -22,6 +22,7 @@
 #import "BLUAppManager.h"
 #import "QGAdvertisingView.h"
 #import "QGVideoChatViewController.h"
+#import <AVFoundation/AVFoundation.h>
 @interface AppDelegate ()
 
 @property (nonatomic, strong)QGAdvertisingView *adView;
@@ -35,7 +36,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    [NSThread sleepForTimeInterval:1.0];
+//    [NSThread sleepForTimeInterval:1.0];
     application.statusBarHidden = NO;
     NSString *curVersion =  [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
     NSString *oldVersion = [QGSaveService objectForKey:USERDEFAULTS_Version];
@@ -54,7 +55,7 @@
 //	UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:videoVC];
 //	self.window.rootViewController = nav;
 
-    [self showAdvertisingPage];
+//    [self showAdvertisingPage];
 
     
 	
@@ -86,7 +87,9 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     [[QGJpushService sharedService] registerDeviceToken:deviceToken];
 }
-
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     self.didResignActive = YES;
     [self handleNotificationWithUserInfo:userInfo];
@@ -165,9 +168,7 @@
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
-    
 
-    
 }
 
 //- (void)OpenNetworkMonitored

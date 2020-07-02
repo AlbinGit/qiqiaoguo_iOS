@@ -53,6 +53,8 @@
     
     _model = model;
     self.teacherdeil.text = _model.signature;
+//    self.teacherdeil.text = _model.org_name;
+
     [self.headIma sd_setImageWithURL:[NSURL URLWithString:_model.head_img] placeholderImage:nil]; ;
 
     self.teachername.text = model.name;

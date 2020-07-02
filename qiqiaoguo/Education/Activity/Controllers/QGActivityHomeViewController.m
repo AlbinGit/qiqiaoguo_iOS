@@ -67,8 +67,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initBaseData];
-    
-  
+
     [self addTabView_UI];
     [self createNavInfo];
     [self getUserMessageCount];
@@ -78,24 +77,31 @@
 
 - (void)createNavInfo {
     
-    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 64)];
+    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 64+Height_StatusBar)];
     _navBGView.backgroundColor = RGBA(255, 255, 255 ,0);
+//    _navBGView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_navBGView];
     //返回按钮
 //    SAButton * returnBtn = [SAButton buttonWithType:UIButtonTypeCustom];
-//    returnBtn.frame = CGRectMake(0, self.navImageView.height - 49, 50, 49);
-    
+//    returnBtn.frame = CGRectMake(0, self.navImageView.height - 34, 50, 49);
 //    [returnBtn setNormalImage:@"round-back-icon"];
-//    PL_CODE_WEAK(ws)
+//	PL_CODE_WEAK(ws);
 //    [returnBtn addClick:^(SAButton *button) {
 //        [ws.navigationController popViewControllerAnimated:YES];
 //    }];
 //    _returnBtn = returnBtn;
-//    [_navBGView addSubview:returnBtn];
+
+	UIButton * returnBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    returnBtn.frame = CGRectMake(0, self.navImageView.height - 34, 50, 49);
+    [returnBtn setImage:[UIImage imageNamed:@"round-back-icon"] forState:UIControlStateNormal];
+	[returnBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    [_navBGView addSubview:returnBtn];
     [self addMesseageBtnInTheView:_navBGView];
 }
-
-
+- (void)backClick
+{
+	[self.navigationController popViewControllerAnimated:YES];
+}
 - (void)addMesseageBtnInTheView:(UIView *)view
 {
     //消息
@@ -146,7 +152,7 @@
     
     _dataArray = [[NSMutableArray alloc]init];
     if (_tableView==nil) {
-        _tableView =[[SASRefreshTableView alloc]  initWithFrame:CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT-49) style:UITableViewStyleGrouped];
+        _tableView =[[SASRefreshTableView alloc]  initWithFrame:CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
         _tableView.delegate=self;
         _tableView.dataSource=self;
         _tableView.backgroundColor = COLOR(242, 243, 244, 1);

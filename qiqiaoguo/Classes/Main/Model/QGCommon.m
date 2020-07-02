@@ -23,6 +23,13 @@
     return rect;
 }
 
++ (CGRect)rectForString:(NSString *)bStr withBoldFont:(UIFont *)font WithWidth:(CGFloat)width
+{
+    CGRect rect = [bStr boundingRectWithSize:CGSizeMake(width,MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+
+    return rect;
+}
+
 + (CGRect)rectForString:(NSString *)bStr withBoldFont:(int)font
 {
     CGRect rect = [bStr boundingRectWithSize:CGSizeMake(1000, 200) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:font]} context:nil];
@@ -55,6 +62,26 @@
     CGRect rect=[self rectForString:str withBoldFont:font];
     return rect.size.width;
 }
+
+//根据高度，计算label的宽度
++ (CGSize)getLabelSizeWidthWith:(NSString *)aString Height:(CGFloat)height andFont:(UIFont *)font
+{
+	CGSize size = CGSizeZero;
+	
+	if([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f){
+		NSDictionary * attribute = @{NSFontAttributeName:font};
+		
+		size = [aString boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, height)
+									 options:
+				NSStringDrawingTruncatesLastVisibleLine |
+				NSStringDrawingUsesLineFragmentOrigin |
+				NSStringDrawingUsesFontLeading
+								  attributes:attribute
+									 context:nil].size;
+	}
+	return size;
+}
+
 
 + (NSInteger)compareTimeStartTime:(NSString *)startTime endTime:(NSString *)endTime
 {

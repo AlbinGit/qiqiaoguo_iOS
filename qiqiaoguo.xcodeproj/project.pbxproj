@@ -7,14 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3803D23A24A868CB00BF475B /* SKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 3803D23424A868CA00BF475B /* SKTag.m */; };
+		3803D23B24A868CB00BF475B /* SKTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3803D23624A868CA00BF475B /* SKTagView.m */; };
+		3803D23C24A868CB00BF475B /* SKTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3803D23924A868CA00BF475B /* SKTagButton.m */; };
+		3803D24224A87D5E00BF475B /* SZJPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3803D23F24A87D5E00BF475B /* SZJPhotoBrowser.m */; };
+		3803D24324A87D5E00BF475B /* SZJBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3803D24024A87D5E00BF475B /* SZJBrowserImageView.m */; };
+		380D0EA724A0996F0082B69A /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D0EA624A0996F0082B69A /* NullSafe.m */; };
 		3817AE442463B35800B7D1F2 /* QGVideoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817AE432463B35800B7D1F2 /* QGVideoChatViewController.m */; };
 		3817AE472463D6E200B7D1F2 /* QGHttpManager+VideoChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817AE462463D6E200B7D1F2 /* QGHttpManager+VideoChat.m */; };
+		381927992485F9E8008EF411 /* QGNewTeacherInteligenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381927982485F9E8008EF411 /* QGNewTeacherInteligenceCell.m */; };
+		3819279C2485FA23008EF411 /* QGNewTeacherOrganizationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819279B2485FA23008EF411 /* QGNewTeacherOrganizationCell.m */; };
+		3819279F24861CC0008EF411 /* QGNewTeacherStateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819279E24861CC0008EF411 /* QGNewTeacherStateModel.m */; };
+		381927A224862637008EF411 /* QGNewTeacherLessonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381927A124862637008EF411 /* QGNewTeacherLessonModel.m */; };
+		381927A52486378E008EF411 /* QGNewteacherInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381927A42486378E008EF411 /* QGNewteacherInfoModel.m */; };
+		381960F72487843700BB7B8E /* QGNewTeacherCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381960F62487843700BB7B8E /* QGNewTeacherCollectionCell.m */; };
+		381BEE522492200A00242D95 /* QGNewteacherBuyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381BEE512492200A00242D95 /* QGNewteacherBuyController.m */; };
+		381BEE582492253A00242D95 /* QGNewTeacherLiveLessonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381BEE572492253A00242D95 /* QGNewTeacherLiveLessonsCell.m */; };
+		381CC491249E0D6C00810811 /* QGRecordFieldCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC490249E0D6C00810811 /* QGRecordFieldCollectionCell.m */; };
+		381CC494249E149600810811 /* QGFileWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC493249E149600810811 /* QGFileWebController.m */; };
+		381CC497249E25C500810811 /* QGChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC496249E25C500810811 /* QGChatModel.m */; };
+		381CC49A249E26F100810811 /* QGChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC499249E26F100810811 /* QGChatCell.m */; };
+		381CC49D249E42C700810811 /* QGTeacherPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC49C249E42C700810811 /* QGTeacherPublishController.m */; };
+		381CC4E6249E515E00810811 /* KKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC4E2249E515E00810811 /* KKButton.m */; };
+		381CC4E7249E515E00810811 /* KKUploadPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC4E5249E515E00810811 /* KKUploadPhotoCollectionViewCell.m */; };
 		381DABD12464E90F004207B9 /* RTCSampleRemoteUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCB2464E90E004207B9 /* RTCSampleRemoteUserModel.m */; };
 		381DABD22464E90F004207B9 /* RTCSampleRemoteUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCC2464E90E004207B9 /* RTCSampleRemoteUserManager.m */; };
 		381DABD32464E90F004207B9 /* UIViewController+RTCSampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABCE2464E90F004207B9 /* UIViewController+RTCSampleAlert.m */; };
 		381DABD6246523D3004207B9 /* QGClassPoplView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABD5246523D3004207B9 /* QGClassPoplView.m */; };
 		381DABD924652B7A004207B9 /* QGCollectionViewClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */; };
+		381E558724A9C86100EAC17D /* QGNewCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381E558624A9C86100EAC17D /* QGNewCommentViewController.m */; };
+		38215A4D2488C62100E31091 /* QGNewTeacherVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38215A4B2488C62100E31091 /* QGNewTeacherVideoCell.m */; };
+		38215A502489020C00E31091 /* QGNewCourseDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38215A4F2489020C00E31091 /* QGNewCourseDetailController.m */; };
+		382396A3249C87CB00EB4794 /* QGTeacherMoreInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382396A2249C87CB00EB4794 /* QGTeacherMoreInfoController.m */; };
+		382396A6249CB7B800EB4794 /* QGTeacherWaitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382396A5249CB7B800EB4794 /* QGTeacherWaitController.m */; };
+		3823FD38248DCD4700A85C1C /* QGStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD37248DCD4700A85C1C /* QGStarView.m */; };
+		3823FD3B248DCFAC00A85C1C /* QGNewTeacherCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD3A248DCFAC00A85C1C /* QGNewTeacherCommentCell.m */; };
+		3823FD3E248DD6DE00A85C1C /* QGNewCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD3D248DD6DE00A85C1C /* QGNewCommentModel.m */; };
+		3823FD41248DDCF800A85C1C /* QGNewStarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD40248DDCF800A85C1C /* QGNewStarCell.m */; };
+		3823FD44248E0BDC00A85C1C /* QGNewShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD43248E0BDC00A85C1C /* QGNewShareModel.m */; };
+		3823FD47248E10E300A85C1C /* QGNewBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD46248E10E300A85C1C /* QGNewBottomView.m */; };
+		3823FD4A248E376100A85C1C /* CRIKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3823FD49248E376100A85C1C /* CRIKeyboardView.m */; };
+		3825A5C724936B3300E2CCC1 /* QGFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3825A5C624936B3300E2CCC1 /* QGFindController.m */; };
+		3825A5CA249374E500E2CCC1 /* QGFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3825A5C9249374E500E2CCC1 /* QGFindCell.m */; };
+		383A150D248F21B700780E19 /* QGImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A150C248F21B700780E19 /* QGImageController.m */; };
+		383A1510248F22C200780E19 /* QGFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A150F248F22C200780E19 /* QGFilePath.m */; };
+		383A1513248F58B400780E19 /* QGBrocastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A1512248F58B400780E19 /* QGBrocastController.m */; };
+		383A151C248F6FC000780E19 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A151B248F6FC000780E19 /* ReplayKit.framework */; };
+		383A151E248F6FF900780E19 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A151D248F6FF900780E19 /* libxml2.tbd */; };
+		383A1520248F701000780E19 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A151F248F701000780E19 /* libiconv.tbd */; };
+		383A1522248F702B00780E19 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A1521248F702B00780E19 /* libicucore.tbd */; };
+		383A1524248F703A00780E19 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A1523248F703A00780E19 /* libresolv.tbd */; };
+		383A1526248F704600780E19 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A1525248F704600780E19 /* libresolv.9.tbd */; };
+		383A154E248F7E0800780E19 /* QGNewUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A154D248F7E0800780E19 /* QGNewUserInfoView.m */; };
+		383C019F249D9F3B00490FE0 /* QGNewDouYinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383C019E249D9F3B00490FE0 /* QGNewDouYinController.m */; };
+		383C01A2249DDD5200490FE0 /* QGRecordVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383C01A1249DDD5200490FE0 /* QGRecordVideoController.m */; };
 		383EA420246647AD00E1DB2C /* QGClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383EA41F246647AD00E1DB2C /* QGClassModel.m */; };
+		3847F0D1247F899800E7412D /* QGNewTeacherDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3847F0D0247F899800E7412D /* QGNewTeacherDetailController.m */; };
+		3847F0D4247F8E1B00E7412D /* QGNewTeacherTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3847F0D3247F8E1B00E7412D /* QGNewTeacherTextCell.m */; };
+		3847F0D7247F8E8900E7412D /* QGNewTeacherBigImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3847F0D6247F8E8900E7412D /* QGNewTeacherBigImgCell.m */; };
+		3847F0DA247F8EAB00E7412D /* QGNewTeacherMulImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3847F0D9247F8EAB00E7412D /* QGNewTeacherMulImgCell.m */; };
+		3847F0DD247F923F00E7412D /* HLSegementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3847F0DB247F923E00E7412D /* HLSegementView.m */; };
+		38486CD42489D86200F1AD98 /* QGNewTeacherHtmlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38486CD32489D86200F1AD98 /* QGNewTeacherHtmlCell.m */; };
+		38486CD7248A14CD00F1AD98 /* QGNewTeacherIntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38486CD6248A14CD00F1AD98 /* QGNewTeacherIntroCell.m */; };
+		38486CDA248A314900F1AD98 /* QGNewteacherLessonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38486CD9248A314900F1AD98 /* QGNewteacherLessonsCell.m */; };
+		38486CDD248A328100F1AD98 /* QGNewCatalogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38486CDC248A328100F1AD98 /* QGNewCatalogModel.m */; };
+		384A772A24889390001B8026 /* QGHomeTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A772924889390001B8026 /* QGHomeTeacherModel.m */; };
+		384A772D248893C0001B8026 /* QGHomeCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A772C248893C0001B8026 /* QGHomeCourseModel.m */; };
+		384ADA62249AFD6100E9D9B7 /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 384ADA55249AFD6100E9D9B7 /* province_data.json */; };
+		384ADA63249AFD6100E9D9B7 /* province_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384ADA56249AFD6100E9D9B7 /* province_data.xml */; };
+		384ADA64249AFD6100E9D9B7 /* MOFSDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA57249AFD6100E9D9B7 /* MOFSDatePicker.m */; };
+		384ADA65249AFD6100E9D9B7 /* MOFSToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA58249AFD6100E9D9B7 /* MOFSToolView.m */; };
+		384ADA66249AFD6100E9D9B7 /* LQYPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA5A249AFD6100E9D9B7 /* LQYPickerView.m */; };
+		384ADA67249AFD6100E9D9B7 /* MOFSPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA5B249AFD6100E9D9B7 /* MOFSPickerManager.m */; };
+		384ADA68249AFD6100E9D9B7 /* MOFSPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA5C249AFD6100E9D9B7 /* MOFSPickerView.m */; };
+		384ADA69249AFD6100E9D9B7 /* AddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA5D249AFD6100E9D9B7 /* AddressModel.m */; };
+		384ADA6A249AFD6100E9D9B7 /* MOFSAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA60249AFD6100E9D9B7 /* MOFSAddressPickerView.m */; };
+		384ADA6D249B43F000E9D9B7 /* PCSheetPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA6B249B43F000E9D9B7 /* PCSheetPickerView.m */; };
+		384ADA70249B448E00E9D9B7 /* provienceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA6F249B448E00E9D9B7 /* provienceModel.m */; };
+		384ADA73249B495800E9D9B7 /* QGRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA72249B495800E9D9B7 /* QGRegisterView.m */; };
+		384ADA76249B5F7200E9D9B7 /* QGTeacherPassportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384ADA75249B5F7200E9D9B7 /* QGTeacherPassportController.m */; };
+		3850F4A424A18B23008A6B3C /* 讲师端服务协议20200619-讲师版V1.0(2)(1).docx in Resources */ = {isa = PBXBuildFile; fileRef = 3850F4A324A18B23008A6B3C /* 讲师端服务协议20200619-讲师版V1.0(2)(1).docx */; };
+		3850F4C524A1CDA8008A6B3C /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4A824A1CDA7008A6B3C /* TZImageCropManager.m */; };
+		3850F4C624A1CDA8008A6B3C /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4AA24A1CDA7008A6B3C /* TZAssetCell.m */; };
+		3850F4C724A1CDA8008A6B3C /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4AB24A1CDA7008A6B3C /* TZVideoPlayerController.m */; };
+		3850F4C824A1CDA8008A6B3C /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4AC24A1CDA7008A6B3C /* TZAssetModel.m */; };
+		3850F4C924A1CDA8008A6B3C /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4AD24A1CDA8008A6B3C /* NSBundle+TZImagePicker.m */; };
+		3850F4CA24A1CDA8008A6B3C /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4B024A1CDA8008A6B3C /* UIView+Layout.m */; };
+		3850F4CB24A1CDA8008A6B3C /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4B124A1CDA8008A6B3C /* TZPhotoPreviewController.m */; };
+		3850F4CC24A1CDA8008A6B3C /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3850F4B224A1CDA8008A6B3C /* TZImagePickerController.bundle */; };
+		3850F4CD24A1CDA8008A6B3C /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4B324A1CDA8008A6B3C /* TZProgressView.m */; };
+		3850F4CE24A1CDA8008A6B3C /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4B724A1CDA8008A6B3C /* TZImageManager.m */; };
+		3850F4CF24A1CDA8008A6B3C /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4B924A1CDA8008A6B3C /* TZPhotoPickerController.m */; };
+		3850F4D024A1CDA8008A6B3C /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4BA24A1CDA8008A6B3C /* TZPhotoPreviewCell.m */; };
+		3850F4D124A1CDA8008A6B3C /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4C024A1CDA8008A6B3C /* TZImagePickerController.m */; };
+		3850F4D224A1CDA8008A6B3C /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4C124A1CDA8008A6B3C /* TZLocationManager.m */; };
+		3850F4D324A1CDA8008A6B3C /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4C224A1CDA8008A6B3C /* TZGifPhotoPreviewController.m */; };
+		3850F4D424A1CDA8008A6B3C /* TZImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4C324A1CDA8008A6B3C /* TZImageRequestOperation.m */; };
+		3850F4D924A1CE96008A6B3C /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4D524A1CE96008A6B3C /* TZTestCell.m */; };
+		3850F4DA24A1CE97008A6B3C /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3850F4D824A1CE96008A6B3C /* LxGridViewFlowLayout.m */; };
+		3853AAE02499ADCB003DE20F /* QGDouYinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AADF2499ADCB003DE20F /* QGDouYinController.m */; };
+		3853AAE62499AE26003DE20F /* QGDouYinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AAE52499AE26003DE20F /* QGDouYinCell.m */; };
+		3853AAE92499AFE0003DE20F /* ZFDouYinControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AAE82499AFE0003DE20F /* ZFDouYinControlView.m */; };
+		3853AAF02499FE6B003DE20F /* QGTeacherEnterPrivacyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AAEF2499FE6B003DE20F /* QGTeacherEnterPrivacyController.m */; };
+		3853AAF6249A0867003DE20F /* QGTeacherRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AAF5249A0867003DE20F /* QGTeacherRegisterController.m */; };
+		3853AAF9249A216E003DE20F /* QGTeacherReginsterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AAF8249A216E003DE20F /* QGTeacherReginsterCell.m */; };
+		3853AAFC249A2F54003DE20F /* QGSelImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3853AAFB249A2F54003DE20F /* QGSelImgView.m */; };
+		386BE9FB2484F0130029F8D8 /* QGNewClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BE9FA2484F0130029F8D8 /* QGNewClassCell.m */; };
+		386BE9FE2484F0340029F8D8 /* QGNewTeacherInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BE9FD2484F0340029F8D8 /* QGNewTeacherInfoCell.m */; };
+		38AC1ABF24973F5400371E3F /* QGStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1ABE24973F5400371E3F /* QGStudyController.m */; };
+		38AC1AC324975AB600371E3F /* QGstudyProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1AC224975AB600371E3F /* QGstudyProgressView.m */; };
+		38AC1AC624977ED500371E3F /* QGStudyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC1AC524977ED500371E3F /* QGStudyCell.m */; };
 		3A5CCE7D1D0516EB009EDFD8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */; };
 		3A5CCE7E1D0516EB009EDFD8 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE31D0516EA009EDFD8 /* NSString+Hashing.m */; };
 		3A5CCE7F1D0516EB009EDFD8 /* UIBarButtonItem+MQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CCDE51D0516EA009EDFD8 /* UIBarButtonItem+MQExtension.m */; };
@@ -800,10 +902,51 @@
 /* Begin PBXFileReference section */
 		19D8DF33E1F4153D3E11FE71 /* Pods-qiqiaoguo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiqiaoguo.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo.release.xcconfig"; sourceTree = "<group>"; };
 		27CB1698497CAC6809604B19 /* libPods-qiqiaoguo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-qiqiaoguo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3803D23424A868CA00BF475B /* SKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTag.m; sourceTree = "<group>"; };
+		3803D23524A868CA00BF475B /* SKTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTagButton.h; sourceTree = "<group>"; };
+		3803D23624A868CA00BF475B /* SKTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTagView.m; sourceTree = "<group>"; };
+		3803D23724A868CA00BF475B /* SKTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTag.h; sourceTree = "<group>"; };
+		3803D23824A868CA00BF475B /* SKTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTagView.h; sourceTree = "<group>"; };
+		3803D23924A868CA00BF475B /* SKTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTagButton.m; sourceTree = "<group>"; };
+		3803D23E24A87D5E00BF475B /* SZJBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZJBrowserImageView.h; sourceTree = "<group>"; };
+		3803D23F24A87D5E00BF475B /* SZJPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZJPhotoBrowser.m; sourceTree = "<group>"; };
+		3803D24024A87D5E00BF475B /* SZJBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZJBrowserImageView.m; sourceTree = "<group>"; };
+		3803D24124A87D5E00BF475B /* SZJPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZJPhotoBrowser.h; sourceTree = "<group>"; };
+		380D0EA624A0996F0082B69A /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		3817AE422463B35800B7D1F2 /* QGVideoChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVideoChatViewController.h; sourceTree = "<group>"; };
 		3817AE432463B35800B7D1F2 /* QGVideoChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVideoChatViewController.m; sourceTree = "<group>"; };
 		3817AE452463D6E200B7D1F2 /* QGHttpManager+VideoChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QGHttpManager+VideoChat.h"; sourceTree = "<group>"; };
 		3817AE462463D6E200B7D1F2 /* QGHttpManager+VideoChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QGHttpManager+VideoChat.m"; sourceTree = "<group>"; };
+		381927972485F9E8008EF411 /* QGNewTeacherInteligenceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherInteligenceCell.h; sourceTree = "<group>"; };
+		381927982485F9E8008EF411 /* QGNewTeacherInteligenceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherInteligenceCell.m; sourceTree = "<group>"; };
+		3819279A2485FA23008EF411 /* QGNewTeacherOrganizationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherOrganizationCell.h; sourceTree = "<group>"; };
+		3819279B2485FA23008EF411 /* QGNewTeacherOrganizationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherOrganizationCell.m; sourceTree = "<group>"; };
+		3819279D24861CC0008EF411 /* QGNewTeacherStateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherStateModel.h; sourceTree = "<group>"; };
+		3819279E24861CC0008EF411 /* QGNewTeacherStateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherStateModel.m; sourceTree = "<group>"; };
+		381927A024862637008EF411 /* QGNewTeacherLessonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherLessonModel.h; sourceTree = "<group>"; };
+		381927A124862637008EF411 /* QGNewTeacherLessonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherLessonModel.m; sourceTree = "<group>"; };
+		381927A32486378E008EF411 /* QGNewteacherInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewteacherInfoModel.h; sourceTree = "<group>"; };
+		381927A42486378E008EF411 /* QGNewteacherInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewteacherInfoModel.m; sourceTree = "<group>"; };
+		381960F52487843700BB7B8E /* QGNewTeacherCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherCollectionCell.h; sourceTree = "<group>"; };
+		381960F62487843700BB7B8E /* QGNewTeacherCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherCollectionCell.m; sourceTree = "<group>"; };
+		381BEE502492200A00242D95 /* QGNewteacherBuyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewteacherBuyController.h; sourceTree = "<group>"; };
+		381BEE512492200A00242D95 /* QGNewteacherBuyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewteacherBuyController.m; sourceTree = "<group>"; };
+		381BEE562492253A00242D95 /* QGNewTeacherLiveLessonsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherLiveLessonsCell.h; sourceTree = "<group>"; };
+		381BEE572492253A00242D95 /* QGNewTeacherLiveLessonsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherLiveLessonsCell.m; sourceTree = "<group>"; };
+		381CC48F249E0D6C00810811 /* QGRecordFieldCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGRecordFieldCollectionCell.h; sourceTree = "<group>"; };
+		381CC490249E0D6C00810811 /* QGRecordFieldCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGRecordFieldCollectionCell.m; sourceTree = "<group>"; };
+		381CC492249E149600810811 /* QGFileWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGFileWebController.h; sourceTree = "<group>"; };
+		381CC493249E149600810811 /* QGFileWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGFileWebController.m; sourceTree = "<group>"; };
+		381CC495249E25C500810811 /* QGChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGChatModel.h; sourceTree = "<group>"; };
+		381CC496249E25C500810811 /* QGChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGChatModel.m; sourceTree = "<group>"; };
+		381CC498249E26F100810811 /* QGChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGChatCell.h; sourceTree = "<group>"; };
+		381CC499249E26F100810811 /* QGChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGChatCell.m; sourceTree = "<group>"; };
+		381CC49B249E42C700810811 /* QGTeacherPublishController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherPublishController.h; sourceTree = "<group>"; };
+		381CC49C249E42C700810811 /* QGTeacherPublishController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherPublishController.m; sourceTree = "<group>"; };
+		381CC4E2249E515E00810811 /* KKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKButton.m; sourceTree = "<group>"; };
+		381CC4E3249E515E00810811 /* KKUploadPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKUploadPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		381CC4E4249E515E00810811 /* KKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKButton.h; sourceTree = "<group>"; };
+		381CC4E5249E515E00810811 /* KKUploadPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKUploadPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		381DABCB2464E90E004207B9 /* RTCSampleRemoteUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSampleRemoteUserModel.m; sourceTree = "<group>"; };
 		381DABCC2464E90E004207B9 /* RTCSampleRemoteUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSampleRemoteUserManager.m; sourceTree = "<group>"; };
 		381DABCD2464E90F004207B9 /* UIViewController+RTCSampleAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTCSampleAlert.h"; sourceTree = "<group>"; };
@@ -814,8 +957,160 @@
 		381DABD5246523D3004207B9 /* QGClassPoplView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGClassPoplView.m; sourceTree = "<group>"; };
 		381DABD724652B7A004207B9 /* QGCollectionViewClassCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGCollectionViewClassCell.h; sourceTree = "<group>"; };
 		381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGCollectionViewClassCell.m; sourceTree = "<group>"; };
+		381E558524A9C86100EAC17D /* QGNewCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewCommentViewController.h; sourceTree = "<group>"; };
+		381E558624A9C86100EAC17D /* QGNewCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewCommentViewController.m; sourceTree = "<group>"; };
+		38215A4B2488C62100E31091 /* QGNewTeacherVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherVideoCell.m; sourceTree = "<group>"; };
+		38215A4C2488C62100E31091 /* QGNewTeacherVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherVideoCell.h; sourceTree = "<group>"; };
+		38215A4E2489020C00E31091 /* QGNewCourseDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewCourseDetailController.h; sourceTree = "<group>"; };
+		38215A4F2489020C00E31091 /* QGNewCourseDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewCourseDetailController.m; sourceTree = "<group>"; };
+		382396A1249C87CB00EB4794 /* QGTeacherMoreInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherMoreInfoController.h; sourceTree = "<group>"; };
+		382396A2249C87CB00EB4794 /* QGTeacherMoreInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherMoreInfoController.m; sourceTree = "<group>"; };
+		382396A4249CB7B800EB4794 /* QGTeacherWaitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherWaitController.h; sourceTree = "<group>"; };
+		382396A5249CB7B800EB4794 /* QGTeacherWaitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherWaitController.m; sourceTree = "<group>"; };
+		3823FD36248DCD4700A85C1C /* QGStarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGStarView.h; sourceTree = "<group>"; };
+		3823FD37248DCD4700A85C1C /* QGStarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGStarView.m; sourceTree = "<group>"; };
+		3823FD39248DCFAC00A85C1C /* QGNewTeacherCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherCommentCell.h; sourceTree = "<group>"; };
+		3823FD3A248DCFAC00A85C1C /* QGNewTeacherCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherCommentCell.m; sourceTree = "<group>"; };
+		3823FD3C248DD6DE00A85C1C /* QGNewCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewCommentModel.h; sourceTree = "<group>"; };
+		3823FD3D248DD6DE00A85C1C /* QGNewCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewCommentModel.m; sourceTree = "<group>"; };
+		3823FD3F248DDCF800A85C1C /* QGNewStarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewStarCell.h; sourceTree = "<group>"; };
+		3823FD40248DDCF800A85C1C /* QGNewStarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewStarCell.m; sourceTree = "<group>"; };
+		3823FD42248E0BDC00A85C1C /* QGNewShareModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewShareModel.h; sourceTree = "<group>"; };
+		3823FD43248E0BDC00A85C1C /* QGNewShareModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewShareModel.m; sourceTree = "<group>"; };
+		3823FD45248E10E300A85C1C /* QGNewBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewBottomView.h; sourceTree = "<group>"; };
+		3823FD46248E10E300A85C1C /* QGNewBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewBottomView.m; sourceTree = "<group>"; };
+		3823FD48248E376100A85C1C /* CRIKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRIKeyboardView.h; sourceTree = "<group>"; };
+		3823FD49248E376100A85C1C /* CRIKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRIKeyboardView.m; sourceTree = "<group>"; };
+		3825A5C524936B3300E2CCC1 /* QGFindController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGFindController.h; sourceTree = "<group>"; };
+		3825A5C624936B3300E2CCC1 /* QGFindController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGFindController.m; sourceTree = "<group>"; };
+		3825A5C8249374E500E2CCC1 /* QGFindCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGFindCell.h; sourceTree = "<group>"; };
+		3825A5C9249374E500E2CCC1 /* QGFindCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGFindCell.m; sourceTree = "<group>"; };
+		383A150B248F21B700780E19 /* QGImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGImageController.h; sourceTree = "<group>"; };
+		383A150C248F21B700780E19 /* QGImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGImageController.m; sourceTree = "<group>"; };
+		383A150E248F22C200780E19 /* QGFilePath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGFilePath.h; sourceTree = "<group>"; };
+		383A150F248F22C200780E19 /* QGFilePath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGFilePath.m; sourceTree = "<group>"; };
+		383A1511248F58B400780E19 /* QGBrocastController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGBrocastController.h; sourceTree = "<group>"; };
+		383A1512248F58B400780E19 /* QGBrocastController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGBrocastController.m; sourceTree = "<group>"; };
+		383A151B248F6FC000780E19 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		383A151D248F6FF900780E19 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		383A151F248F701000780E19 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		383A1521248F702B00780E19 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		383A1523248F703A00780E19 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		383A1525248F704600780E19 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		383A154C248F7E0800780E19 /* QGNewUserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewUserInfoView.h; sourceTree = "<group>"; };
+		383A154D248F7E0800780E19 /* QGNewUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewUserInfoView.m; sourceTree = "<group>"; };
+		383C019D249D9F3B00490FE0 /* QGNewDouYinController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewDouYinController.h; sourceTree = "<group>"; };
+		383C019E249D9F3B00490FE0 /* QGNewDouYinController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewDouYinController.m; sourceTree = "<group>"; };
+		383C01A0249DDD5200490FE0 /* QGRecordVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGRecordVideoController.h; sourceTree = "<group>"; };
+		383C01A1249DDD5200490FE0 /* QGRecordVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGRecordVideoController.m; sourceTree = "<group>"; };
 		383EA41E246647AD00E1DB2C /* QGClassModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGClassModel.h; sourceTree = "<group>"; };
 		383EA41F246647AD00E1DB2C /* QGClassModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGClassModel.m; sourceTree = "<group>"; };
+		3847F0CF247F899800E7412D /* QGNewTeacherDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherDetailController.h; sourceTree = "<group>"; };
+		3847F0D0247F899800E7412D /* QGNewTeacherDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherDetailController.m; sourceTree = "<group>"; };
+		3847F0D2247F8E1B00E7412D /* QGNewTeacherTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherTextCell.h; sourceTree = "<group>"; };
+		3847F0D3247F8E1B00E7412D /* QGNewTeacherTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherTextCell.m; sourceTree = "<group>"; };
+		3847F0D5247F8E8900E7412D /* QGNewTeacherBigImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherBigImgCell.h; sourceTree = "<group>"; };
+		3847F0D6247F8E8900E7412D /* QGNewTeacherBigImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherBigImgCell.m; sourceTree = "<group>"; };
+		3847F0D8247F8EAB00E7412D /* QGNewTeacherMulImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherMulImgCell.h; sourceTree = "<group>"; };
+		3847F0D9247F8EAB00E7412D /* QGNewTeacherMulImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherMulImgCell.m; sourceTree = "<group>"; };
+		3847F0DB247F923E00E7412D /* HLSegementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSegementView.m; sourceTree = "<group>"; };
+		3847F0DC247F923F00E7412D /* HLSegementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSegementView.h; sourceTree = "<group>"; };
+		38486CD22489D86200F1AD98 /* QGNewTeacherHtmlCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherHtmlCell.h; sourceTree = "<group>"; };
+		38486CD32489D86200F1AD98 /* QGNewTeacherHtmlCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherHtmlCell.m; sourceTree = "<group>"; };
+		38486CD5248A14CD00F1AD98 /* QGNewTeacherIntroCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherIntroCell.h; sourceTree = "<group>"; };
+		38486CD6248A14CD00F1AD98 /* QGNewTeacherIntroCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherIntroCell.m; sourceTree = "<group>"; };
+		38486CD8248A314900F1AD98 /* QGNewteacherLessonsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewteacherLessonsCell.h; sourceTree = "<group>"; };
+		38486CD9248A314900F1AD98 /* QGNewteacherLessonsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewteacherLessonsCell.m; sourceTree = "<group>"; };
+		38486CDB248A328100F1AD98 /* QGNewCatalogModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewCatalogModel.h; sourceTree = "<group>"; };
+		38486CDC248A328100F1AD98 /* QGNewCatalogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewCatalogModel.m; sourceTree = "<group>"; };
+		384A772824889390001B8026 /* QGHomeTeacherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeTeacherModel.h; sourceTree = "<group>"; };
+		384A772924889390001B8026 /* QGHomeTeacherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeTeacherModel.m; sourceTree = "<group>"; };
+		384A772B248893C0001B8026 /* QGHomeCourseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHomeCourseModel.h; sourceTree = "<group>"; };
+		384A772C248893C0001B8026 /* QGHomeCourseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHomeCourseModel.m; sourceTree = "<group>"; };
+		384ADA52249AFD6100E9D9B7 /* AddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressModel.h; sourceTree = "<group>"; };
+		384ADA53249AFD6100E9D9B7 /* MOFSPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOFSPickerView.h; sourceTree = "<group>"; };
+		384ADA54249AFD6100E9D9B7 /* MOFSPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOFSPickerManager.h; sourceTree = "<group>"; };
+		384ADA55249AFD6100E9D9B7 /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
+		384ADA56249AFD6100E9D9B7 /* province_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = province_data.xml; sourceTree = "<group>"; };
+		384ADA57249AFD6100E9D9B7 /* MOFSDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFSDatePicker.m; sourceTree = "<group>"; };
+		384ADA58249AFD6100E9D9B7 /* MOFSToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFSToolView.m; sourceTree = "<group>"; };
+		384ADA59249AFD6100E9D9B7 /* MOFSAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOFSAddressPickerView.h; sourceTree = "<group>"; };
+		384ADA5A249AFD6100E9D9B7 /* LQYPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQYPickerView.m; sourceTree = "<group>"; };
+		384ADA5B249AFD6100E9D9B7 /* MOFSPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFSPickerManager.m; sourceTree = "<group>"; };
+		384ADA5C249AFD6100E9D9B7 /* MOFSPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFSPickerView.m; sourceTree = "<group>"; };
+		384ADA5D249AFD6100E9D9B7 /* AddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressModel.m; sourceTree = "<group>"; };
+		384ADA5E249AFD6100E9D9B7 /* MOFSToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOFSToolView.h; sourceTree = "<group>"; };
+		384ADA5F249AFD6100E9D9B7 /* MOFSDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOFSDatePicker.h; sourceTree = "<group>"; };
+		384ADA60249AFD6100E9D9B7 /* MOFSAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFSAddressPickerView.m; sourceTree = "<group>"; };
+		384ADA61249AFD6100E9D9B7 /* LQYPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQYPickerView.h; sourceTree = "<group>"; };
+		384ADA6B249B43F000E9D9B7 /* PCSheetPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSheetPickerView.m; sourceTree = "<group>"; };
+		384ADA6C249B43F000E9D9B7 /* PCSheetPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSheetPickerView.h; sourceTree = "<group>"; };
+		384ADA6E249B448E00E9D9B7 /* provienceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = provienceModel.h; sourceTree = "<group>"; };
+		384ADA6F249B448E00E9D9B7 /* provienceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = provienceModel.m; sourceTree = "<group>"; };
+		384ADA71249B495800E9D9B7 /* QGRegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGRegisterView.h; sourceTree = "<group>"; };
+		384ADA72249B495800E9D9B7 /* QGRegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGRegisterView.m; sourceTree = "<group>"; };
+		384ADA74249B5F7200E9D9B7 /* QGTeacherPassportController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherPassportController.h; sourceTree = "<group>"; };
+		384ADA75249B5F7200E9D9B7 /* QGTeacherPassportController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherPassportController.m; sourceTree = "<group>"; };
+		3850F4A324A18B23008A6B3C /* 讲师端服务协议20200619-讲师版V1.0(2)(1).docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "讲师端服务协议20200619-讲师版V1.0(2)(1).docx"; sourceTree = "<group>"; };
+		3850F4A624A1CDA7008A6B3C /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		3850F4A724A1CDA7008A6B3C /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		3850F4A824A1CDA7008A6B3C /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
+		3850F4A924A1CDA7008A6B3C /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		3850F4AA24A1CDA7008A6B3C /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		3850F4AB24A1CDA7008A6B3C /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		3850F4AC24A1CDA7008A6B3C /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		3850F4AD24A1CDA8008A6B3C /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		3850F4AE24A1CDA8008A6B3C /* TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLocationManager.h; sourceTree = "<group>"; };
+		3850F4AF24A1CDA8008A6B3C /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		3850F4B024A1CDA8008A6B3C /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		3850F4B124A1CDA8008A6B3C /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		3850F4B224A1CDA8008A6B3C /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		3850F4B324A1CDA8008A6B3C /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
+		3850F4B424A1CDA8008A6B3C /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		3850F4B524A1CDA8008A6B3C /* TZImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageRequestOperation.h; sourceTree = "<group>"; };
+		3850F4B624A1CDA8008A6B3C /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		3850F4B724A1CDA8008A6B3C /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		3850F4B824A1CDA8008A6B3C /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
+		3850F4B924A1CDA8008A6B3C /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		3850F4BA24A1CDA8008A6B3C /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		3850F4BB24A1CDA8008A6B3C /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		3850F4BC24A1CDA8008A6B3C /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		3850F4BD24A1CDA8008A6B3C /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		3850F4BE24A1CDA8008A6B3C /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		3850F4BF24A1CDA8008A6B3C /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		3850F4C024A1CDA8008A6B3C /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		3850F4C124A1CDA8008A6B3C /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
+		3850F4C224A1CDA8008A6B3C /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		3850F4C324A1CDA8008A6B3C /* TZImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageRequestOperation.m; sourceTree = "<group>"; };
+		3850F4C424A1CDA8008A6B3C /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
+		3850F4D524A1CE96008A6B3C /* TZTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestCell.m; sourceTree = "<group>"; };
+		3850F4D624A1CE96008A6B3C /* TZTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestCell.h; sourceTree = "<group>"; };
+		3850F4D724A1CE96008A6B3C /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
+		3850F4D824A1CE96008A6B3C /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
+		3853AADE2499ADCB003DE20F /* QGDouYinController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGDouYinController.h; sourceTree = "<group>"; };
+		3853AADF2499ADCB003DE20F /* QGDouYinController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGDouYinController.m; sourceTree = "<group>"; };
+		3853AAE42499AE26003DE20F /* QGDouYinCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGDouYinCell.h; sourceTree = "<group>"; };
+		3853AAE52499AE26003DE20F /* QGDouYinCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGDouYinCell.m; sourceTree = "<group>"; };
+		3853AAE72499AFE0003DE20F /* ZFDouYinControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFDouYinControlView.h; sourceTree = "<group>"; };
+		3853AAE82499AFE0003DE20F /* ZFDouYinControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFDouYinControlView.m; sourceTree = "<group>"; };
+		3853AAEE2499FE6B003DE20F /* QGTeacherEnterPrivacyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherEnterPrivacyController.h; sourceTree = "<group>"; };
+		3853AAEF2499FE6B003DE20F /* QGTeacherEnterPrivacyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherEnterPrivacyController.m; sourceTree = "<group>"; };
+		3853AAF4249A0867003DE20F /* QGTeacherRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherRegisterController.h; sourceTree = "<group>"; };
+		3853AAF5249A0867003DE20F /* QGTeacherRegisterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherRegisterController.m; sourceTree = "<group>"; };
+		3853AAF7249A216E003DE20F /* QGTeacherReginsterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGTeacherReginsterCell.h; sourceTree = "<group>"; };
+		3853AAF8249A216E003DE20F /* QGTeacherReginsterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGTeacherReginsterCell.m; sourceTree = "<group>"; };
+		3853AAFA249A2F53003DE20F /* QGSelImgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGSelImgView.h; sourceTree = "<group>"; };
+		3853AAFB249A2F54003DE20F /* QGSelImgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGSelImgView.m; sourceTree = "<group>"; };
+		386BE9F92484F0130029F8D8 /* QGNewClassCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewClassCell.h; sourceTree = "<group>"; };
+		386BE9FA2484F0130029F8D8 /* QGNewClassCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewClassCell.m; sourceTree = "<group>"; };
+		386BE9FC2484F0340029F8D8 /* QGNewTeacherInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGNewTeacherInfoCell.h; sourceTree = "<group>"; };
+		386BE9FD2484F0340029F8D8 /* QGNewTeacherInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGNewTeacherInfoCell.m; sourceTree = "<group>"; };
+		38AC1ABD24973F5400371E3F /* QGStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGStudyController.h; sourceTree = "<group>"; };
+		38AC1ABE24973F5400371E3F /* QGStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGStudyController.m; sourceTree = "<group>"; };
+		38AC1AC124975AB500371E3F /* QGstudyProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGstudyProgressView.h; sourceTree = "<group>"; };
+		38AC1AC224975AB600371E3F /* QGstudyProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGstudyProgressView.m; sourceTree = "<group>"; };
+		38AC1AC424977ED500371E3F /* QGStudyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGStudyCell.h; sourceTree = "<group>"; };
+		38AC1AC524977ED500371E3F /* QGStudyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGStudyCell.m; sourceTree = "<group>"; };
 		3A5CCDE01D0516EA009EDFD8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		3A5CCDE11D0516EA009EDFD8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		3A5CCDE21D0516EA009EDFD8 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
@@ -2383,6 +2678,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383A1526248F704600780E19 /* libresolv.9.tbd in Frameworks */,
+				383A1524248F703A00780E19 /* libresolv.tbd in Frameworks */,
+				383A1522248F702B00780E19 /* libicucore.tbd in Frameworks */,
+				383A1520248F701000780E19 /* libiconv.tbd in Frameworks */,
+				383A151E248F6FF900780E19 /* libxml2.tbd in Frameworks */,
+				383A151C248F6FC000780E19 /* ReplayKit.framework in Frameworks */,
 				885CDF5F1D6E8CB1004A0C1C /* JavaScriptCore.framework in Frameworks */,
 				886665AE1D055A6400FA64DF /* libz.tbd in Frameworks */,
 				886665F81D0561AD00FA64DF /* libstdc++.tbd in Frameworks */,
@@ -2435,6 +2736,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3803D23324A868CA00BF475B /* SKTagView */ = {
+			isa = PBXGroup;
+			children = (
+				3803D23724A868CA00BF475B /* SKTag.h */,
+				3803D23424A868CA00BF475B /* SKTag.m */,
+				3803D23524A868CA00BF475B /* SKTagButton.h */,
+				3803D23924A868CA00BF475B /* SKTagButton.m */,
+				3803D23824A868CA00BF475B /* SKTagView.h */,
+				3803D23624A868CA00BF475B /* SKTagView.m */,
+			);
+			path = SKTagView;
+			sourceTree = "<group>";
+		};
+		3803D23D24A87D5E00BF475B /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				3803D23E24A87D5E00BF475B /* SZJBrowserImageView.h */,
+				3803D24024A87D5E00BF475B /* SZJBrowserImageView.m */,
+				3803D24124A87D5E00BF475B /* SZJPhotoBrowser.h */,
+				3803D23F24A87D5E00BF475B /* SZJPhotoBrowser.m */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		380D0EA524A0996F0082B69A /* NullSafe */ = {
+			isa = PBXGroup;
+			children = (
+				380D0EA624A0996F0082B69A /* NullSafe.m */,
+			);
+			path = NullSafe;
+			sourceTree = "<group>";
+		};
 		3817AE412463B2F000B7D1F2 /* VideoChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -2448,6 +2781,331 @@
 				3817AE432463B35800B7D1F2 /* QGVideoChatViewController.m */,
 			);
 			path = VideoChat;
+			sourceTree = "<group>";
+		};
+		381CC4E1249E515E00810811 /* publishView */ = {
+			isa = PBXGroup;
+			children = (
+				3850F4D724A1CE96008A6B3C /* LxGridViewFlowLayout.h */,
+				3850F4D824A1CE96008A6B3C /* LxGridViewFlowLayout.m */,
+				3850F4D624A1CE96008A6B3C /* TZTestCell.h */,
+				3850F4D524A1CE96008A6B3C /* TZTestCell.m */,
+				381CC4E4249E515E00810811 /* KKButton.h */,
+				381CC4E2249E515E00810811 /* KKButton.m */,
+				381CC4E3249E515E00810811 /* KKUploadPhotoCollectionViewCell.h */,
+				381CC4E5249E515E00810811 /* KKUploadPhotoCollectionViewCell.m */,
+			);
+			path = publishView;
+			sourceTree = "<group>";
+		};
+		3825A5C424936AA000E2CCC1 /* find */ = {
+			isa = PBXGroup;
+			children = (
+				3825A5C524936B3300E2CCC1 /* QGFindController.h */,
+				3825A5C624936B3300E2CCC1 /* QGFindController.m */,
+				3825A5C8249374E500E2CCC1 /* QGFindCell.h */,
+				3825A5C9249374E500E2CCC1 /* QGFindCell.m */,
+			);
+			path = find;
+			sourceTree = "<group>";
+		};
+		383A150A248F212600780E19 /* ImgPicker */ = {
+			isa = PBXGroup;
+			children = (
+				383A150B248F21B700780E19 /* QGImageController.h */,
+				383A150C248F21B700780E19 /* QGImageController.m */,
+				383A150E248F22C200780E19 /* QGFilePath.h */,
+				383A150F248F22C200780E19 /* QGFilePath.m */,
+			);
+			path = ImgPicker;
+			sourceTree = "<group>";
+		};
+		3847F0CB247F892B00E7412D /* teacherDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3803D23D24A87D5E00BF475B /* PhotoBrowser */,
+				383A150A248F212600780E19 /* ImgPicker */,
+				3847F0CE247F896D00E7412D /* Controller */,
+				3847F0CD247F896800E7412D /* View */,
+				3847F0CC247F896100E7412D /* Model */,
+			);
+			path = teacherDetail;
+			sourceTree = "<group>";
+		};
+		3847F0CC247F896100E7412D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				381927A024862637008EF411 /* QGNewTeacherLessonModel.h */,
+				381927A124862637008EF411 /* QGNewTeacherLessonModel.m */,
+				3819279D24861CC0008EF411 /* QGNewTeacherStateModel.h */,
+				3819279E24861CC0008EF411 /* QGNewTeacherStateModel.m */,
+				381927A32486378E008EF411 /* QGNewteacherInfoModel.h */,
+				381927A42486378E008EF411 /* QGNewteacherInfoModel.m */,
+				38486CDB248A328100F1AD98 /* QGNewCatalogModel.h */,
+				38486CDC248A328100F1AD98 /* QGNewCatalogModel.m */,
+				3823FD3C248DD6DE00A85C1C /* QGNewCommentModel.h */,
+				3823FD3D248DD6DE00A85C1C /* QGNewCommentModel.m */,
+				3823FD42248E0BDC00A85C1C /* QGNewShareModel.h */,
+				3823FD43248E0BDC00A85C1C /* QGNewShareModel.m */,
+				381CC495249E25C500810811 /* QGChatModel.h */,
+				381CC496249E25C500810811 /* QGChatModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3847F0CD247F896800E7412D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38486CD12489D81C00F1AD98 /* teacherDetailView */,
+				3847F0DC247F923F00E7412D /* HLSegementView.h */,
+				3847F0DB247F923E00E7412D /* HLSegementView.m */,
+				3847F0D2247F8E1B00E7412D /* QGNewTeacherTextCell.h */,
+				3847F0D3247F8E1B00E7412D /* QGNewTeacherTextCell.m */,
+				3847F0D5247F8E8900E7412D /* QGNewTeacherBigImgCell.h */,
+				3847F0D6247F8E8900E7412D /* QGNewTeacherBigImgCell.m */,
+				3847F0D8247F8EAB00E7412D /* QGNewTeacherMulImgCell.h */,
+				3847F0D9247F8EAB00E7412D /* QGNewTeacherMulImgCell.m */,
+				381960F52487843700BB7B8E /* QGNewTeacherCollectionCell.h */,
+				381960F62487843700BB7B8E /* QGNewTeacherCollectionCell.m */,
+				386BE9F92484F0130029F8D8 /* QGNewClassCell.h */,
+				386BE9FA2484F0130029F8D8 /* QGNewClassCell.m */,
+				386BE9FC2484F0340029F8D8 /* QGNewTeacherInfoCell.h */,
+				386BE9FD2484F0340029F8D8 /* QGNewTeacherInfoCell.m */,
+				381927972485F9E8008EF411 /* QGNewTeacherInteligenceCell.h */,
+				381927982485F9E8008EF411 /* QGNewTeacherInteligenceCell.m */,
+				3819279A2485FA23008EF411 /* QGNewTeacherOrganizationCell.h */,
+				3819279B2485FA23008EF411 /* QGNewTeacherOrganizationCell.m */,
+				3823FD48248E376100A85C1C /* CRIKeyboardView.h */,
+				3823FD49248E376100A85C1C /* CRIKeyboardView.m */,
+				381CC48F249E0D6C00810811 /* QGRecordFieldCollectionCell.h */,
+				381CC490249E0D6C00810811 /* QGRecordFieldCollectionCell.m */,
+				381CC498249E26F100810811 /* QGChatCell.h */,
+				381CC499249E26F100810811 /* QGChatCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3847F0CE247F896D00E7412D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3847F0CF247F899800E7412D /* QGNewTeacherDetailController.h */,
+				3847F0D0247F899800E7412D /* QGNewTeacherDetailController.m */,
+				38215A4E2489020C00E31091 /* QGNewCourseDetailController.h */,
+				38215A4F2489020C00E31091 /* QGNewCourseDetailController.m */,
+				383A1511248F58B400780E19 /* QGBrocastController.h */,
+				383A1512248F58B400780E19 /* QGBrocastController.m */,
+				381BEE502492200A00242D95 /* QGNewteacherBuyController.h */,
+				381BEE512492200A00242D95 /* QGNewteacherBuyController.m */,
+				383C01A0249DDD5200490FE0 /* QGRecordVideoController.h */,
+				383C01A1249DDD5200490FE0 /* QGRecordVideoController.m */,
+				381CC492249E149600810811 /* QGFileWebController.h */,
+				381CC493249E149600810811 /* QGFileWebController.m */,
+				381E558524A9C86100EAC17D /* QGNewCommentViewController.h */,
+				381E558624A9C86100EAC17D /* QGNewCommentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		38486CD12489D81C00F1AD98 /* teacherDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				38486CD22489D86200F1AD98 /* QGNewTeacherHtmlCell.h */,
+				38486CD32489D86200F1AD98 /* QGNewTeacherHtmlCell.m */,
+				38486CD5248A14CD00F1AD98 /* QGNewTeacherIntroCell.h */,
+				38486CD6248A14CD00F1AD98 /* QGNewTeacherIntroCell.m */,
+				38486CD8248A314900F1AD98 /* QGNewteacherLessonsCell.h */,
+				38486CD9248A314900F1AD98 /* QGNewteacherLessonsCell.m */,
+				381BEE562492253A00242D95 /* QGNewTeacherLiveLessonsCell.h */,
+				381BEE572492253A00242D95 /* QGNewTeacherLiveLessonsCell.m */,
+				3823FD39248DCFAC00A85C1C /* QGNewTeacherCommentCell.h */,
+				3823FD3A248DCFAC00A85C1C /* QGNewTeacherCommentCell.m */,
+				3823FD3F248DDCF800A85C1C /* QGNewStarCell.h */,
+				3823FD40248DDCF800A85C1C /* QGNewStarCell.m */,
+				3823FD36248DCD4700A85C1C /* QGStarView.h */,
+				3823FD37248DCD4700A85C1C /* QGStarView.m */,
+				3823FD45248E10E300A85C1C /* QGNewBottomView.h */,
+				3823FD46248E10E300A85C1C /* QGNewBottomView.m */,
+			);
+			path = teacherDetailView;
+			sourceTree = "<group>";
+		};
+		384ADA51249AFD6100E9D9B7 /* MOFSPickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				384ADA52249AFD6100E9D9B7 /* AddressModel.h */,
+				384ADA53249AFD6100E9D9B7 /* MOFSPickerView.h */,
+				384ADA54249AFD6100E9D9B7 /* MOFSPickerManager.h */,
+				384ADA55249AFD6100E9D9B7 /* province_data.json */,
+				384ADA56249AFD6100E9D9B7 /* province_data.xml */,
+				384ADA57249AFD6100E9D9B7 /* MOFSDatePicker.m */,
+				384ADA58249AFD6100E9D9B7 /* MOFSToolView.m */,
+				384ADA59249AFD6100E9D9B7 /* MOFSAddressPickerView.h */,
+				384ADA5A249AFD6100E9D9B7 /* LQYPickerView.m */,
+				384ADA5B249AFD6100E9D9B7 /* MOFSPickerManager.m */,
+				384ADA5C249AFD6100E9D9B7 /* MOFSPickerView.m */,
+				384ADA5D249AFD6100E9D9B7 /* AddressModel.m */,
+				384ADA5E249AFD6100E9D9B7 /* MOFSToolView.h */,
+				384ADA5F249AFD6100E9D9B7 /* MOFSDatePicker.h */,
+				384ADA60249AFD6100E9D9B7 /* MOFSAddressPickerView.m */,
+				384ADA61249AFD6100E9D9B7 /* LQYPickerView.h */,
+			);
+			path = MOFSPickerManager;
+			sourceTree = "<group>";
+		};
+		3850F4A524A1CDA7008A6B3C /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				3850F4A624A1CDA7008A6B3C /* TZPhotoPreviewCell.h */,
+				3850F4A724A1CDA7008A6B3C /* TZPhotoPickerController.h */,
+				3850F4A824A1CDA7008A6B3C /* TZImageCropManager.m */,
+				3850F4A924A1CDA7008A6B3C /* TZImageManager.h */,
+				3850F4AA24A1CDA7008A6B3C /* TZAssetCell.m */,
+				3850F4AB24A1CDA7008A6B3C /* TZVideoPlayerController.m */,
+				3850F4AC24A1CDA7008A6B3C /* TZAssetModel.m */,
+				3850F4AD24A1CDA8008A6B3C /* NSBundle+TZImagePicker.m */,
+				3850F4AE24A1CDA8008A6B3C /* TZLocationManager.h */,
+				3850F4AF24A1CDA8008A6B3C /* TZImagePickerController.h */,
+				3850F4B024A1CDA8008A6B3C /* UIView+Layout.m */,
+				3850F4B124A1CDA8008A6B3C /* TZPhotoPreviewController.m */,
+				3850F4B224A1CDA8008A6B3C /* TZImagePickerController.bundle */,
+				3850F4B324A1CDA8008A6B3C /* TZProgressView.m */,
+				3850F4B424A1CDA8008A6B3C /* TZGifPhotoPreviewController.h */,
+				3850F4B524A1CDA8008A6B3C /* TZImageRequestOperation.h */,
+				3850F4B624A1CDA8008A6B3C /* TZAssetCell.h */,
+				3850F4B724A1CDA8008A6B3C /* TZImageManager.m */,
+				3850F4B824A1CDA8008A6B3C /* TZImageCropManager.h */,
+				3850F4B924A1CDA8008A6B3C /* TZPhotoPickerController.m */,
+				3850F4BA24A1CDA8008A6B3C /* TZPhotoPreviewCell.m */,
+				3850F4BB24A1CDA8008A6B3C /* NSBundle+TZImagePicker.h */,
+				3850F4BC24A1CDA8008A6B3C /* TZAssetModel.h */,
+				3850F4BD24A1CDA8008A6B3C /* TZVideoPlayerController.h */,
+				3850F4BE24A1CDA8008A6B3C /* TZPhotoPreviewController.h */,
+				3850F4BF24A1CDA8008A6B3C /* UIView+Layout.h */,
+				3850F4C024A1CDA8008A6B3C /* TZImagePickerController.m */,
+				3850F4C124A1CDA8008A6B3C /* TZLocationManager.m */,
+				3850F4C224A1CDA8008A6B3C /* TZGifPhotoPreviewController.m */,
+				3850F4C324A1CDA8008A6B3C /* TZImageRequestOperation.m */,
+				3850F4C424A1CDA8008A6B3C /* TZProgressView.h */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		3853AADD2499AD74003DE20F /* QGDouYinStyle */ = {
+			isa = PBXGroup;
+			children = (
+				3853AAE32499ADDC003DE20F /* Controller */,
+				3853AAE22499ADD7003DE20F /* View */,
+				3853AAE12499ADCE003DE20F /* Model */,
+			);
+			path = QGDouYinStyle;
+			sourceTree = "<group>";
+		};
+		3853AAE12499ADCE003DE20F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3853AAE22499ADD7003DE20F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3853AAE42499AE26003DE20F /* QGDouYinCell.h */,
+				3853AAE52499AE26003DE20F /* QGDouYinCell.m */,
+				3853AAE72499AFE0003DE20F /* ZFDouYinControlView.h */,
+				3853AAE82499AFE0003DE20F /* ZFDouYinControlView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3853AAE32499ADDC003DE20F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3853AADE2499ADCB003DE20F /* QGDouYinController.h */,
+				3853AADF2499ADCB003DE20F /* QGDouYinController.m */,
+				383C019D249D9F3B00490FE0 /* QGNewDouYinController.h */,
+				383C019E249D9F3B00490FE0 /* QGNewDouYinController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3853AAEA2499FE03003DE20F /* teacherEnter */ = {
+			isa = PBXGroup;
+			children = (
+				3853AAED2499FE3A003DE20F /* View */,
+				3853AAEC2499FE35003DE20F /* Model */,
+				3853AAEB2499FE2E003DE20F /* Controller */,
+			);
+			path = teacherEnter;
+			sourceTree = "<group>";
+		};
+		3853AAEB2499FE2E003DE20F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3850F4A324A18B23008A6B3C /* 讲师端服务协议20200619-讲师版V1.0(2)(1).docx */,
+				3853AAEE2499FE6B003DE20F /* QGTeacherEnterPrivacyController.h */,
+				3853AAEF2499FE6B003DE20F /* QGTeacherEnterPrivacyController.m */,
+				3853AAF4249A0867003DE20F /* QGTeacherRegisterController.h */,
+				3853AAF5249A0867003DE20F /* QGTeacherRegisterController.m */,
+				384ADA74249B5F7200E9D9B7 /* QGTeacherPassportController.h */,
+				384ADA75249B5F7200E9D9B7 /* QGTeacherPassportController.m */,
+				382396A1249C87CB00EB4794 /* QGTeacherMoreInfoController.h */,
+				382396A2249C87CB00EB4794 /* QGTeacherMoreInfoController.m */,
+				382396A4249CB7B800EB4794 /* QGTeacherWaitController.h */,
+				382396A5249CB7B800EB4794 /* QGTeacherWaitController.m */,
+				381CC49B249E42C700810811 /* QGTeacherPublishController.h */,
+				381CC49C249E42C700810811 /* QGTeacherPublishController.m */,
+				3850F4A524A1CDA7008A6B3C /* TZImagePickerController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3853AAEC2499FE35003DE20F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				384ADA51249AFD6100E9D9B7 /* MOFSPickerManager */,
+				384ADA6E249B448E00E9D9B7 /* provienceModel.h */,
+				384ADA6F249B448E00E9D9B7 /* provienceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3853AAED2499FE3A003DE20F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3803D23324A868CA00BF475B /* SKTagView */,
+				384ADA6C249B43F000E9D9B7 /* PCSheetPickerView.h */,
+				384ADA6B249B43F000E9D9B7 /* PCSheetPickerView.m */,
+				3853AAF7249A216E003DE20F /* QGTeacherReginsterCell.h */,
+				3853AAF8249A216E003DE20F /* QGTeacherReginsterCell.m */,
+				384ADA71249B495800E9D9B7 /* QGRegisterView.h */,
+				384ADA72249B495800E9D9B7 /* QGRegisterView.m */,
+				3853AAFA249A2F53003DE20F /* QGSelImgView.h */,
+				3853AAFB249A2F54003DE20F /* QGSelImgView.m */,
+				381CC4E1249E515E00810811 /* publishView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38AC1ABC24973F2D00371E3F /* study */ = {
+			isa = PBXGroup;
+			children = (
+				38AC1ABD24973F5400371E3F /* QGStudyController.h */,
+				38AC1ABE24973F5400371E3F /* QGStudyController.m */,
+				38AC1AC024975A9A00371E3F /* View */,
+			);
+			path = study;
+			sourceTree = "<group>";
+		};
+		38AC1AC024975A9A00371E3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38AC1AC124975AB500371E3F /* QGstudyProgressView.h */,
+				38AC1AC224975AB600371E3F /* QGstudyProgressView.m */,
+				38AC1AC424977ED500371E3F /* QGStudyCell.h */,
+				38AC1AC524977ED500371E3F /* QGStudyCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3A5CCDDE1D0516EA009EDFD8 /* Main */ = {
@@ -2605,6 +3263,7 @@
 		3A5CCE501D0516EB009EDFD8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				380D0EA524A0996F0082B69A /* NullSafe */,
 				A4625BF41D4A6DC4009859C3 /* QGPayTool.h */,
 				A4625BF51D4A6DC4009859C3 /* QGPayTool.m */,
 				88583CF61D34EFD4009B1DD4 /* QGAlertView.h */,
@@ -2701,6 +3360,10 @@
 				A4A8176E1D47C62200AF9F9C /* QGGetLocationCityModel.m */,
 				383EA41E246647AD00E1DB2C /* QGClassModel.h */,
 				383EA41F246647AD00E1DB2C /* QGClassModel.m */,
+				384A772824889390001B8026 /* QGHomeTeacherModel.h */,
+				384A772924889390001B8026 /* QGHomeTeacherModel.m */,
+				384A772B248893C0001B8026 /* QGHomeCourseModel.h */,
+				384A772C248893C0001B8026 /* QGHomeCourseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2749,10 +3412,12 @@
 				381DABD5246523D3004207B9 /* QGClassPoplView.m */,
 				381DABD724652B7A004207B9 /* QGCollectionViewClassCell.h */,
 				381DABD824652B7A004207B9 /* QGCollectionViewClassCell.m */,
-				AA34A46B24715739004B3C38 /* QQGCourseTableViewCell.h */,
-				AA34A46C24715739004B3C38 /* QQGCourseTableViewCell.m */,
 				AA84D921247178D1001C41A9 /* QQGTeacherTableViewCell.h */,
 				AA84D922247178D1001C41A9 /* QQGTeacherTableViewCell.m */,
+				AA34A46B24715739004B3C38 /* QQGCourseTableViewCell.h */,
+				AA34A46C24715739004B3C38 /* QQGCourseTableViewCell.m */,
+				38215A4C2488C62100E31091 /* QGNewTeacherVideoCell.h */,
+				38215A4B2488C62100E31091 /* QGNewTeacherVideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2865,6 +3530,12 @@
 		6384747A3B15408803795007 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				383A1525248F704600780E19 /* libresolv.9.tbd */,
+				383A1523248F703A00780E19 /* libresolv.tbd */,
+				383A1521248F702B00780E19 /* libicucore.tbd */,
+				383A151F248F701000780E19 /* libiconv.tbd */,
+				383A151D248F6FF900780E19 /* libxml2.tbd */,
+				383A151B248F6FC000780E19 /* ReplayKit.framework */,
 				885CDF5E1D6E8CB1004A0C1C /* JavaScriptCore.framework */,
 				886665F71D0561AD00FA64DF /* libstdc++.tbd */,
 				886665F51D05619500FA64DF /* libsqlite3.0.tbd */,
@@ -4654,6 +5325,8 @@
 				888BD68F1D110599005E838D /* BLUUserSimpleTableCell.m */,
 				888BD6901D110599005E838D /* QGUserInfoView.h */,
 				888BD6911D110599005E838D /* QGUserInfoView.m */,
+				383A154C248F7E0800780E19 /* QGNewUserInfoView.h */,
+				383A154D248F7E0800780E19 /* QGNewUserInfoView.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -5255,14 +5928,19 @@
 		A425466A1CF3F7C20097382F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3853AADD2499AD74003DE20F /* QGDouYinStyle */,
 				3A5CCDDE1D0516EA009EDFD8 /* Main */,
 				6751113B1D4710F500E24F4A /* NewFeature */,
+				3847F0CB247F892B00E7412D /* teacherDetail */,
+				3853AAEA2499FE03003DE20F /* teacherEnter */,
 				676D01BC1D3F12EA005694F5 /* Order */,
 				3AE256911D051B8600E56DC9 /* Home */,
 				3AE256DB1D051C3500E56DC9 /* Me */,
 				3AE256E91D051C4200E56DC9 /* Shopcart */,
 				8809C2C71D24F87100762708 /* NotiMessage */,
 				3817AE412463B2F000B7D1F2 /* VideoChat */,
+				38AC1ABC24973F2D00371E3F /* study */,
+				3825A5C424936AA000E2CCC1 /* find */,
 				676D019A1D3F1037005694F5 /* Serach */,
 			);
 			path = Classes;
@@ -5339,7 +6017,7 @@
 				TargetAttributes = {
 					A425460E1CF30A760097382F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 773KFNZFJ9;
+						DevelopmentTeam = AUVDLZTKHF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -5386,10 +6064,13 @@
 			files = (
 				6776E70F1D40C77B0016EF17 /* QGProductDetailsCell.xib in Resources */,
 				674E5E2B1D20C708008912EF /* QGCategoryCell.xib in Resources */,
+				3850F4CC24A1CDA8008A6B3C /* TZImagePickerController.bundle in Resources */,
 				D449B80D22C5F142007B1C89 /* screenImage.png in Resources */,
 				672A18C21D2D2A8A0005DD1C /* QGActivityDetailCell.xib in Resources */,
 				886665A51D0559A200FA64DF /* AlipaySDK.bundle in Resources */,
 				672A19981D2D2EDC0005DD1C /* QGCourseDetail.xib in Resources */,
+				384ADA62249AFD6100E9D9B7 /* province_data.json in Resources */,
+				3850F4A424A18B23008A6B3C /* 讲师端服务协议20200619-讲师版V1.0(2)(1).docx in Resources */,
 				67539C091D347BA100F838B0 /* QGOptimalProductPhotoCell.xib in Resources */,
 				886665F41D05610A00FA64DF /* README.txt in Resources */,
 				A42546221CF30A760097382F /* LaunchScreen.storyboard in Resources */,
@@ -5411,6 +6092,7 @@
 				886665F11D05610900FA64DF /* UMSocialSDKResourcesNew.bundle in Resources */,
 				67DD81CB1D549A11007D0BB0 /* QGActShopInfoCell.xib in Resources */,
 				672A19E11D2D2EDC0005DD1C /* QGCourLIstGroupCollectionViewCell.xib in Resources */,
+				384ADA63249AFD6100E9D9B7 /* province_data.xml in Resources */,
 				881A244D1D17888B00C2582B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6776E7041D40C77B0016EF17 /* QGAttributeBuyCell.xib in Resources */,
 				883F39951D1146BD00CD893C /* Localizable.strings in Resources */,
@@ -5446,11 +6128,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-qiqiaoguo/Pods-qiqiaoguo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -5508,6 +6192,7 @@
 				6776E7121D40C77B0016EF17 /* UIView+ModifyFrame.m in Sources */,
 				381DABD12464E90F004207B9 /* RTCSampleRemoteUserModel.m in Sources */,
 				A4496EFB1D54E52600289035 /* QGTicklistModel.m in Sources */,
+				3823FD38248DCD4700A85C1C /* QGStarView.m in Sources */,
 				672A19E01D2D2EDC0005DD1C /* QGCourLIstGroupCollectionViewCell.m in Sources */,
 				888BD7AF1D110599005E838D /* BLUPostTransitionDelegate.m in Sources */,
 				672A19C91D2D2EDC0005DD1C /* SAScheduleDateUtil.m in Sources */,
@@ -5527,16 +6212,22 @@
 				674E5E2C1D20C708008912EF /* QGCategroyFoodCell.m in Sources */,
 				8816B95B1D37696800F3E0AD /* QGMyParticipateViewController.m in Sources */,
 				888BD8031D110599005E838D /* BLURecommend.m in Sources */,
+				3825A5CA249374E500E2CCC1 /* QGFindCell.m in Sources */,
 				67FAFD0F1D8921FA0076A95D /* QGEducationOrderListViewController.m in Sources */,
+				386BE9FE2484F0340029F8D8 /* QGNewTeacherInfoCell.m in Sources */,
+				3803D23B24A868CB00BF475B /* SKTagView.m in Sources */,
 				AA84D923247178D1001C41A9 /* QQGTeacherTableViewCell.m in Sources */,
 				88D407411D66F26700DD65E3 /* UIView+FSExtension.m in Sources */,
+				3847F0DD247F923F00E7412D /* HLSegementView.m in Sources */,
 				6739DC771D869E0500F8E40B /* QGShoppingCartModel.m in Sources */,
+				384ADA73249B495800E9D9B7 /* QGRegisterView.m in Sources */,
 				888496F01D420A26006403BD /* QGActivOrderFooterCell.m in Sources */,
 				888BD8491D11059A005E838D /* BLUTagButton.m in Sources */,
 				888BD8481D11059A005E838D /* BLUTabButton.m in Sources */,
 				888BD8571D11059A005E838D /* BLUServerNotificationHeader.m in Sources */,
 				67110A011D7ECE0A00D443FC /* QGHomevideoListCell.m in Sources */,
 				672A19921D2D2EDC0005DD1C /* QGCourseDetailHttpDownload.m in Sources */,
+				381E558724A9C86100EAC17D /* QGNewCommentViewController.m in Sources */,
 				888BD8E81D11059A005E838D /* BLUViewModel.m in Sources */,
 				884B161F1D4613BD001FED6A /* QGConfirmOrderHeader.m in Sources */,
 				888BD8C21D11059A005E838D /* BLUPostDetailAsyncViewController+PostDetailNode.m in Sources */,
@@ -5608,12 +6299,14 @@
 				AA34A46D24715739004B3C38 /* QQGCourseTableViewCell.m in Sources */,
 				888BD7CD1D110599005E838D /* BLUServer.m in Sources */,
 				888BD87F1D11059A005E838D /* BLUPostTagTextAttachment.m in Sources */,
+				3847F0D7247F8E8900E7412D /* QGNewTeacherBigImgCell.m in Sources */,
 				888BD85D1D11059A005E838D /* BLUPostCommentToolbar.m in Sources */,
 				88D814BD1D4783C400153F1C /* QGOrderAddressViewController.m in Sources */,
 				888BD8C11D11059A005E838D /* BLUPostDetailAsyncViewController+PostDetailCommentNode.m in Sources */,
 				676C4D141D388C4D00FC8CBF /* QGTextView.m in Sources */,
 				888BD8261D11059A005E838D /* UIAlertAction+BLUAddition.m in Sources */,
 				888BD8FE1D11059A005E838D /* BLUPasscodeLockDisableViewModel.m in Sources */,
+				3850F4CA24A1CDA8008A6B3C /* UIView+Layout.m in Sources */,
 				88D407331D66F26700DD65E3 /* FSCalendar+Deprecated.m in Sources */,
 				888BD8001D110599005E838D /* BLUPagination.m in Sources */,
 				886AE3521D4A12E700C79D6C /* QGGoodLogisticsInfoView.m in Sources */,
@@ -5648,6 +6341,7 @@
 				888BD8531D11059A005E838D /* BLUDialogueCell.m in Sources */,
 				381DABD6246523D3004207B9 /* QGClassPoplView.m in Sources */,
 				8816B9551D372F8600F3E0AD /* QGCategoryButton.m in Sources */,
+				3823FD44248E0BDC00A85C1C /* QGNewShareModel.m in Sources */,
 				88548D901D435FC60001423E /* QGShopCarCellHeader.m in Sources */,
 				888BD83A1D11059A005E838D /* BLUCircleSearchResultsViewController.m in Sources */,
 				888BD8731D11059A005E838D /* BLUPostDetailToolbar.m in Sources */,
@@ -5658,6 +6352,8 @@
 				888BD8FF1D11059A005E838D /* BLUPasscodeLockEnableViewModel.m in Sources */,
 				6776E6E51D40C6AF0016EF17 /* QGAttributeValueModel.m in Sources */,
 				A4A817661D47B49300AF9F9C /* main.m in Sources */,
+				381CC494249E149600810811 /* QGFileWebController.m in Sources */,
+				3803D23A24A868CB00BF475B /* SKTag.m in Sources */,
 				888BD8911D11059A005E838D /* BLUUserBarView.m in Sources */,
 				888BD8051D110599005E838D /* BLURedirectObject.m in Sources */,
 				888BD7EC1D110599005E838D /* BLUDynamicMO.m in Sources */,
@@ -5673,6 +6369,7 @@
 				675480E61D45FCD200BADE44 /* QGNoteDetailCell.m in Sources */,
 				888BD8E41D11059A005E838D /* BLUUserSettingViewController.m in Sources */,
 				671C90541D37AD2C00CE4B5B /* QGProductDetailsViewController.m in Sources */,
+				383A1510248F22C200780E19 /* QGFilePath.m in Sources */,
 				675BA2131D4AFD9600BBC1F5 /* QGContact.m in Sources */,
 				3A5CCEB41D0516EB009EDFD8 /* QGHttpDownloadConst.m in Sources */,
 				888643AA1D64079000123AE7 /* QGActCalendarViewController.m in Sources */,
@@ -5685,6 +6382,7 @@
 				888BD9051D11059A005E838D /* BLUPostCommentViewModel.m in Sources */,
 				888BD9131D11059A005E838D /* BLUSendPostViewModel.m in Sources */,
 				888496F51D420A26006403BD /* QGOrderBottomTool.m in Sources */,
+				3823FD4A248E376100A85C1C /* CRIKeyboardView.m in Sources */,
 				672A199C1D2D2EDC0005DD1C /* QGShowTimeView.m in Sources */,
 				676277BA1D33990D003D5919 /* QGOptimalProductSkillTableViewCell.m in Sources */,
 				888BD8801D11059A005E838D /* BLUPostTagTitleView.m in Sources */,
@@ -5704,6 +6402,8 @@
 				672A19D91D2D2EDC0005DD1C /* QGTeacherInfoListModel.m in Sources */,
 				888496F21D420A26006403BD /* QGMallOrderDetailCell.m in Sources */,
 				A4A8176F1D47C62200AF9F9C /* QGGetLocationCityModel.m in Sources */,
+				381CC491249E0D6C00810811 /* QGRecordFieldCollectionCell.m in Sources */,
+				38215A4D2488C62100E31091 /* QGNewTeacherVideoCell.m in Sources */,
 				888BD8BC1D11059A005E838D /* BLUBottomTransitioningAnimator.m in Sources */,
 				6776E6E41D40C6AF0016EF17 /* QGAttrListModel.m in Sources */,
 				670C2D1E1D6564C300BEF4C7 /* QGNearActSignModel.m in Sources */,
@@ -5727,6 +6427,7 @@
 				888BD8D31D11059A005E838D /* BLUSendPostViewController.m in Sources */,
 				3A5CCEC01D0516EB009EDFD8 /* SAUtils.m in Sources */,
 				888BD7C11D110599005E838D /* BLUApiManager+Comment.m in Sources */,
+				3850F4CB24A1CDA8008A6B3C /* TZPhotoPreviewController.m in Sources */,
 				676D01D61D3F12EA005694F5 /* QGOrderListFooter.m in Sources */,
 				88548D891D4315120001423E /* QGGoodsMO+CoreDataProperties.m in Sources */,
 				888BD7D71D110599005E838D /* BLUBrandCategoryMO+CoreDataProperties.m in Sources */,
@@ -5734,6 +6435,8 @@
 				67DF93E11D92778900B55F69 /* QGHomeSubjectView.m in Sources */,
 				674D59B51D434DF0003FB04E /* QGViewController+QGReturnToTheTop.m in Sources */,
 				8868B0F11D94C16F00290EF9 /* QGAdvertisingView.m in Sources */,
+				3853AAE02499ADCB003DE20F /* QGDouYinController.m in Sources */,
+				381CC49A249E26F100810811 /* QGChatCell.m in Sources */,
 				672A19CA1D2D2EDC0005DD1C /* QGSeacherCourseHttpDownload.m in Sources */,
 				3A5CCEA01D0516EB009EDFD8 /* TAPageControl.m in Sources */,
 				3A7487C31D0D0C900094B8F8 /* QGNotifiCationConst.m in Sources */,
@@ -5742,54 +6445,70 @@
 				3817AE442463B35800B7D1F2 /* QGVideoChatViewController.m in Sources */,
 				67098C291D51D26500019FD2 /* QGActSignSaveViewController.m in Sources */,
 				888BD7B11D110599005E838D /* BLUUserTransitionDelegate.m in Sources */,
+				38486CD7248A14CD00F1AD98 /* QGNewTeacherIntroCell.m in Sources */,
 				888BD89C1D11059A005E838D /* BLUUserSimpleInfoView.m in Sources */,
 				672A19D31D2D2EDC0005DD1C /* QGSearchView.m in Sources */,
 				888BD8981D11059A005E838D /* BLUUserLevelComponentView.m in Sources */,
+				3850F4D224A1CDA8008A6B3C /* TZLocationManager.m in Sources */,
 				67D895CD1D5C0F11003C8BF2 /* QGModel.m in Sources */,
 				886AE34F1D4A121C00C79D6C /* QGGoodLogisticsHeaderview.m in Sources */,
 				888BD8311D11059A005E838D /* BLUBriefHeader.m in Sources */,
 				672A198F1D2D2EDC0005DD1C /* QGCourseTeacherImageModel.m in Sources */,
+				384ADA64249AFD6100E9D9B7 /* MOFSDatePicker.m in Sources */,
 				887E34FA1D236BC800FE858B /* QGRegisterUserinfoViewController.m in Sources */,
+				380D0EA724A0996F0082B69A /* NullSafe.m in Sources */,
 				67539C0F1D347C2500F838B0 /* QGOptimalProductCardCell.m in Sources */,
+				384ADA65249AFD6100E9D9B7 /* MOFSToolView.m in Sources */,
 				888BD7DC1D110599005E838D /* BLUCircle.m in Sources */,
 				888BD8321D11059A005E838D /* BLUCircleBriefAsyncNode.m in Sources */,
 				67FAFD0E1D8921FA0076A95D /* QGEducationOrderDetailViewController.m in Sources */,
 				888BD8C31D11059A005E838D /* BLUPostDetailAsyncViewController+Reply.m in Sources */,
 				676D01D01D3F12EA005694F5 /* QGActivOrderViewController.m in Sources */,
 				888BD8E91D11059A005E838D /* BLUViewModelDelegateHelper.m in Sources */,
+				3850F4DA24A1CE97008A6B3C /* LxGridViewFlowLayout.m in Sources */,
 				888BD86F1D11059A005E838D /* BLUPostDetailNode+Text.m in Sources */,
 				888BD8991D11059A005E838D /* BLUUserNavCell.m in Sources */,
 				888496DB1D420A18006403BD /* QGActivOrderListViewController.m in Sources */,
+				38486CDA248A314900F1AD98 /* QGNewteacherLessonsCell.m in Sources */,
 				888BD7BD1D110599005E838D /* BLUAddressManager.m in Sources */,
 				888BD7F01D110599005E838D /* BLUImageMO.m in Sources */,
 				888BD8B21D11059A005E838D /* BLULoginViewController.m in Sources */,
 				888BD9161D11059A005E838D /* BLURegViewModel.m in Sources */,
 				672A19A61D2D2EDC0005DD1C /* QGOrgAllCourseViewController.m in Sources */,
+				3850F4C724A1CDA8008A6B3C /* TZVideoPlayerController.m in Sources */,
 				888BD7EF1D110599005E838D /* BLUImageMO+CoreDataProperties.m in Sources */,
 				888BD86D1D11059A005E838D /* BLUPostDetailNode+Action.m in Sources */,
 				672A19B21D2D2EDC0005DD1C /* QGTeacherListModel.m in Sources */,
 				888BD8D01D11059A005E838D /* BLUSendPost2ViewController+Text.m in Sources */,
 				885E6C2D1D7EC80C0041CFDD /* QGSearchScreeningView.m in Sources */,
+				3803D24324A87D5E00BF475B /* SZJBrowserImageView.m in Sources */,
 				888BD7E31D110599005E838D /* BLUCommentReply.m in Sources */,
 				888BD8151D110599005E838D /* BLUWXApiManager.m in Sources */,
 				888BD8A61D11059A005E838D /* BLUCircleDetailViewController.m in Sources */,
 				888BD88B1D11059A005E838D /* UIButton+BLUTheme.m in Sources */,
+				384ADA69249AFD6100E9D9B7 /* AddressModel.m in Sources */,
+				381BEE582492253A00242D95 /* QGNewTeacherLiveLessonsCell.m in Sources */,
 				888BD7F41D110599005E838D /* BLULevelRule.m in Sources */,
 				888BD89E1D11059A005E838D /* BLUUserSimpleTableCell.m in Sources */,
 				888BD89A1D11059A005E838D /* BLUUserSimpleCell.m in Sources */,
 				3A5CCE991D0516EB009EDFD8 /* SATextView.m in Sources */,
 				886AE34C1D4A0FEB00C79D6C /* QGGoodLogisticsViewController.m in Sources */,
+				3823FD3B248DCFAC00A85C1C /* QGNewTeacherCommentCell.m in Sources */,
 				888BD8511D11059A005E838D /* BLUChatCell.m in Sources */,
 				888BD8DC1D11059A005E838D /* BLUTextEditViewController.m in Sources */,
 				888BD8661D11059A005E838D /* BLUPostDetailCommentNode.m in Sources */,
+				3819279F24861CC0008EF411 /* QGNewTeacherStateModel.m in Sources */,
 				888BD8D61D11059A005E838D /* BLUSettingViewController.m in Sources */,
 				888BD7BB1D110599005E838D /* BLUKeyChainUtils.m in Sources */,
+				38486CDD248A328100F1AD98 /* QGNewCatalogModel.m in Sources */,
 				888BD8DD1D11059A005E838D /* BLUOtherUserViewController.m in Sources */,
 				888BD7CF1D110599005E838D /* BLUShareManager.m in Sources */,
 				888BD8E61D11059A005E838D /* BLUWebViewController.m in Sources */,
 				888BD8641D11059A005E838D /* BLUPostCommonVideoNode.m in Sources */,
 				675BA2121D4AFD9600BBC1F5 /* QGActOrderDownload.m in Sources */,
+				383A1513248F58B400780E19 /* QGBrocastController.m in Sources */,
 				674E5E2F1D20C708008912EF /* QGSubjectCollectionViewCell.m in Sources */,
+				3850F4D424A1CDA8008A6B3C /* TZImageRequestOperation.m in Sources */,
 				6739DC741D86954C00F8E40B /* QGEduOrderDownload.m in Sources */,
 				88D4073F1D66F26700DD65E3 /* FSCalendarStickyHeader.m in Sources */,
 				888496DD1D420A18006403BD /* QGSelectOrderCancelReasonViewController.m in Sources */,
@@ -5798,12 +6517,14 @@
 				888BD8461D11059A005E838D /* BLURefreshFooter.m in Sources */,
 				3A5CCE811D0516EB009EDFD8 /* UIColor+BLUAddition.m in Sources */,
 				676315DB1D3DF70F00658AFD /* QGPostListModel.m in Sources */,
+				384ADA6A249AFD6100E9D9B7 /* MOFSAddressPickerView.m in Sources */,
 				888BD8591D11059A005E838D /* BLUContentParagraphTextNode.m in Sources */,
 				672A198E1D2D2EDC0005DD1C /* QGCourseOrganizationModel.m in Sources */,
 				888BD8851D11059A005E838D /* BLUSettingIndicatorCell.m in Sources */,
 				888BD7C61D110599005E838D /* BLUApiManager+MessageCategory.m in Sources */,
 				8803FCA71D1BEB3B00922FBD /* QGHttpManager+User.m in Sources */,
 				675BA2101D4AFD9600BBC1F5 /* QGOrderPayViewController.m in Sources */,
+				3823FD41248DDCF800A85C1C /* QGNewStarCell.m in Sources */,
 				88583CEF1D348515009B1DD4 /* QGSettingCell.m in Sources */,
 				888BD8F41D11059A005E838D /* BLUImagePickerViewModel.m in Sources */,
 				88583CF21D34CEC6009B1DD4 /* QGAboutViewController.m in Sources */,
@@ -5811,17 +6532,21 @@
 				885C20801D0EA1910033D7F3 /* QGPersonalViewController.m in Sources */,
 				88A5D9751D12A5F20046A203 /* QGSocialService.m in Sources */,
 				888BD7D01D110599005E838D /* BLUAd.m in Sources */,
+				38486CD42489D86200F1AD98 /* QGNewTeacherHtmlCell.m in Sources */,
 				888BD7D61D110599005E838D /* BLUBrandCategory.m in Sources */,
 				888BD7B01D110599005E838D /* BLUShowImageController.m in Sources */,
 				888BD83C1D11059A005E838D /* BLUCirleHotTagNode.m in Sources */,
 				888BD7EA1D110599005E838D /* BLUDynamic.m in Sources */,
 				6776E7111D40C77B0016EF17 /* QGTypeView.m in Sources */,
+				3850F4CD24A1CDA8008A6B3C /* TZProgressView.m in Sources */,
 				888BD7CA1D110599005E838D /* BLUApiManager+Tag.m in Sources */,
 				3A5CCEA31D0516EB009EDFD8 /* UIView+SDExtension.m in Sources */,
+				382396A6249CB7B800EB4794 /* QGTeacherWaitController.m in Sources */,
 				888BD90E1D11059A005E838D /* BLUPostDetailViewModel.m in Sources */,
 				886665FE1D05896900FA64DF /* QGJpushService.m in Sources */,
 				888BD84D1D11059A005E838D /* BLUGuideCircleDescView.m in Sources */,
 				675BA2181D4AFD9600BBC1F5 /* QGActOrderListCell.m in Sources */,
+				3853AAF6249A0867003DE20F /* QGTeacherRegisterController.m in Sources */,
 				671C903B1D3766F400CE4B5B /* QGSingleStoreModel.m in Sources */,
 				884FFFE41D4DDBDC008EE1EB /* QGChatHeaderView.m in Sources */,
 				674E5E2A1D20C708008912EF /* QGCategoryCell.m in Sources */,
@@ -5830,12 +6555,14 @@
 				67637D801D2B88350034706E /* QGActHomeModel.m in Sources */,
 				676315D51D3DF67C00658AFD /* QGHomePostListCell.m in Sources */,
 				888BD7B81D110599005E838D /* UIImage+Tag.m in Sources */,
+				3850F4C524A1CDA8008A6B3C /* TZImageCropManager.m in Sources */,
 				888BD7B31D110599005E838D /* BLUViewController+PageRedirection.m in Sources */,
 				888BD7FB1D110599005E838D /* BLUMessageCategoryMO+CoreDataProperties.m in Sources */,
 				888BD7B21D110599005E838D /* BLUViewControllerRedirectController.m in Sources */,
 				381DABD22464E90F004207B9 /* RTCSampleRemoteUserManager.m in Sources */,
 				674E5E251D20C708008912EF /* QGGetGoodsListByCategoryIdHttpDownload.m in Sources */,
 				888BD8211D11059A005E838D /* BLUSolidLine.m in Sources */,
+				3850F4C624A1CDA8008A6B3C /* TZAssetCell.m in Sources */,
 				888BD8371D11059A005E838D /* BLUCircleFollowedPostUserInfoNode.m in Sources */,
 				A4027C881D3E96C8004EFD9B /* QGEduFristActivityListCell.m in Sources */,
 				888BD9081D11059A005E838D /* BLUPostDetailAsyncViewModel+Delegate.m in Sources */,
@@ -5843,9 +6570,11 @@
 				888BD7EB1D110599005E838D /* BLUDynamicMO+CoreDataProperties.m in Sources */,
 				675BA2161D4AFD9600BBC1F5 /* QGActOrderCell.m in Sources */,
 				676277C01D3399A8003D5919 /* QGOptimalProductResultModel.m in Sources */,
+				3853AAFC249A2F54003DE20F /* QGSelImgView.m in Sources */,
 				676277D11D33A0AC003D5919 /* QGSlideClassficationCollectionViewCell.m in Sources */,
 				674D8BA81D41C7B500CD0268 /* QGLoadWebCell.m in Sources */,
 				888BD8C01D11059A005E838D /* BLUPostCommonListViewController.m in Sources */,
+				384ADA68249AFD6100E9D9B7 /* MOFSPickerView.m in Sources */,
 				888BD7E11D110599005E838D /* BLUCoinNewBieRule.m in Sources */,
 				888BD8451D11059A005E838D /* BLUNoCoinIndicator.m in Sources */,
 				676277C61D33A053003D5919 /* QGSecKillViewController.m in Sources */,
@@ -5854,6 +6583,7 @@
 				6751114E1D48509000E24F4A /* CALayer+Additions.m in Sources */,
 				676D01B21D3F1037005694F5 /* QGPOPView.m in Sources */,
 				888BD85C1D11059A005E838D /* BLUPostCommentReplyUIComponent.m in Sources */,
+				3850F4C924A1CDA8008A6B3C /* NSBundle+TZImagePicker.m in Sources */,
 				67233B781D2508BF00F1E306 /* QGQGEduFristVideoListCell.m in Sources */,
 				888BD89D1D11059A005E838D /* BLUUserSimpleLevelView.m in Sources */,
 				888BD9031D11059A005E838D /* BLUPostActionViewModel.m in Sources */,
@@ -5862,6 +6592,7 @@
 				6739DC5B1D86414000F8E40B /* QGEduOrderViewController.m in Sources */,
 				888BD8881D11059A005E838D /* BLUSettingTextCell.m in Sources */,
 				888BD8041D110599005E838D /* BLURecommendData.m in Sources */,
+				3850F4D924A1CE96008A6B3C /* TZTestCell.m in Sources */,
 				3A5CCE931D0516EB009EDFD8 /* SASearchIndexView.m in Sources */,
 				3AE256B71D051B8600E56DC9 /* QGHomeV2ViewController.m in Sources */,
 				672A19C81D2D2EDC0005DD1C /* QGSortModel.m in Sources */,
@@ -5882,7 +6613,9 @@
 				888BD7F71D110599005E838D /* BLULogistics.m in Sources */,
 				671BAF3B1D817254001DD148 /* QGHomePostListV2TabCell.m in Sources */,
 				888BD8901D11059A005E838D /* BLULevelButton.m in Sources */,
+				381960F72487843700BB7B8E /* QGNewTeacherCollectionCell.m in Sources */,
 				888496DA1D420A18006403BD /* QGActivOrderDetailViewController.m in Sources */,
+				381CC4E6249E515E00810811 /* KKButton.m in Sources */,
 				888BD8D51D11059A005E838D /* BLUAPSettingViewController.m in Sources */,
 				888BD8351D11059A005E838D /* BLUCircleCarouselCell.m in Sources */,
 				888BD82F1D11059A005E838D /* UIView+BLUHierarchy.m in Sources */,
@@ -5903,10 +6636,13 @@
 				888BD88D1D11059A005E838D /* BLUAvatarButton.m in Sources */,
 				888BD8B01D11059A005E838D /* BLUImageViewerViewController.m in Sources */,
 				383EA420246647AD00E1DB2C /* QGClassModel.m in Sources */,
+				3850F4D024A1CDA8008A6B3C /* TZPhotoPreviewCell.m in Sources */,
 				888BD82D1D11059A005E838D /* UITableView+BLUAddition.m in Sources */,
 				888BD8A91D11059A005E838D /* BLUCircleMainViewController.m in Sources */,
 				888BD8421D11059A005E838D /* BLUContentReplyView.m in Sources */,
 				888BD8971D11059A005E838D /* BLUUserInfoView.m in Sources */,
+				3847F0DA247F8EAB00E7412D /* QGNewTeacherMulImgCell.m in Sources */,
+				384ADA76249B5F7200E9D9B7 /* QGTeacherPassportController.m in Sources */,
 				3A5CCE9D1D0516EB009EDFD8 /* TAAbstractDotView.m in Sources */,
 				888BD8121D110599005E838D /* BLUPaymentService.m in Sources */,
 				672A19C51D2D2EDC0005DD1C /* NSDate+Calendar.m in Sources */,
@@ -5927,10 +6663,13 @@
 				888BD90C1D11059A005E838D /* BLUPostDetailAsyncViewModel+PostManager.m in Sources */,
 				675480E31D45B54C00BADE44 /* QGGetCityDownload.m in Sources */,
 				675480DA1D45B00C00BADE44 /* QGSwitchCityViewController.m in Sources */,
+				3847F0D4247F8E1B00E7412D /* QGNewTeacherTextCell.m in Sources */,
 				888BD8271D11059A005E838D /* UIApplication+BLUAddition.m in Sources */,
 				88D407341D66F26700DD65E3 /* FSCalendar+IBExtension.m in Sources */,
 				3A5CCE8C1D0516EB009EDFD8 /* SAButton.m in Sources */,
+				3853AAF02499FE6B003DE20F /* QGTeacherEnterPrivacyController.m in Sources */,
 				884B16161D45F03D001FED6A /* QGConfirmOrderViewController.m in Sources */,
+				3819279C2485FA23008EF411 /* QGNewTeacherOrganizationCell.m in Sources */,
 				3A5CCEA21D0516EB009EDFD8 /* SDCycleScrollView.m in Sources */,
 				888BD7D41D110599005E838D /* BLUAssetPicker.m in Sources */,
 				884D8D7A1D814CA1003A356F /* QGSearchScreeningModel.m in Sources */,
@@ -5942,9 +6681,12 @@
 				672A19E21D2D2EDC0005DD1C /* QGTeacherCouseTableViewCell.m in Sources */,
 				888BD8381D11059A005E838D /* BLUCircleFollowHeader.m in Sources */,
 				8887D6921D3C7DF200A62418 /* QGHttpManager+Order.m in Sources */,
+				3850F4C824A1CDA8008A6B3C /* TZAssetModel.m in Sources */,
 				672A18BD1D2D2A710005DD1C /* QGActlistHomeModel.m in Sources */,
 				6776E7081D40C77B0016EF17 /* QGBuyCountView.m in Sources */,
 				888BD8CC1D11059A005E838D /* BLUPostTagSearchResultViewController.m in Sources */,
+				384A772A24889390001B8026 /* QGHomeTeacherModel.m in Sources */,
+				383C019F249D9F3B00490FE0 /* QGNewDouYinController.m in Sources */,
 				888BD7D31D110599005E838D /* BLUAPSetting.m in Sources */,
 				6776E6E21D40C6AF0016EF17 /* QGSingleItemPriceListModel.m in Sources */,
 				888BD8671D11059A005E838D /* BLUPostDetailCommentReplyNode.m in Sources */,
@@ -5960,6 +6702,8 @@
 				A42546A41CF3F7C20097382F /* AppDelegate.m in Sources */,
 				888BD7B91D110599005E838D /* UIImage+User.m in Sources */,
 				888BD7E21D110599005E838D /* BLUComment.m in Sources */,
+				3853AAE62499AE26003DE20F /* QGDouYinCell.m in Sources */,
+				3803D23C24A868CB00BF475B /* SKTagButton.m in Sources */,
 				676D01B81D3F1037005694F5 /* QGSearchResultNavView.m in Sources */,
 				888BD80C1D110599005E838D /* BLUUserBalance.m in Sources */,
 				67539C071D347BA100F838B0 /* QGOptimalProductGridLayout.m in Sources */,
@@ -5974,6 +6718,7 @@
 				8857917D1D101B3D00748D62 /* QGTableView.m in Sources */,
 				888BD84B1D11059A005E838D /* BLUVideoIndicatorImageNode.m in Sources */,
 				67539C081D347BA100F838B0 /* QGOptimalProductPhotoCell.m in Sources */,
+				3825A5C724936B3300E2CCC1 /* QGFindController.m in Sources */,
 				888BD8281D11059A005E838D /* UIButton+BLUAddition.m in Sources */,
 				6776E6E11D40C6AF0016EF17 /* QGSingleItemModel.m in Sources */,
 				672A19D81D2D2EDC0005DD1C /* QGCommentInfoModel.m in Sources */,
@@ -5981,6 +6726,7 @@
 				888BD8D21D11059A005E838D /* BLUSendPost2ViewController.m in Sources */,
 				888BD91A1D11059A005E838D /* BLUUsersViewModel.m in Sources */,
 				67BD5DED1D2E37EA0070C043 /* QGActlistDetailModel.m in Sources */,
+				38AC1AC624977ED500371E3F /* QGStudyCell.m in Sources */,
 				3AE256BD1D051B8600E56DC9 /* QGFirstPageDataModel.m in Sources */,
 				886296FC1D1A7419003E3994 /* QGLoginViewController.m in Sources */,
 				A4027C851D3E9335004EFD9B /* QGEduFristActivityCell.m in Sources */,
@@ -5990,18 +6736,24 @@
 				886AE3551D4A146100C79D6C /* QGGoodLogisticsCell.m in Sources */,
 				888BD80A1D110599005E838D /* BLUServerNotificationMO.m in Sources */,
 				381DABD924652B7A004207B9 /* QGCollectionViewClassCell.m in Sources */,
+				384ADA67249AFD6100E9D9B7 /* MOFSPickerManager.m in Sources */,
 				672A19DA1D2D2EDC0005DD1C /* QGTeacherPhotoModel.m in Sources */,
 				672A19A21D2D2EDC0005DD1C /* QGEduTeacherModel.m in Sources */,
+				3850F4CE24A1CDA8008A6B3C /* TZImageManager.m in Sources */,
 				3AE256E81D051C3500E56DC9 /* MQAddBtnView.m in Sources */,
 				88D4073D1D66F26700DD65E3 /* FSCalendarHeader.m in Sources */,
 				882026151D24A9C90072286E /* QGResetPasswordViewcontroller.m in Sources */,
 				888BD8021D110599005E838D /* BLUPostTag.m in Sources */,
+				384ADA66249AFD6100E9D9B7 /* LQYPickerView.m in Sources */,
 				3A5CCE951D0516EB009EDFD8 /* SASwitch.m in Sources */,
+				381CC4E7249E515E00810811 /* KKUploadPhotoCollectionViewCell.m in Sources */,
 				888BD8FB1D11059A005E838D /* BLUApSettingViewModel.m in Sources */,
+				3850F4D124A1CDA8008A6B3C /* TZImagePickerController.m in Sources */,
 				888BD88A1D11059A005E838D /* BLUThemeManager.m in Sources */,
 				8876195C1D2A53F400A4DAA5 /* QGCardMessageViewController.m in Sources */,
 				888BD7BF1D110599005E838D /* BLUApiManager+Category.m in Sources */,
 				888BD7C01D110599005E838D /* BLUApiManager+Circle.m in Sources */,
+				3803D24224A87D5E00BF475B /* SZJPhotoBrowser.m in Sources */,
 				888496EF1D420A26006403BD /* QGActivOrderDetailCell.m in Sources */,
 				888BD8CB1D11059A005E838D /* BLUPostTagHotViewController.m in Sources */,
 				672A19CC1D2D2EDC0005DD1C /* QGSeacherTeacherHttpDownload.m in Sources */,
@@ -6018,13 +6770,18 @@
 				888BD7E41D110599005E838D /* BLUContentParagraph.m in Sources */,
 				6751114A1D4760E900E24F4A /* QGSaveService.m in Sources */,
 				6739DC671D867E6A00F8E40B /* QGEduSignSaveViewController.m in Sources */,
+				381CC497249E25C500810811 /* QGChatModel.m in Sources */,
 				676277BD1D339918003D5919 /* QGTimerLabel.m in Sources */,
 				888BD8941D11059A005E838D /* BLUUserGenderImageNode.m in Sources */,
+				381BEE522492200A00242D95 /* QGNewteacherBuyController.m in Sources */,
+				381927992485F9E8008EF411 /* QGNewTeacherInteligenceCell.m in Sources */,
+				383A154E248F7E0800780E19 /* QGNewUserInfoView.m in Sources */,
 				888BD89F1D11059A005E838D /* QGUserInfoView.m in Sources */,
 				888BD8BB1D11059A005E838D /* BLUPasscodeLockViewController.m in Sources */,
 				887BAF181D6C299A00E03A0E /* QGActivNearViewController.m in Sources */,
 				672A19C41D2D2EDC0005DD1C /* QGSearchResultViewController.m in Sources */,
 				3A5CCEBB1D0516EB009EDFD8 /* SACommon.m in Sources */,
+				38215A502489020C00E31091 /* QGNewCourseDetailController.m in Sources */,
 				675155ED1D55DA480011C7B1 /* QGTeacherListTableViewCell.m in Sources */,
 				884DD81D1D2BC37400FF468B /* QGActivMessageViewController.m in Sources */,
 				888BD8C71D11059A005E838D /* BLUPostDetailAsyncViewController.m in Sources */,
@@ -6032,6 +6789,7 @@
 				88583CF51D34CFBE009B1DD4 /* QGAboutCell.m in Sources */,
 				888BD8011D110599005E838D /* BLUPost.m in Sources */,
 				675480DD1D45B0A800BADE44 /* QGSwitchCityCollectionViewCell.m in Sources */,
+				384ADA6D249B43F000E9D9B7 /* PCSheetPickerView.m in Sources */,
 				8857917A1D1017CF00748D62 /* QGCell.m in Sources */,
 				8876195F1D2A579000A4DAA5 /* QGMessageListCell.m in Sources */,
 				888BD8921D11059A005E838D /* BLUUserBlurView.m in Sources */,
@@ -6043,12 +6801,14 @@
 				888BD86A1D11059A005E838D /* BLUPostDetailFeaturedCommentsHeader.m in Sources */,
 				888BD7AC1D110599005E838D /* BLUCircleActionDelegate.m in Sources */,
 				88583CEC1D347DBA009B1DD4 /* QGSettingViewController.m in Sources */,
+				386BE9FB2484F0130029F8D8 /* QGNewClassCell.m in Sources */,
 				888BD8AC1D11059A005E838D /* BLUCircleViewController.m in Sources */,
 				888BD85F1D11059A005E838D /* BLUPostCommonComentNode.m in Sources */,
 				888BD8D41D11059A005E838D /* BLUShareViewController.m in Sources */,
 				888BD8471D11059A005E838D /* BLURefreshHeader.m in Sources */,
 				888BD8B71D11059A005E838D /* BLUChatViewController.m in Sources */,
 				888BD7C31D110599005E838D /* BLUApiManager+Dynamic.m in Sources */,
+				381CC49D249E42C700810811 /* QGTeacherPublishController.m in Sources */,
 				884B51801D4B46ED00E8825A /* QGGoodsListViewController.m in Sources */,
 				674E5E2E1D20C708008912EF /* QGNoneCell.m in Sources */,
 				67FAFD121D895F040076A95D /* QGEduOrderDetailCell.m in Sources */,
@@ -6057,6 +6817,7 @@
 				884DD81A1D2BC27700FF468B /* QGOrderMessageViewController.m in Sources */,
 				672A19971D2D2EDC0005DD1C /* QGCourseDetail.m in Sources */,
 				672A199F1D2D2EDC0005DD1C /* QGEduClassModel.m in Sources */,
+				384A772D248893C0001B8026 /* QGHomeCourseModel.m in Sources */,
 				888BD8B61D11059A005E838D /* BLUThirdPartyLoginViewController.m in Sources */,
 				888BD7D81D110599005E838D /* BLUBrandCategoryMO.m in Sources */,
 				888BD8681D11059A005E838D /* BLUPostDetailCommentReplyTextNode.m in Sources */,
@@ -6064,6 +6825,7 @@
 				888BD8C51D11059A005E838D /* BLUPostDetailAsyncViewController+Toolbar.m in Sources */,
 				885C20831D0EA8180033D7F3 /* QGAdiceCell.m in Sources */,
 				888BD88E1D11059A005E838D /* BLUAvatarEditView.m in Sources */,
+				381927A224862637008EF411 /* QGNewTeacherLessonModel.m in Sources */,
 				888BD7C91D110599005E838D /* BLUApiManager+Post.m in Sources */,
 				886665FB1D056EA300FA64DF /* QGAnalyticsService.m in Sources */,
 				888BD9111D11059A005E838D /* BLUPostViewModel.m in Sources */,
@@ -6080,8 +6842,10 @@
 				888BD84E1D11059A005E838D /* BLUImagePickerAlbumContentsCollectionViewCell.m in Sources */,
 				672A19CF1D2D2EDC0005DD1C /* QGOrgTeacherTableViewCell.m in Sources */,
 				888BD9011D11059A005E838D /* BLUPasscodeLockViewModel.m in Sources */,
+				382396A3249C87CB00EB4794 /* QGTeacherMoreInfoController.m in Sources */,
 				888BD8AB1D11059A005E838D /* BLUCircleSearchTableViewController.m in Sources */,
 				88548D8D1D4321130001423E /* QGShopCarModel.m in Sources */,
+				383A150D248F21B700780E19 /* QGImageController.m in Sources */,
 				888BD8EC1D11059A005E838D /* BLUCircleAdViewModel.m in Sources */,
 				67C905041D266B61004725D0 /* QGEduGroupCollectionViewCell.m in Sources */,
 				67FEE3461D5C05FF000E559E /* QGOrgCourseListViewController.m in Sources */,
@@ -6107,6 +6871,8 @@
 				88D4073B1D66F26700DD65E3 /* FSCalendarEventIndicator.m in Sources */,
 				88D407321D66F26700DD65E3 /* FSCalendar+DateTools.m in Sources */,
 				888BD8E11D11059A005E838D /* BLUUserLevelDetailsViewController.m in Sources */,
+				38AC1ABF24973F5400371E3F /* QGStudyController.m in Sources */,
+				3853AAF9249A216E003DE20F /* QGTeacherReginsterCell.m in Sources */,
 				888BD8EF1D11059A005E838D /* BLUCircleFollowViewModel.m in Sources */,
 				888BD8561D11059A005E838D /* BLUServerNotificationCell.m in Sources */,
 				674E5DBD1D20C708008912EF /* QGEduClassViewController.m in Sources */,
@@ -6115,6 +6881,7 @@
 				675BA1E81D4AEE0300BBC1F5 /* SAAlert.m in Sources */,
 				675BA2111D4AFD9600BBC1F5 /* QGActOrderDetailResultModel.m in Sources */,
 				67098C221D51943400019FD2 /* QGPayResultViewController.m in Sources */,
+				381927A52486378E008EF411 /* QGNewteacherInfoModel.m in Sources */,
 				6776E7051D40C77B0016EF17 /* QGAttributePopView.m in Sources */,
 				675BA2141D4AFD9600BBC1F5 /* QGOrderPayModel.m in Sources */,
 				674E5DBC1D20C708008912EF /* QGEducationViewController.m in Sources */,
@@ -6126,6 +6893,7 @@
 				888BD83F1D11059A005E838D /* BLURadioButtonView.m in Sources */,
 				888BD8DB1D11059A005E838D /* BLUSignatureEditViewController.m in Sources */,
 				888BD8091D110599005E838D /* BLUServerNotificationMO+CoreDataProperties.m in Sources */,
+				3847F0D1247F899800E7412D /* QGNewTeacherDetailController.m in Sources */,
 				888496D11D420A0B006403BD /* QGActivOrderModel.m in Sources */,
 				672A19D11D2D2EDC0005DD1C /* QGSearchCourseTableViewCell.m in Sources */,
 				888BD7D21D110599005E838D /* BLUAps.m in Sources */,
@@ -6148,15 +6916,18 @@
 				A4027C801D3E786C004EFD9B /* QGPhotoCell.m in Sources */,
 				675480E01D45B0E300BADE44 /* QGShopCityModel.m in Sources */,
 				884B51831D4B4B0400E8825A /* QGGoodsListCell.m in Sources */,
+				384ADA70249B448E00E9D9B7 /* provienceModel.m in Sources */,
 				3A5CCEB31D0516EB009EDFD8 /* QGHttpDownload.m in Sources */,
 				888BD7C51D110599005E838D /* BLUApiManager+Message.m in Sources */,
 				8856C6521D26707F000B0F93 /* QGDynamicViewController.m in Sources */,
 				888BD8221D11059A005E838D /* BLUTableView.m in Sources */,
 				888BD8BE1D11059A005E838D /* BLUPostCommentDetailReplyAsyncViewController.m in Sources */,
 				888BD83E1D11059A005E838D /* BLUPageView.m in Sources */,
+				3853AAE92499AFE0003DE20F /* ZFDouYinControlView.m in Sources */,
 				888BD8F61D11059A005E838D /* BLUChatViewModel.m in Sources */,
 				3A5CCE821D0516EB009EDFD8 /* UIImage+MQimage.m in Sources */,
 				887619621D2A5B2D00A4DAA5 /* QGMessageListHeadView.m in Sources */,
+				3850F4CF24A1CDA8008A6B3C /* TZPhotoPickerController.m in Sources */,
 				672A19931D2D2EDC0005DD1C /* QGaddFooterView.m in Sources */,
 				888BD89B1D11059A005E838D /* BLUUserSimpleCoinView.m in Sources */,
 				888BD8741D11059A005E838D /* BLUPostDetailUserInfoNode.m in Sources */,
@@ -6167,12 +6938,15 @@
 				888496F31D420A26006403BD /* QGMallOrderFooterCell.m in Sources */,
 				676D01BB1D3F105C005694F5 /* QGHttpManager+Search.m in Sources */,
 				884B16131D45B40D001FED6A /* QGHttpManager+ShopCar.m in Sources */,
+				383C01A2249DDD5200490FE0 /* QGRecordVideoController.m in Sources */,
+				3823FD47248E10E300A85C1C /* QGNewBottomView.m in Sources */,
 				676D01B51D3F1037005694F5 /* QGSearchPromptHeader.m in Sources */,
 				888BD91E1D110E3F005E838D /* MyCircleMainViewController.m in Sources */,
 				888BD8F01D11059A005E838D /* BLUCircleListViewModel.m in Sources */,
 				888BD7E71D110599005E838D /* BLUDialogue.m in Sources */,
 				672A19E61D2D35A40005DD1C /* QGActivityHomeViewController.m in Sources */,
 				3A5CCE881D0516EB009EDFD8 /* QGViewController.m in Sources */,
+				3850F4D324A1CDA8008A6B3C /* TZGifPhotoPreviewController.m in Sources */,
 				3A5CCE981D0516EB009EDFD8 /* SATextField.m in Sources */,
 				675111551D4850A300E24F4A /* GHBLocationManager.m in Sources */,
 				675111441D4710F500E24F4A /* QGNewFeatureCell.m in Sources */,
@@ -6201,6 +6975,7 @@
 				675090441D3C6B130060007B /* QGTagListModel.m in Sources */,
 				888BD8EE1D11059A005E838D /* BLUCircleDetailMainViewController.m in Sources */,
 				676D01D51D3F12EA005694F5 /* QGMallOrderCell.m in Sources */,
+				3823FD3E248DD6DE00A85C1C /* QGNewCommentModel.m in Sources */,
 				888BD8331D11059A005E838D /* BLUCircleBriefCell.m in Sources */,
 				888BD8B31D11059A005E838D /* BLURegStep1ViewController.m in Sources */,
 				888BD8DA1D11059A005E838D /* BLURightTransitioningController.m in Sources */,
@@ -6209,6 +6984,7 @@
 				88D4073C1D66F26700DD65E3 /* FSCalendarFlowLayout.m in Sources */,
 				888BD83D1D11059A005E838D /* BLUGridView.m in Sources */,
 				888BD7DB1D110599005E838D /* BLUCategory.m in Sources */,
+				38AC1AC324975AB600371E3F /* QGstudyProgressView.m in Sources */,
 				888BD8751D11059A005E838D /* BLUPostLikedUserCell.m in Sources */,
 				888BD8621D11059A005E838D /* BLUPostCommonOptCell.m in Sources */,
 				884C06731D365CB000599EBD /* QGMyFollowViewController.m in Sources */,
@@ -6374,9 +7150,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 773KFNZFJ9;
+				DEVELOPMENT_TEAM = AUVDLZTKHF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6385,6 +7161,8 @@
 					"$(PROJECT_DIR)/qiqiaoguo/Classes/Community/ThirdLibs/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
+					"$(PROJECT_DIR)/qiqiaoguo/3T",
+					"$(PROJECT_DIR)/qiqiaoguo/3TLib",
 				);
 				GCC_PREFIX_HEADER = "qiqiaoguo/qiqiaoguo-Prefix.pch";
 				INFOPLIST_FILE = qiqiaoguo/Info.plist;
@@ -6400,8 +7178,8 @@
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
 				);
-				MARKETING_VERSION = 3.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo2222222;
+				MARKETING_VERSION = 4.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo;
 				PRODUCT_NAME = "七巧国";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -6423,9 +7201,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 773KFNZFJ9;
+				DEVELOPMENT_TEAM = AUVDLZTKHF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6434,6 +7212,8 @@
 					"$(PROJECT_DIR)/qiqiaoguo/Classes/Community/ThirdLibs/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
+					"$(PROJECT_DIR)/qiqiaoguo/3T",
+					"$(PROJECT_DIR)/qiqiaoguo/3TLib",
 				);
 				GCC_PREFIX_HEADER = "qiqiaoguo/qiqiaoguo-Prefix.pch";
 				INFOPLIST_FILE = qiqiaoguo/Info.plist;
@@ -6449,8 +7229,8 @@
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/qiqiaoguo/ThirdFrameworks",
 				);
-				MARKETING_VERSION = 3.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo2222222;
+				MARKETING_VERSION = 4.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platomix.qiqiaoguo;
 				PRODUCT_NAME = "七巧国";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

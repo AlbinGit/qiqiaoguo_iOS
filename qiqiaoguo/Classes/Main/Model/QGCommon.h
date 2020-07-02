@@ -10,6 +10,11 @@
 
 @interface QGCommon : NSObject
 
++ (CGRect)rectForString:(NSString *)bStr withBoldFont:(UIFont *)font WithWidth:(CGFloat)width;
++ (CGSize)getLabelSizeWidthWith:(NSString *)aString Height:(CGFloat)height andFont:(UIFont *)font;
+
+
+
 + (CGFloat)rectWithFont:(int)font;
 + (CGFloat)rectWithString:(NSString *)str withFont:(int)font;
 + (NSInteger)compareTimeStartTime:(NSString *)startTime endTime:(NSString *)endTime;

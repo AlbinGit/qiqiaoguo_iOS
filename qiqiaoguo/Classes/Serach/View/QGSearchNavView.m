@@ -41,13 +41,15 @@
         UIImage *image = [[UIImage imageNamed:@"search-drop-down-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [_categoryButton setImage:image forState:UIControlStateNormal];
         UILabel *label = [UILabel makeThemeLabelWithType:BLULabelTypeContent];
-        label.text = @"机构";
+//        label.text = @"机构";
+        label.text = @"老师";
         [label sizeToFit];
         [_categoryButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -image.size.width - 3, 0, image.size.width + 3)];
         [_categoryButton setImageEdgeInsets:UIEdgeInsetsMake(0, label.width + 3, 0, -label.width - 3)];
         
         _cancelButton = [UIButton makeThemeButtonWithType:BLUButtonTypeDefault];
-        _cancelButton.title = @"取消";
+//        _cancelButton.title = @"取消";
+		[_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
         _cancelButton.titleColor = QGCellContentColor;
         
         _bottomLine = [UIView new];
@@ -120,18 +122,26 @@
     switch (searchOptionType) {
         case QGSearchOptionTypeCourse:
         {
-            self.categoryButton.title = @"课程";
+//            self.categoryButton.title = @"课程";
+			[_categoryButton setTitle:@"课程" forState:UIControlStateNormal];
+
             self.searchTextField.placeholder = @"搜索 课程";
         }break;
         case QGSearchOptionTypeInstitution:
         {
-            self.categoryButton.title = @"机构";
-            self.searchTextField.placeholder = @"搜索 机构";
+//            self.searchTextField.placeholder = @"搜索 机构";
+//			[_categoryButton setTitle:@"机构" forState:UIControlStateNormal];
+			
+            self.searchTextField.placeholder = @"搜索 老师";
+			[_categoryButton setTitle:@"老师" forState:UIControlStateNormal];
+
+
         }break;
         case QGSearchOptionTypeGoods:
         {
-            self.categoryButton.title = @"商品";
+//            self.categoryButton.title = @"商品";
             self.searchTextField.placeholder = @"搜索 商品";
+			[_categoryButton setTitle:@"商品" forState:UIControlStateNormal];
         }break;
             
         default:

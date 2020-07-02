@@ -45,6 +45,8 @@ NSString *  QGApiObjectKeycontent     = @"content";
         NSMutableArray *contentTypes = [NSMutableArray arrayWithArray:contentTypeSet.allObjects];
         [contentTypes addObjectsFromArray:@[@"text/html", @"text/plain"]];
         _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithArray:contentTypes];
+//		_sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
+
         // user agent调整
         NSString *userAgent = _sharedClient.requestSerializer.HTTPRequestHeaders[@"User-Agent"];
         NSArray *userAgentStrComponent = [userAgent componentsSeparatedByString:@"/"];
@@ -77,6 +79,7 @@ NSString *  QGApiObjectKeycontent     = @"content";
 + (void)GET:(NSString *)url params:(NSDictionary *)params resultClass:(Class)resultClass objectKeyPath:(NSString *)objectKeyPath success:(QGResponseSuccess)success failure:(QGResponseFail)failure
 {
     QGHttpManager *manager = [QGHttpManager sharedManager];
+
     [manager GET:url parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
        responseObject = [manager parsedResponseOfClass:resultClass fromJSON:responseObject objectKeyPath:objectKeyPath];
         NSLog(@"responseObject=== %@",responseObject);
@@ -164,6 +167,28 @@ NSString *  QGApiObjectKeycontent     = @"content";
     }];
     
 }
++ (void)POST:(NSString *)url params:(NSDictionary *)params video:(NSURL *)videoUrl success:(QGResponseSuccess)success failure:(QGResponseFail)failure
+{
+    QGHttpManager *manager = [QGHttpManager sharedManager];
+	[manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+		NSData * fileData = [NSData dataWithContentsOfURL:videoUrl];
+		[formData appendPartWithFileData:fileData name:@"video" fileName:@"video.mp4" mimeType:@"application/octet-stream"];
+	} progress:^(NSProgress * _Nonnull uploadProgress) {
+		
+	} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+            success(task,responseObject);
+        }
+	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(task,error);
+        }
+
+	}];
+}
+
+
+
 
 // 将数据转化成模型
 - (id)parsedResponseOfClass:(Class)resultClass fromJSON:(id)responseObject objectKeyPath:(NSString *)objectKeyPath

@@ -28,14 +28,14 @@
         CGFloat width = MQScreenW/2-1;
         CGFloat height = width*0.38;
         UIImageView  *im= [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,  width, height)];
-        im.image =  [UIImage imageNamed:@"near-couse-icon"];
+        im.image =  [UIImage imageNamed:@"img_附近课程"];
         [self.contentView addSubview:im];
         im.userInteractionEnabled = YES;
         UITapGestureRecognizer *tapImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showImageAction)];
         [im addGestureRecognizer:tapImage];
         UIImageView  *org= [[UIImageView alloc] initWithFrame:CGRectMake(im.maxX+1, 0, width, height)];
         org.userInteractionEnabled = YES;
-        org.image =[UIImage imageNamed:@"near-org-icon"];
+        org.image =[UIImage imageNamed:@"img_附近老师"];
         [self.contentView addSubview:org];
         UITapGestureRecognizer *tapImage1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showImageAction1)];
         [org addGestureRecognizer:tapImage1];

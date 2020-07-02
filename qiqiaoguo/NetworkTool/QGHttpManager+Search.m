@@ -12,6 +12,7 @@
 #define QGHotCourseTag      (BLUApiString(@"/Phone/Search/getHotCourse"))
 #define QGHotOrgTag         (BLUApiString(@"/Phone/Search/getHotOrg"))
 #define QGHotGoodsTag       (BLUApiString(@"/Phone/Search/getHotGoods"))
+//#define QGHotTeacherTag       (BLUApiString(@"/Phone/Search/getHotTeacher"))
 
 #define QGCourseScreening      (BLUApiString(@"/Phone/Edu/getCourseFilter"))
 #define QGOrgScreening        (BLUApiString(@"/Phone/Edu/getOrgFilter"))
@@ -19,6 +20,7 @@
 #define QGCourseList        (BLUApiString(@"/Phone/Edu/getCourseList"))
 #define QGOrgList           (BLUApiString(@"/Phone/Edu/getOrgList"))
 #define QGGoodsList         (BLUApiString(@"/Phone/Mall/getMallIndex"))
+//#define QGTeacherList           (BLUApiString(@"/Phone/Edu/getOrgTeacher"))
 
 @implementation QGHttpManager (Search)
 
@@ -28,7 +30,9 @@
     if (type == QGSearchOptionTypeCourse) {
         URL = QGHotCourseTag;
     }else if (type == QGSearchOptionTypeInstitution){
-        URL = QGHotOrgTag;
+        URL = QGHotOrgTag;//机构
+//        URL = QGTeacherList;
+
     }else{
         URL = QGHotGoodsTag;
     }

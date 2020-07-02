@@ -81,11 +81,7 @@ static NSString * const QGfooterViewCellIdentifier = @"footerViewCellIdentifier"
     CGFloat y = (itemHeight + 50) * row;
 
     if (_firstRowCellCountArray.count>0 || _dataSource.count<3) {
-        
-        
         _collectionView.height = y +itemHeight+50 +44;
-        
-        
     }
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -124,13 +120,11 @@ static NSString * const QGfooterViewCellIdentifier = @"footerViewCellIdentifier"
         if (_dataSource.count<5) {
             [footerView.btn setTitle:@"查看更多" forState:UIControlStateNormal];
             [footerView.btn setImage:[UIImage imageNamed:@"cell_right_arrow"] forState:UIControlStateNormal];
-      
             [footerView.btn addClick:^(UIButton *button) {
                 UIViewController *viewController = [SAUtils findViewControllerWithView:self];
-                
                 BLUCircleDetailMainViewController *vc = [[BLUCircleDetailMainViewController alloc] initWithCircleID:_videoCircleId.integerValue];
                 [viewController.navigationController pushViewController:vc animated:YES];
-                
+			
             }];
         }else {
             

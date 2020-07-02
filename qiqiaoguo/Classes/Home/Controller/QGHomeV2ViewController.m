@@ -47,13 +47,13 @@
 #import "QGEduClassViewController.h"
 #import "QGHomevideoListCell.h"
 #import "QGHomePostListV2TabCell.h"
-
 #import "QGClassPoplView.h"
 #import "QGClassModel.h"
-
 #import "QQGCourseTableViewCell.h"
 #import "QQGTeacherTableViewCell.h"
-
+#import "QGHomeCourseModel.h"
+#import "QGHomeTeacherModel.h"
+#import "QGNewTeacherVideoCell.h"
 #define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
 #define IS_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8)
 typedef NS_ENUM(NSUInteger, QGHomeCellType) {
@@ -62,10 +62,11 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     QGHomeCellTypePost,//热门文章
     QGHomeCellTypeCourse,//精品课程
     QGHomeCellTypeTeacher,//名师风采
+    QGHomeCellTypeTeacherVideo,//大家都在看
 };
 
 
-@interface QGHomeV2ViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate,CLLocationManagerDelegate,QGHomevideoListCellDelegate,QGHomePostListV2TabCellDelegate,QGCollectionFooterLineViewDelegate,QQGCourseTableViewCellDelegate>
+@interface QGHomeV2ViewController ()<UITextFieldDelegate,SDCycleScrollViewDelegate,CLLocationManagerDelegate,QGHomevideoListCellDelegate,QGHomePostListV2TabCellDelegate,QGCollectionFooterLineViewDelegate,QQGCourseTableViewCellDelegate,QGNewTeacherVideoCellDelegate>
 {
     CLLocationManager *locationManager;
 }
@@ -76,6 +77,17 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 @property (nonatomic,strong)SASRefreshTableView*tableView;
 @property (nonatomic,strong) NSMutableArray *bannerArray;
 @property (nonatomic,strong) UIImageView *searchBg;
+
+@property (nonatomic,strong) NSMutableArray *courseList;//课程列表
+@property (nonatomic,strong) NSMutableArray *teacherList;//老师列表
+@property (nonatomic,strong) NSMutableArray *momentList;//视频列表
+
+@property (nonatomic,copy) NSString * category_id;//班级
+@property (nonatomic,copy) NSString * subject_id;//科目
+@property (nonatomic,assign) NSInteger firstpage;//课程
+@property (nonatomic,assign) NSInteger teacherpage;//老师计数
+
+
 /**城市数组*/
 @property (nonatomic,strong)NSMutableArray *shopCityLists;
 @property (nonatomic,strong) QGShopCityModel *result;
@@ -98,6 +110,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 @property (nonatomic,assign) CGFloat postHeight;
 @property (nonatomic,assign) CGFloat videoHeight;
 @property (nonatomic,assign) CGFloat courseHeight;
+@property (nonatomic,assign) CGFloat teacherVideoHeight;
 
 /**班级弹出视图*/
 @property (nonatomic,strong) QGClassPoplView *classPopView;
@@ -123,6 +136,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [locationManager requestAlwaysAuthorization];
         locationManager.delegate = self;
     }
+	[self initData];
     [self getShopCityListRequestMethod];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     [self add_viewUI];
@@ -131,8 +145,21 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     _postfirstRowCellCountArray = [NSMutableArray array];
     _coursefirstRowCellCountArray = [NSMutableArray array];
     
-  }
 
+}
+- (void)initData
+{
+	_subject_id = @"-1";
+	_firstpage = 1;
+	_teacherpage = 1;
+	if ([SAUserDefaults getValueWithKey:USERDEFAULTS_ClassID]) {
+		_category_id = [SAUserDefaults getValueWithKey:USERDEFAULTS_ClassID];
+	}else
+	{
+		_category_id = @"0";//精品
+	}
+
+}
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -164,21 +191,23 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [weakSelf.tableView scrollRectToVisible:CGRectMake(0, 0, MQScreenW, MQScreenH) animated:YES];
     }];
     self.navImageView.alpha=0;
-    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 80)];
-    _navBGView.backgroundColor = RGBA(255, 255, 255 ,0);
+    _navBGView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 88)];
+//    _navBGView.backgroundColor = RGBA(255, 255, 255 ,0);
+    _navBGView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_navBGView];
-    UIView *vc = [[UIView alloc] initWithFrame:CGRectMake(0, 80, self.view.width, 1)];
+    UIView *vc = [[UIView alloc] initWithFrame:CGRectMake(0, 88, self.view.width, 1)];
     vc.backgroundColor = RGBA(255, 255, 255 ,0);
     [_navBGView addSubview:vc];
     self.lineView = vc;
     //分类按钮
     _sortBtn = [UIButton new];
     [_navBGView addSubview:_sortBtn];
-    _sortBtn.image = [UIImage imageNamed:@"icon_city_home"];
+//    _sortBtn.image = [UIImage imageNamed:@"ic_选择学习阶段"];
+	[_sortBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
     _sortBtn.titleFont = FONT_CUSTOM(14);
     [_sortBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@38);
-        make.left.equalTo(@7);
+        make.top.equalTo(@45);
+        make.left.equalTo(@15);
         make.height.equalTo(@32);
         make.width.equalTo(@0);
     }];
@@ -186,10 +215,11 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     UIView *searchView = [[UIView alloc]init];
     kClearBackground(searchView);
     [_navBGView addSubview:searchView];
-    UIImageView *searchBg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, searchView.width, 30)];
-    searchBg.backgroundColor = COLOR(177, 177, 177, 0.5);
+    UIImageView *searchBg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, searchView.width, 32)];
+    searchBg.backgroundColor = PL_COLOR_230;
+//    searchBg.backgroundColor = [UIColor colorFromHexString:@""];
     searchBg.layer.masksToBounds = YES;
-    searchBg.layer.cornerRadius = 5;
+    searchBg.layer.cornerRadius = 15;
     [searchView addSubview:searchBg];
     _searchBg = searchBg;
     //搜索图片
@@ -208,9 +238,9 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     [searchView addSubview:_search];
     [searchView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_sortBtn.mas_right).offset(15);
-        make.top.equalTo(@38);
+        make.top.equalTo(@45);
         make.height.equalTo(@44);
-        make.right.equalTo(_navBGView).offset(-50);
+        make.right.equalTo(_navBGView).offset(-20);
     }];
     [searchBg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.width.equalTo(searchView);
@@ -226,26 +256,112 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         make.top.equalTo(searchView).offset(6);
         make.width.equalTo(searchView).offset(-15);
     }];
-    [self addMesseageBtnInTheView:_navBGView];
-          self.automaticallyAdjustsScrollViewInsets =NO;
+    
+//	[self addMesseageBtnInTheView:_navBGView];
+          
+	self.automaticallyAdjustsScrollViewInsets =NO;
     
 }
+#pragma mark 请求首页数据
 - (void)requestFirstDataMethod:(SARefreshType)type {
     [[SAProgressHud sharedInstance]showWaitWithWindow];
+//	_firstpage = 1;
+//	_teacherpage = 1;
+	[self initData];
     [QGHttpManager homeDataSuccess:^(QGFirstPageDataModel *result) {
         _dataModel =result;
         _dataSource =_dataModel.videoList;
         [self createTableHeader];
         [self addpostHeghtCell];
         [self addvideoHeightCell];
-        [self addcourseHeghtCell];
+//        [self addcourseHeghtCell];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
     }];
-    [self getUserMessageCount];
+    [self getUserMessageCount];	
+	[self p_loadTeacherData:0];
+	[self p_loadLessonData:0];
+}
+
+- (void)p_loadLessonData:(NSInteger)type
+{
+	if (type == 0) {
+		_courseList = [NSMutableArray array];
+	}
+	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+	NSDictionary * param = @{
+		@"platform_id":[SAUserDefaults getValueWithKey:USERDEFAULTS_Platform_id],
+		@"client_type":@"ios",
+		@"verion":[infoDictionary objectForKey:@"CFBundleShortVersionString"],
+		@"category_id":@([_category_id intValue]),
+		@"subject_id":@([_subject_id intValue]),
+//		@"subject_id":@(-1),
+		@"page":@(_firstpage),
+		@"page_size":@"4",
+	};
+	[QGHttpManager get:[NSString stringWithFormat:@"%@/Phone/Home/getTeacherCourseList",QQG_BASE_APIURLString] params:param success:^(id responseObj) {
+		NSMutableDictionary * muDic = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)responseObj];
+		NSData * data = [NSJSONSerialization dataWithJSONObject:muDic options:NSJSONWritingPrettyPrinted error:nil];
+		NSString * strda = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+		NSLog(@"%@",strda);
+		NSMutableArray * resultArr = [NSMutableArray array];
+		resultArr = [QGHomeCourseModel mj_objectArrayWithKeyValuesArray:responseObj[@"extra"][@"items"]];
+
+		if (resultArr.count>0) {
+			[_tableView showFooterView];
+			for (QGHomeCourseModel * model in resultArr) {
+				[_courseList addObject:model];
+			}
+		}
+        [self addcourseHeghtCell];
+		[_tableView endRrefresh];
+		[_tableView reloadData];
+		} failure:^(NSError *error) {
+			NSLog(@"%@",error);
+			[_tableView endRrefresh];
+		}];
+}
+
+- (void)p_loadTeacherData:(NSInteger)type
+{
+	if (type == 0) {
+		_teacherList = [NSMutableArray array];
+	}
+	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+	NSDictionary * param = @{
+		@"platform_id":[SAUserDefaults getValueWithKey:USERDEFAULTS_Platform_id],
+		@"client_type":@"ios",
+		@"verion":[infoDictionary objectForKey:@"CFBundleShortVersionString"],
+		@"category_id":@([_category_id intValue]),
+		@"page":@(_teacherpage),
+		@"page_size":@"4",
+	};
+	[QGHttpManager get:[NSString stringWithFormat:@"%@/Phone/Home/getTeacherMomentList",QQG_BASE_APIURLString] params:param success:^(id responseObj) {
+		NSMutableDictionary * muDic = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)responseObj];
+		NSData * data = [NSJSONSerialization dataWithJSONObject:muDic options:NSJSONWritingPrettyPrinted error:nil];
+		NSString * strda = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+		NSLog(@"%@",strda);
+		NSMutableArray * resultArr = [NSMutableArray array];
+		resultArr = [QGHomeTeacherModel mj_objectArrayWithKeyValuesArray:responseObj[@"extra"][@"items"]];
+		if (resultArr.count>0) {
+			[_tableView showFooterView];
+			for (QGHomeTeacherModel * model in resultArr) {
+				[_teacherList addObject:model];
+			}
+		}else
+		{
+			[_tableView hiddenFooterView];
+		}
+		[self addTeacherVideoHeightCell];
+		[_tableView endRrefresh];
+		[_tableView reloadData];
+		} failure:^(NSError *error) {
+			NSLog(@"%@",error);
+			[_tableView endRrefresh];
+		}];
 }
 # pragma mark cell 的高度
 - (void)addvideoHeightCell {
@@ -254,7 +370,14 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     int totalCol = 2;
     int row = (_dataSource.count-1) / totalCol;
     CGFloat y = (itemHeight + 50) * row;
-    _videoHeight = itemHeight +44 +y+50;
+//    _videoHeight = itemHeight +44 +y+50;	
+	if (_dataSource.count>0) {
+		_videoHeight = itemHeight +44 +y+50;
+	}else
+	{
+		_videoHeight = 0;
+	}
+
 }
 - (void)addpostHeghtCell {
     CGFloat itemWidth  = (MQScreenW-20)/2.0-15;
@@ -267,12 +390,28 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 
 - (void)addcourseHeghtCell {
     CGFloat itemWidth  = (MQScreenW-3*10)/2.0;
-    CGFloat itemHeight = itemWidth*9/16;
+    CGFloat itemHeight = itemWidth;
     int totalCol = 2;
-    int row = (_dataModel.courseList.count-1) / totalCol;
-    CGFloat y = (itemHeight + 50) * row;
-    _courseHeight = itemHeight +44 +y+50;
+    int row = (_courseList.count-1) / totalCol;
+    CGFloat y = (itemHeight + 73) * row;
+	if (_courseList.count>0) {
+		_courseHeight = itemHeight +44 +y+73;
+	}else
+	{
+		_courseHeight = 0;
+	}
+	
 }
+
+- (void)addTeacherVideoHeightCell {
+    CGFloat itemWidth  = (MQScreenW-3*10)/2.0;
+    CGFloat itemHeight = itemWidth*4/3;
+    int totalCol = 2;
+    int row = (_teacherList.count-1) / totalCol;
+    CGFloat y = (itemHeight + 50) * row;
+    _teacherVideoHeight = itemHeight +44 +y+50;
+}
+
 
 - (void)updateUserMessageCount{
     if (self.messageCount > 0) {
@@ -289,11 +428,17 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     [_sortBtn mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo([NSNumber numberWithFloat:citybtnW]);
     }];
-    [_sortBtn setTitle:title];
-    [_sortBtn.titleLabel sizeToFit];
-    [_sortBtn.imageView sizeToFit];
-    [_sortBtn setImageEdgeInsets:UIEdgeInsetsMake(0, _sortBtn.titleLabel.width+10, 0, -_sortBtn.titleLabel.width-5)];
-    [_sortBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -_sortBtn.imageView.width-10 , 0, _sortBtn.imageView.width)];
+//    [_sortBtn setTitle:title];
+//    [_sortBtn.titleLabel sizeToFit];
+//    [_sortBtn.imageView sizeToFit];
+//    [_sortBtn setImageEdgeInsets:UIEdgeInsetsMake(0, _sortBtn.titleLabel.width+10, 0, -_sortBtn.titleLabel.width-5)];
+//    [_sortBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -_sortBtn.imageView.width-10 , 0, _sortBtn.imageView.width)];
+	
+	[_sortBtn setTitle:title forState:UIControlStateNormal];
+	[_sortBtn setImage:[UIImage imageNamed:@"ic_选择学习阶段"] forState:UIControlStateNormal];
+	
+    [_sortBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -_sortBtn.imageView.image.size.width , 0, _sortBtn.imageView.image.size.width)];
+    [_sortBtn setImageEdgeInsets:UIEdgeInsetsMake(0, _sortBtn.titleLabel.width, 0, -_sortBtn.titleLabel.bounds.size.width)];
     
 }
 
@@ -304,37 +449,15 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     for (QGBannerModel *bannerModel in _dataModel.bannerList) {
         [self.bannerArray addObject:bannerModel.cover];
     }
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_WIDTH*0.625) imageURLStringsGroup:self.bannerArray];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,_navBGView.bottom, SCREEN_WIDTH, SCREEN_WIDTH*0.625) imageURLStringsGroup:self.bannerArray];
     cycleScrollView.delegate = self;
     cycleScrollView.pageControlDotSize = CGSizeMake(5, 5);
     cycleScrollView.autoScrollTimeInterval = 3;
     [view addSubview:cycleScrollView];
-    _modelView = [[QGHomeSubjectView alloc]initWithFrame:CGRectMake(0, cycleScrollView.maxY, SCREEN_WIDTH, 85)];
-    if (_dataModel.cateList.count > 4) {
-        _modelView.height = 165;
-    }
-    
-    NSLog(@"ssss %@",_dataModel.cateList);
-    [_modelView addDataToImageArray:_dataModel.cateList];
-    [_modelView tapModel:^(QGEducateListtModel *model) {
-        if ([model.id isEqualToString:@"0"]) {
-            QGEduClassViewController *vc = [[QGEduClassViewController alloc] init];
-            vc.id = model.id;
-            [self.navigationController pushViewController:vc animated:YES];
-        }else{
-            
-            QGSearchResultViewController *search = [[QGSearchResultViewController alloc] init];
-            search.catogoryId = model.id;
-            search.CateID = model.id.integerValue;
-            search.searchOptionType = QGSearchOptionTypeCourse;
-            [self.navigationController pushViewController:search animated:YES];
-        }
-    }];
-            [view addSubview:_modelView];
-    view.frame = CGRectMake(0, 0, SCREEN_WIDTH, _modelView.maxY);
+
+    view.frame = CGRectMake(0, 0, SCREEN_WIDTH, cycleScrollView.maxY);
     _tableView.tableHeaderView = view;
-          self.automaticallyAdjustsScrollViewInsets =NO;
-    
+	self.automaticallyAdjustsScrollViewInsets =NO;
     
 }
 - (void)addMesseageBtnInTheView:(UIView *)view
@@ -392,6 +515,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 							_cityTitile = item.item.name;
                             [SAUserDefaults saveValue:item.item.sid forKey:USERDEFAULTS_SID];
                             [SAUserDefaults saveValue:item.item.platform_id forKey:USERDEFAULTS_Platform_id];
+//							[SAUserDefaults saveValue:_cityTitile forKey:USERDEFAULTS_City];
                         }];
                         *stop = YES;
                     }
@@ -425,9 +549,20 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 	[_classPopView cityBtnFrameWithTitle:_cityTitile];
 	
 	_classPopView.selectBlock = ^(QGClassListModel * _Nonnull model, NSIndexPath * _Nonnull indexPath) {
-		[weakSelf updateCityBtnFrameWithTitle:model.title];
-        [SAUserDefaults saveValue:model.title forKey:USERDEFAULTS_Class];
-		[SAUserDefaults saveValue:[NSString stringWithFormat:@"%ld-%ld",(long)indexPath.row,indexPath.section] forKey:USERDEFAULTS_IndexPath];
+		if (model) {
+			[weakSelf updateCityBtnFrameWithTitle:model.title];
+			[SAUserDefaults saveValue:model.title forKey:USERDEFAULTS_Class];
+			[SAUserDefaults saveValue:model.myID forKey:USERDEFAULTS_ClassID];
+			[SAUserDefaults saveValue:[NSString stringWithFormat:@"%ld-%ld",(long)indexPath.row,indexPath.section] forKey:USERDEFAULTS_IndexPath];
+		}else
+		{
+			[weakSelf updateCityBtnFrameWithTitle:@"全部"];
+			[SAUserDefaults removeWithKey:USERDEFAULTS_Class];
+			[SAUserDefaults removeWithKey:USERDEFAULTS_ClassID];
+			[SAUserDefaults removeWithKey:USERDEFAULTS_IndexPath];
+			[weakSelf initData];
+		}
+		[weakSelf requestFirstDataMethod:SARefreshPullDownType];
 	};
 	
 	[_classPopView.localButton addClick:^(UIButton *button) {
@@ -443,21 +578,11 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 		_cityTitile = cityModel.name;
 		[SAUserDefaults saveValue:cityModel.sid forKey:USERDEFAULTS_SID];
 		[SAUserDefaults saveValue:cityModel.platform_id forKey:USERDEFAULTS_Platform_id];
+//		[SAUserDefaults saveValue:cityModel.name forKey:USERDEFAULTS_City];
 		[weakSelf requestFirstDataMethod:SARefreshPullDownType];
 		}];
-
 	}];
 }
-//- (void)updateClassPopViewCityBtnFrameWithTitle:(NSString *)title
-//{
-//	CGSize btntitleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_classPopView.localButton.titleFont, NSFontAttributeName, nil]];
-//
-//	   [_classPopView.localButton setTitle:title];
-//	   [_classPopView.localButton.titleLabel sizeToFit];
-//	   [_classPopView.localButton.imageView sizeToFit];
-//	   [_classPopView.localButton setImageEdgeInsets:UIEdgeInsetsMake(0, _classPopView.localButton.titleLabel.width+10, 0, -_classPopView.localButton.titleLabel.width-5)];
-//	   [_classPopView.localButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_classPopView.localButton.imageView.width-10 , 0, _classPopView.localButton.imageView.width)];
-//}
 - (QGClassPoplView *)classPopView
 {
 	if (!_classPopView) {
@@ -514,7 +639,10 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 - (NSInteger)getDataCount{
     NSInteger count = 0;
     count += _dataModel.postList.count > 0;
-    count += _dataModel.courseList.count > 0;
+//    count += _dataModel.courseList.count > 0;
+    count += _courseList.count > 0||_dataModel.cateList>0;
+//    count += _dataModel.cateList>0;
+    count += _teacherList.count > 0;
     count += _dataModel.videoList.count > 0;
     count += _dataModel.bannerList.count>0;
     count += _dataModel.teacherList.count>0;
@@ -526,7 +654,7 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     
     if (type ==QGHomeCellTypeEdu)
     {
-        PL_CELL_CREATE(QGHomeActivityListCell)
+        PL_CELL_CREATEMETHOD(QGHomeActivityListCell,@"QGHomeActivityListCell");
         cell.selectionStyle =  UITableViewCellSelectionStyleNone;
         NSString *va = _dataModel.more[@"nearbyAreaId"];
         cell.nearbyAreaID = va.integerValue;
@@ -562,18 +690,23 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [cell.collectionView reloadData];
         return cell;
     }
+    else if (type == QGHomeCellTypeTeacherVideo) {
+        PL_CELL_CREATEMETHOD(QGNewTeacherVideoCell,@"QGNewTeacherVideoCell") ;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.dataSource = _teacherList;
+		cell.delegate = self;
+        [cell.collectionView reloadData];
+        return cell;
+    }
     else {
         PL_CELL_CREATEMETHOD(QQGCourseTableViewCell,@"searchCourse") ;
         cell.delegate =self;
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
-        cell.dataSource = _dataModel.courseList;
+//        cell.dataSource = _dataModel.courseList;
+        cell.dataSource = _courseList;
         [cell.collectionView reloadData];
         return cell;
         
-//        PL_CELL_CREATEMETHOD(QGSearchCourseTableViewCell, @"searchCourse")
-//        cell.model = _dataModel.courseList[indexPath.row];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        return cell;
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -612,13 +745,33 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 
 - (void)QQGCourseTableViewCellMoreBtnClicked:(QQGCourseTableViewCell *)sender {
     PL_CODE_WEAK(ws)
-    [UIView animateWithDuration:0.5f animations:^{
-        [ws.coursefirstRowCellCountArray addObject:_dataModel.courseList];
+//    [UIView animateWithDuration:0.5f animations:^{
+//        [ws.coursefirstRowCellCountArray addObject:_dataModel.courseList];
+//        [sender.collectionView reloadData];
+//        [ws.tableView beginUpdates];
+//        [ws.tableView endUpdates];
+//    }];
+	_firstpage++;
+    [UIView animateWithDuration:0.5f animations:^{	
+		[ws p_loadLessonData:1];
         [sender.collectionView reloadData];
         [ws.tableView beginUpdates];
         [ws.tableView endUpdates];
     }];
 }
+#pragma mark 加载更多
+- (void)QGNewTeacherVideoCellMoreBtnClicked:(QGNewTeacherVideoCell *)sender
+{
+    PL_CODE_WEAK(ws)
+	_teacherpage++;
+    [UIView animateWithDuration:0.5f animations:^{
+		[ws p_loadTeacherData:1];
+        [sender.collectionView reloadData];
+        [ws.tableView beginUpdates];
+        [ws.tableView endUpdates];
+    }];
+}
+
 - (void)QQGCourseTableViewCellFoldBtnClicked:(QQGCourseTableViewCell *)sender {
     PL_CODE_WEAK(ws)
     [UIView animateWithDuration:0.5f animations:^{
@@ -658,25 +811,37 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         CGFloat itemWidth  = (MQScreenW-4*10)/3.0;
         return itemWidth + 40;
     }
+	else if (type == QGHomeCellTypeTeacherVideo) {
+		   return _teacherVideoHeight;
+	   }
     else {
-        if (_coursefirstRowCellCountArray.count>0 || _dataSource.count<3) {
-            return _courseHeight;
-        }else  {
-            CGFloat itemWidth  = (MQScreenW-3*10)/2.0;
-            CGFloat itemHeight = itemWidth*9/16;
-            return (itemHeight +50)*2+44;
-        }
-        //        return 245.7;
+//        if (_coursefirstRowCellCountArray.count>0 || _dataSource.count<3) {
+//            return _courseHeight;
+//        }else  {
+//            CGFloat itemWidth  = (MQScreenW-3*10)/2.0;
+//            CGFloat itemHeight = itemWidth*9/16;
+//            return (itemHeight +50)*2+44;
+//        }
+		return _courseHeight;
     }
 }
 - (QGHomeCellType)getCellTypeWithIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *array = [NSMutableArray array];
+	
+	if (_teacherList.count>0) {
+		[array addObject:@(QGHomeCellTypeTeacherVideo)];
+	}
     if (_dataModel.teacherList.count > 0) {
         [array addObject:@(QGHomeCellTypeTeacher)];
     }
-    if (_dataModel.courseList.count > 0) {
-        [array addObject:@(QGHomeCellTypeCourse)];
-    }
+
+//	if (_courseList.count > 0) {
+//		[array addObject:@(QGHomeCellTypeCourse)];
+//	}
+	if (_courseList.count > 0||_dataModel.cateList.count>0) {
+		[array addObject:@(QGHomeCellTypeCourse)];
+	}
+
     if (_dataModel.postList.count > 0) {
         [array addObject:@(QGHomeCellTypePost)];
     }
@@ -684,27 +849,9 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
         [array addObject:@(QGHomeCellTypeVideo)];
     }
     [array addObject:@(QGHomeCellTypeEdu)];
+
     return [array[indexPath.section] intValue];
-//    QGHomeCellType type = QGHomeCellTypeCourse;
-//    if (indexPath.section == 0) {
-//        type = QGHomeCellTypeEdu;
-//    }
-//    else
-//        if (indexPath.section == 1) {
-//            if (_dataModel.courseList.count > 0) {
-//
-//            }
-//            type = QGHomeCellTypeCourse;
-//            if (_dataModel.videoList.count > 0) {
-//                type = QGHomeCellTypeVideo;
-//            }else{
-//
-//                type = _dataModel.postList.count> 0 ? QGHomeCellTypePost : QGHomeCellTypeCourse;
-//            }
-//        }else if(indexPath.section == 2){
-//            type = (_dataModel.videoList.count > 0 && _dataModel.postList.count>0) ? QGHomeCellTypePost : QGHomeCellTypeCourse;
-//        }
-//    return type;
+
 }
 #pragma mark 头部视图
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -712,7 +859,6 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     
     UIView *view= [[UIView alloc] init];
     QGHomeCellType type = [self getCellTypeWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
-    
     if (type == QGHomeCellTypeVideo) {
         view.backgroundColor = [UIColor whiteColor];
         view.frame=CGRectMake(0, 0, SCREEN_WIDTH, 44);
@@ -741,14 +887,37 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     {
         view =[self createSectionHeaderView:@"热门文章"];
     }else if (type == QGHomeCellTypeCourse) {
-        
-//        view =[self createSectionHeaderView:@"精品课程"];
-		view = [self createSectionIconImgHeaderView:@"精品课程" andImgName:@"ic_课程"];		
+		
+		
+		UIView * titleView = [self createSectionIconImgHeaderView:@"精品课程" andImgName:@"ic_课程"];
+		titleView.backgroundColor = COLOR(242, 243, 244, 1);
+		
+		_modelView = [[QGHomeSubjectView alloc]initWithFrame:CGRectMake(0, titleView.maxY, SCREEN_WIDTH, 85)];
+		_modelView.backgroundColor = COLOR(242, 243, 244, 1);
+		NSLog(@"ssss %@",_dataModel.cateList);
+		[_modelView addDataToImageArray:_dataModel.cateList];
+		[_modelView tapModel:^(QGEducateListtModel *model) {
+			if ([model.id isEqualToString:@"0"]) {//全部分类
+				QGEduClassViewController *vc = [[QGEduClassViewController alloc] init];
+				vc.id = model.id;
+				[self.navigationController pushViewController:vc animated:YES];
+			}else{
+				
+				_subject_id = model.id;
+				_firstpage = 1;
+				[self p_loadLessonData:0];
+				
+			}
+		}];
+		[view addSubview:titleView];
+		[view addSubview:_modelView];
+		view.frame = CGRectMake(0, 0, SCREEN_WIDTH, _modelView.maxY+25);
     } else if (type == QGHomeCellTypeTeacher) {
-//        view = [self createSectionHeaderView:@"名师风采"];
 		view = [self createSectionIconImgHeaderView:@"名师风采" andImgName:@"ic_老师"];
-
+    }else if (type == QGHomeCellTypeTeacherVideo) {
+		view = [self createSectionIconImgHeaderView:@"大家都在看" andImgName:@"ic_大家都在看"];
     }
+
     return view;
 }
 
@@ -757,9 +926,12 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 {
     QGHomeCellType type = [self getCellTypeWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
     if (type == QGHomeCellTypeEdu){
-        
         return 10;
-    }else
+    }else if (type == QGHomeCellTypeCourse)
+	{
+		return 44+85+25;
+	}
+	else
         return 44;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -836,56 +1008,8 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
     return view;
 }
 
-
-
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView == _tableView) {
-        float Range = 150.0;
-        float higth = scrollView.contentOffset.y;
-        if (higth <0.0) {
-            UIColor *color = RGBA(255, 255, 255 ,0);
-            _search.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索机构/课程" attributes:@{NSForegroundColorAttributeName: color}];
-            [_messageicon setImage:[UIImage imageNamed:@""]];
-            _messageicon.hidden = YES;
-            _searchimg.image = [UIImage imageNamed:@""];
-            [_sortBtn setTitleColor:RGBA(255, 255, 255 ,0) forState:(UIControlStateNormal)];
-            _sortBtn.image = [UIImage imageNamed:@""];
-            _searchBg.backgroundColor = COLOR(177, 177, 177, 0);
-            _lineView.backgroundColor = RGBA(255, 255, 255 ,0);
-            
-        }
-        else if ( higth >= 0.0 && higth < Range) {
-            float alpha = 1.0 / Range * higth;
-            _navBGView.backgroundColor = RGBA(253, 255, 255 ,alpha);
-            UIColor *color = [UIColor whiteColor];
-            _search.attributedPlaceholder = [[NSAttributedString alloc] initWithString: @"搜索机构/课程" attributes:@{NSForegroundColorAttributeName: color}];
-            _sortBtn.image = [UIImage imageNamed:@"icon_city_home"];
-            _messageicon.hidden = NO;
-            [_messageicon setImage:[UIImage imageNamed:@"message_image"]];
-            _searchimg.image = [UIImage imageNamed:@"icon_search_home"];
-            _searchBg.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
-            [_sortBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-            _lineView.backgroundColor = RGBA(255, 255, 255 ,0);
-        }else
-        {
-            UIColor *color = QGTitleColor;
-            _search.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索机构/课程" attributes:@{NSForegroundColorAttributeName: color}];
-            _navBGView.backgroundColor = RGBA(253, 255, 255 ,1.0);
-            _searchBg.backgroundColor = COLOR(177, 177, 177, 0.5);
-            //            _searchBg.backgroundColor =COLOR(243, 243, 243, 1);
-            [_messageicon setImage:[UIImage imageNamed:@"message_icon"]];
-            _messageicon.hidden = NO;
-            [_sortBtn setTitleColor:QGTitleColor forState:(UIControlStateNormal)];
-            
-            _sortBtn.image = [UIImage imageNamed:@"search-drop-down-icon"];
-            _searchimg.image =[UIImage imageNamed:@"icon_classification_search"];
-            _searchBg.backgroundColor = APPBackgroundColor;
-            _lineView.backgroundColor = COLOR(222, 222, 222, 1);
-        }
-    }
-    
     CGFloat offsetY = scrollView.contentOffset.y;
     if (offsetY >MQScreenH) {
         self.returnTopButton.hidden = NO;
@@ -1093,7 +1217,6 @@ typedef NS_ENUM(NSUInteger, QGHomeCellType) {
 
 - (void)goActListVC
 {
-    
     self.tabBarController.selectedIndex=1;
 }
 

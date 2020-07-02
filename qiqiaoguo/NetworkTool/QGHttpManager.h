@@ -35,6 +35,8 @@ typedef void (^QGResponseFail)(NSURLSessionDataTask * task, NSError * error);
 + (void)POST:(NSString *)url params:(NSDictionary *)params image:(UIImage *)image resultClass:(Class)resultClass objectKeyPath:(NSString *)objectKeyPath success:(QGResponseSuccess)success failure:(QGResponseFail)failure;
 
 
+// 上传视频的请求
++ (void)POST:(NSString *)url params:(NSDictionary *)params video:(NSURL *)videoUrl success:(QGResponseSuccess)success failure:(QGResponseFail)failure;
 
 
 

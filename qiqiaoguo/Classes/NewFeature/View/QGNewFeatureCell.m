@@ -38,7 +38,8 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"startBtn"] forState:UIControlStateNormal];
         [btn sizeToFit];
          btn.center = CGPointMake(self.width * 0.5, self.height * 0.87);
-        [btn setTitle:@"进入七巧国"];
+        [btn setTitle:@"进入七巧国" forState:UIControlStateNormal];
+		
         [btn setTitleFont:FONT_CUSTOM(15)];
         [btn setTitleColor:[UIColor colorFromHexString:@"6dc296"] forState:(UIControlStateNormal)];
      

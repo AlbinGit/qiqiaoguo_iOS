@@ -333,14 +333,14 @@
     UIButton  *button = [[UIButton alloc] initWithFrame:CGRectMake(MQScreenW*0.5, line.maxY, MQScreenW/4 , viewH)];
     
     button.backgroundColor = [UIColor colorFromHexString:@"ffb400"];
-    [button setTitle:@"加入购物车"];
+    [button setTitle:@"加入购物车" forState:UIControlStateNormal];
     button.tag = 1001;
     [button setTitleFont:[UIFont systemFontOfSize:15]];
     [button addTarget:self action:@selector(bottomButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     UIButton  *button1 = [[UIButton alloc] initWithFrame:CGRectMake(MQScreenW/4+MQScreenW*0.5, line.maxY, MQScreenW/4 , viewH)];
     button1.backgroundColor = COLOR(250, 29, 72, 1);;
-    [button1 setTitle:@"立即购买"];
+    [button1 setTitle:@"立即购买" forState:UIControlStateNormal];
     button1.tag = 1002;
     [button1 setTitleFont:[UIFont systemFontOfSize:15]];
     [button1 addTarget:self action:@selector(bottomButtonClick:) forControlEvents:UIControlEventTouchUpInside];

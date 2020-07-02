@@ -112,6 +112,19 @@ static const NSInteger kNoCointIndicatorTag = 1002;
 
     [self.view addSubview:_tableView];
     [self.view addSubview:_toolbar];
+    [_toolbar layoutIfNeeded];
+
+	NSArray * subViewArray = [_toolbar subviews];
+
+	for (id view in subViewArray)
+	{
+		if ([view isKindOfClass:(NSClassFromString(@"_UIToolbarContentView"))])
+		{
+			UIView *testView = view;
+			testView.userInteractionEnabled = NO;
+		}
+	}
+
 
     [_toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view);

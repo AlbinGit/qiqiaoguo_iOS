@@ -29,6 +29,7 @@
     [self createReturnButton];
     [self createNavTitle:@"编辑联系人"];
     [self createNavRightBtn:@"保存"];
+
     _nameField.delegate = self;
     _phoneField.delegate = self;
     _phoneField.returnKeyType = UIReturnKeyDone;
@@ -43,6 +44,7 @@
         _nameField.text = user.nickname;
         _phoneField.text =user.mobile;
     }
+	
     [self.rightBtn addClick:^(SAButton *button) {
         [weakSelf goSignUp];
     }];

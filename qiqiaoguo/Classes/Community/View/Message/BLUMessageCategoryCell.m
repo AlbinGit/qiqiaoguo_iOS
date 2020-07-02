@@ -83,7 +83,7 @@
 
     _timeLabel.centerY = _solidLine.bottom / 3 ;
     _messageCountLabel.centerY = _solidLine.bottom / 3 * 2 ;
-    _contentLabel.centerY = _messageCountLabel.centerY;
+    _contentLabel.centerY = _messageCountLabel.centerY+5;
     _titleLabel.centerY = self.height/2.0;//_timeLabel.centerY;
 
     if (_messageModel.unreadCount == 0) {

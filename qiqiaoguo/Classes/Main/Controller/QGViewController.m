@@ -974,5 +974,8 @@
     [self showTopIndicatorWithSuccessMessage:message];
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 @end

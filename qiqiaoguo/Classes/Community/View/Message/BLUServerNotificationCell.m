@@ -60,8 +60,16 @@
 
     if (_notificaton.imageURL) {
         CGFloat ratio = contentWidth / _notificaton.width;
-        _imageButton.width = _notificaton.width * ratio;
-        _imageButton.height = _notificaton.height * ratio;
+		if (isinf(ratio)) {
+			_imageButton.width = 0 ;
+			_imageButton.height = 0;
+		}else
+		{
+			_imageButton.width = _notificaton.width * ratio;
+			_imageButton.height = _notificaton.height * ratio;
+		}
+//		_imageButton.width = _notificaton.width * ratio;
+//        _imageButton.height = _notificaton.height * ratio;
         _imageButton.x = BLUThemeMargin * 4;
         _imageButton.y = _contentLabel.bottom + BLUThemeMargin * 3;
     } else {

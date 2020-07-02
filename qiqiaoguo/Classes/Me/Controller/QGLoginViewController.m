@@ -76,7 +76,8 @@ static const CGFloat kShareButtonWidth = 56;
     // Login button
     _loginButton = [BLUMainTitleButton new];
     _loginButton.translatesAutoresizingMaskIntoConstraints = NO;
-    _loginButton.title = NSLocalizedString(@"login.login-button.login", @"Log in");
+//    _loginButton.title = NSLocalizedString(@"login.login-button.login", @"Log in");
+	[_loginButton setTitle:NSLocalizedString(@"login.login-button.login", @"Log in") forState:UIControlStateNormal];
     [_loginButton addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
     [superview addSubview:_loginButton];
 

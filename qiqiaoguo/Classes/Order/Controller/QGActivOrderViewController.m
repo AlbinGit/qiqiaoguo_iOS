@@ -12,7 +12,7 @@
 #import "QGMallOrderListViewController.h"
 #import "QGHttpManager+Order.h"
 #import "QGActivOrderListViewController.h"
-
+#import "QGEducatiionOrderViewController.h"
 @interface QGActivOrderViewController () <VTMagicViewDataSource,VTMagicViewDelegate>
 
 @property (nonatomic, strong) VTMagicController *magicController;
@@ -47,13 +47,21 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.leftBarButtonItem  = [UIBarButtonItem itemWithnorImage:[UIImage imageNamed:@"icon_classification_back"] heighImage:nil targer:self action:@selector(back)];
+	
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"其他订单" style:(UIBarButtonItemStylePlain) target:self action:@selector(otherClick)];
 }
 
 - (void)back {
     
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+- (void)otherClick
+{
+	QGEducatiionOrderViewController *vc = [QGEducatiionOrderViewController new];
+		  
+	[self.navigationController pushViewController:vc animated:YES];
+}
 - (void)updateViewConstraints
 {
     UIView *magicView = _magicController.view;

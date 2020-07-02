@@ -156,7 +156,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(10, 0, SCREEN_WIDTH-40, 54);
     btn.contentEdgeInsets = UIEdgeInsetsMake(10, 0, 10, 0);
-    [btn setTitle:@"确认支付"];
+    [btn setTitle:@"确认支付" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     btn.backgroundColor = QGMainRedColor;
     btn.layer.masksToBounds = YES;

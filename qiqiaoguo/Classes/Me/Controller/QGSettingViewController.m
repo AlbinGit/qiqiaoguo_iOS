@@ -82,7 +82,8 @@ static const CGFloat kRowHeight = 50.0;
         BLUMainTitleButton *button = [BLUMainTitleButton new];
         button.translatesAutoresizingMaskIntoConstraints = NO;
         button.tag = 1;
-        button.title = @"退出登录";
+//        button.title = @"退出登录";
+		[button setTitle:@"退出登录" forState:UIControlStateNormal];
         [button addTarget:self action:@selector(cannelbuttonClick) forControlEvents:UIControlEventTouchUpInside];
         [view addSubview: button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {

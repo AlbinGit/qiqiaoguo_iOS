@@ -32,7 +32,6 @@ typedef NS_ENUM(NSInteger, QGUserInfoViewType) {
 //- (void)shouldShowLevelInfoFromUserInfoView:(QGUserInfoView *)userInfoView;
 - (void)shouldShowNewsFromUserInfoView:(QGUserInfoView *)userInfoView;
 
-
 @end
 @interface QGUserInfoView : UIView
 @property (nonatomic, strong) UIImageView *backgroundImageView;

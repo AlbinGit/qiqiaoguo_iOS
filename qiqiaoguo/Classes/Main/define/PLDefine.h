@@ -26,7 +26,6 @@
 #import "QGCommon.h"
 
 
-
 // control
 #import "SAButton.h"
 #import "SATextField.h"

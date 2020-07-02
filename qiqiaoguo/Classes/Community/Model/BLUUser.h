@@ -34,6 +34,11 @@ typedef NS_ENUM(NSInteger, BLUUserMarriage) {
     BLUUserMarriageInLove,
     BLUUserMarriageMarried,
     BLUUserMarriageDivorced,
+    BLUUserMarriageCheck,
+    BLUUserMarriageCollection,
+    BLUUserMarriageFollow,
+    BLUUserMarriageTeacherId,
+
 };
 
 UIKIT_EXTERN NSInteger BLUUserSignatureMaxLength;
@@ -96,7 +101,11 @@ UIKIT_EXTERN NSInteger BLUUserLevelMinimum;
 @property (nonatomic, assign, readonly) NSInteger isCheckIn;
 
 @property (nonatomic, assign) BOOL didFollow;
-
+//新增参数
+@property (nonatomic, assign, readonly) NSInteger is_checkIn_status;//是否签到
+@property (nonatomic, assign, readonly) NSInteger collection_course_count;
+@property (nonatomic, assign, readonly) NSInteger following_teacher_count;
+@property (nonatomic, assign, readonly) NSInteger teacher_id;
 
 @end
 
@@ -113,6 +122,13 @@ UIKIT_EXTERN NSInteger BLUUserLevelMinimum;
 - (NSString *)genderDesc;
 - (NSString *)signatureDesc;
 - (NSString *)levelDesc;
+
+//- (NSString *)user_heckIn_status;
+//- (NSString *)collectionCount;
+//- (NSString *)followingCount;
+//- (NSString *)userTeacherId;
+
+
 
 + (NSString *)descForMarriage:(BLUUserMarriage)marriage;
 + (NSString *)descForBirtyday:(NSDate *)birthday;

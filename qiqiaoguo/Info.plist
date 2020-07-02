@@ -119,6 +119,8 @@
 	<string>获取您的位置主要方便您报名参加线下活动</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Use microphone</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>需要访问您的相册获取图片用于修改头像及发帖功能哦</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要访问您的相册获取图片用于修改头像及发帖功能哦</string>
 	<key>UIBackgroundModes</key>

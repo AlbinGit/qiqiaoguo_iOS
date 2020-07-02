@@ -21,6 +21,10 @@ target 'qiqiaoguo' do
     pod 'IQKeyboardManager'
     pod 'MBProgressHUD'
     pod 'FMDB'
+	pod 'ZFPlayer'
+        pod 'ZFPlayer/ControlView'
+        pod 'ZFPlayer/AVPlayer'
+
     pod 'Masonry'
     pod 'VTMagic'
     pod 'AliRTCSdk'
